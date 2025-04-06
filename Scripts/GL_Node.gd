@@ -1,4 +1,5 @@
 extends Node2D
+class_name GL_Node
 var rows : Dictionary
 
 # Called when the node enters the scene tree for the first time.
@@ -20,24 +21,31 @@ func _update_visuals():
 	for child in holder.get_children():
 		if child.name != "Title":
 			child.queue_free()
-	for row in rows:
-		if row.get("type","default") == "default":
+	for key in rows:
+		if rows[key].get("type","default") == "default":
 			var nodeRow = load("res://Scenes/Nodes/Node Row.tscn")
 			holder.call_deferred("add_child",nodeRow)
-			(nodeRow.get_node("Label") as Label).text = row.get("name","???")
-			_set_inout_type(nodeRow.get_node("Input") as Label,row.get("input","null"))
-			_set_inout_type(nodeRow.get_node("Output") as Label,row.get("output","null"))
+			(nodeRow.get_node("Label") as Label).text = str(key)
+			_set_inout_type(nodeRow.get_node("Input") as Label,rows[key].get("input","null"))
+			_set_inout_type(nodeRow.get_node("Output") as Label,rows[key].get("output","null"))
 
-func _set_inout_type(label : Label , type : String):
-	match type:
-		"null":
+func _set_inout_type(label:Label, value):
+	match typeof(value):
+		_:
 			label.visible = false
-		"float":
+		TYPE_FLOAT:
 			label.text = "◉"
 			label.add_theme_color_override("font_color", Color.ROYAL_BLUE)
-		"bool":
+		TYPE_BOOL:
 			label.text = "◆"
 			label.add_theme_color_override("font_color", Color.ORANGE)
-		"color":
+		TYPE_COLOR:
 			label.text = "▲"
 			label.add_theme_color_override("font_color", Color.WHITE_SMOKE)
+
+func _set_title(name:String):
+	(get_node("Node").get_node("Holder").get_node("Title") as Label).text = name
+
+func _create_row(name:String,input,output):
+	rows[name] = {"input": input, "output": output}
+	_update_visuals()
