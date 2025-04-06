@@ -26,6 +26,8 @@ func _update_visuals():
 			var nodeRow = load("res://Scenes/Nodes/Node Row.tscn")
 			holder.call_deferred("add_child",nodeRow)
 			(nodeRow.get_node("Label") as Label).text = str(key)
+			(nodeRow.get_node("Input").get_note("Point") as GL_Node_Point).valueName = str(key)
+			(nodeRow.get_node("Output").get_note("Point") as GL_Node_Point).valueName = str(key)
 			_set_inout_type(nodeRow.get_node("Input") as Label,rows[key].get("input","null"))
 			_set_inout_type(nodeRow.get_node("Output") as Label,rows[key].get("output","null"))
 
@@ -49,3 +51,7 @@ func _set_title(name:String):
 func _create_row(name:String,input,output):
 	rows[name] = {"input": input, "output": output}
 	_update_visuals()
+
+func _recieve_input(inputName:String,value):
+	
+func _send_input(inputName:String,value):
