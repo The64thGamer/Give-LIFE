@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bdcxusbd86oox"]
+
+[node name="Node Row" type="HBoxContainer"]
+
+[node name="Input" type="Label" parent="."]
+layout_mode = 2
+text = "◉"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Testtesttesttesttest"
+clip_text = true
+
+[node name="Output" type="Label" parent="."]
+layout_mode = 2
+text = "◉"
