@@ -1,16 +1,19 @@
 extends Node2D
 class_name GL_Node
 var rows : Dictionary
+var uuid : int #REMEMBER TO SET THIS ON CREATION
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	_init_visuals()
-	pass # Replace with function body.
+	pass 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+func _create_uuid():
+	var rand = RandomNumberGenerator.new()
+	rand.seed = Time.get_unix_time_from_system()
+	uuid = rand.randi()
 
 func _init_visuals():
 	var nodeVisuals = load("res://Scenes/Nodes/Node.tscn")
@@ -53,5 +56,16 @@ func _create_row(name:String,input,output):
 	_update_visuals()
 
 func _recieve_input(inputName:String,value):
+	if rows.has(inputName):
+		rows[inputName]["input"] = value
 	
-func _send_input(inputName:String,value):
+func _send_input(output_name: String, value):
+	if not rows.has(output_name):
+		return
+
+	var connections = rows[output_name].get("connections", [])
+	for conn in connections:
+		var target = conn.get("target", null)
+		var input_name = conn.get("input_name", null)
+		if target and input_name:
+			target._recieve_input(input_name, value)
