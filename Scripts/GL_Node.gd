@@ -29,18 +29,26 @@ func _update_visuals():
 		if child.name != "Title":
 			child.queue_free()
 	for key in rows:
-		if rows[key].get("type","default") == "default":
-			var nodeRow = load("res://Scenes/Nodes/Node Row.tscn").instantiate()
-			holder.add_child(nodeRow)
-			(nodeRow.get_node("Label") as Label).text = str(key)
-			var input = nodeRow.get_node("Input") as GL_Node_Point
-			var output = nodeRow.get_node("Output") as GL_Node_Point
-			input.valueName = str(key)
-			input.mainNode = self
-			output.valueName = str(key)
-			output.mainNode = self
-			_set_inout_type(nodeRow.get_node("Input") as Button,rows[key]["input"])
-			_set_inout_type(nodeRow.get_node("Output") as Button,rows[key]["output"])
+		var nodeRow = load("res://Scenes/Nodes/Node Row.tscn").instantiate()
+		holder.add_child(nodeRow)
+		nodeRow.name = str(key)
+		(nodeRow.get_node("Label") as Label).text = str(key)
+		var input = nodeRow.get_node("Input") as GL_Node_Point
+		var output = nodeRow.get_node("Output") as GL_Node_Point
+		input.valueName = str(key)
+		input.mainNode = self
+		output.valueName = str(key)
+		output.mainNode = self
+		_set_inout_type(nodeRow.get_node("Input") as Button,rows[key]["input"])
+		_set_inout_type(nodeRow.get_node("Output") as Button,rows[key]["output"])
+
+func give_input_point_pos(name:String) -> Vector2:
+	var holder = get_node("Holder").get_node(name)
+	if holder == null:
+		return global_position
+	else:
+		holder = holder.get_node("Input") as GL_Node_Point
+		return holder.global_position + Vector2(holder.size.x/2,holder.size.y/2)
 
 func _set_inout_type(label:Button, value):
 	match typeof(value):
@@ -67,7 +75,7 @@ func _recieve_input(inputName:String,value):
 	if rows.has(inputName):
 		rows[inputName]["input"] = value
 	
-func _send_input(output_name: String, value):
+func _send_input(output_name: String):
 	if not rows.has(output_name):
 		return
 
@@ -76,7 +84,7 @@ func _send_input(output_name: String, value):
 		var target = conn.get("target", null)
 		var input_name = conn.get("input_name", null)
 		if target and input_name:
-			target._recieve_input(input_name, value)
+			target._recieve_input(input_name, rows[output_name]["output"])
 
 func _create_connection(target:GL_Node,input_name:String,output_name:String):
 	if not rows.has(output_name):

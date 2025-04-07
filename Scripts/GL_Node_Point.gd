@@ -7,22 +7,51 @@ var dragging:bool
 var previewLine:Line2D = null
 var mouseInside:bool
 var lastToDrag:bool
+var allLines: Array
 
 func _process(delta):
 	if dragging:
 		if previewLine == null:
-			previewLine = Line2D.new()
-			previewLine.position = Vector2.ZERO
-			add_child(previewLine)
-			previewLine.width = 5
-			previewLine.default_color = Color.WHITE
-			previewLine.add_point(Vector2.ZERO)
-			previewLine.add_point(Vector2.ZERO)
-			previewLine.points[0] = Vector2(size.x / 2, size.y / 2)
-			previewLine.begin_cap_mode = Line2D.LINE_CAP_ROUND
-			previewLine.end_cap_mode = Line2D.LINE_CAP_ROUND
+			previewLine = _create_line()
 		previewLine.points[1] = get_viewport().get_mouse_position() - previewLine.global_position
+		
+	var connections = mainNode.rows[valueName].get("connections",[])
+	if connections != []:
+		var iter = 0
+		for child:Line2D in allLines:
+			var output = mainNode.rows[valueName]["output"]
+			match typeof(output):
+				TYPE_FLOAT:
+					child.default_color = Color(0.254902 * output, 0.411765 * output, 0.882353 * output, 1) 
+				TYPE_BOOL:
+					if output:
+						child.default_color = Color.ORANGE
+					else:
+						child.default_color = Color.BLACK
+				TYPE_COLOR:
+					child.default_color = output
+			child.points[1] = (connections[iter]["target"] as GL_Node).give_input_point_pos(connections[iter]["input_name"]) - child.global_position
+			iter += 1
 
+func _create_line() -> Line2D:
+	var previewLine = Line2D.new()
+	previewLine.position = Vector2.ZERO
+	previewLine.width = 5
+	previewLine.default_color = Color.WHITE
+	previewLine.add_point(Vector2.ZERO)
+	previewLine.add_point(Vector2.ZERO)
+	previewLine.points[0] = Vector2(size.x / 2, size.y / 2)
+	previewLine.begin_cap_mode = Line2D.LINE_CAP_ROUND
+	previewLine.end_cap_mode = Line2D.LINE_CAP_ROUND
+	add_child(previewLine)
+	return previewLine
+
+func update_lines():
+	for child in allLines:
+		child.queue_free()
+	allLines = []
+	for child in mainNode.rows[valueName].get("connections",[]):
+		allLines.append(_create_line())
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -46,7 +75,6 @@ func _finish_drag():
 		previewLine.queue_free()
 		dragging = false
 	elif mouseInside:
-		print("YESSS")
 		for node in get_tree().get_nodes_in_group("Outputs"):
 			if node is GL_Node_Point:
 				node._node_connect(mainNode,valueName)
@@ -55,3 +83,4 @@ func _node_connect(node:GL_Node,inputValue:String):
 	if not lastToDrag:
 		return
 	mainNode._create_connection(node,inputValue,valueName)
+	update_lines()
