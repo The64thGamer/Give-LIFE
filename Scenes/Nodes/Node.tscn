@@ -4,6 +4,7 @@
 custom_minimum_size = Vector2(100, 100)
 offset_right = 100.0
 offset_bottom = 100.0
+mouse_default_cursor_shape = 6
 
 [node name="Holder" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(100, 100)

@@ -5,12 +5,12 @@
 
 [node name="Sine" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+mouse_filter = 2
 
 [node name="Node" parent="." instance=ExtResource("1_m6pki")]
 layout_mode = 0
 script = ExtResource("2_claki")
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

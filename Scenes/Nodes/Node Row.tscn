@@ -1,22 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdcxusbd86oox"]
+[gd_scene load_steps=2 format=3 uid="uid://bdcxusbd86oox"]
 
 [ext_resource type="Script" uid="uid://dwl36vn5chqmq" path="res://Scripts/GL_Node_Point.gd" id="1_fygh4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ljh8l"]
-size = Vector2(15, 15)
-
 [node name="Node Row" type="HBoxContainer"]
 
-[node name="Input" type="Label" parent="."]
+[node name="Input" type="Button" parent="."]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "◉"
-
-[node name="Point" type="Area2D" parent="Input"]
 script = ExtResource("1_fygh4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Input/Point"]
-position = Vector2(7, 13)
-shape = SubResource("RectangleShape2D_ljh8l")
+isOutput = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
@@ -24,15 +17,12 @@ size_flags_horizontal = 3
 text = "Testtesttesttesttest"
 clip_text = true
 
-[node name="Output" type="Label" parent="."]
+[node name="Output" type="Button" parent="."]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "◉"
-
-[node name="Point" type="Area2D" parent="Output"]
-position = Vector2(-23, 0)
 script = ExtResource("1_fygh4")
 isOutput = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Output/Point"]
-position = Vector2(7, 13)
-shape = SubResource("RectangleShape2D_ljh8l")
+[connection signal="pressed" from="Input" to="Input" method="_start_drag"]
+[connection signal="pressed" from="Output" to="Output" method="_start_drag"]

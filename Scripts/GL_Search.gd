@@ -8,18 +8,18 @@ func _ready():
 	_set_State(false)
 	_set_rows()
 
-func _process(delta):
-	pass
-
 func _input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT:
-		if event.pressed:
-			_set_State(!searching)
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_RIGHT && event.pressed:
+				_set_State(!searching)
+		#if event.button_index == MOUSE_BUTTON_LEFT && event.pressed && searching:
+				#_set_State(false) #fix when not hovered
 
 func _set_State(state:bool):
 	searching = state
 	visible = searching
 	lastMousePos = get_viewport().get_mouse_position()
+	position = lastMousePos
 
 func _set_rows():
 	var container = get_node("Panel").get_node("ScrollContainer").get_node("Container")
@@ -32,12 +32,15 @@ func _set_rows():
 		button.pressed.connect(func():
 			_create_node(button.text)
 		)
+		button.pressed.connect(func():
+			_set_State(false)
+		)
 		container.call_deferred("add_child",row)
 
 func _create_node(name:String):
 	var node = load("res://Scenes/Node Types/" + name + ".tscn").instantiate()
 	get_tree().root.add_child(node)
-	print("res://Scenes/Node Types/" + name + ".tscn")
-	node = node as GL_Node
+	node = (node as Control).get_child(0) as GL_Node
+	node.position = lastMousePos
 	node._create_uuid()
 	

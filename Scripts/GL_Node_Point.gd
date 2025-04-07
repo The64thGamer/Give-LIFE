@@ -1,4 +1,4 @@
-extends Area2D
+extends Button
 class_name GL_Node_Point
 
 var mainNode : GL_Node
@@ -22,9 +22,7 @@ func process(delta):
 
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-			_start_drag()
-		else:
+		if !event.pressed:
 			_finish_drag()
 
 func _start_drag():
