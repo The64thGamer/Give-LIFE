@@ -6,7 +6,7 @@
 [node name="Sine" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-mouse_filter = 2
+mouse_filter = 1
 
 [node name="Node" parent="." instance=ExtResource("1_m6pki")]
 layout_mode = 0

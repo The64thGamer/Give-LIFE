@@ -7,5 +7,6 @@ func _ready():
 	pass 
 
 func _process(delta):
+	super._process(delta)
 	rows["Output"]["output"] = sin(Time.get_ticks_msec() * rows["Length"].get("input",1))
 	pass

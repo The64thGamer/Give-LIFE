@@ -4,30 +4,24 @@ var rows : Dictionary
 var uuid : int #REMEMBER TO SET THIS ON CREATION
 var dragging : bool
 var canDrag : bool
-
-func _ready():
-	_init_visuals()
+var dragOffset : Vector2
 	
 func _process(delta):
 	if dragging:
-		position = get_viewport().get_mouse_position()
+		position = get_viewport().get_mouse_position() + dragOffset
 		
-func _on_input_event(viewport, event, shape_idx):
-	print(str(event) + "A")
+func _input(event): 
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT && event.pressed && canDrag:
 			dragging = true
-		if event.button_index == MOUSE_BUTTON_LEFT && event.canceled && dragging:
+			dragOffset = position - get_viewport().get_mouse_position()
+		if event.button_index == MOUSE_BUTTON_LEFT && !event.pressed && dragging:
 			dragging = false
 
 func _create_uuid():
 	var rand = RandomNumberGenerator.new()
 	rand.seed = Time.get_unix_time_from_system()
 	uuid = rand.randi()
-
-func _init_visuals():
-	var nodeVisuals = load("res://Scenes/Nodes/Node.tscn").instantiate()
-	call_deferred("add_child",nodeVisuals)
 
 func _update_visuals():
 	var holder = get_node("Holder")
