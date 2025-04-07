@@ -4,12 +4,11 @@
 
 [node name="Node Row" type="HBoxContainer"]
 
-[node name="Input" type="Button" parent="."]
+[node name="Input" type="Button" parent="." groups=["Outputs"]]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "◉"
 script = ExtResource("1_fygh4")
-isOutput = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
@@ -18,12 +17,12 @@ mouse_filter = 1
 text = "Testtesttesttesttest"
 clip_text = true
 
-[node name="Output" type="Button" parent="."]
+[node name="Output" type="Button" parent="." groups=["Outputs"]]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "◉"
 script = ExtResource("1_fygh4")
-isOutput = true
 
-[connection signal="pressed" from="Input" to="Input" method="_start_drag"]
-[connection signal="pressed" from="Output" to="Output" method="_start_drag"]
+[connection signal="mouse_entered" from="Input" to="Input" method="mouse_enter"]
+[connection signal="mouse_exited" from="Input" to="Input" method="mouse_exit"]
+[connection signal="button_down" from="Output" to="Output" method="_start_drag"]

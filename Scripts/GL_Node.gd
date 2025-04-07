@@ -33,8 +33,12 @@ func _update_visuals():
 			var nodeRow = load("res://Scenes/Nodes/Node Row.tscn").instantiate()
 			holder.add_child(nodeRow)
 			(nodeRow.get_node("Label") as Label).text = str(key)
-			(nodeRow.get_node("Input") as GL_Node_Point).valueName = str(key)
-			(nodeRow.get_node("Output") as GL_Node_Point).valueName = str(key)
+			var input = nodeRow.get_node("Input") as GL_Node_Point
+			var output = nodeRow.get_node("Output") as GL_Node_Point
+			input.valueName = str(key)
+			input.mainNode = self
+			output.valueName = str(key)
+			output.mainNode = self
 			_set_inout_type(nodeRow.get_node("Input") as Button,rows[key]["input"])
 			_set_inout_type(nodeRow.get_node("Output") as Button,rows[key]["output"])
 
@@ -56,7 +60,7 @@ func _set_title(name:String):
 	(get_node("Holder").get_node("Title") as Label).text = name
 
 func _create_row(name:String,input,output):
-	rows[name] = {"input": input, "output": output}
+	rows[name] = {"input": input, "output": output, "connections": []}
 	_update_visuals()
 
 func _recieve_input(inputName:String,value):
@@ -74,6 +78,34 @@ func _send_input(output_name: String, value):
 		if target and input_name:
 			target._recieve_input(input_name, value)
 
+func _create_connection(target:GL_Node,input_name:String,output_name:String):
+	if not rows.has(output_name):
+		return
+		
+	var item = target.rows.get(input_name, null)
+	if item == null:
+		return
+		
+	if typeof(rows[output_name].get("output", null)) != typeof(target.rows[input_name].get("input",null)):
+		print("Type mismatch: cannot connect " + output_name + " to " + target.name)
+		return
+	
+	var thenew = {
+		"target": target,
+		"input_name": input_name
+	}
+	
+	var connections = rows[output_name].get("connections",[])
+	
+	for connection in connections:
+		if connection.target == thenew.target and connection.input_name == thenew.input_name:
+			print("Connection already exists: " + output_name + " to " + target.name)
+			return
+	
+	connections.append(thenew)
+	rows[output_name]["connections"] = connections
+	
+	
 func mouse_enter():
 	canDrag = true
 func mouse_exit():
