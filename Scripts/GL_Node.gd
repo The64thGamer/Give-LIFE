@@ -1,4 +1,4 @@
-extends Node2D
+extends Panel
 class_name GL_Node
 var rows : Dictionary
 var uuid : int #REMEMBER TO SET THIS ON CREATION
@@ -16,7 +16,7 @@ func _create_uuid():
 	uuid = rand.randi()
 
 func _init_visuals():
-	var nodeVisuals = load("res://Scenes/Nodes/Node.tscn")
+	var nodeVisuals = load("res://Scenes/Nodes/Node.tscn").instantiate()
 	call_deferred("add_child",nodeVisuals)
 
 func _update_visuals():
@@ -26,7 +26,7 @@ func _update_visuals():
 			child.queue_free()
 	for key in rows:
 		if rows[key].get("type","default") == "default":
-			var nodeRow = load("res://Scenes/Nodes/Node Row.tscn")
+			var nodeRow = load("res://Scenes/Nodes/Node Row.tscn").instantiate()
 			holder.call_deferred("add_child",nodeRow)
 			(nodeRow.get_node("Label") as Label).text = str(key)
 			(nodeRow.get_node("Input").get_note("Point") as GL_Node_Point).valueName = str(key)

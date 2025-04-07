@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c57u187iciexi"]
+
+[ext_resource type="PackedScene" uid="uid://mowdu1i1rldt" path="res://Scenes/UI/Search.tscn" id="1_xwfut"]
+
+[node name="NodeMap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Search" parent="." instance=ExtResource("1_xwfut")]
+layout_mode = 1

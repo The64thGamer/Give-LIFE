@@ -13,8 +13,9 @@ config_version=5
 config/name="Give LIFE"
 config/description="The sequel to Faz-Anim"
 config/version="0.1a"
+run/main_scene="uid://c57u187iciexi"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://c1usct57qv2oa"
 
 [filesystem]
 
