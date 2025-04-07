@@ -24,7 +24,7 @@ func _create_uuid():
 	uuid = rand.randi()
 
 func _update_visuals():
-	var holder = get_node("Holder")
+	var holder = get_node("Margins").get_node("Holder")
 	for child in holder.get_children():
 		if child.name != "Title":
 			child.queue_free()
@@ -39,11 +39,31 @@ func _update_visuals():
 		input.mainNode = self
 		output.valueName = str(key)
 		output.mainNode = self
+		if rows[key]["picker"] == true:
+			match typeof(rows[key]["pickValue"]):
+				TYPE_FLOAT:
+					assignPick(nodeRow.get_node("Pick Float"),str(key))
+					var slider = nodeRow.get_node("Pick Float") as HSlider
+					slider.max_value = rows[key]["pickFloatMax"]
+					slider.value = rows[key]["pickValue"]
+				TYPE_BOOL:
+					assignPick(nodeRow.get_node("Pick Bool"),str(key))
+					(nodeRow.get_node("Pick Float") as ColorPickerButton).color = rows[key]["pickValue"]
+				TYPE_COLOR:
+					assignPick(nodeRow.get_node("Pick Color"),str(key))
+					(nodeRow.get_node("Pick Float") as CheckButton).button_pressed = rows[key]["pickValue"]
+			
+				
 		_set_inout_type(nodeRow.get_node("Input") as Button,rows[key]["input"])
 		_set_inout_type(nodeRow.get_node("Output") as Button,rows[key]["output"])
 
+func assignPick(pick:GL_Node_Picker,key:String):
+	if pick != null:
+		pick.mainNode = self
+		pick.valueName = key
+
 func give_input_point_pos(name:String) -> Vector2:
-	var holder = get_node("Holder").get_node(name)
+	var holder = get_node("Margins").get_node("Holder").get_node(name)
 	if holder == null:
 		return global_position
 	else:
@@ -65,10 +85,10 @@ func _set_inout_type(label:Button, value):
 			label.visible = false
 
 func _set_title(name:String):
-	(get_node("Holder").get_node("Title") as Label).text = name
+	(get_node("Margins").get_node("Holder").get_node("Title") as Label).text = name
 
-func _create_row(name:String,input,output):
-	rows[name] = {"input": input, "output": output, "connections": []}
+func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaximum:float):
+	rows[name] = {"input": input, "output": output, "connections": [], "picker":picker,"pickValue":pickDefault,"backConnected":false,"pickFloatMax":pickFloatMaximum}
 	_update_visuals()
 
 func _recieve_input(inputName:String,value):
@@ -85,6 +105,11 @@ func _send_input(output_name: String):
 		var input_name = conn.get("input_name", null)
 		if target and input_name:
 			target._recieve_input(input_name, rows[output_name]["output"])
+
+func _confirm_backConnection(input_name:String):
+	if !rows.has(input_name):
+		return
+	rows[input_name]["backConnected"] = true
 
 func _create_connection(target:GL_Node,input_name:String,output_name:String):
 	if not rows.has(output_name):
@@ -113,6 +138,7 @@ func _create_connection(target:GL_Node,input_name:String,output_name:String):
 	connections.append(thenew)
 	rows[output_name]["connections"] = connections
 	
+	target._confirm_backConnection(input_name)
 	
 func mouse_enter():
 	canDrag = true

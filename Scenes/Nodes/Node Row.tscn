@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdcxusbd86oox"]
+[gd_scene load_steps=5 format=3 uid="uid://bdcxusbd86oox"]
 
 [ext_resource type="Script" uid="uid://dwl36vn5chqmq" path="res://Scripts/GL_Node_Point.gd" id="1_fygh4"]
+[ext_resource type="Script" uid="uid://q5qlhwvjb16w" path="res://Scripts/GL_Node_Picker_Float.gd" id="2_vlx6y"]
+[ext_resource type="Script" uid="uid://dflftb37a7ind" path="res://Scripts/GL_Node_Picker_Color.gd" id="3_tf34m"]
+[ext_resource type="Script" uid="uid://b7ysqwtxh8pf" path="res://Scripts/GL_Node_Picker_Bool.gd" id="4_yal7b"]
 
 [node name="Node Row" type="HBoxContainer"]
 
@@ -17,6 +20,29 @@ mouse_filter = 1
 text = "Testtesttesttesttest"
 clip_text = true
 
+[node name="Pick Float" type="HSlider" parent="."]
+visible = false
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.0
+script = ExtResource("2_vlx6y")
+
+[node name="Pick Color" type="ColorPickerButton" parent="."]
+visible = false
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+color = Color(0.894432, 0.326066, 0.580441, 1)
+script = ExtResource("3_tf34m")
+
+[node name="Pick Bool" type="CheckButton" parent="."]
+visible = false
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+script = ExtResource("4_yal7b")
+
 [node name="Output" type="Button" parent="." groups=["Outputs"]]
 layout_mode = 2
 mouse_default_cursor_shape = 2
@@ -25,4 +51,7 @@ script = ExtResource("1_fygh4")
 
 [connection signal="mouse_entered" from="Input" to="Input" method="mouse_enter"]
 [connection signal="mouse_exited" from="Input" to="Input" method="mouse_exit"]
+[connection signal="value_changed" from="Pick Float" to="Pick Float" method="value_changed"]
+[connection signal="color_changed" from="Pick Color" to="Pick Color" method="color_changed"]
+[connection signal="toggled" from="Pick Bool" to="Pick Bool" method="toggled"]
 [connection signal="button_down" from="Output" to="Output" method="_start_drag"]

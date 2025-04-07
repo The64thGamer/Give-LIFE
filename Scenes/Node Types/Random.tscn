@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhn8qtyeny0sm"]
+
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_wswgt"]
+[ext_resource type="Script" uid="uid://3vek1806nwqj" path="res://Scripts/GL_Random.gd" id="2_wswgt"]
+
+[node name="Sine" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Node" parent="." instance=ExtResource("1_wswgt")]
+layout_mode = 0
+offset_right = 200.0
+script = ExtResource("2_wswgt")
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

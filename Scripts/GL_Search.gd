@@ -1,6 +1,6 @@
 extends Control
 
-var rows : Dictionary = {"Sine":99}
+var rows : Dictionary = {"Sine":99,"Random":99,"Float":99}
 var searching : bool
 var lastMousePos : Vector2
 

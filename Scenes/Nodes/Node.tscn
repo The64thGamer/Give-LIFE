@@ -1,13 +1,15 @@
-[gd_scene format=3 uid="uid://b0arjg8r75f8y"]
+[gd_scene load_steps=2 format=3 uid="uid://b0arjg8r75f8y"]
+
+[ext_resource type="Theme" uid="uid://b3wjoiiv6sq22" path="res://UI/Themes/Default.tres" id="1_arhwt"]
 
 [node name="Node" type="Panel"]
-custom_minimum_size = Vector2(100, 100)
-offset_right = 100.0
-offset_bottom = 100.0
+custom_minimum_size = Vector2(200, 100)
+offset_right = 200.0
+offset_bottom = 50.0
 mouse_default_cursor_shape = 6
+theme = ExtResource("1_arhwt")
 
-[node name="Holder" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(100, 100)
+[node name="Margins" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +17,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Holder"]
+[node name="Holder" type="VBoxContainer" parent="Margins"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Margins/Holder"]
 layout_mode = 2
 text = "Test"
 horizontal_alignment = 1
