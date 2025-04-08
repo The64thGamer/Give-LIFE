@@ -1,6 +1,15 @@
 extends Control
 
-var rows : Dictionary = {"Sine":99,"Random":99,"Float":99}
+var rows : Dictionary = {
+	"Sine":99,
+	"Random":99,
+	"Float":99,
+	"Chica":1,
+	"ChicaSpot":1,
+	"Keystrokes":1,
+	"Keystroke Ramp":1,
+	"Mix Colors":1,
+	}
 var searching : bool
 var lastMousePos : Vector2
 
@@ -39,7 +48,7 @@ func _set_rows():
 
 func _create_node(name:String):
 	var node = load("res://Scenes/Node Types/" + name + ".tscn").instantiate()
-	get_tree().root.add_child(node)
+	get_parent().add_child(node)
 	node = (node as Control).get_child(0) as GL_Node
 	node.position = lastMousePos
 	node._create_uuid()

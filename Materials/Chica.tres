@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://b51m30fupimsx"]
+
+[ext_resource type="Shader" uid="uid://des8a3glk3x31" path="res://Materials/Chica.gdshader" id="1_g0agl"]
+[ext_resource type="Texture2D" uid="uid://fldji252qpey" path="res://Textures/Chica_Main.png" id="2_72hyw"]
+[ext_resource type="Texture2D" uid="uid://cev65j6tjoli8" path="res://Textures/Chica_MaskMap.png" id="3_6qvbf"]
+[ext_resource type="Texture2D" uid="uid://bnrc4uavbcu8f" path="res://Textures/Chica_NormalMap.png" id="4_wheg1"]
+[ext_resource type="Texture2D" uid="uid://c6rqou6artl3b" path="res://Textures/Chica_PaintMap.png" id="5_vlian"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_g0agl")
+shader_parameter/diffuse_texture = ExtResource("2_72hyw")
+shader_parameter/normal_map = ExtResource("4_wheg1")
+shader_parameter/normal_scale = 1.0
+shader_parameter/mask_map = ExtResource("3_6qvbf")
+shader_parameter/paint_map = ExtResource("5_vlian")
+shader_parameter/paint_color_r = Color(0.901961, 0.745098, 0.239216, 1)
+shader_parameter/paint_color_g = Color(0.85098, 0.533333, 0.254902, 1)
+shader_parameter/paint_color_b = Color(0.647059, 0.12549, 0.0980392, 1)
+shader_parameter/paint_color_a = Color(0, 0, 0, 1)

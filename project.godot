@@ -13,10 +13,14 @@ config_version=5
 config/name="Give LIFE"
 config/description="The sequel to Faz-Anim"
 config/version="0.1a"
-run/main_scene="uid://c57u187iciexi"
+run/main_scene="uid://doe47bro2kqt6"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://c1usct57qv2oa"
 
 [filesystem]
 
 import/blender/enabled=false
+
+[rendering]
+
+anti_aliasing/quality/use_taa=true

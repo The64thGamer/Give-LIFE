@@ -1,4 +1,4 @@
-extends Panel
+extends PanelContainer
 class_name GL_Node
 var rows : Dictionary
 var uuid : int #REMEMBER TO SET THIS ON CREATION
@@ -31,7 +31,6 @@ func _update_visuals():
 	for key in rows:
 		var nodeRow = load("res://Scenes/Nodes/Node Row.tscn").instantiate()
 		holder.add_child(nodeRow)
-		nodeRow.name = str(key)
 		(nodeRow.get_node("Label") as Label).text = str(key)
 		var input = nodeRow.get_node("Input") as GL_Node_Point
 		var output = nodeRow.get_node("Output") as GL_Node_Point
@@ -46,13 +45,14 @@ func _update_visuals():
 					var slider = nodeRow.get_node("Pick Float") as HSlider
 					slider.max_value = rows[key]["pickFloatMax"]
 					slider.value = rows[key]["pickValue"]
-				TYPE_BOOL:
-					assignPick(nodeRow.get_node("Pick Bool"),str(key))
-					(nodeRow.get_node("Pick Float") as ColorPickerButton).color = rows[key]["pickValue"]
 				TYPE_COLOR:
 					assignPick(nodeRow.get_node("Pick Color"),str(key))
-					(nodeRow.get_node("Pick Float") as CheckButton).button_pressed = rows[key]["pickValue"]
-			
+					(nodeRow.get_node("Pick Color") as ColorPickerButton).color = rows[key]["pickValue"]
+				TYPE_BOOL:
+					assignPick(nodeRow.get_node("Pick Bool"),str(key))
+					(nodeRow.get_node("Pick Bool") as CheckButton).button_pressed = rows[key]["pickValue"]
+		else:
+			(nodeRow.get_node("Label") as Label).size_flags_horizontal = Control.SIZE_EXPAND_FILL
 				
 		_set_inout_type(nodeRow.get_node("Input") as Button,rows[key]["input"])
 		_set_inout_type(nodeRow.get_node("Output") as Button,rows[key]["output"])
@@ -63,12 +63,15 @@ func assignPick(pick:GL_Node_Picker,key:String):
 		pick.valueName = key
 
 func give_input_point_pos(name:String) -> Vector2:
-	var holder = get_node("Margins").get_node("Holder").get_node(name)
+	var holder = get_node("Margins").get_node("Holder")
 	if holder == null:
 		return global_position
 	else:
-		holder = holder.get_node("Input") as GL_Node_Point
-		return holder.global_position + Vector2(holder.size.x/2,holder.size.y/2)
+		for child in holder.get_children():
+			if child.name != "Title" && (child.get_node("Label") as Label).text == name:
+				holder = child.get_node("Input") as GL_Node_Point
+				return holder.global_position + Vector2(holder.size.x/2,holder.size.y/2)
+	return Vector2.ZERO
 
 func _set_inout_type(label:Button, value):
 	match typeof(value):
@@ -93,7 +96,10 @@ func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaxim
 
 func _recieve_input(inputName:String,value):
 	if rows.has(inputName):
-		rows[inputName]["input"] = value
+		if typeof(rows[inputName]["input"]) == TYPE_FLOAT && typeof(value) == TYPE_BOOL:
+			rows[inputName]["input"] = float(value)
+		else:
+			rows[inputName]["input"] = value
 	
 func _send_input(output_name: String):
 	if not rows.has(output_name):
@@ -120,8 +126,9 @@ func _create_connection(target:GL_Node,input_name:String,output_name:String):
 		return
 		
 	if typeof(rows[output_name].get("output", null)) != typeof(target.rows[input_name].get("input",null)):
-		print("Type mismatch: cannot connect " + output_name + " to " + target.name)
-		return
+		if !(typeof(rows[output_name].get("output", null)) == TYPE_BOOL && typeof(target.rows[input_name].get("input",null)) == TYPE_FLOAT):
+			print("Type mismatch: cannot connect " + output_name + " to " + target.name)
+			return
 	
 	var thenew = {
 		"target": target,

@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=3 uid="uid://doe47bro2kqt6"]
+
+[ext_resource type="PackedScene" uid="uid://cry2msqosqx0u" path="res://Scenes/Animatables/Chica.tscn" id="1_5nprb"]
+[ext_resource type="Script" uid="uid://8vyuhyx0xogt" path="res://Scripts/freecam.gd" id="2_stiks"]
+[ext_resource type="VoxelGIData" uid="uid://ckgscns47hws6" path="res://Scenes/Levels/Freddy's.VoxelGI_data.res" id="3_1u053"]
+[ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/GL_Spotlight.gd" id="3_2ymb8"]
+[ext_resource type="PackedScene" uid="uid://c57u187iciexi" path="res://Scenes/UI/Node Map.tscn" id="5_h0i1e"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_stiks"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1u053"]
+
+[sub_resource type="Environment" id="Environment_h0i1e"]
+background_mode = 1
+tonemap_mode = 4
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+ssil_intensity = 3.0
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+
+[node name="Freddy\'s" type="Node3D"]
+
+[node name="World Boundary" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0211427, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundary"]
+shape = SubResource("WorldBoundaryShape3D_stiks")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("PlaneMesh_1u053")
+
+[node name="Chica" parent="." instance=ExtResource("1_5nprb")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 4.76837e-07, 1.47296, -2.35951)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.42203, 4.45495, 0.192916)
+light_energy = 0.575
+light_size = 0.106
+shadow_enabled = true
+omni_range = 8.156
+omni_attenuation = 2.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.87906, 4.18335, 0.548465)
+light_size = 0.106
+shadow_enabled = true
+omni_range = 8.156
+omni_attenuation = 2.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.975392, 4.18335, -5.09868)
+light_size = 0.106
+shadow_enabled = true
+omni_range = 8.156
+omni_attenuation = 2.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_h0i1e")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01889, 2.26498, -0.257163)
+script = ExtResource("2_stiks")
+toggle_key = 4194305
+overlay_text = false
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.976123, 0.0551107, -0.210113, -0.00945105, 0.97714, 0.212388, 0.217015, -0.205331, 0.954329, -0.581223, 3.60596, 4.08111)
+light_color = Color(0.944285, 0.839984, 0.7003, 1)
+light_energy = 500.0
+light_size = 0.124
+shadow_enabled = true
+spot_range = 7.605
+spot_attenuation = 2.0
+spot_angle = 5.59
+spot_angle_attenuation = 0.329877
+
+[node name="Node" type="Node" parent="SpotLight3D" groups=["L_SPOT_CHICA"]]
+script = ExtResource("3_2ymb8")
+canChangeColor = true
+canChangeSize = true
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="."]
+
+[node name="VoxelGI" type="VoxelGI" parent="."]
+data = ExtResource("3_1u053")
+
+[node name="NodeMap" parent="." instance=ExtResource("5_h0i1e")]

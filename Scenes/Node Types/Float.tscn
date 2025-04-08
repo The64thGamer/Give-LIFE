@@ -3,14 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_cnobp"]
 [ext_resource type="Script" uid="uid://b325grg0122jn" path="res://Scripts/GL_Float.gd" id="2_cnobp"]
 
-[node name="Sine" type="Control"]
+[node name="Node" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." instance=ExtResource("1_cnobp")]
 layout_mode = 0
-offset_right = 200.0
 script = ExtResource("2_cnobp")
 
 [connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]

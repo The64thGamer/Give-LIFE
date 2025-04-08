@@ -15,10 +15,8 @@ script = ExtResource("1_fygh4")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
-size_flags_horizontal = 3
 mouse_filter = 1
 text = "Testtesttesttesttest"
-clip_text = true
 
 [node name="Pick Float" type="HSlider" parent="."]
 visible = false

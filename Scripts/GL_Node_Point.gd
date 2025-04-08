@@ -13,7 +13,8 @@ func _process(delta):
 	if dragging:
 		if previewLine == null:
 			previewLine = _create_line()
-		previewLine.points[1] = get_viewport().get_mouse_position() - previewLine.global_position
+		previewLine.points[0] = global_position + Vector2(size.x / 2, size.y / 2)
+		previewLine.points[1] = get_viewport().get_mouse_position()# - previewLine.global_position
 		
 	var connections = mainNode.rows[valueName].get("connections",[])
 	if connections != []:
@@ -30,7 +31,8 @@ func _process(delta):
 						child.default_color = Color.BLACK
 				TYPE_COLOR:
 					child.default_color = output
-			child.points[1] = (connections[iter]["target"] as GL_Node).give_input_point_pos(connections[iter]["input_name"]) - child.global_position
+			child.points[0] = global_position + Vector2(size.x / 2, size.y / 2)
+			child.points[1] = (connections[iter]["target"] as GL_Node).give_input_point_pos(connections[iter]["input_name"])# - child.global_position
 			iter += 1
 
 func _create_line() -> Line2D:
@@ -40,9 +42,10 @@ func _create_line() -> Line2D:
 	previewLine.default_color = Color.WHITE
 	previewLine.add_point(Vector2.ZERO)
 	previewLine.add_point(Vector2.ZERO)
-	previewLine.points[0] = Vector2(size.x / 2, size.y / 2)
 	previewLine.begin_cap_mode = Line2D.LINE_CAP_ROUND
 	previewLine.end_cap_mode = Line2D.LINE_CAP_ROUND
+	previewLine.antialiased = true
+	previewLine.top_level = true
 	add_child(previewLine)
 	return previewLine
 

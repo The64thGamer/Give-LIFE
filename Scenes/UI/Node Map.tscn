@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://c57u187iciexi"]
+[gd_scene load_steps=5 format=3 uid="uid://c57u187iciexi"]
 
+[ext_resource type="Script" uid="uid://i4p62x8fnqpn" path="res://Scripts/GL_Node_Map.gd" id="1_jyqbx"]
 [ext_resource type="PackedScene" uid="uid://mowdu1i1rldt" path="res://Scenes/UI/Search.tscn" id="1_xwfut"]
+
+[sub_resource type="Gradient" id="Gradient_xwfut"]
+colors = PackedColorArray(0.448074, 0.0582233, 0.099986, 1, 0.330802, 0.066494, 0.0423852, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jyqbx"]
+gradient = SubResource("Gradient_xwfut")
 
 [node name="NodeMap" type="Control"]
 layout_mode = 3
@@ -9,6 +16,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jyqbx")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_jyqbx")
 
 [node name="Search" parent="." instance=ExtResource("1_xwfut")]
 layout_mode = 1

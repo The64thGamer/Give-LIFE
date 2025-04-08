@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2wexxs2psg84"]
+
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_4ojwp"]
+[ext_resource type="Script" uid="uid://dum3u4w3aa3s0" path="res://Scripts/GL_Mix_Colors.gd" id="2_4ojwp"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Node" parent="." instance=ExtResource("1_4ojwp")]
+layout_mode = 0
+script = ExtResource("2_4ojwp")
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

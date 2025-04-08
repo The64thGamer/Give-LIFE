@@ -1,0 +1,57 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://m7s5j51nrkg1"
+path="res://.godot/imported/Chica.fbx-d7cc11b983dd0e55edccc1e316069a29.scn"
+
+[deps]
+
+source_file="res://Models/Animatronics/Chica/Chica.fbx"
+dest_files=["res://.godot/imported/Chica.fbx-d7cc11b983dd0e55edccc1e316069a29.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"Chica Main": {
+"use_external/enabled": true,
+"use_external/path": "uid://b51m30fupimsx"
+},
+"Material.017": {
+"use_external/enabled": true,
+"use_external/path": "uid://2a27fe7w8jef"
+},
+"hair yellow": {
+"use_external/enabled": true,
+"use_external/path": "uid://bimexjbcml72"
+},
+"hair yellow.001": {
+"use_external/enabled": true,
+"use_external/path": "uid://2a27fe7w8jef"
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
