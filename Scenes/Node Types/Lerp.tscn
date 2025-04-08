@@ -10,6 +10,7 @@ mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_pi2iu")]
 layout_mode = 0
+tooltip_text = "Smooths out a value as it changes. 'Speed' changes how fast it moves from the current value to the input into 'Value'"
 script = ExtResource("2_pi2iu")
 
 [connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]

@@ -10,6 +10,7 @@ mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_6fnvm")]
 layout_mode = 0
+tooltip_text = "Controls Chica's movements. All eyelid movements can be set to a particular position using values of 0.0 to 1.0."
 script = ExtResource("2_6fnvm")
 identification = "AA_CHICA"
 names = PackedStringArray("Armature_001|Eyebrow L Down", "Armature_001|Eyebrow L Up", "Armature_001|Eyebrow R Down", "Armature_001|Eyebrow R Up", "Armature_001|Eyelid L", "Armature_001|Eyelid R", "Armature_001|Eyes Down", "Armature_001|Eyes Left", "Armature_001|Eyes Right", "Armature_001|Eyes Up", "Armature_001|Head Down", "Armature_001|Head L", "Armature_001|Head R", "Armature_001|Head Tilt L", "Armature_001|Head Tilt R", "Armature_001|Head Up", "Armature_001|Jaw", "Armature_001|Underlid L", "Armature_001|Underlid R")

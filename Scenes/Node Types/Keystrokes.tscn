@@ -10,6 +10,7 @@ mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_ua37n")]
 layout_mode = 0
+tooltip_text = "Sets a bool for any of the number keys that are pressed."
 script = ExtResource("2_ua37n")
 
 [connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]

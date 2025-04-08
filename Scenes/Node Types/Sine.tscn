@@ -10,6 +10,7 @@ mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_m6pki")]
 layout_mode = 0
+tooltip_text = "Outputs a sin wave from 0.0 to 1.0. 'Length' changes how long it takes for the sin to loop."
 script = ExtResource("2_claki")
 
 [connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]

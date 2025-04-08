@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgxjl4lltri0j"]
+
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_ltih5"]
+[ext_resource type="Script" uid="uid://cwnen4mit8x6n" path="res://Scripts/GL_Record.gd" id="2_ltih5"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_ltih5")]
+layout_mode = 0
+tooltip_text = "When 'Recording' is set to ON, it records inputs and saves them with the time from 'Current Time'. Going back in time will play back those inputs along with any you send in. Rows can be added and named based on how you want them identified."
+script = ExtResource("2_ltih5")
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

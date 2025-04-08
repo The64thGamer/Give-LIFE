@@ -11,6 +11,7 @@ var rows : Dictionary = {
 	"Mix Colors":1,
 	"Lerp":1,
 	"Mouse Wheel":1,
+	"Record":1,
 	}
 var searching : bool
 var lastMousePos : Vector2
