@@ -23,4 +23,4 @@ import/blender/enabled=false
 
 [rendering]
 
-anti_aliasing/quality/use_taa=true
+anti_aliasing/quality/msaa_3d=2

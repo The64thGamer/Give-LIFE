@@ -38,9 +38,17 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "uid://b51m30fupimsx"
 },
+"Material.015": {
+"use_external/enabled": true,
+"use_external/path": "uid://c64nx5pjielba"
+},
+"Material.016": {
+"use_external/enabled": true,
+"use_external/path": "uid://cjmaxbq2g1fac"
+},
 "Material.017": {
 "use_external/enabled": true,
-"use_external/path": "uid://2a27fe7w8jef"
+"use_external/path": "uid://eh4k2esv6081"
 },
 "hair yellow": {
 "use_external/enabled": true,

@@ -26,11 +26,12 @@ func _create_uuid():
 func _update_visuals():
 	var holder = get_node("Margins").get_node("Holder")
 	for child in holder.get_children():
-		if child.name != "Title":
+		if child.name.contains("Node Row"):
 			child.queue_free()
 	for key in rows:
 		var nodeRow = load("res://Scenes/Nodes/Node Row.tscn").instantiate()
 		holder.add_child(nodeRow)
+		nodeRow.name = "Node Row"
 		(nodeRow.get_node("Label") as Label).text = str(key)
 		var input = nodeRow.get_node("Input") as GL_Node_Point
 		var output = nodeRow.get_node("Output") as GL_Node_Point
@@ -68,7 +69,7 @@ func give_input_point_pos(name:String) -> Vector2:
 		return global_position
 	else:
 		for child in holder.get_children():
-			if child.name != "Title" && (child.get_node("Label") as Label).text == name:
+			if child.name.contains("Node Row") && (child.get_node("Label") as Label).text == name:
 				holder = child.get_node("Input") as GL_Node_Point
 				return holder.global_position + Vector2(holder.size.x/2,holder.size.y/2)
 	return Vector2.ZERO
@@ -160,10 +161,9 @@ func destroy_connection(target:GL_Node,input_name:String):
 				rows[key]["connections"] = connections
 				var holder = get_node("Margins").get_node("Holder")
 				for child in holder.get_children():
-					if child.name == "Title":
-						continue
-					(child.get_node("Input") as GL_Node_Point).update_lines()
-					(child.get_node("Output") as GL_Node_Point).update_lines()
+					if child.name.contains("Node Row"):
+						(child.get_node("Input") as GL_Node_Point).update_lines()
+						(child.get_node("Output") as GL_Node_Point).update_lines()
 				return
 	
 func mouse_enter():
