@@ -12,8 +12,8 @@ mouse_filter = 1
 layout_mode = 0
 script = ExtResource("2_6fnvm")
 identification = "AA_CHICA"
-names = PackedStringArray("Armature_001|Jaw")
-types = PackedStringArray("float")
+names = PackedStringArray("Armature_001|Eyebrow L Down", "Armature_001|Eyebrow L Up", "Armature_001|Eyebrow R Down", "Armature_001|Eyebrow R Up", "Armature_001|Eyelid L", "Armature_001|Eyelid R", "Armature_001|Eyes Down", "Armature_001|Eyes Left", "Armature_001|Eyes Right", "Armature_001|Eyes Up", "Armature_001|Head Down", "Armature_001|Head L", "Armature_001|Head R", "Armature_001|Head Tilt L", "Armature_001|Head Tilt R", "Armature_001|Head Up", "Armature_001|Jaw", "Armature_001|Underlid L", "Armature_001|Underlid R")
+types = PackedStringArray("float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float")
 
 [connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
 [connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

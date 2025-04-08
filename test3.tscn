@@ -1,0 +1,196 @@
+[gd_scene load_steps=39 format=3 uid="uid://boc50vhrb3a2u"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_po782"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_lnpje"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_jq1x4"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_svvfb"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_8hojv"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_qj7nf"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_3du0l"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_833nb"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_605kl"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_bqkbb"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_0gudw"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_uamae"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_iacw3"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_vx16h"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_aw5a4"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_t7bsg"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_tfmfu"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_uesa7"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eknxq"]
+animation = &"Armature_001|Eyebrow L Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aeder"]
+animation = &"Armature_001|Eyebrow L Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g83ja"]
+animation = &"Armature_001|Eyebrow R Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fdf5l"]
+animation = &"Armature_001|Eyebrow R Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vomoc"]
+animation = &"Armature_001|Eyelid L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jsjy2"]
+animation = &"Armature_001|Eyelid R"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_odiqw"]
+animation = &"Armature_001|Eyes Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ll0tw"]
+animation = &"Armature_001|Eyes Left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t8fma"]
+animation = &"Armature_001|Eyes Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_w5qji"]
+animation = &"Armature_001|Eyes Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_18f0g"]
+animation = &"Armature_001|Head Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ufvow"]
+animation = &"Armature_001|Head L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_02yle"]
+animation = &"Armature_001|Head R"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bsav2"]
+animation = &"Armature_001|Head Tilt L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_58xho"]
+animation = &"Armature_001|Head Tilt R"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_13bbb"]
+animation = &"Armature_001|Head Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a2h4w"]
+animation = &"Armature_001|Jaw"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ee7ng"]
+animation = &"Armature_001|Underlid L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xrs43"]
+animation = &"Armature_001|Underlid R"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_r5cy4"]
+graph_offset = Vector2(-653.223, 16.3686)
+nodes/Add_1/node = SubResource("AnimationNodeAdd2_po782")
+nodes/Add_1/position = Vector2(200, 100)
+nodes/Add_10/node = SubResource("AnimationNodeAdd2_lnpje")
+nodes/Add_10/position = Vector2(2000, 100)
+nodes/Add_11/node = SubResource("AnimationNodeAdd2_jq1x4")
+nodes/Add_11/position = Vector2(2200, 100)
+nodes/Add_12/node = SubResource("AnimationNodeAdd2_svvfb")
+nodes/Add_12/position = Vector2(2400, 100)
+nodes/Add_13/node = SubResource("AnimationNodeAdd2_8hojv")
+nodes/Add_13/position = Vector2(2600, 100)
+nodes/Add_14/node = SubResource("AnimationNodeAdd2_qj7nf")
+nodes/Add_14/position = Vector2(2800, 100)
+nodes/Add_15/node = SubResource("AnimationNodeAdd2_3du0l")
+nodes/Add_15/position = Vector2(3000, 100)
+nodes/Add_16/node = SubResource("AnimationNodeAdd2_833nb")
+nodes/Add_16/position = Vector2(3200, 100)
+nodes/Add_17/node = SubResource("AnimationNodeAdd2_605kl")
+nodes/Add_17/position = Vector2(3400, 100)
+nodes/Add_18/node = SubResource("AnimationNodeAdd2_bqkbb")
+nodes/Add_18/position = Vector2(3600, 100)
+nodes/Add_2/node = SubResource("AnimationNodeAdd2_0gudw")
+nodes/Add_2/position = Vector2(400, 100)
+nodes/Add_3/node = SubResource("AnimationNodeAdd2_uamae")
+nodes/Add_3/position = Vector2(600, 100)
+nodes/Add_4/node = SubResource("AnimationNodeAdd2_iacw3")
+nodes/Add_4/position = Vector2(800, 100)
+nodes/Add_5/node = SubResource("AnimationNodeAdd2_vx16h")
+nodes/Add_5/position = Vector2(1000, 100)
+nodes/Add_7/node = SubResource("AnimationNodeAdd2_aw5a4")
+nodes/Add_7/position = Vector2(1400, 100)
+nodes/Add_8/node = SubResource("AnimationNodeAdd2_t7bsg")
+nodes/Add_8/position = Vector2(1600, 100)
+nodes/Add_9/node = SubResource("AnimationNodeAdd2_tfmfu")
+nodes/Add_9/position = Vector2(1800, 100)
+"nodes/Addshould just im_6/node" = SubResource("AnimationNodeAdd2_uesa7")
+"nodes/Addshould just im_6/position" = Vector2(1200, 100)
+"nodes/Anim_Armature_001|Eyebrow L Down/node" = SubResource("AnimationNodeAnimation_eknxq")
+"nodes/Anim_Armature_001|Eyebrow L Down/position" = Vector2(0, 0)
+"nodes/Anim_Armature_001|Eyebrow L Up/node" = SubResource("AnimationNodeAnimation_aeder")
+"nodes/Anim_Armature_001|Eyebrow L Up/position" = Vector2(200, 0)
+"nodes/Anim_Armature_001|Eyebrow R Down/node" = SubResource("AnimationNodeAnimation_g83ja")
+"nodes/Anim_Armature_001|Eyebrow R Down/position" = Vector2(400, 0)
+"nodes/Anim_Armature_001|Eyebrow R Up/node" = SubResource("AnimationNodeAnimation_fdf5l")
+"nodes/Anim_Armature_001|Eyebrow R Up/position" = Vector2(600, 0)
+"nodes/Anim_Armature_001|Eyelid L/node" = SubResource("AnimationNodeAnimation_vomoc")
+"nodes/Anim_Armature_001|Eyelid L/position" = Vector2(800, 0)
+"nodes/Anim_Armature_001|Eyelid R/node" = SubResource("AnimationNodeAnimation_jsjy2")
+"nodes/Anim_Armature_001|Eyelid R/position" = Vector2(1000, 0)
+"nodes/Anim_Armature_001|Eyes Down/node" = SubResource("AnimationNodeAnimation_odiqw")
+"nodes/Anim_Armature_001|Eyes Down/position" = Vector2(1200, 0)
+"nodes/Anim_Armature_001|Eyes Left/node" = SubResource("AnimationNodeAnimation_ll0tw")
+"nodes/Anim_Armature_001|Eyes Left/position" = Vector2(1400, 0)
+"nodes/Anim_Armature_001|Eyes Right/node" = SubResource("AnimationNodeAnimation_t8fma")
+"nodes/Anim_Armature_001|Eyes Right/position" = Vector2(1600, 0)
+"nodes/Anim_Armature_001|Eyes Up/node" = SubResource("AnimationNodeAnimation_w5qji")
+"nodes/Anim_Armature_001|Eyes Up/position" = Vector2(1800, 0)
+"nodes/Anim_Armature_001|Head Down/node" = SubResource("AnimationNodeAnimation_18f0g")
+"nodes/Anim_Armature_001|Head Down/position" = Vector2(2000, 0)
+"nodes/Anim_Armature_001|Head L/node" = SubResource("AnimationNodeAnimation_ufvow")
+"nodes/Anim_Armature_001|Head L/position" = Vector2(2200, 0)
+"nodes/Anim_Armature_001|Head R/node" = SubResource("AnimationNodeAnimation_02yle")
+"nodes/Anim_Armature_001|Head R/position" = Vector2(2400, 0)
+"nodes/Anim_Armature_001|Head Tilt L/node" = SubResource("AnimationNodeAnimation_bsav2")
+"nodes/Anim_Armature_001|Head Tilt L/position" = Vector2(2600, 0)
+"nodes/Anim_Armature_001|Head Tilt R/node" = SubResource("AnimationNodeAnimation_58xho")
+"nodes/Anim_Armature_001|Head Tilt R/position" = Vector2(2800, 0)
+"nodes/Anim_Armature_001|Head Up/node" = SubResource("AnimationNodeAnimation_13bbb")
+"nodes/Anim_Armature_001|Head Up/position" = Vector2(3000, 0)
+nodes/Anim_Armature_001|Jaw/node = SubResource("AnimationNodeAnimation_a2h4w")
+nodes/Anim_Armature_001|Jaw/position = Vector2(3200, 0)
+"nodes/Anim_Armature_001|Underlid L/node" = SubResource("AnimationNodeAnimation_ee7ng")
+"nodes/Anim_Armature_001|Underlid L/position" = Vector2(3400, 0)
+"nodes/Anim_Armature_001|Underlid R/node" = SubResource("AnimationNodeAnimation_xrs43")
+"nodes/Anim_Armature_001|Underlid R/position" = Vector2(3600, 0)
+nodes/output/position = Vector2(2820, 420)
+node_connections = [&"Add_1", 0, &"Anim_Armature_001|Eyebrow L Down", &"Add_1", 1, &"Anim_Armature_001|Eyebrow L Up", &"Add_10", 0, &"Add_9", &"Add_10", 1, &"Anim_Armature_001|Head Down", &"Add_11", 0, &"Add_10", &"Add_11", 1, &"Anim_Armature_001|Head L", &"Add_12", 0, &"Add_11", &"Add_12", 1, &"Anim_Armature_001|Head R", &"Add_13", 0, &"Add_12", &"Add_13", 1, &"Anim_Armature_001|Head Tilt L", &"Add_14", 0, &"Add_13", &"Add_14", 1, &"Anim_Armature_001|Head Tilt R", &"Add_15", 0, &"Add_14", &"Add_15", 1, &"Anim_Armature_001|Head Up", &"Add_16", 0, &"Add_15", &"Add_16", 1, &"Anim_Armature_001|Jaw", &"Add_17", 0, &"Add_16", &"Add_17", 1, &"Anim_Armature_001|Underlid L", &"Add_18", 0, &"Add_17", &"Add_18", 1, &"Anim_Armature_001|Underlid R", &"Add_2", 0, &"Add_1", &"Add_2", 1, &"Anim_Armature_001|Eyebrow R Down", &"Add_3", 0, &"Add_2", &"Add_3", 1, &"Anim_Armature_001|Eyebrow R Up", &"Add_4", 0, &"Add_3", &"Add_4", 1, &"Anim_Armature_001|Eyelid L", &"Add_5", 0, &"Add_4", &"Add_5", 1, &"Anim_Armature_001|Eyelid R", &"Add_7", 0, &"Addshould just im_6", &"Add_7", 1, &"Anim_Armature_001|Eyes Left", &"Add_8", 0, &"Add_7", &"Add_8", 1, &"Anim_Armature_001|Eyes Right", &"Add_9", 0, &"Add_8", &"Add_9", 1, &"Anim_Armature_001|Eyes Up", &"Addshould just im_6", 0, &"Add_5", &"Addshould just im_6", 1, &"Anim_Armature_001|Eyes Down", &"output", 0, &"Add_18"]
+
+[node name="_AnimationTree_3" type="AnimationTree"]
+root_node = NodePath("../Chica")
+tree_root = SubResource("AnimationNodeBlendTree_r5cy4")
+anim_player = NodePath("/root/Freddy\'s/Chica/Chica/AnimationPlayer")
+parameters/Add_1/add_amount = 0
+parameters/Add_10/add_amount = 0
+parameters/Add_11/add_amount = 0
+parameters/Add_12/add_amount = 0
+parameters/Add_13/add_amount = 0
+parameters/Add_14/add_amount = 0
+parameters/Add_15/add_amount = 0
+parameters/Add_16/add_amount = 0
+parameters/Add_17/add_amount = 0
+parameters/Add_18/add_amount = 1.0
+parameters/Add_2/add_amount = 0
+parameters/Add_3/add_amount = 0
+parameters/Add_4/add_amount = 0
+parameters/Add_5/add_amount = 0
+parameters/Add_7/add_amount = 0
+parameters/Add_8/add_amount = 0
+parameters/Add_9/add_amount = 0
+"parameters/Addshould just im_6/add_amount" = 0

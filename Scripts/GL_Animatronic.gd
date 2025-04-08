@@ -22,6 +22,7 @@ func _ready():
 
 	blend_tree = AnimationNodeBlendTree.new()
 	anim_tree.tree_root = blend_tree
+	anim_player.speed_scale = 0
 	
 	# Handle single animation case
 	if animations.size() == 1:
@@ -51,18 +52,17 @@ func _ready():
 		blend_tree.add_node(anim_name, new_anim_node, Vector2(i * 200, 0))
 
 		var add_node := AnimationNodeAdd2.new()
-		anim_tree.set("parameters/" + add_name + "/add_amount", 1.0)
 		blend_tree.add_node(add_name, add_node, Vector2(i * 200, 100))
-
 		blend_tree.connect_node(add_name, 0, prev_name)
 		blend_tree.connect_node(add_name, 1, anim_name)
-
 		prev_name = add_name
 
 	# Final output node connection
 	#var output := AnimationNodeOutput.new()
 	#blend_tree.add_node("Output", output, Vector2((animations.size() + 1) * 200, 100))
-	blend_tree.connect_node("Output", 0, prev_name)
+	blend_tree.connect_node("output", 0, prev_name)
+	for i in range(0,animations.size()):
+		anim_tree.set("parameters/Add_" + str(i) + "/add_amount", 1.0)
 
 
 func _sent_signals(anim_name: String, value: float):
