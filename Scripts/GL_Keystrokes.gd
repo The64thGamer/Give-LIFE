@@ -1,6 +1,7 @@
 extends GL_Node
 
 func _ready():
+	super._ready()
 	_set_title("Keystrokes")
 	_create_row("KEY #1",null,false,false,0.0,1)
 	_create_row("KEY #2",null,false,false,0.0,1)
@@ -12,7 +13,8 @@ func _ready():
 	_create_row("KEY #8",null,false,false,0.0,1)
 	_create_row("KEY #9",null,false,false,0.0,1)
 	_create_row("KEY #0",null,false,false,0.0,1)
-	pass 
+	_update_visuals()
+	
 func _process(delta):
 	super._process(delta)
 

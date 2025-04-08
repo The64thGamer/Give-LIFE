@@ -5,6 +5,10 @@ var uuid : int #REMEMBER TO SET THIS ON CREATION
 var dragging : bool
 var canDrag : bool
 var dragOffset : Vector2
+var loadNodeRow : Resource
+
+func _ready():
+	loadNodeRow = preload("res://Scenes/Nodes/Node Row.tscn")
 	
 func _process(delta):
 	if dragging:
@@ -29,7 +33,7 @@ func _update_visuals():
 		if child.name.contains("Node Row"):
 			child.queue_free()
 	for key in rows:
-		var nodeRow = load("res://Scenes/Nodes/Node Row.tscn").instantiate()
+		var nodeRow = loadNodeRow.instantiate()
 		holder.add_child(nodeRow)
 		nodeRow.name = "Node Row"
 		(nodeRow.get_node("Label") as Label).text = str(key)
@@ -93,7 +97,6 @@ func _set_title(name:String):
 
 func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaximum:float):
 	rows[name] = {"input": input, "output": output, "connections": [], "picker":picker,"pickValue":pickDefault,"backConnected":false,"pickFloatMax":pickFloatMaximum}
-	_update_visuals()
 
 func _recieve_input(inputName:String,value):
 	if rows.has(inputName):
@@ -170,3 +173,8 @@ func mouse_enter():
 	canDrag = true
 func mouse_exit():
 	canDrag = false
+	
+func apply_pick_values():
+	for key in rows:
+		if rows[key]["picker"] == true && rows[key]["backConnected"] == false:
+			rows[key]["input"] = rows[key]["pickValue"]

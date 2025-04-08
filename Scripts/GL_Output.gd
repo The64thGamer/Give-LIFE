@@ -5,6 +5,7 @@ extends GL_Node
 @export var types : PackedStringArray
 
 func _ready():
+	super._ready()
 	_set_title(identification)
 	for i in names.size():
 		match(types[i].to_lower()):
@@ -14,14 +15,11 @@ func _ready():
 				_create_row(str(names[i]),Color.WHITE,null,true,Color.WHITE,0)
 			"bool":
 				_create_row(str(names[i]),false,null,true,false,0)
-	pass 
+	_update_visuals()
 
 func _process(delta):
 	super._process(delta)
-	
-	for key in rows:
-		if rows[key]["picker"] == true && rows[key]["backConnected"] == false:
-			rows[key]["input"] = rows[key]["pickValue"]
+	apply_pick_values()
 	
 	for node in get_tree().get_nodes_in_group(identification):
 		if node is GL_Animatable:

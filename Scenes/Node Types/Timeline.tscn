@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh0jvghfbjita"]
+
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_1cicv"]
+[ext_resource type="Script" uid="uid://bmayx1doxjhg1" path="res://Scripts/GL_Timeline.gd" id="2_1cicv"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_1cicv")]
+layout_mode = 0
+tooltip_text = "Generates a time that always counts up. 'Play' toggle determines if it counts or not. 'Rewind' determines if playback is in reverse. 'Restart' sets time back to 0."
+script = ExtResource("2_1cicv")
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

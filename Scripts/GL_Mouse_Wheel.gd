@@ -1,16 +1,15 @@
 extends GL_Node
 
 func _ready():
+	super._ready()
 	_set_title("Mouse Wheel")
 	_create_row("Output", null, 0.0, false, 0.0, 0)
 	_create_row("Step Size", 0.0, null, true, 0.1, 1.0)
+	_update_visuals()
 
 func _process(delta):
 	super._process(delta)
-	
-	for key in rows:
-		if rows[key]["picker"] == true && rows[key]["backConnected"] == false:
-			rows[key]["input"] = rows[key]["pickValue"]
+	apply_pick_values()
 	
 	_send_input("Output")
 

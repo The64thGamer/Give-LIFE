@@ -1,17 +1,18 @@
 extends Control
 
 var rows : Dictionary = {
-	"Sine":99,
-	"Random":99,
-	"Float":99,
 	"Chica":1,
 	"ChicaSpot":1,
+	"Float":1,
 	"Keystrokes":1,
 	"Keystroke Ramp":1,
-	"Mix Colors":1,
 	"Lerp":1,
+	"Mix Colors":1,
 	"Mouse Wheel":1,
+	"Random":1,
 	"Record":1,
+	"Sine":1,
+	"Timeline":1,
 	}
 var searching : bool
 var lastMousePos : Vector2

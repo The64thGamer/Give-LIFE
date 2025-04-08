@@ -1,9 +1,11 @@
 extends GL_Node
 
 func _ready():
+	super._ready()
 	_set_title("Record")
 	_create_row("Recording",false,null,true,false,0)
 	_create_row("Current Time",0.0,null,false,0,0)
+	_update_visuals()
 	pass 
 
 func _process(delta):
