@@ -10,10 +10,9 @@ mouse_filter = 1
 
 [node name="Node" parent="." instance=ExtResource("1_6fnvm")]
 layout_mode = 0
-offset_bottom = 100.0
 script = ExtResource("2_6fnvm")
 identification = "AA_CHICA"
-names = PackedStringArray("Jaw")
+names = PackedStringArray("Armature_001|Jaw")
 types = PackedStringArray("float")
 
 [connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
