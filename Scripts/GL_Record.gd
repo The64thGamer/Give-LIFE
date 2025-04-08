@@ -3,6 +3,7 @@ var timer:float
 const sampleRate = 0.1
 var recording:Dictionary
 var oldTime:float = 0.000030042452 #sorta random number
+var time:float = 0
 
 func _ready():
 	super._ready()
@@ -20,29 +21,42 @@ func _process(delta):
 	apply_pick_values()
 	for key in rows:
 		_send_input(key)
-	
+	time = float(rows["Current Time"]["output"])
 	if recording:
 		if timer <= 0:
 			timer = sampleRate
 			_traverse()
 			_record()
 		timer -= delta
-	oldTime = float(rows["Current Time"]["output"])
+	oldTime = time
 
 func _traverse():
-	if float(rows["Current Time"]["output"]) == oldTime:
+	if time == oldTime:
 		return
 	for key in recording:
-		if recording[key]["start"] == null || recording[key]["end"] == null:
+		if recording[key]["start"] == -1 || recording[key]["end"] == -1:
 			continue
-		if recording[key]["current"] == null:
+		if recording[key]["current"] == -1:
 			recording[key]["current"] = recording[key]["start"]
 		var current = recording[key]["list"][recording[key]["current"]]
+		if time < oldTime: #rewind
+			
+		else: #forward
+			current = recursive_traverse_forward(current)
+			recording[key]["current"] = current["id"]
+			
+func recursive_traverse_forward(current:Dictionary) -> Dictionary:
+	if current["time"] <= time:
+		if current["forward"] != -1 && recording[key]["list"][current["forward"]]["time"] <= time:
+			return recursive_traverse_forward(current["forward"])
+	return current	
+	
 func _record():
+	#{"id":12345,back":-1,"forward":-1,"time":1.01,"value":null}
 	pass
 
 func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaximum:float):
 	super._create_row(name,input,output,picker,pickDefault,pickFloatMaximum)
 	for key in rows:
 		if !recording.has(key):
-			recording[key] = {"start":null,"end":null,"current":null,"list":{}}
+			recording[key] = {"start":-1,"end":-1,"current":-1,"list":{}}
