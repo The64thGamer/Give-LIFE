@@ -19,8 +19,6 @@ func _process(delta):
 	for key in rows:
 		rows[key]["output"] = rows[key]["input"]
 	apply_pick_values()
-	for key in rows:
-		_send_input(key)
 	time = float(rows["Current Time"]["output"])
 	if recording:
 		if timer <= 0:
@@ -29,6 +27,8 @@ func _process(delta):
 			_record()
 		timer -= delta
 	oldTime = time
+	for key in rows:
+		_send_input(key)
 
 func _traverse():
 	if time == oldTime:
@@ -40,15 +40,20 @@ func _traverse():
 			recording[key]["current"] = recording[key]["start"]
 		var current = recording[key]["list"][recording[key]["current"]]
 		if time < oldTime: #rewind
-			
+			continue #fix pls
 		else: #forward
-			current = recursive_traverse_forward(current)
+			current = recursive_traverse_forward(key,current)
 			recording[key]["current"] = current["id"]
+			if current["time"] <= time:
+				rows[key]["output"] = current["value"]
 			
-func recursive_traverse_forward(current:Dictionary) -> Dictionary:
+func recursive_traverse_forward(key:String,current:Dictionary) -> Dictionary:
+	if current["time"] > time:
+		if current["back"] != -1:
+			return recursive_traverse_forward(key,recording[key]["list"][current["back"]])
 	if current["time"] <= time:
 		if current["forward"] != -1 && recording[key]["list"][current["forward"]]["time"] <= time:
-			return recursive_traverse_forward(current["forward"])
+			return recursive_traverse_forward(key,recording[key]["list"][current["forward"]])
 	return current	
 	
 func _record():
