@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b3tysebs8i7po"]
+[gd_scene load_steps=42 format=3 uid="uid://bb004cdud1qnj"]
 
 [sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_x54fa"]
 
@@ -35,9 +35,6 @@
 [sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_hx4q6"]
 
 [sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_ujn16"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aipfx"]
-animation = &"Armature_001|Eyebrow L Down"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0ipva"]
 animation = &"Armature_001|Eyebrow L Up"
@@ -95,8 +92,15 @@ animation = &"Armature_001|Underlid R"
 
 [sub_resource type="AnimationNodeOutput" id="AnimationNodeOutput_1kfqo"]
 
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_x54fa"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_d61hk"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aipfx"]
+animation = &"Armature_001|Eyebrow L Down"
+
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_mob0c"]
-graph_offset = Vector2(-382.646, 32.9876)
+graph_offset = Vector2(-574.867, -45.2357)
 nodes/Add_1/node = SubResource("AnimationNodeAdd2_x54fa")
 nodes/Add_1/position = Vector2(400, -40)
 nodes/Add_10/node = SubResource("AnimationNodeAdd2_d61hk")
@@ -133,8 +137,6 @@ nodes/Add_8/node = SubResource("AnimationNodeAdd2_hx4q6")
 nodes/Add_8/position = Vector2(2000, -280)
 nodes/Add_9/node = SubResource("AnimationNodeAdd2_ujn16")
 nodes/Add_9/position = Vector2(2220, -300)
-"nodes/Anim_Armature_001|Eyebrow L Down/node" = SubResource("AnimationNodeAnimation_aipfx")
-"nodes/Anim_Armature_001|Eyebrow L Down/position" = Vector2(0, 0)
 "nodes/Anim_Armature_001|Eyebrow L Up/node" = SubResource("AnimationNodeAnimation_0ipva")
 "nodes/Anim_Armature_001|Eyebrow L Up/position" = Vector2(0, 260)
 "nodes/Anim_Armature_001|Eyebrow R Down/node" = SubResource("AnimationNodeAnimation_1465b")
@@ -173,8 +175,14 @@ nodes/Anim_Armature_001|Jaw/position = Vector2(0, 4120)
 "nodes/Anim_Armature_001|Underlid R/position" = Vector2(0, 4640)
 nodes/Output/node = SubResource("AnimationNodeOutput_1kfqo")
 nodes/Output/position = Vector2(160, 4900)
+nodes/TimeSationNodeBlendTree_mob0ceekationNodeBlendTree_mob0c/node = SubResource("AnimationNodeTimeSeek_x54fa")
+nodes/TimeSationNodeBlendTree_mob0ceekationNodeBlendTree_mob0c/position = Vector2(280, -60)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_d61hk")
+nodes/TimeScale/position = Vector2(-200, -120)
+nodes/a/node = SubResource("AnimationNodeAnimation_aipfx")
+nodes/a/position = Vector2(-580, -20)
 nodes/output/position = Vector2(4520, -600)
-node_connections = [&"Add_1", 0, &"Anim_Armature_001|Eyebrow L Down", &"Add_1", 1, &"Anim_Armature_001|Eyebrow L Up", &"Add_10", 0, &"Add_9", &"Add_10", 1, &"Anim_Armature_001|Head Down", &"Add_11", 0, &"Add_10", &"Add_11", 1, &"Anim_Armature_001|Head L", &"Add_12", 0, &"Add_11", &"Add_12", 1, &"Anim_Armature_001|Head R", &"Add_13", 0, &"Add_12", &"Add_13", 1, &"Anim_Armature_001|Head Tilt L", &"Add_14", 0, &"Add_13", &"Add_14", 1, &"Anim_Armature_001|Head Tilt R", &"Add_15", 0, &"Add_14", &"Add_15", 1, &"Anim_Armature_001|Head Up", &"Add_16", 0, &"Add_15", &"Add_16", 1, &"Anim_Armature_001|Jaw", &"Add_17", 0, &"Add_16", &"Add_17", 1, &"Anim_Armature_001|Underlid L", &"Add_18", 0, &"Add_17", &"Add_18", 1, &"Anim_Armature_001|Underlid R", &"Add_2", 0, &"Add_1", &"Add_2", 1, &"Anim_Armature_001|Eyebrow R Down", &"Add_3", 0, &"Add_2", &"Add_3", 1, &"Anim_Armature_001|Eyebrow R Up", &"Add_4", 0, &"Add_3", &"Add_4", 1, &"Anim_Armature_001|Eyelid L", &"Add_5", 0, &"Add_4", &"Add_5", 1, &"Anim_Armature_001|Eyelid R", &"Add_6", 0, &"Add_5", &"Add_6", 1, &"Anim_Armature_001|Eyes Down", &"Add_7", 0, &"Add_6", &"Add_7", 1, &"Anim_Armature_001|Eyes Left", &"Add_8", 0, &"Add_7", &"Add_8", 1, &"Anim_Armature_001|Eyes Right", &"Add_9", 0, &"Add_8", &"Add_9", 1, &"Anim_Armature_001|Eyes Up", &"output", 0, &"Add_18"]
+node_connections = [&"Add_1", 1, &"Anim_Armature_001|Eyebrow L Up", &"Add_10", 0, &"Add_9", &"Add_10", 1, &"Anim_Armature_001|Head Down", &"Add_11", 0, &"Add_10", &"Add_11", 1, &"Anim_Armature_001|Head L", &"Add_12", 0, &"Add_11", &"Add_12", 1, &"Anim_Armature_001|Head R", &"Add_13", 0, &"Add_12", &"Add_13", 1, &"Anim_Armature_001|Head Tilt L", &"Add_14", 0, &"Add_13", &"Add_14", 1, &"Anim_Armature_001|Head Tilt R", &"Add_15", 0, &"Add_14", &"Add_15", 1, &"Anim_Armature_001|Head Up", &"Add_16", 0, &"Add_15", &"Add_16", 1, &"Anim_Armature_001|Jaw", &"Add_17", 0, &"Add_16", &"Add_17", 1, &"Anim_Armature_001|Underlid L", &"Add_18", 0, &"Add_17", &"Add_18", 1, &"Anim_Armature_001|Underlid R", &"Add_2", 0, &"Add_1", &"Add_2", 1, &"Anim_Armature_001|Eyebrow R Down", &"Add_3", 0, &"Add_2", &"Add_3", 1, &"Anim_Armature_001|Eyebrow R Up", &"Add_4", 0, &"Add_3", &"Add_4", 1, &"Anim_Armature_001|Eyelid L", &"Add_5", 0, &"Add_4", &"Add_5", 1, &"Anim_Armature_001|Eyelid R", &"Add_6", 0, &"Add_5", &"Add_6", 1, &"Anim_Armature_001|Eyes Down", &"Add_7", 0, &"Add_6", &"Add_7", 1, &"Anim_Armature_001|Eyes Left", &"Add_8", 0, &"Add_7", &"Add_8", 1, &"Anim_Armature_001|Eyes Right", &"Add_9", 0, &"Add_8", &"Add_9", 1, &"Anim_Armature_001|Eyes Up", &"TimeSationNodeBlendTree_mob0ceekationNodeBlendTree_mob0c", 0, &"TimeScale", &"TimeScale", 0, &"a", &"output", 0, &"Add_18"]
 
 [node name="_AnimationTree_3" type="AnimationTree"]
 root_node = NodePath(".")
@@ -198,5 +206,7 @@ parameters/Add_6/add_amount = 1.0
 parameters/Add_7/add_amount = 1.0
 parameters/Add_8/add_amount = 1.0
 parameters/Add_9/add_amount = 1.0
+parameters/TimeSationNodeBlendTree_mob0ceekationNodeBlendTree_mob0c/seek_request = 98.02
+parameters/TimeScale/scale = -47.49
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

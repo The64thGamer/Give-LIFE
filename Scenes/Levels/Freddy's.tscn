@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://doe47bro2kqt6"]
+[gd_scene load_steps=10 format=3 uid="uid://doe47bro2kqt6"]
 
 [ext_resource type="PackedScene" uid="uid://cry2msqosqx0u" path="res://Scenes/Animatables/Chica.tscn" id="1_5nprb"]
 [ext_resource type="Script" uid="uid://8vyuhyx0xogt" path="res://Scripts/freecam.gd" id="2_stiks"]
 [ext_resource type="VoxelGIData" uid="uid://ckgscns47hws6" path="res://Scenes/Levels/Freddy's.VoxelGI_data.res" id="3_1u053"]
 [ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/GL_Spotlight.gd" id="3_2ymb8"]
+[ext_resource type="Theme" uid="uid://b3wjoiiv6sq22" path="res://UI/Themes/Default.tres" id="3_ajshc"]
 [ext_resource type="PackedScene" uid="uid://c57u187iciexi" path="res://Scenes/UI/Node Map.tscn" id="5_h0i1e"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_stiks"]
@@ -66,6 +67,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01889, 2.26498, -0.257163)
 script = ExtResource("2_stiks")
 toggle_key = 4194305
 overlay_text = false
+
+[node name="Control" type="Control" parent="Camera3D"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Camera3D/Control"]
+z_index = 1000
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_ajshc")
+theme_override_font_sizes/font_size = 9
+text = "Give LIFE: TEST_A_BEGINNINGS
+(Press Esc for Nodes, Right Click to search node, Tab toggles background)"
+horizontal_alignment = 2
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.976123, 0.0551107, -0.210113, -0.00945105, 0.97714, 0.212388, 0.217015, -0.205331, 0.954329, -0.581223, 3.60596, 4.08111)

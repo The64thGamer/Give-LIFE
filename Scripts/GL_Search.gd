@@ -9,6 +9,8 @@ var rows : Dictionary = {
 	"Keystrokes":1,
 	"Keystroke Ramp":1,
 	"Mix Colors":1,
+	"Lerp":1,
+	"Mouse Wheel":1,
 	}
 var searching : bool
 var lastMousePos : Vector2

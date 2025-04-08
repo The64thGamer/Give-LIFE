@@ -142,10 +142,29 @@ func _create_connection(target:GL_Node,input_name:String,output_name:String):
 			print("Connection already exists: " + output_name + " to " + target.name)
 			return
 	
+	for node in get_tree().get_nodes_in_group("GL Node"):
+		if node is GL_Node:
+			node.destroy_connection(target,input_name)
+	
 	connections.append(thenew)
 	rows[output_name]["connections"] = connections
 	
 	target._confirm_backConnection(input_name)
+	
+func destroy_connection(target:GL_Node,input_name:String):
+	for key in rows:
+		var connections = rows[key].get("connections",[])
+		for i in connections.size():
+			if connections[i].target == target and connections[i].input_name == input_name:
+				connections.remove_at(i)
+				rows[key]["connections"] = connections
+				var holder = get_node("Margins").get_node("Holder")
+				for child in holder.get_children():
+					if child.name == "Title":
+						continue
+					(child.get_node("Input") as GL_Node_Point).update_lines()
+					(child.get_node("Output") as GL_Node_Point).update_lines()
+				return
 	
 func mouse_enter():
 	canDrag = true

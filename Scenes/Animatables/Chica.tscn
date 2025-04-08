@@ -5,5 +5,140 @@
 
 [node name="Chica" type="Node3D" groups=["AA_CHICA"]]
 script = ExtResource("1_vcqxk")
+animParameters = {
+"Armature_001|Eyebrow L Down": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Eyebrow L Up": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Eyebrow R Down": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Eyebrow R Up": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Eyelid L": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "move_to",
+"value": 0.0
+},
+"Armature_001|Eyelid R": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "move_to",
+"value": 0.0
+},
+"Armature_001|Eyes Down": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Eyes Left": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Eyes Right": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Eyes Up": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Head Down": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Head L": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Head R": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Head Tilt L": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Head Tilt R": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Head Up": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Jaw": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "standard",
+"value": 0.0
+},
+"Armature_001|Underlid L": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "move_to",
+"value": 0.0
+},
+"Armature_001|Underlid R": {
+"in_speed": 5.0,
+"out_speed": 5.0,
+"signal_value": 0,
+"type": "move_to",
+"value": 0.0
+}
+}
 
 [node name="Chica" parent="." instance=ExtResource("1_4j8or")]

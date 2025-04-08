@@ -1,0 +1,376 @@
+[gd_scene load_steps=75 format=3 uid="uid://dwwl76ovr08cn"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_cn2km"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_x8bp0"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_te08d"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_m6rs4"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_h5gjp"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_nx15v"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_8a8nn"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_vyvv0"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_l62w7"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_6pojw"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_p7m28"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_b4s1y"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_wtllb"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_rccxp"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_f5fuw"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_10oc2"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_3duk8"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_dxpms"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mnxbd"]
+animation = &"Armature_001|Eyebrow L Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kktee"]
+animation = &"Armature_001|Eyebrow L Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sxbu5"]
+animation = &"Armature_001|Eyebrow R Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jijo2"]
+animation = &"Armature_001|Eyebrow R Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_clpi8"]
+animation = &"Armature_001|Eyelid L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ewowv"]
+animation = &"Armature_001|Eyelid R"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y6fj7"]
+animation = &"Armature_001|Eyes Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rn5yg"]
+animation = &"Armature_001|Eyes Left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6bq74"]
+animation = &"Armature_001|Eyes Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ktacc"]
+animation = &"Armature_001|Eyes Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6nmjk"]
+animation = &"Armature_001|Head Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_phwt5"]
+animation = &"Armature_001|Head L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wxhct"]
+animation = &"Armature_001|Head R"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cih8x"]
+animation = &"Armature_001|Head Tilt L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6geux"]
+animation = &"Armature_001|Head Tilt R"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2dbgd"]
+animation = &"Armature_001|Head Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r4i6k"]
+animation = &"Armature_001|Jaw"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8014d"]
+animation = &"Armature_001|Underlid L"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yi0pf"]
+animation = &"Armature_001|Underlid R"
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_vg2ge"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_nwvxa"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_46c20"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_o3ji5"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_bnxdd"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_4t5x4"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_4w7im"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_8r4ga"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_7ip44"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_jk2s7"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_ywf75"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_8odpf"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_fdavu"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_8kdjr"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_yfuwc"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_slo5n"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_vantn"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_y80px"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_yl10v"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_78t4h"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_iw5bp"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_v3epd"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_gwde8"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ut4um"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_t16cc"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_5fy0b"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_85hp2"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_oohxp"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_hu0d2"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_alpwc"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_futfp"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ufukg"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ia1a7"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_veuxd"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_n5pxs"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_hvv16"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_v6irv"]
+graph_offset = Vector2(-183.88, 4143.02)
+nodes/Add_1/node = SubResource("AnimationNodeAdd2_cn2km")
+nodes/Add_1/position = Vector2(220, 6280)
+nodes/Add_10/node = SubResource("AnimationNodeAdd2_x8bp0")
+nodes/Add_10/position = Vector2(0, 0)
+nodes/Add_11/node = SubResource("AnimationNodeAdd2_te08d")
+nodes/Add_11/position = Vector2(0, 340)
+nodes/Add_12/node = SubResource("AnimationNodeAdd2_m6rs4")
+nodes/Add_12/position = Vector2(0, 680)
+nodes/Add_13/node = SubResource("AnimationNodeAdd2_h5gjp")
+nodes/Add_13/position = Vector2(0, 1020)
+nodes/Add_14/node = SubResource("AnimationNodeAdd2_nx15v")
+nodes/Add_14/position = Vector2(0, 1360)
+nodes/Add_15/node = SubResource("AnimationNodeAdd2_8a8nn")
+nodes/Add_15/position = Vector2(0, 1700)
+nodes/Add_16/node = SubResource("AnimationNodeAdd2_vyvv0")
+nodes/Add_16/position = Vector2(0, 2040)
+nodes/Add_17/node = SubResource("AnimationNodeAdd2_l62w7")
+nodes/Add_17/position = Vector2(0, 2380)
+nodes/Add_18/node = SubResource("AnimationNodeAdd2_6pojw")
+nodes/Add_18/position = Vector2(0, 2720)
+nodes/Add_2/node = SubResource("AnimationNodeAdd2_p7m28")
+nodes/Add_2/position = Vector2(0, 3060)
+nodes/Add_3/node = SubResource("AnimationNodeAdd2_b4s1y")
+nodes/Add_3/position = Vector2(0, 3420)
+nodes/Add_4/node = SubResource("AnimationNodeAdd2_wtllb")
+nodes/Add_4/position = Vector2(0, 3760)
+nodes/Add_5/node = SubResource("AnimationNodeAdd2_rccxp")
+nodes/Add_5/position = Vector2(0, 4100)
+nodes/Add_6/node = SubResource("AnimationNodeAdd2_f5fuw")
+nodes/Add_6/position = Vector2(0, 4440)
+nodes/Add_7/node = SubResource("AnimationNodeAdd2_10oc2")
+nodes/Add_7/position = Vector2(0, 4780)
+nodes/Add_8/node = SubResource("AnimationNodeAdd2_3duk8")
+nodes/Add_8/position = Vector2(0, 5120)
+nodes/Add_9/node = SubResource("AnimationNodeAdd2_dxpms")
+nodes/Add_9/position = Vector2(0, 5460)
+"nodes/Anim_Armature_001|Eyebrow L Down/node" = SubResource("AnimationNodeAnimation_mnxbd")
+"nodes/Anim_Armature_001|Eyebrow L Down/position" = Vector2(-160, 5800)
+"nodes/Anim_Armature_001|Eyebrow L Up/node" = SubResource("AnimationNodeAnimation_kktee")
+"nodes/Anim_Armature_001|Eyebrow L Up/position" = Vector2(-160, 6060)
+"nodes/Anim_Armature_001|Eyebrow R Down/node" = SubResource("AnimationNodeAnimation_sxbu5")
+"nodes/Anim_Armature_001|Eyebrow R Down/position" = Vector2(-160, 6320)
+"nodes/Anim_Armature_001|Eyebrow R Up/node" = SubResource("AnimationNodeAnimation_jijo2")
+"nodes/Anim_Armature_001|Eyebrow R Up/position" = Vector2(-160, 6580)
+"nodes/Anim_Armature_001|Eyelid L/node" = SubResource("AnimationNodeAnimation_clpi8")
+"nodes/Anim_Armature_001|Eyelid L/position" = Vector2(-160, 6820)
+"nodes/Anim_Armature_001|Eyelid R/node" = SubResource("AnimationNodeAnimation_ewowv")
+"nodes/Anim_Armature_001|Eyelid R/position" = Vector2(-160, 7880)
+"nodes/Anim_Armature_001|Eyes Down/node" = SubResource("AnimationNodeAnimation_y6fj7")
+"nodes/Anim_Armature_001|Eyes Down/position" = Vector2(-160, 8140)
+"nodes/Anim_Armature_001|Eyes Left/node" = SubResource("AnimationNodeAnimation_rn5yg")
+"nodes/Anim_Armature_001|Eyes Left/position" = Vector2(-160, 8400)
+"nodes/Anim_Armature_001|Eyes Right/node" = SubResource("AnimationNodeAnimation_6bq74")
+"nodes/Anim_Armature_001|Eyes Right/position" = Vector2(-160, 8660)
+"nodes/Anim_Armature_001|Eyes Up/node" = SubResource("AnimationNodeAnimation_ktacc")
+"nodes/Anim_Armature_001|Eyes Up/position" = Vector2(-160, 8920)
+"nodes/Anim_Armature_001|Head Down/node" = SubResource("AnimationNodeAnimation_6nmjk")
+"nodes/Anim_Armature_001|Head Down/position" = Vector2(-160, 9180)
+"nodes/Anim_Armature_001|Head L/node" = SubResource("AnimationNodeAnimation_phwt5")
+"nodes/Anim_Armature_001|Head L/position" = Vector2(-160, 9440)
+"nodes/Anim_Armature_001|Head R/node" = SubResource("AnimationNodeAnimation_wxhct")
+"nodes/Anim_Armature_001|Head R/position" = Vector2(-160, 9700)
+"nodes/Anim_Armature_001|Head Tilt L/node" = SubResource("AnimationNodeAnimation_cih8x")
+"nodes/Anim_Armature_001|Head Tilt L/position" = Vector2(-160, 9980)
+"nodes/Anim_Armature_001|Head Tilt R/node" = SubResource("AnimationNodeAnimation_6geux")
+"nodes/Anim_Armature_001|Head Tilt R/position" = Vector2(-160, 10240)
+"nodes/Anim_Armature_001|Head Up/node" = SubResource("AnimationNodeAnimation_2dbgd")
+"nodes/Anim_Armature_001|Head Up/position" = Vector2(-160, 10500)
+nodes/Anim_Armature_001|Jaw/node = SubResource("AnimationNodeAnimation_r4i6k")
+nodes/Anim_Armature_001|Jaw/position = Vector2(-160, 10760)
+"nodes/Anim_Armature_001|Underlid L/node" = SubResource("AnimationNodeAnimation_8014d")
+"nodes/Anim_Armature_001|Underlid L/position" = Vector2(-160, 11020)
+"nodes/Anim_Armature_001|Underlid R/node" = SubResource("AnimationNodeAnimation_yi0pf")
+"nodes/Anim_Armature_001|Underlid R/position" = Vector2(-160, 12360)
+nodes/Seek_1/node = SubResource("AnimationNodeTimeSeek_vg2ge")
+nodes/Seek_1/position = Vector2(460, 7020)
+nodes/Seek_10/node = SubResource("AnimationNodeTimeSeek_nwvxa")
+nodes/Seek_10/position = Vector2(460, 14420)
+nodes/Seek_11/node = SubResource("AnimationNodeTimeSeek_46c20")
+nodes/Seek_11/position = Vector2(460, 14140)
+nodes/Seek_12/node = SubResource("AnimationNodeTimeSeek_o3ji5")
+nodes/Seek_12/position = Vector2(460, 13880)
+nodes/Seek_13/node = SubResource("AnimationNodeTimeSeek_bnxdd")
+nodes/Seek_13/position = Vector2(460, 13620)
+nodes/Seek_14/node = SubResource("AnimationNodeTimeSeek_4t5x4")
+nodes/Seek_14/position = Vector2(460, 13360)
+nodes/Seek_15/node = SubResource("AnimationNodeTimeSeek_4w7im")
+nodes/Seek_15/position = Vector2(460, 13080)
+nodes/Seek_16/node = SubResource("AnimationNodeTimeSeek_8r4ga")
+nodes/Seek_16/position = Vector2(460, 12820)
+nodes/Seek_17/node = SubResource("AnimationNodeTimeSeek_7ip44")
+nodes/Seek_17/position = Vector2(460, 12560)
+nodes/Seek_18/node = SubResource("AnimationNodeTimeSeek_jk2s7")
+nodes/Seek_18/position = Vector2(460, 12300)
+nodes/Seek_2/node = SubResource("AnimationNodeTimeSeek_ywf75")
+nodes/Seek_2/position = Vector2(460, 7560)
+nodes/Seek_3/node = SubResource("AnimationNodeTimeSeek_8odpf")
+nodes/Seek_3/position = Vector2(460, 7300)
+nodes/Seek_4/node = SubResource("AnimationNodeTimeSeek_fdavu")
+nodes/Seek_4/position = Vector2(460, 6760)
+nodes/Seek_5/node = SubResource("AnimationNodeTimeSeek_8kdjr")
+nodes/Seek_5/position = Vector2(460, 12020)
+nodes/Seek_6/node = SubResource("AnimationNodeTimeSeek_yfuwc")
+nodes/Seek_6/position = Vector2(460, 11760)
+nodes/Seek_7/node = SubResource("AnimationNodeTimeSeek_slo5n")
+nodes/Seek_7/position = Vector2(460, 11500)
+nodes/Seek_8/node = SubResource("AnimationNodeTimeSeek_vantn")
+nodes/Seek_8/position = Vector2(460, 11240)
+nodes/Seek_9/node = SubResource("AnimationNodeTimeSeek_y80px")
+nodes/Seek_9/position = Vector2(460, 10960)
+nodes/Time_1/node = SubResource("AnimationNodeTimeScale_yl10v")
+nodes/Time_1/position = Vector2(220, 6020)
+nodes/Time_10/node = SubResource("AnimationNodeTimeScale_78t4h")
+nodes/Time_10/position = Vector2(220, 9140)
+nodes/Time_11/node = SubResource("AnimationNodeTimeScale_iw5bp")
+nodes/Time_11/position = Vector2(220, 9420)
+nodes/Time_12/node = SubResource("AnimationNodeTimeScale_v3epd")
+nodes/Time_12/position = Vector2(220, 9680)
+nodes/Time_13/node = SubResource("AnimationNodeTimeScale_gwde8")
+nodes/Time_13/position = Vector2(220, 9940)
+nodes/Time_14/node = SubResource("AnimationNodeTimeScale_ut4um")
+nodes/Time_14/position = Vector2(220, 10200)
+nodes/Time_15/node = SubResource("AnimationNodeTimeScale_t16cc")
+nodes/Time_15/position = Vector2(220, 10480)
+nodes/Time_16/node = SubResource("AnimationNodeTimeScale_5fy0b")
+nodes/Time_16/position = Vector2(220, 10740)
+nodes/Time_17/node = SubResource("AnimationNodeTimeScale_85hp2")
+nodes/Time_17/position = Vector2(220, 12600)
+nodes/Time_18/node = SubResource("AnimationNodeTimeScale_oohxp")
+nodes/Time_18/position = Vector2(220, 12320)
+nodes/Time_2/node = SubResource("AnimationNodeTimeScale_hu0d2")
+nodes/Time_2/position = Vector2(220, 7600)
+nodes/Time_3/node = SubResource("AnimationNodeTimeScale_alpwc")
+nodes/Time_3/position = Vector2(220, 7320)
+nodes/Time_4/node = SubResource("AnimationNodeTimeScale_futfp")
+nodes/Time_4/position = Vector2(220, 6800)
+nodes/Time_5/node = SubResource("AnimationNodeTimeScale_ufukg")
+nodes/Time_5/position = Vector2(220, 7860)
+nodes/Time_6/node = SubResource("AnimationNodeTimeScale_ia1a7")
+nodes/Time_6/position = Vector2(220, 11800)
+nodes/Time_7/node = SubResource("AnimationNodeTimeScale_veuxd")
+nodes/Time_7/position = Vector2(220, 11540)
+nodes/Time_8/node = SubResource("AnimationNodeTimeScale_n5pxs")
+nodes/Time_8/position = Vector2(220, 11260)
+nodes/Time_9/node = SubResource("AnimationNodeTimeScale_hvv16")
+nodes/Time_9/position = Vector2(220, 11000)
+nodes/output/position = Vector2(40, 11280)
+node_connections = [&"Add_1", 0, &"Anim_Armature_001|Eyebrow L Down", &"Seek_1", 0, &"Time_1", &"Seek_10", 0, &"Time_10", &"Seek_11", 0, &"Time_11", &"Seek_12", 0, &"Time_12", &"Seek_13", 0, &"Time_13", &"Seek_14", 0, &"Time_14", &"Seek_15", 0, &"Time_15", &"Seek_16", 0, &"Time_16", &"Seek_17", 0, &"Time_17", &"Seek_18", 0, &"Time_18", &"Seek_2", 0, &"Time_2", &"Seek_3", 0, &"Time_3", &"Seek_4", 0, &"Time_4", &"Seek_5", 0, &"Time_5", &"Seek_6", 0, &"Time_6", &"Seek_7", 0, &"Time_7", &"Seek_8", 0, &"Time_8", &"Seek_9", 0, &"Time_9", &"Time_1", 0, &"Anim_Armature_001|Eyebrow L Up", &"Time_10", 0, &"Anim_Armature_001|Head Down", &"Time_11", 0, &"Anim_Armature_001|Head L", &"Time_12", 0, &"Anim_Armature_001|Head R", &"Time_13", 0, &"Anim_Armature_001|Head Tilt L", &"Time_14", 0, &"Anim_Armature_001|Head Tilt R", &"Time_15", 0, &"Anim_Armature_001|Head Up", &"Time_16", 0, &"Anim_Armature_001|Jaw", &"Time_17", 0, &"Anim_Armature_001|Underlid L", &"Time_18", 0, &"Anim_Armature_001|Underlid R", &"Time_2", 0, &"Anim_Armature_001|Eyebrow R Down", &"Time_3", 0, &"Anim_Armature_001|Eyebrow R Up", &"Time_4", 0, &"Anim_Armature_001|Eyelid L", &"Time_5", 0, &"Anim_Armature_001|Eyelid R", &"Time_6", 0, &"Anim_Armature_001|Eyes Down", &"Time_7", 0, &"Anim_Armature_001|Eyes Left", &"Time_8", 0, &"Anim_Armature_001|Eyes Right", &"Time_9", 0, &"Anim_Armature_001|Eyes Up"]
+
+[node name="_AnimationTree_3" type="AnimationTree"]
+root_node = NodePath("../Chica")
+tree_root = SubResource("AnimationNodeBlendTree_v6irv")
+anim_player = NodePath("/root/Freddy\'s/Chica/Chica/AnimationPlayer")
+parameters/Add_1/add_amount = 1.0
+parameters/Add_10/add_amount = 1.0
+parameters/Add_11/add_amount = 1.0
+parameters/Add_12/add_amount = 1.0
+parameters/Add_13/add_amount = 1.0
+parameters/Add_14/add_amount = 1.0
+parameters/Add_15/add_amount = 1.0
+parameters/Add_16/add_amount = 1.0
+parameters/Add_17/add_amount = 1.0
+parameters/Add_18/add_amount = 1.0
+parameters/Add_2/add_amount = 1.0
+parameters/Add_3/add_amount = 1.0
+parameters/Add_4/add_amount = 1.0
+parameters/Add_5/add_amount = 1.0
+parameters/Add_6/add_amount = 1.0
+parameters/Add_7/add_amount = 1.0
+parameters/Add_8/add_amount = 1.0
+parameters/Add_9/add_amount = 1.0
+parameters/Seek_1/seek_request = 0
+parameters/Seek_10/seek_request = 0
+parameters/Seek_11/seek_request = 0
+parameters/Seek_12/seek_request = 0
+parameters/Seek_13/seek_request = 0
+parameters/Seek_14/seek_request = 0
+parameters/Seek_15/seek_request = 0
+parameters/Seek_16/seek_request = 0
+parameters/Seek_17/seek_request = 95.6
+parameters/Seek_18/seek_request = 254.94
+parameters/Seek_2/seek_request = 2.85
+parameters/Seek_3/seek_request = 1.65
+parameters/Seek_4/seek_request = 0
+parameters/Seek_5/seek_request = 0
+parameters/Seek_6/seek_request = 0
+parameters/Seek_7/seek_request = 0
+parameters/Seek_8/seek_request = 0
+parameters/Seek_9/seek_request = 0
+parameters/Time_1/scale = 0
+parameters/Time_10/scale = 0
+parameters/Time_11/scale = 0
+parameters/Time_12/scale = 0
+parameters/Time_13/scale = 0
+parameters/Time_14/scale = 0
+parameters/Time_15/scale = 0
+parameters/Time_16/scale = 0
+parameters/Time_17/scale = 0
+parameters/Time_18/scale = 0
+parameters/Time_2/scale = 0
+parameters/Time_3/scale = 0
+parameters/Time_4/scale = 0
+parameters/Time_5/scale = 0
+parameters/Time_6/scale = 0
+parameters/Time_7/scale = 0
+parameters/Time_8/scale = 0
+parameters/Time_9/scale = 0

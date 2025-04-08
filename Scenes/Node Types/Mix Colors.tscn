@@ -8,7 +8,7 @@ layout_mode = 3
 anchors_preset = 0
 mouse_filter = 1
 
-[node name="Node" parent="." instance=ExtResource("1_4ojwp")]
+[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_4ojwp")]
 layout_mode = 0
 script = ExtResource("2_4ojwp")
 

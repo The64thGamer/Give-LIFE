@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bihdx0jew1bly"]
+
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_pi2iu"]
+[ext_resource type="Script" uid="uid://4m1d1qoykyf6" path="res://Scripts/GL_Lerp.gd" id="2_pi2iu"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_pi2iu")]
+layout_mode = 0
+script = ExtResource("2_pi2iu")
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]
