@@ -21,6 +21,7 @@ func _process(delta):
 		var iter = 0
 		for child:Line2D in allLines:
 			var output = mainNode.rows[valueName]["output"]
+			tooltip_text = str(output)
 			match typeof(output):
 				TYPE_FLOAT:
 					child.default_color = Color(0.254902 * output, 0.411765 * output, 0.882353 * output, 1) 

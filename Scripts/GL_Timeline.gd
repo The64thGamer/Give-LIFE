@@ -13,5 +13,11 @@ func _ready():
 func _process(delta):
 	super._process(delta)
 	apply_pick_values()
-	#rows["Output"]["output"] = rows["Output"]["pickValue"]
+	if rows["Play"]["input"] == true:
+		if rows["Rewind"]["input"] == true:
+			rows["Time"]["output"] = max(float(rows["Time"]["output"] - delta),0)
+		else:
+			rows["Time"]["output"] += delta
+	if rows["Restart"]["input"] == true:
+		rows["Time"]["output"] = 0.0	
 	_send_input("Time")
