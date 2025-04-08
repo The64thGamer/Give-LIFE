@@ -10,21 +10,22 @@ func _ready():
 	
 	# Initialize the AnimationTree and set up the blend tree
 	anim_tree = AnimationTree.new()
-	anim_tree.anim_player = anim_player.get_path()
+	anim_tree.anim_player = anim_player.get_path()  # Set the path to the AnimationPlayer
 	add_child(anim_tree)
 
-	# Create and assign the root node for the blend tree
-	anim_tree.tree_root = AnimationNodeAnimation.new()
+	# Create the blend tree
+	anim_tree.tree_root = AnimationNodeBlendTree.new()
 	anim_tree.active = true
+	blend_tree = anim_tree.tree_root as AnimationNodeBlendTree
+	
+	# Disable automatic playback of animations
+	anim_player.speed_scale = 0  # This will stop the animation from automatically playing
+	
 	var animations = anim_player.get_animation_list()
 	if animations.size() == 0:
 		return
-
-	blend_tree = AnimationNodeBlendTree.new()
-	anim_tree.tree_root = blend_tree
-	anim_player.speed_scale = 0
 	
-	# Handle single animation case
+	# Handle the case where there is only one animation
 	if animations.size() == 1:
 		var node_name = "Anim_" + animations[0]
 		var anim_node := AnimationNodeAnimation.new()
@@ -36,7 +37,7 @@ func _ready():
 		blend_tree.connect_node("Output", 0, node_name)
 		return
 
-	# Start with the first animation
+	# Start with the first animation node
 	var prev_name = "Anim_" + animations[0]
 	var prev_anim_node := AnimationNodeAnimation.new()
 	prev_anim_node.animation = animations[0]
@@ -58,13 +59,14 @@ func _ready():
 		prev_name = add_name
 
 	# Final output node connection
-	#var output := AnimationNodeOutput.new()
-	#blend_tree.add_node("Output", output, Vector2((animations.size() + 1) * 200, 100))
 	blend_tree.connect_node("output", 0, prev_name)
-	for i in range(0,animations.size()):
+
+	# Set the blend amount for each additive node
+	for i in range(0, animations.size()):
 		anim_tree.set("parameters/Add_" + str(i) + "/add_amount", 1.0)
 
 
+# Function to set the time of the animation based on a normalized value (0.0 to 1.0)
 func _sent_signals(anim_name: String, value: float):
 	if not anim_tree:
 		return
@@ -74,7 +76,6 @@ func _sent_signals(anim_name: String, value: float):
 
 	if not anim_player.has_animation(anim_name):
 		print("Animation not found: ", anim_name)
-		print(anim_player.get_animation_list())
 		return
 
 	var anim_length = anim_player.get_animation(anim_name).length
