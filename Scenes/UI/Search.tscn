@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c46u2u0lup1mm" path="res://Scripts/GL_Search.gd" id="1_g1g1x"]
 
 [node name="Search" type="Control"]
+z_index = 100
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 3
 anchors_preset = 15

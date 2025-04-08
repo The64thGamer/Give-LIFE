@@ -14,7 +14,18 @@ func _process(delta):
 		if previewLine == null:
 			previewLine = _create_line()
 		previewLine.points[0] = global_position + Vector2(size.x / 2, size.y / 2)
-		previewLine.points[1] = get_viewport().get_mouse_position()# - previewLine.global_position
+		previewLine.points[1] = get_viewport().get_mouse_position()
+		var output = mainNode.rows[valueName]["output"]
+		match typeof(output):
+			TYPE_FLOAT:
+				previewLine.default_color = Color(0.254902 * output, 0.411765 * output, 0.882353 * output, 1) 
+			TYPE_BOOL:
+				if output:
+					previewLine.default_color = Color.ORANGE
+				else:
+					previewLine.default_color = Color.BLACK
+			TYPE_COLOR:
+				previewLine.default_color = output
 		
 	var connections = mainNode.rows[valueName].get("connections",[])
 	if connections != []:
@@ -51,6 +62,8 @@ func _create_line() -> Line2D:
 	return previewLine
 
 func update_lines():
+	if name == "Input":
+		return
 	for child in allLines:
 		child.queue_free()
 	allLines = []

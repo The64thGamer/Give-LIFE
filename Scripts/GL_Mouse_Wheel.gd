@@ -17,6 +17,6 @@ func _input(event):
 	# Check if the mouse wheel up or down button is pressed
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
-			rows["Output"]["output"] = clamp(rows["Output"]["output"] + rows["Step Size"]["input"], 0, 1)
+			rows["Output"]["output"] = float(clamp(rows["Output"]["output"] + rows["Step Size"]["input"], 0, 1))
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
-			rows["Output"]["output"] = clamp(rows["Output"]["output"] - rows["Step Size"]["input"], 0, 1)
+			rows["Output"]["output"] = float(clamp(rows["Output"]["output"] - rows["Step Size"]["input"], 0, 1))

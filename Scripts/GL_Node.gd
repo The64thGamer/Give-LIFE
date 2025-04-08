@@ -6,6 +6,7 @@ var dragging : bool
 var canDrag : bool
 var dragOffset : Vector2
 var loadNodeRow : Resource
+var special_condition : String
 
 func _ready():
 	loadNodeRow = preload("res://Scenes/Nodes/Node Row.tscn")
@@ -32,6 +33,8 @@ func _update_visuals():
 	for child in holder.get_children():
 		if child.name.contains("Node Row"):
 			child.queue_free()
+		if child.name.contains("OptionButton"):
+			child.queue_free()
 	for key in rows:
 		var nodeRow = loadNodeRow.instantiate()
 		holder.add_child(nodeRow)
@@ -41,8 +44,10 @@ func _update_visuals():
 		var output = nodeRow.get_node("Output") as GL_Node_Point
 		input.valueName = str(key)
 		input.mainNode = self
+		input.update_lines()
 		output.valueName = str(key)
 		output.mainNode = self
+		output.update_lines()
 		if rows[key]["picker"] == true:
 			match typeof(rows[key]["pickValue"]):
 				TYPE_FLOAT:
@@ -61,6 +66,12 @@ func _update_visuals():
 				
 		_set_inout_type(nodeRow.get_node("Input") as Button,rows[key]["input"])
 		_set_inout_type(nodeRow.get_node("Output") as Button,rows[key]["output"])
+	match(special_condition):
+		"Record Node":
+			var add = load("res://Scenes/Nodes/Node Add.tscn").instantiate()
+			holder.add_child(add)
+			(add as GL_Node_Add).mainNode = self
+
 
 func assignPick(pick:GL_Node_Picker,key:String):
 	if pick != null:
@@ -96,6 +107,8 @@ func _set_title(name:String):
 	(get_node("Margins").get_node("Holder").get_node("Title") as Label).text = name
 
 func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaximum:float):
+	if rows.has(name):
+		return
 	rows[name] = {"input": input, "output": output, "connections": [], "picker":picker,"pickValue":pickDefault,"backConnected":false,"pickFloatMax":pickFloatMaximum}
 
 func _recieve_input(inputName:String,value):

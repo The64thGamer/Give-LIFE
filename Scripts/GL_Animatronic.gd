@@ -105,11 +105,10 @@ func _process(delta):
 		match(animParameters[key]["type"]):
 			"standard":
 				var value = float(animParameters[key]["signal_value"])
-				if value > 0.01:
+				if value > 0.5:
 					animParameters[key]["value"] = clamp(float(animParameters[key]["value"]) + (delta * animParameters[key]["out_speed"] * value),0,1)
-				else:
+				elif value < 0.5:
 					animParameters[key]["value"] = clamp(float(animParameters[key]["value"]) - (delta * animParameters[key]["in_speed"] * (1 - value)),0,1)
-
 			"move_to":	
 				animParameters[key]["value"] = lerp(float(animParameters[key]["value"]), float(animParameters[key]["signal_value"]),delta * animParameters[key]["out_speed"])
 		var anim_length = anim_player.get_animation(key).length
