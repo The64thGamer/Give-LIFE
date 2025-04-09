@@ -5,6 +5,8 @@ var recording:Dictionary
 var oldTime:float = 0.000030042452 #sorta random number
 var time:float = 0
 var rng:RandomNumberGenerator
+var oldRecording:bool
+var defaultValues:Dictionary
 
 func _ready():
 	super._ready()
@@ -13,6 +15,7 @@ func _ready():
 	_create_row("Recording",false,null,true,false,0)
 	_create_row("Current Time",0.0,0.0,false,0,0)
 	_update_visuals()
+	rng = RandomNumberGenerator.new()
 	rng.seed = Time.get_ticks_msec()
 	pass 
 
@@ -22,13 +25,18 @@ func _process(delta):
 		rows[key]["output"] = rows[key]["input"]
 	apply_pick_values()
 	time = float(rows["Current Time"]["output"])
-	if recording:
+	_traverse()
+	var recordBool = rows["Recording"]["input"]
+	if recordBool == true:
+		if recordBool != oldRecording || time == 0:
+			for key in rows:
+				defaultValues[key] = rows[key]["output"]
 		if timer <= 0:
 			timer = sampleRate
-			_traverse()
 			_record()
 		timer -= delta
 	oldTime = time
+	oldRecording = recordBool
 	for key in rows:
 		_send_input(key)
 
@@ -36,9 +44,9 @@ func _traverse():
 	if time == oldTime:
 		return
 	for key in recording:
-		if recording[key]["start"] == -1 || recording[key]["end"] == -1:
+		if recording[key]["start"] == null || recording[key]["end"] == null:
 			continue
-		if recording[key]["current"] == -1:
+		if recording[key]["current"] == null:
 			recording[key]["current"] = recording[key]["start"]
 		if time < oldTime: #rewind
 			continue #fix pls
@@ -51,20 +59,24 @@ func _traverse():
 func recursive_traverse_forward(key:String,current:String) -> String:
 	var dict = recording[key]["list"][current]
 	if dict["time"] > time:
-		if dict["back"] != -1:
-			return recursive_traverse_forward(key,recording[key]["list"][dict["back"]])
+		if dict["back"] != null:
+			return recursive_traverse_forward(key,dict["back"])
 	if dict["time"] <= time:
-		if dict["forward"] != -1 && recording[key]["list"][dict["forward"]]["time"] <= time:
+		if dict["forward"] != null && recording[key]["list"][dict["forward"]]["time"] <= time:
 			return recursive_traverse_forward(key,dict["forward"])
 	return current	
 	
 func _record():
 	for key in recording:
+		if defaultValues[key] == rows[key]["input"]:
+			continue
+		elif defaultValues[key] != null:
+			defaultValues[key] == null #is this gonna bite me back if I allow null values to pass
 		var currentSave = recording[key]["current"]
-		if currentSave == -1:
+		if currentSave == null:
 			var id = "ID_" + str(rng.randi())
 			recording[key]["list"][id] = {
-				"value":rows[key]["inputs"],
+				"value":rows[key]["input"],
 				"time":time,
 				"back":null,
 				"forward":null
@@ -72,18 +84,20 @@ func _record():
 			recording[key]["current"] = id
 			recording[key]["start"] = id
 			recording[key]["end"] = id
+			rows[key]["output"] = recording[key]["list"][id]["value"]
 			continue
 		else:
 			if time < oldTime: #rewind
 				continue #fix pls
 			else: #forward
 				if recording[key]["list"][currentSave]["time"] == time: #paused recording
-					recording[key]["list"][currentSave]["value"] = rows[key]["inputs"]
+					recording[key]["list"][currentSave]["value"] = rows[key]["input"]
+					rows[key]["output"] = rows[key]["input"]
 				elif recording[key]["list"][currentSave]["time"] < time:
+					var id = "ID_" + str(rng.randi())
 					if recording[key]["list"][currentSave]["forward"] == null:
-						var id = "ID_" + str(rng.randi())
 						recording[key]["list"][id] = {
-						"value":rows[key]["inputs"],
+						"value":rows[key]["input"],
 						"time":time,
 						"back":currentSave,
 						"forward":null
@@ -91,7 +105,20 @@ func _record():
 						recording[key]["list"][currentSave]["forward"] = id
 						recording[key]["current"] = id
 						recording[key]["end"] = id
+					else:
+						var forward = recording[key]["list"][currentSave]["forward"]
+						recording[key]["list"][id] = {
+						"value":rows[key]["input"],
+						"time":time,
+						"back":currentSave,
+						"forward":forward
+						}
+						recording[key]["list"][forward]["back"] = id
+						recording[key]["list"][currentSave]["forward"] = id
+						recording[key]["current"] = id
+					rows[key]["output"] = recording[key]["list"][id]["value"]
 				#else: Somethings messed up and you need to re-traverse
+				
 				continue
 	pass
 
@@ -100,4 +127,4 @@ func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaxim
 	super._create_row(name,input,output,picker,pickDefault,pickFloatMaximum)
 	for key in rows:
 		if !recording.has(key):
-			recording[key] = {"start":-1,"end":-1,"current":-1,"list":{}}
+			recording[key] = {"start":null,"end":null,"current":null,"list":{}}
