@@ -38,27 +38,31 @@ func _traverse():
 			continue
 		if recording[key]["current"] == -1:
 			recording[key]["current"] = recording[key]["start"]
-		var current = recording[key]["list"][recording[key]["current"]]
 		if time < oldTime: #rewind
 			continue #fix pls
 		else: #forward
-			current = recursive_traverse_forward(key,current)
-			recording[key]["current"] = current["id"]
-			if current["time"] <= time:
-				rows[key]["output"] = current["value"]
+			var current = recording[key]["current"]
+			recording[key]["current"] = recursive_traverse_forward(key,current)
+			if recording[key]["list"][current]["time"] <= time:
+				rows[key]["output"] = recording[key]["list"][current]["value"]
 			
-func recursive_traverse_forward(key:String,current:Dictionary) -> Dictionary:
-	if current["time"] > time:
-		if current["back"] != -1:
-			return recursive_traverse_forward(key,recording[key]["list"][current["back"]])
-	if current["time"] <= time:
-		if current["forward"] != -1 && recording[key]["list"][current["forward"]]["time"] <= time:
-			return recursive_traverse_forward(key,recording[key]["list"][current["forward"]])
+func recursive_traverse_forward(key:String,current:String) -> String:
+	var dict = recording[key]["list"][current]
+	if dict["time"] > time:
+		if dict["back"] != -1:
+			return recursive_traverse_forward(key,recording[key]["list"][dict["back"]])
+	if dict["time"] <= time:
+		if dict["forward"] != -1 && recording[key]["list"][dict["forward"]]["time"] <= time:
+			return recursive_traverse_forward(key,dict["forward"])
 	return current	
 	
 func _record():
-	#{"id":12345,back":-1,"forward":-1,"time":1.01,"value":null}
+	for key in recording:
+		if recording[key]["current"] == -1:
+			var dict = {}
+	#{back":-1,"forward":-1,"time":1.01,"value":null}
 	pass
+
 
 func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaximum:float):
 	super._create_row(name,input,output,picker,pickDefault,pickFloatMaximum)
