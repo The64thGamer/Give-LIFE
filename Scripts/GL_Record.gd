@@ -44,6 +44,8 @@ func _traverse():
 	if time == oldTime:
 		return
 	for key in recording:
+		if key == "Recording" || key == "Current Time":
+			continue
 		if recording[key]["start"] == null || recording[key]["end"] == null:
 			continue
 		if recording[key]["current"] == null:
@@ -52,10 +54,19 @@ func _traverse():
 			continue #fix pls
 		else: #forward
 			var current = recording[key]["current"]
-			recording[key]["current"] = recursive_traverse_forward(key,current)
-			if recording[key]["list"][current]["time"] <= time:
-				rows[key]["output"] = recording[key]["list"][current]["value"]
-			
+			var newCurrent = recursive_traverse_forward(key,current)
+			recording[key]["current"] = newCurrent 
+			if recording[key]["list"][newCurrent]["time"] <= time:
+				#Below interpolates the final value
+				if typeof(recording[key]["list"][current]["value"]) != TYPE_BOOL:
+					rows[key]["output"] = lerp(recording[key]["list"][current]["value"],recording[key]["list"][newCurrent]["value"],remap_time(time,recording[key]["list"][current]["time"],recording[key]["list"][newCurrent]["time"]))
+
+func remap_time(value: float, start: float, end: float) -> float:
+	if start == end:
+		return 0.0 
+	return (value - start) / (end - start)
+
+
 func recursive_traverse_forward(key:String,current:String) -> String:
 	var dict = recording[key]["list"][current]
 	if dict["time"] > time:
@@ -68,6 +79,8 @@ func recursive_traverse_forward(key:String,current:String) -> String:
 	
 func _record():
 	for key in recording:
+		if key == "Recording" || key == "Current Time":
+			continue
 		if defaultValues[key] == rows[key]["input"]:
 			continue
 		elif defaultValues[key] != null:
@@ -125,6 +138,8 @@ func _record():
 
 func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaximum:float):
 	super._create_row(name,input,output,picker,pickDefault,pickFloatMaximum)
+	if name == "Recording" || name == "Current Time":
+			return
 	for key in rows:
 		if !recording.has(key):
 			recording[key] = {"start":null,"end":null,"current":null,"list":{}}
