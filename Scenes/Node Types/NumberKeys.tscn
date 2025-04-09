@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://jmwqwspljwjc"]
 
-[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_ua37n"]
-[ext_resource type="Script" uid="uid://e6v6exlrhtaq" path="res://Scripts/GL_Keystrokes.gd" id="2_ua37n"]
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_nt2x2"]
+[ext_resource type="Script" uid="uid://e6v6exlrhtaq" path="res://Scripts/GL_NumberKeys.gd" id="2_gnbp1"]
 
 [node name="Node" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 mouse_filter = 1
 
-[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_ua37n")]
+[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_nt2x2")]
 layout_mode = 0
 tooltip_text = "Sets a bool for any of the number keys that are pressed."
-script = ExtResource("2_ua37n")
+script = ExtResource("2_gnbp1")
 
 [connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
 [connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]
