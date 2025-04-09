@@ -10,7 +10,7 @@ mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_ltih5")]
 layout_mode = 0
-tooltip_text = "When 'Recording' is set to ON, it records inputs and saves them with the time from 'Current Time'. Going back in time will play back those inputs along with any you send in. Rows can be added and named based on how you want them identified."
+tooltip_text = "When 'Recording' is set to ON, it records inputs and saves them with the time from 'Current Time'. Going back in time will play back those inputs along with any you send in. Rows can be added and named based on how you want them identified. When recording past the first time, it will ignore your current input values until they change, then it will record alongside your previous inputs for that particular row."
 script = ExtResource("2_ltih5")
 
 [connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]

@@ -29,3 +29,8 @@ texture = SubResource("GradientTexture1D_jyqbx")
 
 [node name="Search" parent="." instance=ExtResource("1_xwfut")]
 layout_mode = 1
+
+[node name="Holder" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

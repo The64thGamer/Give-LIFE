@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://brgcm5aas061o"]
+
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_x0ewx"]
+[ext_resource type="Script" uid="uid://8acchs5jv70x" path="res://Scripts/GL_Invert.gd" id="2_x0ewx"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_x0ewx")]
+layout_mode = 0
+tooltip_text = "Inverts the input, not the same as multiplying by -1. This is 1 - Input. The 'On' input toggles the inversion."
+script = ExtResource("2_x0ewx")
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

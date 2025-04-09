@@ -21,9 +21,9 @@ func _ready():
 
 func _process(delta):
 	super._process(delta)
+	apply_pick_values()
 	for key in rows:
 		rows[key]["output"] = rows[key]["input"]
-	apply_pick_values()
 	time = float(rows["Current Time"]["output"])
 	_traverse()
 	var recordBool = rows["Recording"]["input"]

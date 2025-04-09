@@ -93,8 +93,10 @@ grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("3_ajshc")
 theme_override_font_sizes/font_size = 9
-text = "Give LIFE: TEST_A_BEGINNINGS
-(Press Esc for Nodes, Right Click to search node, Tab toggles background)"
+text = "Give LIFE: TEST_B_HISTORY
+Press Esc for Nodes, Right Click to search node.
+Tab toggles background.Middle Click hold to pan. 
+Scroll to Zoom. Hover things for tooltips."
 horizontal_alignment = 2
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
