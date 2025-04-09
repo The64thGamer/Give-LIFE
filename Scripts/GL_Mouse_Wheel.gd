@@ -13,7 +13,7 @@ func _process(delta):
 	
 	_send_input("Output")
 
-func _input(event):
+func _unhandled_input(event):
 	# Check if the mouse wheel up or down button is pressed
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:

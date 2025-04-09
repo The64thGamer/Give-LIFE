@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhkp4bfwm1agf"]
+[gd_scene load_steps=3 format=3 uid="uid://d2da0nd32yqo7"]
 
 [ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_o85ib"]
 [ext_resource type="Script" uid="uid://y8j8wap2o4oe" path="res://Scripts/GL_Mouse_Wheel.gd" id="2_o85ib"]
