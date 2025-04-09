@@ -10,7 +10,7 @@ func _ready():
 func _sent_signals(signal_ID:String,the_signal):
 	match(signal_ID):
 		"intensity":
-			light.light_energy = the_signal * energyMultiplier
+			light.light_energy = max(the_signal,0) * energyMultiplier
 		"color":
 			if canChangeColor:
 				light.light_color = the_signal

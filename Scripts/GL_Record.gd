@@ -1,6 +1,6 @@
 extends GL_Node
 var timer:float
-const sampleRate = 0.1
+const sampleRate = 0.05
 var recording:Dictionary
 var oldTime:float = 0.000030042452 #sorta random number
 var time:float = 0
@@ -55,12 +55,11 @@ func _traverse():
 		else: #forward
 			var current = recording[key]["current"]
 			var newCurrent = recursive_traverse_forward(key,current)
-			recording[key]["current"] = newCurrent 
-			if recording[key]["list"][newCurrent]["time"] <= time:
-				#Below interpolates the final value
-				if typeof(recording[key]["list"][current]["value"]) != TYPE_BOOL:
-					rows[key]["output"] = lerp(recording[key]["list"][current]["value"],recording[key]["list"][newCurrent]["value"],remap_time(time,recording[key]["list"][current]["time"],recording[key]["list"][newCurrent]["time"]))
-
+			if current != newCurrent:
+				recording[key]["lastUsed"] = current
+				recording[key]["current"] = newCurrent 
+			if recording[key]["lastUsed"] != null && recording[key]["current"] != recording[key]["end"]:
+				rows[key]["output"] = lerp(recording[key]["list"][recording[key]["lastUsed"]]["value"],recording[key]["list"][recording[key]["current"]]["value"],remap_time(time,recording[key]["list"][recording[key]["lastUsed"]]["time"],recording[key]["list"][recording[key]["current"]]["time"]))
 func remap_time(value: float, start: float, end: float) -> float:
 	if start == end:
 		return 0.0 
@@ -142,4 +141,4 @@ func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaxim
 			return
 	for key in rows:
 		if !recording.has(key):
-			recording[key] = {"start":null,"end":null,"current":null,"list":{}}
+			recording[key] = {"start":null,"end":null,"current":null,"list":{},"lastUsed":null}
