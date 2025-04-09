@@ -4,6 +4,7 @@ const sampleRate = 0.1
 var recording:Dictionary
 var oldTime:float = 0.000030042452 #sorta random number
 var time:float = 0
+var rng:RandomNumberGenerator
 
 func _ready():
 	super._ready()
@@ -12,6 +13,7 @@ func _ready():
 	_create_row("Recording",false,null,true,false,0)
 	_create_row("Current Time",0.0,0.0,false,0,0)
 	_update_visuals()
+	rng.seed = Time.get_ticks_msec()
 	pass 
 
 func _process(delta):
@@ -58,9 +60,39 @@ func recursive_traverse_forward(key:String,current:String) -> String:
 	
 func _record():
 	for key in recording:
-		if recording[key]["current"] == -1:
-			var dict = {}
-	#{back":-1,"forward":-1,"time":1.01,"value":null}
+		var currentSave = recording[key]["current"]
+		if currentSave == -1:
+			var id = "ID_" + str(rng.randi())
+			recording[key]["list"][id] = {
+				"value":rows[key]["inputs"],
+				"time":time,
+				"back":null,
+				"forward":null
+				}
+			recording[key]["current"] = id
+			recording[key]["start"] = id
+			recording[key]["end"] = id
+			continue
+		else:
+			if time < oldTime: #rewind
+				continue #fix pls
+			else: #forward
+				if recording[key]["list"][currentSave]["time"] == time: #paused recording
+					recording[key]["list"][currentSave]["value"] = rows[key]["inputs"]
+				elif recording[key]["list"][currentSave]["time"] < time:
+					if recording[key]["list"][currentSave]["forward"] == null:
+						var id = "ID_" + str(rng.randi())
+						recording[key]["list"][id] = {
+						"value":rows[key]["inputs"],
+						"time":time,
+						"back":currentSave,
+						"forward":null
+						}
+						recording[key]["list"][currentSave]["forward"] = id
+						recording[key]["current"] = id
+						recording[key]["end"] = id
+				#else: Somethings messed up and you need to re-traverse
+				continue
 	pass
 
 
