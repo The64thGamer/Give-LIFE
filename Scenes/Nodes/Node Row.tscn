@@ -47,6 +47,7 @@ mouse_default_cursor_shape = 2
 text = "◉"
 script = ExtResource("1_fygh4")
 
+[connection signal="button_down" from="Input" to="Input" method="_detatch"]
 [connection signal="mouse_entered" from="Input" to="Input" method="mouse_enter"]
 [connection signal="mouse_exited" from="Input" to="Input" method="mouse_exit"]
 [connection signal="value_changed" from="Pick Float" to="Pick Float" method="value_changed"]

@@ -81,6 +81,11 @@ func _start_drag():
 	dragging = true
 	lastToDrag = true
 	
+func _detatch():
+	for node in get_tree().get_nodes_in_group("Outputs"):
+			if node is GL_Node_Point:
+				node._node_disconnect(mainNode,valueName)
+	
 func mouse_enter():
 	mouseInside = true
 	
@@ -101,3 +106,6 @@ func _node_connect(node:GL_Node,inputValue:String):
 		return
 	mainNode._create_connection(node,inputValue,valueName)
 	update_lines()
+	
+func _node_disconnect(node: GL_Node, outputValue: String):
+	mainNode.destroy_connection(node,outputValue)

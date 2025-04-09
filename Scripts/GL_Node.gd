@@ -10,6 +10,7 @@ var special_condition : String
 
 func _ready():
 	loadNodeRow = preload("res://Scenes/Nodes/Node Row.tscn")
+	(get_node("Margins").get_node("Holder").get_node("Title").get_node("Exit Button") as Button).connect("button_down",self.delete_whole_node)
 	
 func _process(delta):
 	if dragging:
@@ -104,7 +105,7 @@ func _set_inout_type(label:Button, value):
 			label.visible = false
 
 func _set_title(name:String):
-	(get_node("Margins").get_node("Holder").get_node("Title") as Label).text = name
+	(get_node("Margins").get_node("Holder").get_node("Title").get_node("Title Label") as Label).text = name
 
 func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaximum:float):
 	if rows.has(name):
@@ -191,3 +192,10 @@ func apply_pick_values():
 	for key in rows:
 		if rows[key]["picker"] == true && rows[key]["backConnected"] == false:
 			rows[key]["input"] = rows[key]["pickValue"]
+
+func delete_whole_node():
+	for node in get_tree().get_nodes_in_group("Outputs"):
+			if node is GL_Node_Point:
+				for key in rows:
+					node.mainNode.destroy_connection(self,key)
+	queue_free()
