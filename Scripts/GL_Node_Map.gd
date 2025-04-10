@@ -21,6 +21,7 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	is_hovered = false
 
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:
 		match event.keycode:
@@ -30,12 +31,11 @@ func _input(event: InputEvent) -> void:
 					background.self_modulate.a = 1
 			KEY_TAB:
 				background.self_modulate.a = abs(background.self_modulate.a - 1)
-
 	if not visible:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
+		
 	if not is_hovered:
 		return
 
