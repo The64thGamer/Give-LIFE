@@ -16,5 +16,5 @@ func _sent_signals(signal_ID:String,the_signal):
 				light.light_color = the_signal
 		"size":
 			if canChangeSize:
-				light.spot_angle = the_signal * 90
+				light.spot_angle = the_signal * 45
 	pass 

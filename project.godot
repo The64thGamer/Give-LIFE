@@ -15,7 +15,13 @@ config/description="The sequel to Faz-Anim"
 config/version="0.2"
 run/main_scene="uid://doe47bro2kqt6"
 config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 config/icon="uid://c1usct57qv2oa"
+
+[display]
+
+display_server/driver.linuxbsd="wayland"
 
 [filesystem]
 
@@ -24,4 +30,6 @@ import/blender/enabled=false
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true
+global_illumination/voxel_gi/quality=1
 anti_aliasing/quality/msaa_3d=2
+environment/volumetric_fog/volume_size=128
