@@ -10,6 +10,7 @@ func _ready():
 	visible = false
 	background = get_node("Background")
 	holder = get_node("Holder")
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 	connect("mouse_entered", _on_mouse_entered)
 	connect("mouse_exited", _on_mouse_exited)
@@ -32,7 +33,6 @@ func _input(event: InputEvent) -> void:
 
 	if not visible:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		return
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
@@ -56,14 +56,11 @@ func _input(event: InputEvent) -> void:
 			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 				zoom_factor = 0.9
 
-			# Apply scale
 			holder.scale *= zoom_factor
 
-			# Recalculate the new local position of the mouse after scaling
 			var new_global_xform = holder.get_global_transform()
 			var new_local_mouse_pos = new_global_xform.affine_inverse().basis_xform(mouse_pos)
 
-			# Calculate offset to shift so the mouse stays “anchored”
 			var delta = (new_local_mouse_pos - local_mouse_pos)
 			holder.position += delta * holder.scale
 

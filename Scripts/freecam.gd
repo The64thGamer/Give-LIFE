@@ -63,9 +63,6 @@ func _ready() -> void:
 	_setup_nodes.call_deferred()
 	_add_keybindings()
 	movement_active = true
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-
 
 func _process(delta: float) -> void:
 	
