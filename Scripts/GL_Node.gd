@@ -142,9 +142,10 @@ func _create_connection(target:GL_Node,input_name:String,output_name:String):
 	var item = target.rows.get(input_name, null)
 	if item == null:
 		return
-		
-	if typeof(rows[output_name].get("output", null)) != typeof(target.rows[input_name].get("input",null)):
-		if !(typeof(rows[output_name].get("output", null)) == TYPE_BOOL && typeof(target.rows[input_name].get("input",null)) == TYPE_FLOAT):
+	
+	var typeA = typeof(rows[output_name].get("output", null))
+	var typeB = typeof(target.rows[input_name].get("input",null))
+	if (typeA != typeB) && !(typeA == TYPE_BOOL && typeB == TYPE_FLOAT) && !(typeA == TYPE_INT && typeB == TYPE_FLOAT)&& !(typeA == TYPE_FLOAT && typeB == TYPE_INT):
 			print("Type mismatch: cannot connect " + output_name + " to " + target.name)
 			return
 	
