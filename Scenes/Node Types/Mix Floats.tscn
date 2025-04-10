@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b83i85vl6gd01"]
+
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_njggm"]
+[ext_resource type="Script" uid="uid://beit3xudynjdl" path="res://Scripts/GL_Mix_Floats.gd" id="2_njggm"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_njggm")]
+layout_mode = 0
+tooltip_text = "Mixes two floats (numbers) together using the 'Factor', with 0.0 being fully Float A, and 1.0 being fully Float B."
+script = ExtResource("2_njggm")
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

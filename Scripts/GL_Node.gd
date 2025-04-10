@@ -2,6 +2,7 @@ extends PanelContainer
 class_name GL_Node
 var rows : Dictionary
 var uuid : int #REMEMBER TO SET THIS ON CREATION
+var nodePath:String
 var dragging : bool
 var canDrag : bool
 var dragOffset : Vector2
@@ -105,7 +106,11 @@ func _set_inout_type(label:Button, value):
 			label.visible = false
 
 func _set_title(name:String):
-	(get_node("Margins").get_node("Holder").get_node("Title").get_node("Title Label") as Label).text = name
+	(get_node("Margins").get_node("Holder").get_node("Title").get_node("Title Label") as LineEdit).text = name
+
+func _get_title() -> String:
+	return (get_node("Margins").get_node("Holder").get_node("Title").get_node("Title Label") as LineEdit).text
+
 
 func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaximum:float):
 	if rows.has(name):

@@ -5,6 +5,7 @@ var holder: Control
 var is_panning: bool = false
 var last_mouse_pos: Vector2
 var is_hovered: bool = false
+var _workspace_ID:String
 
 func _ready():
 	visible = false
@@ -68,3 +69,47 @@ func _input(event: InputEvent) -> void:
 		var delta = event.position - last_mouse_pos
 		holder.position += delta
 		last_mouse_pos = event.position
+
+func save_everything():
+	var saveDict := {}
+	var rng = RandomNumberGenerator.new()
+	rng.seed = Time.get_ticks_msec()
+
+	for child:GL_Node in holder.get_children():
+		var id = "SAVE_" + str(rng.randi())
+		saveDict[id] = {
+			"path": child.nodePath,
+			"name": child._get_title(),
+			"uuid": child.uuid,
+			"rows": child.rows.duplicate(true), # deep copy
+		}
+		for key in saveDict[id]["rows"]:
+			if saveDict[id]["rows"][key].has("connections"):
+				var connections = saveDict[id]["rows"][key]["connections"]
+				for i in range(connections.size()):
+					if connections[i]["target"] is GL_Node:
+						connections[i]["target"] = connections[i]["target"].uuid
+
+	var save_dir = "user://My Precious Save Files/" + str(_workspace_ID)
+	DirAccess.make_dir_recursive_absolute(save_dir)
+	var file_path = save_dir + "/node_workspace.tres"
+
+	var resource = ConfigFile.new()
+	resource.set_value("workspace", "data", saveDict)
+	var err = resource.save(file_path)
+	if err != OK:
+		push_error("Failed to save workspace: " + str(err))
+	else:
+		print("Saved workspace to: ", file_path)
+		
+func load_everything() -> Dictionary:
+	var file_path = "user://My Precious Save Files/" + str(_workspace_ID) + "/node_workspace.tres"
+	var resource = ConfigFile.new()
+	var err = resource.load(file_path)
+	if err != OK:
+		push_error("Failed to load workspace: " + str(err))
+		return {}
+	
+	var data = resource.get_value("workspace", "data", {})
+	print("Loaded workspace from: ", file_path)
+	return data
