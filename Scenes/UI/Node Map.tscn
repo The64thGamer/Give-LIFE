@@ -78,6 +78,7 @@ popup/item_0/text = "Test"
 popup/item_0/id = 0
 
 [node name="Button" type="Button" parent="MarginContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Edit"
 

@@ -1,4 +1,5 @@
 extends GL_Node
+class_name GL_Record
 var timer:float
 const sampleRate = 0.05
 var recording:Dictionary

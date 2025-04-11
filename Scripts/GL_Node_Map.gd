@@ -99,26 +99,43 @@ func save_everything():
 	
 	if holder.get_child_count() == 0:
 		return
-	
+
 	for child in holder.get_children():
 		child = child.get_child(0)
 		if child is not GL_Node:
 			print(child.name)
 			continue
+
 		var id = "SAVE_" + str(rng.randi())
-		saveDict[id] = {
+		var node_data = {
 			"path": child.nodePath,
 			"name": child._get_title(),
 			"uuid": child.uuid,
 			"rows": child.rows.duplicate(true),
 			"position": child.position
 		}
-		for key in saveDict[id]["rows"]:
-			if saveDict[id]["rows"][key].has("connections"):
-				var connections = saveDict[id]["rows"][key]["connections"]
+
+		# Save recording if it's a GL_Record and has enough data
+		if child is GL_Record and child.recording != null:
+			if child.recording.size() >= 3:
+				var recording_file_path = "user://My Precious Save Files/" + str(_workspace_ID) + "/" + child.uuid + "_recording.tres"
+				var recording_config = ConfigFile.new()
+				recording_config.set_value("recording", "data", child.recording)
+				var err = recording_config.save(recording_file_path)
+				if err != OK:
+					push_error("Failed to save recording for " + child.uuid + ": " + str(err))
+				else:
+					print("Saved recording for node ", child.uuid)
+
+		# Convert connections to uuid references
+		for key in node_data["rows"]:
+			if node_data["rows"][key].has("connections"):
+				var connections = node_data["rows"][key]["connections"]
 				for i in range(connections.size()):
 					if connections[i]["target"] is GL_Node:
 						connections[i]["target"] = connections[i]["target"].uuid
+
+		saveDict[id] = node_data
 
 	var save_dir = "user://My Precious Save Files/" + str(_workspace_ID)
 	DirAccess.make_dir_recursive_absolute(save_dir)
@@ -146,8 +163,9 @@ func save_everything():
 		push_error("Failed to save workspace: " + str(err))
 	else:
 		print("Saved workspace to: ", file_path)
-		
+
 	populate_workspace_options()
+
 
 		
 func load_everything():
@@ -190,6 +208,12 @@ func load_everything():
 		node._set_title(data[key].get("name","???"))
 		node.rows = data[key].get("rows",{})
 		node._update_visuals()
+		if node is GL_Record:
+			var recording_file = "user://My Precious Save Files/" + str(_workspace_ID) + "/" + node.uuid + "_recording.tres"
+			var config = ConfigFile.new()
+			if config.load(recording_file) == OK:
+				node.recording = config.get_value("recording", "data", {})
+
 
 func generate_new_workspace_id() -> String:
 	var rng = RandomNumberGenerator.new()
