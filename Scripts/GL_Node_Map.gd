@@ -5,7 +5,16 @@ var holder: Control
 var is_panning: bool = false
 var last_mouse_pos: Vector2
 var is_hovered: bool = false
+
+#Workspaces
 var _workspace_ID:String
+var save_name: String = "My Save"
+var author_name: String = "Unnamed Author"
+var version: String = ProjectSettings.get_setting("application/config/version")
+var game_title: String = ProjectSettings.get_setting("application/config/name")
+var time_created: String = ""
+var last_updated: String = ""
+
 
 func _notification(what):
 	if what == NOTIFICATION_EXIT_TREE:
@@ -86,6 +95,7 @@ func save_everything():
 	for child in holder.get_children():
 		child = child.get_child(0)
 		if child is not GL_Node:
+			print(child.name)
 			continue
 		var id = "SAVE_" + str(rng.randi())
 		saveDict[id] = {
@@ -106,12 +116,28 @@ func save_everything():
 	var file_path = save_dir + "/node_workspace.tres"
 
 	var resource = ConfigFile.new()
+
+	# Metadata section
+	if time_created == "":
+		time_created = Time.get_datetime_string_from_system(true)
+	last_updated = Time.get_datetime_string_from_system(true)
+
+	resource.set_value("meta", "save_name", save_name)
+	resource.set_value("meta", "author", author_name)
+	resource.set_value("meta", "version", ProjectSettings.get_setting("application/config/version"))
+	resource.set_value("meta", "game_title", ProjectSettings.get_setting("application/config/name"))
+	resource.set_value("meta", "time_created", time_created)
+	resource.set_value("meta", "last_updated", last_updated)
+
+	# Main save data
 	resource.set_value("workspace", "data", saveDict)
+
 	var err = resource.save(file_path)
 	if err != OK:
 		push_error("Failed to save workspace: " + str(err))
 	else:
 		print("Saved workspace to: ", file_path)
+
 		
 func load_everything():
 	var file_path = "user://My Precious Save Files/" + str(_workspace_ID) + "/node_workspace.tres"
@@ -120,10 +146,25 @@ func load_everything():
 	if err != OK:
 		push_error("Failed to load workspace: " + str(err))
 		return {}
-	
+
+	# Load metadata
+	save_name = resource.get_value("meta", "save_name", "Unnamed Save")
+	author_name = resource.get_value("meta", "author", "Unknown Author")
+	version = resource.get_value("meta", "version", "0.0")
+	game_title = resource.get_value("meta", "game_title", "Untitled Game")
+	time_created = resource.get_value("meta", "time_created", "")
+	last_updated = resource.get_value("meta", "last_updated", "")
+
+	print("Loaded workspace metadata:")
+	print("Save Name: ", save_name)
+	print("Author: ", author_name)
+	print("Version: ", version)
+	print("Game Title: ", game_title)
+	print("Time Created: ", time_created)
+	print("Last Updated: ", last_updated)
+
+	# Load nodes
 	var data = resource.get_value("workspace", "data", {})
-	print("Loaded workspace from: ", file_path)
-	
 	for key in data:
 		var node := load(data[key]["path"]).instantiate() as GL_Node
 		holder.add_child(node)
