@@ -83,7 +83,7 @@ func _record():
 		if defaultValues[key] == rows[key]["input"]:
 			continue
 		elif defaultValues[key] != null:
-			defaultValues[key] == null #is this gonna bite me back if I allow null values to pass
+			defaultValues[key] = null #is this gonna bite me back if I allow null values to pass
 		var currentSave = recording[key]["current"]
 		if currentSave == null:
 			var id = "ID_" + str(rng.randi())

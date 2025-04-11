@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c57u187iciexi"]
+[gd_scene load_steps=6 format=3 uid="uid://c57u187iciexi"]
 
 [ext_resource type="Script" uid="uid://i4p62x8fnqpn" path="res://Scripts/GL_Node_Map.gd" id="1_jyqbx"]
 [ext_resource type="PackedScene" uid="uid://mowdu1i1rldt" path="res://Scenes/UI/Search.tscn" id="1_xwfut"]
+[ext_resource type="Theme" uid="uid://b3wjoiiv6sq22" path="res://UI/Themes/Default.tres" id="2_2eix6"]
 
 [sub_resource type="Gradient" id="Gradient_xwfut"]
 colors = PackedColorArray(0.448074, 0.0582233, 0.099986, 1, 0.330802, 0.066494, 0.0423852, 1)
@@ -31,6 +32,23 @@ texture = SubResource("GradientTexture1D_jyqbx")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+z_index = 1000
+layout_mode = 2
+offset_left = 10.0
+offset_top = 550.0
+offset_right = 1142.0
+offset_bottom = 599.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_2eix6")
+theme_override_font_sizes/font_size = 8
+text = "Give LIFE: TEST_C_ETCHINGS
+Press Esc for Nodes, Right Click to search node.
+Tab toggles background.Middle Click hold to pan. 
+Scroll to Zoom. Hover things for tooltips."
+horizontal_alignment = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

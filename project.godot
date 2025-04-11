@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Give LIFE"
-config/description="The sequel to Faz-Anim"
-config/version="0.2"
+config/description="The sequel to Faz-Anim!"
+config/version="0.3"
 run/main_scene="uid://doe47bro2kqt6"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
