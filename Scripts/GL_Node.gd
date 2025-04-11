@@ -16,6 +16,15 @@ func _ready():
 func _process(delta):
 	if dragging:
 		position = get_viewport().get_mouse_position() + dragOffset
+	for key in rows:
+		for connection in rows[key].get("connections",[]):
+			if typeof(connection.target) == TYPE_STRING:
+				for node in get_tree().get_nodes_in_group("GL Node"):
+					if node is GL_Node:
+						if node.uuid == connection.target:
+							connection.target = node
+							break
+			
 		
 func _input(event): 
 	if event is InputEventMouseButton:
@@ -128,12 +137,12 @@ func _send_input(output_name: String):
 	if not rows.has(output_name):
 		return
 
-	var connections = rows[output_name].get("connections", [])
-	for conn in connections:
+	for conn in rows[output_name].get("connections", []):
 		var target = conn.get("target", null)
 		var input_name = conn.get("input_name", null)
 		if target and input_name:
-			target._recieve_input(input_name, rows[output_name]["output"])
+			if typeof(target) != TYPE_STRING:
+				target._recieve_input(input_name, rows[output_name]["output"])
 
 func _confirm_backConnection(input_name:String):
 	if !rows.has(input_name):
@@ -159,7 +168,7 @@ func _create_connection(target:GL_Node,input_name:String,output_name:String):
 		"input_name": input_name
 	}
 	
-	var connections = rows[output_name].get("connections",[])
+	var connections = 	rows[output_name].get("connections", [])
 	
 	for connection in connections:
 		if connection.target == thenew.target and connection.input_name == thenew.input_name:

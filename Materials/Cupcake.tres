@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://ib27jt1hintu"]
+
+[ext_resource type="Shader" uid="uid://des8a3glk3x31" path="res://Materials/Chica.gdshader" id="1_x2806"]
+[ext_resource type="Texture2D" uid="uid://d2njms16g6vfl" path="res://Textures/Cupcake_Main.png" id="2_x2806"]
+[ext_resource type="Texture2D" uid="uid://ds153o06s3h2o" path="res://Textures/Cupcake_MaskMap.png" id="3_ra1hk"]
+[ext_resource type="Texture2D" uid="uid://mib065wdrh1d" path="res://Textures/Cupcake_NormalMap.png" id="4_ea1c7"]
+[ext_resource type="Texture2D" uid="uid://ynfjrueskv6u" path="res://Textures/Cupcake_PaintMap.png" id="5_olpqj"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_x2806")
+shader_parameter/diffuse_texture = ExtResource("2_x2806")
+shader_parameter/normal_map = ExtResource("4_ea1c7")
+shader_parameter/normal_scale = 1.0
+shader_parameter/mask_map = ExtResource("3_ra1hk")
+shader_parameter/paint_map = ExtResource("5_olpqj")
+shader_parameter/paint_color_r = Color(0.823529, 0.305882, 0.427451, 1)
+shader_parameter/paint_color_g = Color(0.443137, 0.298039, 0.215686, 1)
+shader_parameter/paint_color_b = Color(0.227451, 0.0980392, 0.0666667, 1)
+shader_parameter/paint_color_a = Color(1, 0.568627, 0, 1)

@@ -7,6 +7,10 @@ var last_mouse_pos: Vector2
 var is_hovered: bool = false
 var _workspace_ID:String
 
+func _notification(what):
+	if what == NOTIFICATION_EXIT_TREE:
+		save_everything()
+
 func _ready():
 	visible = false
 	background = get_node("Background")
@@ -15,6 +19,10 @@ func _ready():
 
 	connect("mouse_entered", _on_mouse_entered)
 	connect("mouse_exited", _on_mouse_exited)
+	
+	var rng = RandomNumberGenerator.new()
+	rng.seed = Time.get_ticks_msec()
+	_workspace_ID = str(rng.randi())
 
 func _on_mouse_entered():
 	is_hovered = true
@@ -75,7 +83,10 @@ func save_everything():
 	var rng = RandomNumberGenerator.new()
 	rng.seed = Time.get_ticks_msec()
 
-	for child:GL_Node in holder.get_children():
+	for child in holder.get_children():
+		child = child.get_child(0)
+		if child is not GL_Node:
+			continue
 		var id = "SAVE_" + str(rng.randi())
 		saveDict[id] = {
 			"path": child.nodePath,
@@ -102,7 +113,7 @@ func save_everything():
 	else:
 		print("Saved workspace to: ", file_path)
 		
-func load_everything() -> Dictionary:
+func load_everything():
 	var file_path = "user://My Precious Save Files/" + str(_workspace_ID) + "/node_workspace.tres"
 	var resource = ConfigFile.new()
 	var err = resource.load(file_path)
@@ -112,4 +123,11 @@ func load_everything() -> Dictionary:
 	
 	var data = resource.get_value("workspace", "data", {})
 	print("Loaded workspace from: ", file_path)
-	return data
+	
+	for key in data:
+		var node := load(data[key]["path"]).instantiate() as GL_Node
+		holder.add_child(node)
+		node.uuid = data[key]["uuid"]
+		node._set_title(data[key]["name"])
+		node.rows = data[key]["rows"]
+		node._update_visuals()
