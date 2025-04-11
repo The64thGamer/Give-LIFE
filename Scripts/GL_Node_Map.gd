@@ -6,6 +6,9 @@ var is_panning: bool = false
 var last_mouse_pos: Vector2
 var is_hovered: bool = false
 
+#Workspace shenanigans
+var optionsVar:OptionButton
+
 #Workspaces
 var _workspace_ID:String
 var save_name: String = "My Save"
@@ -24,14 +27,16 @@ func _ready():
 	visible = false
 	background = get_node("Background")
 	holder = get_node("Holder")
+	optionsVar = get_node("MarginContainer/HBoxContainer/OptionButton")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 	connect("mouse_entered", _on_mouse_entered)
 	connect("mouse_exited", _on_mouse_exited)
-	
-	var rng = RandomNumberGenerator.new()
-	rng.seed = Time.get_ticks_msec()
-	_workspace_ID = str(rng.randi())
+
+	_workspace_ID = generate_new_workspace_id()
+	populate_workspace_options()
+	optionsVar.connect("item_selected", Callable(self, "_on_workspace_selected"))
+
 
 func _on_mouse_entered():
 	is_hovered = true
@@ -91,7 +96,10 @@ func save_everything():
 	var saveDict := {}
 	var rng = RandomNumberGenerator.new()
 	rng.seed = Time.get_ticks_msec()
-
+	
+	if holder.get_child_count() == 0:
+		return
+	
 	for child in holder.get_children():
 		child = child.get_child(0)
 		if child is not GL_Node:
@@ -102,7 +110,8 @@ func save_everything():
 			"path": child.nodePath,
 			"name": child._get_title(),
 			"uuid": child.uuid,
-			"rows": child.rows.duplicate(true), # deep copy
+			"rows": child.rows.duplicate(true),
+			"position": child.position
 		}
 		for key in saveDict[id]["rows"]:
 			if saveDict[id]["rows"][key].has("connections"):
@@ -137,6 +146,8 @@ func save_everything():
 		push_error("Failed to save workspace: " + str(err))
 	else:
 		print("Saved workspace to: ", file_path)
+		
+	populate_workspace_options()
 
 		
 func load_everything():
@@ -166,9 +177,59 @@ func load_everything():
 	# Load nodes
 	var data = resource.get_value("workspace", "data", {})
 	for key in data:
-		var node := load(data[key]["path"]).instantiate() as GL_Node
+		var packed_scene = load(data[key]["path"])
+		if packed_scene == null:
+			printerr("Could not load resource at: " + data[key]["path"])
+			continue
+		var node = packed_scene.instantiate() as Control
 		holder.add_child(node)
-		node.uuid = data[key]["uuid"]
-		node._set_title(data[key]["name"])
-		node.rows = data[key]["rows"]
+		node = node.get_child(0) as GL_Node
+		node.position = data[key].get("position",Vector2.ZERO)
+		node.nodePath = data[key].get("path","ERR")
+		node.uuid = data[key].get("uuid","ERR_" + key + str(Time.get_ticks_msec()))
+		node._set_title(data[key].get("name","???"))
+		node.rows = data[key].get("rows",{})
 		node._update_visuals()
+
+func generate_new_workspace_id() -> String:
+	var rng = RandomNumberGenerator.new()
+	rng.seed = Time.get_ticks_msec()
+	return str(rng.randi())
+
+func clear_holder():
+	for node in holder.get_children():
+		node.queue_free()
+	await get_tree().process_frame  # ensure all nodes are freed
+	
+func populate_workspace_options():
+	optionsVar.clear()
+	optionsVar.add_item("New Workspace")
+
+	var dir := DirAccess.open("user://My Precious Save Files")
+	if dir:
+		dir.list_dir_begin()
+		var name = dir.get_next()
+		while name != "":
+			if dir.current_is_dir() and name != "." and name != "..":
+				optionsVar.add_item(name)
+			name = dir.get_next()
+		dir.list_dir_end()
+
+func _on_workspace_selected(index: int):
+	save_everything()
+
+	if index == 0:  # New Workspace
+		clear_holder()
+		_workspace_ID = generate_new_workspace_id()
+		save_name = "My Save"
+		author_name = "Unnamed Author"
+		version = ProjectSettings.get_setting("application/config/version")
+		game_title = ProjectSettings.get_setting("application/config/name")
+		time_created = ""
+		last_updated = ""
+		print("Created new workspace: ", _workspace_ID)
+	else:
+		var selected_name = optionsVar.get_item_text(index)
+		_workspace_ID = selected_name
+		clear_holder()
+		load_everything()

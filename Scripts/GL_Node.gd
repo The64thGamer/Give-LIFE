@@ -1,7 +1,7 @@
 extends PanelContainer
 class_name GL_Node
 var rows : Dictionary
-var uuid : int #REMEMBER TO SET THIS ON CREATION
+var uuid : String
 var nodePath:String
 var dragging : bool
 var canDrag : bool
@@ -37,7 +37,7 @@ func _input(event):
 func _create_uuid():
 	var rand = RandomNumberGenerator.new()
 	rand.seed = Time.get_unix_time_from_system()
-	uuid = rand.randi()
+	uuid = str(rand.randi())
 
 func _update_visuals():
 	var holder = get_node("Margins").get_node("Holder")
@@ -141,7 +141,7 @@ func _send_input(output_name: String):
 		var target = conn.get("target", null)
 		var input_name = conn.get("input_name", null)
 		if target and input_name:
-			if typeof(target) != TYPE_STRING:
+			if typeof(target) != TYPE_INT:
 				target._recieve_input(input_name, rows[output_name]["output"])
 
 func _confirm_backConnection(input_name:String):

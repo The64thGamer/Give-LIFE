@@ -87,3 +87,5 @@ text = "Save"
 
 [node name="Search" parent="." instance=ExtResource("1_xwfut")]
 layout_mode = 1
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Button2" to="." method="save_everything"]

@@ -44,7 +44,8 @@ func _process(delta):
 				TYPE_COLOR:
 					child.default_color = output
 			child.points[0] = global_position + Vector2(size.x / 2, size.y / 2)
-			child.points[1] = (connections[iter]["target"] as GL_Node).give_input_point_pos(connections[iter]["input_name"])# - child.global_position
+			if typeof(connections[iter]["target"]) != TYPE_INT:
+				child.points[1] = (connections[iter]["target"] as GL_Node).give_input_point_pos(connections[iter]["input_name"])# - child.global_position
 			iter += 1
 
 func _create_line() -> Line2D:
