@@ -19,7 +19,7 @@ operator = 6
 code = "shader_type canvas_item;
 render_mode blend_mix;
 
-uniform vec4 ColorParameter : source_color = vec4(0.005733, 0.015133, 0.051438, 1.000000);
+uniform vec4 ColorParameter : source_color = vec4(0.005733, 0.015132, 0.051438, 1.000000);
 uniform sampler2D screen_tex_frg_2 : hint_screen_texture;
 
 
@@ -48,7 +48,6 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-185.495, 4.35043)
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2(660, 160)

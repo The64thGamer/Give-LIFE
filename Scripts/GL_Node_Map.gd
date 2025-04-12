@@ -50,8 +50,6 @@ func _input(event: InputEvent) -> void:
 		match event.keycode:
 			KEY_ESCAPE:
 				visible = not visible
-				if visible:
-					background.self_modulate.a = 1
 			KEY_TAB:
 				background.self_modulate.a = abs(background.self_modulate.a - 1)
 	if not visible:

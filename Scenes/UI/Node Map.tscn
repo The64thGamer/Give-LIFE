@@ -35,11 +35,16 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="."]
 z_index = 1000
-layout_mode = 2
-offset_left = 10.0
-offset_top = 550.0
-offset_right = 1142.0
-offset_bottom = 599.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1143.0
+offset_top = -97.0
+offset_right = -11.0
+offset_bottom = -48.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("2_2eix6")
