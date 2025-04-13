@@ -1,4 +1,5 @@
 extends Control
+class_name GL_Node_Map
 
 var background: TextureRect
 var holder: Control

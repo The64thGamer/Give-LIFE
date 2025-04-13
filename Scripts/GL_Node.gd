@@ -72,6 +72,9 @@ func _update_visuals():
 				TYPE_BOOL:
 					assignPick(nodeRow.get_node("Pick Bool"),str(key))
 					(nodeRow.get_node("Pick Bool") as CheckButton).button_pressed = rows[key]["pickValue"]
+			if rows[key]["pickValue"] is GL_AudioType:
+				assignPick(nodeRow.get_node("Pick Audio"),str(key))
+				rows[key]["pickValue"] = GL_AudioType.new()
 		else:
 			(nodeRow.get_node("Label") as Label).size_flags_horizontal = Control.SIZE_EXPAND_FILL
 				
@@ -111,8 +114,11 @@ func _set_inout_type(label:Button, value):
 		TYPE_COLOR:
 			label.text = "▲"
 			label.add_theme_color_override("font_color", Color.WHITE_SMOKE)
-		_:
-			label.visible = false
+	if value is GL_AudioType:
+		label.text = "🔈"
+		label.add_theme_color_override("font_color", Color.BLUE_VIOLET)
+	if value == null:
+		label.visible = false
 
 func _set_title(name:String):
 	(get_node("Margins").get_node("Holder").get_node("Title").get_node("Title Label") as LineEdit).text = name
@@ -213,4 +219,4 @@ func delete_whole_node():
 			if node is GL_Node_Point:
 				for key in rows:
 					node.mainNode.destroy_connection(self,key)
-	queue_free()
+	get_parent().queue_free()

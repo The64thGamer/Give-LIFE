@@ -2,8 +2,8 @@ extends GL_Node
 
 func _ready():
 	super._ready()
-	_set_title("Color")
-	_create_row("Output",null,Color.WHITE,true,Color.WHITE,0)
+	_set_title("Audio")
+	_create_row("Output",null,GL_AudioType.new(),true,GL_AudioType.new(),0)
 	_update_visuals()
 
 func _process(delta):

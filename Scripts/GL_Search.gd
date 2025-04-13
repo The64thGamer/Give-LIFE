@@ -1,6 +1,7 @@
 extends Control
 
 var rows : Dictionary = {
+	"Audio":1,
 	"Bool":1,
 	"Chica":1,
 	"ChicaSpot":1,

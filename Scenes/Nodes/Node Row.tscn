@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdcxusbd86oox"]
+[gd_scene load_steps=6 format=3 uid="uid://bdcxusbd86oox"]
 
 [ext_resource type="Script" uid="uid://dwl36vn5chqmq" path="res://Scripts/GL_Node_Point.gd" id="1_fygh4"]
 [ext_resource type="Script" uid="uid://q5qlhwvjb16w" path="res://Scripts/GL_Node_Picker_Float.gd" id="2_vlx6y"]
 [ext_resource type="Script" uid="uid://dflftb37a7ind" path="res://Scripts/GL_Node_Picker_Color.gd" id="3_tf34m"]
 [ext_resource type="Script" uid="uid://b7ysqwtxh8pf" path="res://Scripts/GL_Node_Picker_Bool.gd" id="4_yal7b"]
+[ext_resource type="Script" uid="uid://rmlqvxot3kys" path="res://Scripts/GL_Node_Picker_Audio.gd" id="5_yal7b"]
 
 [node name="Node Row" type="HBoxContainer"]
 
@@ -41,6 +42,30 @@ custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 script = ExtResource("4_yal7b")
 
+[node name="Pick Audio" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 2
+script = ExtResource("5_yal7b")
+
+[node name="HBox" type="HBoxContainer" parent="Pick Audio"]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="Pick Audio/HBox"]
+layout_mode = 2
+allow_reselect = true
+
+[node name="Button" type="Button" parent="Pick Audio/HBox"]
+layout_mode = 2
+text = "🗀"
+
+[node name="FileDialog" type="FileDialog" parent="Pick Audio"]
+title = "Open a File"
+initial_position = 1
+size = Vector2i(960, 480)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+
 [node name="Output" type="Button" parent="." groups=["Outputs"]]
 layout_mode = 2
 mouse_default_cursor_shape = 2
@@ -53,4 +78,6 @@ script = ExtResource("1_fygh4")
 [connection signal="value_changed" from="Pick Float" to="Pick Float" method="value_changed"]
 [connection signal="color_changed" from="Pick Color" to="Pick Color" method="color_changed"]
 [connection signal="toggled" from="Pick Bool" to="Pick Bool" method="toggled"]
+[connection signal="item_selected" from="Pick Audio/HBox/OptionButton" to="Pick Audio" method="_on_audio_option_selected"]
+[connection signal="pressed" from="Pick Audio/HBox/Button" to="Pick Audio" method="_on_audio_button_pressed"]
 [connection signal="button_down" from="Output" to="Output" method="_start_drag"]

@@ -21,6 +21,8 @@ func _named(name:String):
 			mainNode._create_row(name,false,false,true,false,0)
 		2:
 			mainNode._create_row(name,Color.WHITE,Color.WHITE,true,Color.WHITE,0)
+		3:
+			mainNode._create_row(name,GL_AudioType.new(),GL_AudioType.new(),true,GL_AudioType.new(),0)
 	mainNode._update_visuals()
 func _cancelled():
 	disabled = false

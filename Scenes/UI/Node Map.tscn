@@ -10,7 +10,7 @@ colors = PackedColorArray(0.448074, 0.0582233, 0.099986, 1, 0.330802, 0.066494, 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_jyqbx"]
 gradient = SubResource("Gradient_xwfut")
 
-[node name="NodeMap" type="Control"]
+[node name="NodeMap" type="Control" groups=["Node Map"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

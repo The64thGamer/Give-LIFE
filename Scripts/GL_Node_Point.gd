@@ -26,6 +26,8 @@ func _process(delta):
 					previewLine.default_color = Color.BLACK
 			TYPE_COLOR:
 				previewLine.default_color = output
+		if output is GL_AudioType:
+			previewLine.default_color = Color.BLUE_VIOLET
 		
 	var connections = mainNode.rows[valueName].get("connections",[])
 	if connections != []:
@@ -43,6 +45,8 @@ func _process(delta):
 						child.default_color = Color.BLACK
 				TYPE_COLOR:
 					child.default_color = output
+			if output is GL_AudioType:
+				child.default_color = Color.BLUE_VIOLET
 			child.points[0] = global_position + Vector2(size.x / 2, size.y / 2)
 			if typeof(connections[iter]["target"]) != TYPE_INT:
 				child.points[1] = (connections[iter]["target"] as GL_Node).give_input_point_pos(connections[iter]["input_name"])# - child.global_position
