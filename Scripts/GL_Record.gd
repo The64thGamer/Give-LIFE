@@ -60,7 +60,14 @@ func _traverse():
 				recording[key]["lastUsed"] = current
 				recording[key]["current"] = newCurrent 
 			if recording[key]["lastUsed"] != null && recording[key]["current"] != recording[key]["end"]:
-				rows[key]["output"] = lerp(recording[key]["list"][recording[key]["lastUsed"]]["value"],recording[key]["list"][recording[key]["current"]]["value"],remap_time(time,recording[key]["list"][recording[key]["lastUsed"]]["time"],recording[key]["list"][recording[key]["current"]]["time"]))
+				if(rows[key]["output"] is float):
+					rows[key]["output"] = lerp(float(recording[key]["list"][recording[key]["lastUsed"]]["value"]),float(recording[key]["list"][recording[key]["current"]]["value"]),remap_time(time,recording[key]["list"][recording[key]["lastUsed"]]["time"],recording[key]["list"][recording[key]["current"]]["time"]))
+				elif(rows[key]["output"] is bool || rows[key]["output"] is GL_AudioType):
+					rows[key]["output"] = recording[key]["current"]
+				elif(rows[key]["output"] is Color):
+					rows[key]["output"] = lerp(recording[key]["list"][recording[key]["lastUsed"]]["value"],recording[key]["list"][recording[key]["current"]]["value"],remap_time(time,recording[key]["list"][recording[key]["lastUsed"]]["time"],recording[key]["list"][recording[key]["current"]]["time"]))
+
+
 func remap_time(value: float, start: float, end: float) -> float:
 	if start == end:
 		return 0.0 
@@ -81,10 +88,6 @@ func _record():
 	for key in recording:
 		if key == "Recording" || key == "Current Time":
 			continue
-		if defaultValues[key] == rows[key]["input"]:
-			continue
-		elif defaultValues[key] != null:
-			defaultValues[key] = null #is this gonna bite me back if I allow null values to pass
 		var currentSave = recording[key]["current"]
 		if currentSave == null:
 			var id = "ID_" + str(rng.randi())
@@ -99,7 +102,11 @@ func _record():
 			recording[key]["end"] = id
 			rows[key]["output"] = recording[key]["list"][id]["value"]
 			continue
-		else:
+		if defaultValues[key] == rows[key]["input"]:
+			continue
+		elif defaultValues[key] != null:
+			defaultValues[key] = null #is this gonna bite me back if I allow null values to pass
+		if currentSave != null:
 			if time < oldTime: #rewind
 				continue #fix pls
 			else: #forward
