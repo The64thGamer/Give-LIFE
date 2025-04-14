@@ -1,11 +1,12 @@
 extends Control
 
 var rows : Dictionary = {
+	"Advanced Spotlight":1,
+	"Animatronic":1,
 	"Audio":1,
 	"Bool":1,
-	"Chica":1,
-	"ChicaSpot":1,
 	"Color":1,
+	"Direct Output":1,
 	"Float":1,
 	"Invert":1,
 	"Keystrokes":1,

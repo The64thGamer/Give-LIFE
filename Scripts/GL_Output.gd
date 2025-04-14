@@ -15,6 +15,8 @@ func _ready():
 				_create_row(str(names[i]),Color.WHITE,null,true,Color.WHITE,0)
 			"bool":
 				_create_row(str(names[i]),false,null,true,false,0)
+			"audio":
+				_create_row(str(names[i]),GL_AudioType.new(),null,true,GL_AudioType.new(),0)
 	_update_visuals()
 
 func _process(delta):

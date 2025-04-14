@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://doe47bro2kqt6"]
+[gd_scene load_steps=12 format=3 uid="uid://doe47bro2kqt6"]
 
 [ext_resource type="PackedScene" uid="uid://cry2msqosqx0u" path="res://Scenes/Animatables/Chica.tscn" id="1_5nprb"]
 [ext_resource type="ArrayMesh" uid="uid://b1bib2igyo7dh" path="res://Models/map.res" id="1_hw7w6"]
 [ext_resource type="Script" uid="uid://8vyuhyx0xogt" path="res://Scripts/freecam.gd" id="2_stiks"]
 [ext_resource type="VoxelGIData" uid="uid://46w51nkfx52x" path="res://Scenes/Levels/Freddy's.VoxelGI_data.res" id="3_1u053"]
 [ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/GL_Spotlight.gd" id="3_2ymb8"]
+[ext_resource type="Script" uid="uid://c5kxam0k3beml" path="res://Scripts/GL_Speaker.gd" id="5_dxv3w"]
 [ext_resource type="PackedScene" uid="uid://c57u187iciexi" path="res://Scenes/UI/Node Map.tscn" id="5_h0i1e"]
 [ext_resource type="Material" uid="uid://o4fe7jj6qk7v" path="res://addons/Godot-4-Color-Correction-and-Screen-Effects-main/Materials and Shaders/Shade.tres" id="5_v8b1x"]
 [ext_resource type="PackedScene" uid="uid://c1jqilpkwfdrv" path="res://Models/Cupcake.fbx" id="8_rh5t1"]
@@ -147,6 +148,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="Direct Output" type="Node" parent="Camera3D" groups=["DIRECT_OUTPUT"]]
+script = ExtResource("5_dxv3w")
+
+[node name="Speaker" type="AudioStreamPlayer" parent="Camera3D/Direct Output"]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.976122, 0.0551108, -0.210113, -0.00945105, 0.97714, 0.212388, 0.217015, -0.205331, 0.954329, 1.01632, 5.29307, 3.8293)

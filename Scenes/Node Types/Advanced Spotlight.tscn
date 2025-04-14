@@ -10,7 +10,7 @@ mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_vck43")]
 layout_mode = 0
-tooltip_text = "Controls the spotlight for Chica."
+tooltip_text = "Controls a spotlight."
 script = ExtResource("2_1p1hk")
 identification = "L_SPOT_CHICA"
 names = PackedStringArray("intensity", "color", "size")
