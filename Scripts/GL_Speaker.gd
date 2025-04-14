@@ -1,6 +1,7 @@
 extends GL_Animatable
 
 var speaker:AudioStreamPlayer
+var oldPath:String
 
 func _ready():
 	speaker = get_child(0)
@@ -13,7 +14,7 @@ func _sent_signals(anim_name: String, value):
 	match(anim_name):
 		"Audio":
 			var path = (value as GL_AudioType).value
-			if path != "":
+			if path != "" && path != oldPath:
 				var stream
 				match(path.get_extension().to_lower()):
 					"mp3":
@@ -25,12 +26,13 @@ func _sent_signals(anim_name: String, value):
 				if stream and stream is AudioStream:
 					speaker.stream = stream
 					speaker.play()
+					oldPath = path
 				else:
 					printerr("Invalid audio stream at path: ", path)
 		"Volume":
 			speaker.volume_linear = value
 		"Current Time":
-			if abs(speaker.get_playback_position() - value) < 0.1:
+			if abs(speaker.get_playback_position() - value) > 0.1:
 				speaker.seek(value)
 	
 
