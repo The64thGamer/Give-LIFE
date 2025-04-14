@@ -74,7 +74,8 @@ func _update_visuals():
 					(nodeRow.get_node("Pick Bool") as CheckButton).button_pressed = rows[key]["pickValue"]
 			if rows[key]["pickValue"] is GL_AudioType:
 				assignPick(nodeRow.get_node("Pick Audio"),str(key))
-				rows[key]["pickValue"] = GL_AudioType.new()
+				if rows[key]["pickValue"] == null:
+					rows[key]["pickValue"] = GL_AudioType.new()
 		else:
 			(nodeRow.get_node("Label") as Label).size_flags_horizontal = Control.SIZE_EXPAND_FILL
 				

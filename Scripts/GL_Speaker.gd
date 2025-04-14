@@ -14,6 +14,7 @@ func _sent_signals(anim_name: String, value):
 		
 	match(anim_name):
 		"Audio":
+			print(value.value)
 			if value is not GL_AudioType:
 				return
 			var path = (value as GL_AudioType).value
