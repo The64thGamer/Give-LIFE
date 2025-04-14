@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwcuye45ift61"]
+
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_5vmnd"]
+[ext_resource type="Script" uid="uid://bmnxkp7ge8wu1" path="res://Scripts/GL_Multiply.gd" id="2_5vmnd"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_5vmnd")]
+layout_mode = 0
+tooltip_text = "Multiplies two floats together."
+script = ExtResource("2_5vmnd")
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

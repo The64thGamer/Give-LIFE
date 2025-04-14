@@ -10,7 +10,7 @@ mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_uifvy")]
 layout_mode = 0
-tooltip_text = "Controls Chica's movements. All eyelid movements can be set to a particular position using values of 0.0 to 1.0."
+tooltip_text = "Outputs audio directly to your device speakers."
 script = ExtResource("2_nkf8v")
 identification = "DIRECT_OUTPUT"
 names = PackedStringArray("Audio", "Volume", "Current Time")

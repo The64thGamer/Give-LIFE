@@ -1,6 +1,7 @@
 extends Control
 
 var rows : Dictionary = {
+	"Add":1,
 	"Advanced Spotlight":1,
 	"Animatronic":1,
 	"Audio":1,
@@ -15,9 +16,12 @@ var rows : Dictionary = {
 	"Mix Colors":1,
 	"Mix Floats":1,
 	"Mouse Wheel":1,
+	"Multiply":1,
 	"Random":1,
 	"Record":1,
 	"Sine":1,
+	"Subtract":1,
+	"Switch Audio":1,
 	"Timeline":1,
 	}
 var searching : bool

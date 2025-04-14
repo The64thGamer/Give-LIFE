@@ -60,19 +60,17 @@ func _traverse():
 				recording[key]["lastUsed"] = current
 				recording[key]["current"] = newCurrent 
 			if recording[key]["lastUsed"] != null && recording[key]["current"] != recording[key]["end"]:
-				if(rows[key]["output"] is float):
+				if(typeof(rows[key]["output"]) == TYPE_BOOL || rows[key]["output"] is GL_AudioType):
+					rows[key]["output"] = recording[key]["list"][recording[key]["current"]]["value"]
+				elif(typeof(rows[key]["output"]) == TYPE_FLOAT):
 					rows[key]["output"] = lerp(float(recording[key]["list"][recording[key]["lastUsed"]]["value"]),float(recording[key]["list"][recording[key]["current"]]["value"]),remap_time(time,recording[key]["list"][recording[key]["lastUsed"]]["time"],recording[key]["list"][recording[key]["current"]]["time"]))
-				elif(rows[key]["output"] is bool || rows[key]["output"] is GL_AudioType):
-					rows[key]["output"] = recording[key]["current"]
-				elif(rows[key]["output"] is Color):
+				elif(typeof(rows[key]["output"]) == TYPE_COLOR):
 					rows[key]["output"] = lerp(recording[key]["list"][recording[key]["lastUsed"]]["value"],recording[key]["list"][recording[key]["current"]]["value"],remap_time(time,recording[key]["list"][recording[key]["lastUsed"]]["time"],recording[key]["list"][recording[key]["current"]]["time"]))
-
 
 func remap_time(value: float, start: float, end: float) -> float:
 	if start == end:
 		return 0.0 
 	return (value - start) / (end - start)
-
 
 func recursive_traverse_forward(key:String,current:String) -> String:
 	var dict = recording[key]["list"][current]

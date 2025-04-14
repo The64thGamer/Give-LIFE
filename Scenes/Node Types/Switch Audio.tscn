@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://eoidlfg4tkux"]
+
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_mx713"]
+[ext_resource type="Script" uid="uid://dvk3lfcqg4nwr" path="res://Scripts/GL_Switch_Audio.gd" id="2_mx713"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_mx713")]
+layout_mode = 0
+tooltip_text = "Toggles between two audio sources using the 'Toggle' input."
+script = ExtResource("2_mx713")
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

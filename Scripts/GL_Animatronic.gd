@@ -118,4 +118,5 @@ func _process(delta):
 
 # Function to set the time of the animation based on a normalized value (0.0 to 1.0)
 func _sent_signals(anim_name: String, value: float):
+	value = float(value)
 	animParameters[anim_name]["signal_value"] = clamp(value,0,1)

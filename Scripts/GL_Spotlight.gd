@@ -10,11 +10,15 @@ func _ready():
 func _sent_signals(signal_ID:String,the_signal):
 	match(signal_ID):
 		"intensity":
-			light.light_energy = max(the_signal,0) * energyMultiplier
+			if typeof(the_signal) == TYPE_BOOL:
+				the_signal = the_signal * 1.0
+			light.light_energy = max(the_signal,0.0) * energyMultiplier
 		"color":
 			if canChangeColor:
 				light.light_color = the_signal
 		"size":
 			if canChangeSize:
-				light.spot_angle = clamp(the_signal * 45,0.1,90)
+				if typeof(the_signal) == TYPE_BOOL:
+					the_signal = the_signal * 1.0
+				light.spot_angle = clamp(the_signal * 45.0,0.1,90)
 	pass 
