@@ -2,6 +2,7 @@ extends GL_Animatable
 
 var speaker:AudioStreamPlayer
 var oldPath:String
+var oldTime:float
 
 func _ready():
 	speaker = get_child(0)
@@ -25,15 +26,17 @@ func _sent_signals(anim_name: String, value):
 						stream = AudioStreamOggVorbis.load_from_file(path)
 				if stream and stream is AudioStream:
 					speaker.stream = stream
-					speaker.play()
 					oldPath = path
 				else:
 					printerr("Invalid audio stream at path: ", path)
 		"Volume":
 			speaker.volume_linear = value
 		"Current Time":
-			if abs(speaker.get_playback_position() - value) > 0.1:
-				speaker.seek(value)
-	
+			if speaker.stream != null:
+				if abs(speaker.get_playback_position() - value) > 0.05 && value < speaker.stream.get_length():
+					speaker.play(value)
+				if oldTime == value:
+					speaker.stop()
+				oldTime = value
 
 	
