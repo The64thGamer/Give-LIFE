@@ -200,3 +200,19 @@ data = ExtResource("3_1u053")
 
 [node name="Cupcake" parent="." instance=ExtResource("8_rh5t1")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.70851, 1.63136, -0.629339)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02523, 5.11888, -0.962287)
+light_color = Color(0.453088, 0.421959, 0.656402, 1)
+light_energy = 1.184
+shadow_enabled = true
+omni_range = 8.67266
+omni_attenuation = 2.0
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02523, 5.11888, -0.962287)
+visible = false
+light_energy = 2.829
+shadow_enabled = true
+omni_range = 8.67266
+omni_attenuation = 2.0

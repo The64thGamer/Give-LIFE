@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnrc4uavbcu8f"
-path.s3tc="res://.godot/imported/Chica_NormalMap.png-69cc3ac2b8ef303f803e39dc3c32c557.s3tc.ctex"
-path.etc2="res://.godot/imported/Chica_NormalMap.png-69cc3ac2b8ef303f803e39dc3c32c557.etc2.ctex"
+path.bptc="res://.godot/imported/Chica_NormalMap.png-69cc3ac2b8ef303f803e39dc3c32c557.bptc.ctex"
+path.astc="res://.godot/imported/Chica_NormalMap.png-69cc3ac2b8ef303f803e39dc3c32c557.astc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,12 +13,12 @@ metadata={
 [deps]
 
 source_file="res://Textures/Chica_NormalMap.png"
-dest_files=["res://.godot/imported/Chica_NormalMap.png-69cc3ac2b8ef303f803e39dc3c32c557.s3tc.ctex", "res://.godot/imported/Chica_NormalMap.png-69cc3ac2b8ef303f803e39dc3c32c557.etc2.ctex"]
+dest_files=["res://.godot/imported/Chica_NormalMap.png-69cc3ac2b8ef303f803e39dc3c32c557.bptc.ctex", "res://.godot/imported/Chica_NormalMap.png-69cc3ac2b8ef303f803e39dc3c32c557.astc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=1
