@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwvshov2sptun"]
 
-[ext_resource type="Script" uid="uid://0trc0nel0023" path="res://Scripts/GL_Node_Add.gd" id="1_vw1dw"]
+[ext_resource type="Script" uid="uid://0trc0nel0023" path="res://Scripts/Node Class/GL_Node_Add.gd" id="1_vw1dw"]
 
 [node name="OptionButton" type="OptionButton"]
 offset_right = 68.0

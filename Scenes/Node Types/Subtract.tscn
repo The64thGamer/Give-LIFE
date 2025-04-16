@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dk4kpw62fma4m"]
 
 [ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_vak63"]
-[ext_resource type="Script" uid="uid://bxaml7g17kutm" path="res://Scripts/GL_Subtract.gd" id="2_vak63"]
+[ext_resource type="Script" uid="uid://bxaml7g17kutm" path="res://Scripts/Node Types/GL_Subtract.gd" id="2_vak63"]
 
 [node name="Node" type="Control"]
 layout_mode = 3

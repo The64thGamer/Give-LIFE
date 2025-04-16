@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://mowdu1i1rldt"]
 
-[ext_resource type="Script" uid="uid://c46u2u0lup1mm" path="res://Scripts/GL_Search.gd" id="1_g1g1x"]
+[ext_resource type="Script" uid="uid://c46u2u0lup1mm" path="res://Scripts/Node Types/GL_Search.gd" id="1_g1g1x"]
 
 [node name="Search" type="Control"]
 z_index = 100

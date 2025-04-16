@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b83i85vl6gd01"]
 
 [ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_njggm"]
-[ext_resource type="Script" uid="uid://beit3xudynjdl" path="res://Scripts/GL_Mix_Floats.gd" id="2_njggm"]
+[ext_resource type="Script" uid="uid://beit3xudynjdl" path="res://Scripts/Node Types/GL_Mix_Floats.gd" id="2_njggm"]
 
 [node name="Node" type="Control"]
 layout_mode = 3

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxay21t1j6ha1"]
 
 [ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_vck43"]
-[ext_resource type="Script" uid="uid://t8bsiegtsiwo" path="res://Scripts/GL_Output.gd" id="2_1p1hk"]
+[ext_resource type="Script" uid="uid://t8bsiegtsiwo" path="res://Scripts/Node Types/GL_Output.gd" id="2_1p1hk"]
 
 [node name="Node" type="Control"]
 layout_mode = 3
@@ -12,9 +12,13 @@ mouse_filter = 1
 layout_mode = 0
 tooltip_text = "Controls a spotlight."
 script = ExtResource("2_1p1hk")
-identification = "L_SPOT_CHICA"
-names = PackedStringArray("intensity", "color", "size")
-types = PackedStringArray("float", "color", "float")
+customRows = {
+"L_SPOT_CHICA": {
+"color": Color(1, 0.890592, 0.770118, 1),
+"intensity": 0.0,
+"size": 0.3
+}
+}
 
 [connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
 [connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

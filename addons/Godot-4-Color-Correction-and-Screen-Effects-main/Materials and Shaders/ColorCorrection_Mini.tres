@@ -59,7 +59,7 @@ max = 100.0
 default_value_enabled = true
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_0aqq5"]
-size = Vector2(1204, 728)
+size = Vector2(1204, 442)
 title = "Brightness, Contrast, Saturation"
 attached_nodes = PackedInt32Array(15, 16, 14, 9, 8, 7, 6)
 
@@ -116,7 +116,7 @@ linked_parent_graph_frame = 4
 operator = 3
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_uafdx"]
-size = Vector2(1005, 620)
+size = Vector2(1004, 442)
 title = "Vignette"
 attached_nodes = PackedInt32Array(10, 11, 13, 12, 254)
 
@@ -136,12 +136,12 @@ default_value_enabled = true
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_l1o88"]
 linked_parent_graph_frame = 151
-size = Vector2(2064, 992)
+size = Vector2(2064, 882)
 title = "Main Color Correcton"
 attached_nodes = PackedInt32Array(25, 20, 27, 22, 21, 30, 29, 28, 26, 24, 23, 19, 18)
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_qepnh"]
-size = Vector2(664, 298)
+size = Vector2(664, 122)
 title = "Color Filter"
 attached_nodes = PackedInt32Array(31, 32)
 

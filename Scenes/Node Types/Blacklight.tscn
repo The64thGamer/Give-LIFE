@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://orb8ktn8fpup"]
+
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_jwmxn"]
+[ext_resource type="Script" uid="uid://dbqob0b43rqef" path="res://Scripts/Node Types/GL_Blacklight.gd" id="2_jwmxn"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_jwmxn")]
+layout_mode = 0
+tooltip_text = "Outputs a special color that will reveal UV reactive paint on objects when connected to a light's color value."
+script = ExtResource("2_jwmxn")
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]

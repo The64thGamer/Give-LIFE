@@ -4,5 +4,5 @@
 transparency = 1
 albedo_color = Color(1, 1, 1, 0.415686)
 metallic = 1.0
-roughness = 0.16
-refraction_enabled = true
+roughness = 0.23
+refraction_texture_channel = 2

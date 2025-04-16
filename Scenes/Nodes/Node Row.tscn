@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bdcxusbd86oox"]
 
-[ext_resource type="Script" uid="uid://dwl36vn5chqmq" path="res://Scripts/GL_Node_Point.gd" id="1_fygh4"]
-[ext_resource type="Script" uid="uid://q5qlhwvjb16w" path="res://Scripts/GL_Node_Picker_Float.gd" id="2_vlx6y"]
-[ext_resource type="Script" uid="uid://dflftb37a7ind" path="res://Scripts/GL_Node_Picker_Color.gd" id="3_tf34m"]
-[ext_resource type="Script" uid="uid://b7ysqwtxh8pf" path="res://Scripts/GL_Node_Picker_Bool.gd" id="4_yal7b"]
-[ext_resource type="Script" uid="uid://rmlqvxot3kys" path="res://Scripts/GL_Node_Picker_Audio.gd" id="5_yal7b"]
+[ext_resource type="Script" uid="uid://dwl36vn5chqmq" path="res://Scripts/Node Class/GL_Node_Point.gd" id="1_fygh4"]
+[ext_resource type="Script" uid="uid://q5qlhwvjb16w" path="res://Scripts/Node Class/GL_Node_Picker_Float.gd" id="2_vlx6y"]
+[ext_resource type="Script" uid="uid://dflftb37a7ind" path="res://Scripts/Node Class/GL_Node_Picker_Color.gd" id="3_tf34m"]
+[ext_resource type="Script" uid="uid://b7ysqwtxh8pf" path="res://Scripts/Node Class/GL_Node_Picker_Bool.gd" id="4_yal7b"]
+[ext_resource type="Script" uid="uid://rmlqvxot3kys" path="res://Scripts/Node Class/GL_Node_Picker_Audio.gd" id="5_yal7b"]
 
 [node name="Node Row" type="HBoxContainer"]
 

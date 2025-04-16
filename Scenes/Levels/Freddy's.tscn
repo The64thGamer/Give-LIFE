@@ -1,13 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://doe47bro2kqt6"]
+[gd_scene load_steps=14 format=3 uid="uid://doe47bro2kqt6"]
 
 [ext_resource type="PackedScene" uid="uid://cry2msqosqx0u" path="res://Scenes/Animatables/Chica.tscn" id="1_5nprb"]
 [ext_resource type="ArrayMesh" uid="uid://b1bib2igyo7dh" path="res://Models/map.res" id="1_hw7w6"]
-[ext_resource type="Script" uid="uid://8vyuhyx0xogt" path="res://Scripts/freecam.gd" id="2_stiks"]
+[ext_resource type="Script" uid="uid://8vyuhyx0xogt" path="res://Scripts/Player/freecam.gd" id="2_stiks"]
 [ext_resource type="VoxelGIData" uid="uid://46w51nkfx52x" path="res://Scenes/Levels/Freddy's.VoxelGI_data.res" id="3_1u053"]
-[ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/GL_Spotlight.gd" id="3_2ymb8"]
-[ext_resource type="Script" uid="uid://c5kxam0k3beml" path="res://Scripts/GL_Speaker.gd" id="5_dxv3w"]
+[ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Node Types/GL_Spotlight.gd" id="3_2ymb8"]
+[ext_resource type="Script" uid="uid://c5kxam0k3beml" path="res://Scripts/Node Types/GL_Speaker.gd" id="5_dxv3w"]
 [ext_resource type="PackedScene" uid="uid://c57u187iciexi" path="res://Scenes/UI/Node Map.tscn" id="5_h0i1e"]
 [ext_resource type="Material" uid="uid://o4fe7jj6qk7v" path="res://addons/Godot-4-Color-Correction-and-Screen-Effects-main/Materials and Shaders/Shade.tres" id="5_v8b1x"]
+[ext_resource type="Texture2D" uid="uid://ktqnj6yjrsbn" path="res://Textures/Flashlight.png" id="6_dxv3w"]
+[ext_resource type="Script" uid="uid://r3akx4cd0pjd" path="res://Scripts/Player/Flashlight.gd" id="7_nohax"]
 [ext_resource type="PackedScene" uid="uid://c1jqilpkwfdrv" path="res://Models/Cupcake.fbx" id="8_rh5t1"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_stiks"]
@@ -154,6 +156,18 @@ script = ExtResource("5_dxv3w")
 
 [node name="Speaker" type="AudioStreamPlayer" parent="Camera3D/Direct Output"]
 
+[node name="Flashlight" type="SpotLight3D" parent="Camera3D"]
+transform = Transform3D(0.988581, 0.00223086, 0.150674, 0.00378631, 0.999207, -0.0396364, -0.150643, 0.0397543, 0.987789, 0.18008, -0.22295, -0.000120074)
+visible = false
+light_energy = 16.0
+light_projector = ExtResource("6_dxv3w")
+light_size = 0.1
+shadow_enabled = true
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle_attenuation = 1.32065e-05
+script = ExtResource("7_nohax")
+
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.976122, 0.0551108, -0.210113, -0.00945105, 0.97714, 0.212388, 0.217015, -0.205331, 0.954329, 1.01632, 5.29307, 3.8293)
 light_color = Color(0.944285, 0.839984, 0.7003, 1)
@@ -194,25 +208,48 @@ ambient_mode = 0
 [node name="NodeMap" parent="." instance=ExtResource("5_h0i1e")]
 
 [node name="VoxelGI" type="VoxelGI" parent="."]
-subdiv = 0
 size = Vector3(30, 30, 30)
 data = ExtResource("3_1u053")
 
 [node name="Cupcake" parent="." instance=ExtResource("8_rh5t1")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.70851, 1.63136, -0.629339)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 5.0536, -0.179164, -7.79335)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02523, 5.11888, -0.962287)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.08313, 6.53973, -5.89464)
 light_color = Color(0.453088, 0.421959, 0.656402, 1)
-light_energy = 1.184
+light_energy = 1.349
 shadow_enabled = true
-omni_range = 8.67266
+omni_range = 15.0
 omni_attenuation = 2.0
 
-[node name="OmniLight3D9" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02523, 5.11888, -0.962287)
-visible = false
-light_energy = 2.829
+[node name="OmniLight3D10" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0281185, 6.53973, -11.7199)
+light_color = Color(0.453088, 0.421959, 0.656402, 1)
+light_energy = 1.349
 shadow_enabled = true
-omni_range = 8.67266
+omni_range = 15.0
+omni_attenuation = 2.0
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77652, 6.53973, -9.53749)
+light_color = Color(0.453088, 0.421959, 0.656402, 1)
+light_energy = 1.349
+shadow_enabled = true
+omni_range = 15.0
+omni_attenuation = 2.0
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.28852, 6.53973, -10.2856)
+light_color = Color(0.453088, 0.421959, 0.656402, 1)
+light_energy = 1.349
+shadow_enabled = true
+omni_range = 15.0
+omni_attenuation = 2.0
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8723, 6.53973, -6.37975)
+light_color = Color(0.453088, 0.421959, 0.656402, 1)
+light_energy = 1.349
+shadow_enabled = true
+omni_range = 15.0
 omni_attenuation = 2.0
