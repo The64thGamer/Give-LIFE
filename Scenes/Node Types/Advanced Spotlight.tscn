@@ -41,7 +41,7 @@ customRows = {
 "L_COLOR_B_GUEST": {
 "color": Color(0.183399, 0.257872, 1, 1),
 "intensity": 0.0,
-"size": 0.5
+"size": 0.3
 },
 "L_SPOT_CHICA": {
 "color": Color(1, 0.890592, 0.770118, 1),
