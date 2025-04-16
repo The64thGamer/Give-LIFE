@@ -110,6 +110,7 @@ func save_everything():
 			"path": child.nodePath,
 			"name": child._get_title(),
 			"uuid": child.uuid,
+			"special_saved_values": child.special_saved_values,
 			"rows": child.rows.duplicate(true),
 			"position": child.position
 		}
@@ -206,6 +207,7 @@ func load_everything():
 		node.uuid = data[key].get("uuid","ERR_" + key + str(Time.get_ticks_msec()))
 		node._set_title(data[key].get("name","???"))
 		node.rows = data[key].get("rows",{})
+		node.special_saved_values = data[key].get("special_saved_values",{})
 		node._update_visuals()
 		if node is GL_Record:
 			var recording_file = "user://My Precious Save Files/" + str(_workspace_ID) + "/" + node.uuid + "_recording.tres"

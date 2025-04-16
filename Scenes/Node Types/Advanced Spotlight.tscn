@@ -13,10 +13,50 @@ layout_mode = 0
 tooltip_text = "Controls a spotlight."
 script = ExtResource("2_1p1hk")
 customRows = {
+"L_COLOR_A_CHICA": {
+"color": Color(0.571163, 0.910449, 0.191508, 1),
+"intensity": 0.0,
+"size": 0.3
+},
+"L_COLOR_A_FREDDY": {
+"color": Color(1, 0.521496, 0.136316, 1),
+"intensity": 0.0,
+"size": 0.3
+},
+"L_COLOR_A_GUEST": {
+"color": Color(0.792161, 0.282841, 0.989518, 1),
+"intensity": 0.0,
+"size": 0.3
+},
+"L_COLOR_B_CHICA": {
+"color": Color(9.62615e-08, 0.885611, 0.662009, 1),
+"intensity": 0.0,
+"size": 0.3
+},
+"L_COLOR_B_FREDDY": {
+"color": Color(0.908537, 0.21146, 0.158202, 1),
+"intensity": 0.0,
+"size": 0.3
+},
+"L_COLOR_B_GUEST": {
+"color": Color(0.183399, 0.257872, 1, 1),
+"intensity": 0.0,
+"size": 0.5
+},
 "L_SPOT_CHICA": {
 "color": Color(1, 0.890592, 0.770118, 1),
 "intensity": 0.0,
-"size": 0.3
+"size": 0.15
+},
+"L_SPOT_FREDDY": {
+"color": Color(1, 0.890196, 0.768627, 1),
+"intensity": 0.0,
+"size": 0.15
+},
+"L_SPOT_GUEST": {
+"color": Color(1, 0.890196, 0.768627, 1),
+"intensity": 0.0,
+"size": 0.15
 }
 }
 

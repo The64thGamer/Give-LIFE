@@ -8,6 +8,7 @@ var canDrag : bool
 var dragOffset : Vector2
 var loadNodeRow : Resource
 var special_condition : String
+var special_saved_values : Dictionary
 
 func _ready():
 	loadNodeRow = preload("res://Scenes/Nodes/Node Row.tscn")
