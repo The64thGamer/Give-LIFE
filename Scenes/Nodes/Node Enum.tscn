@@ -5,7 +5,6 @@
 [node name="Enum" type="OptionButton"]
 offset_right = 68.0
 offset_bottom = 31.0
-selected = 0
 allow_reselect = true
 script = ExtResource("1_iujrj")
 

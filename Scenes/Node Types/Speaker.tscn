@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b03x861ratqbj"]
+[gd_scene load_steps=4 format=3 uid="uid://b03x861ratqbj"]
 
 [ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_uifvy"]
 [ext_resource type="Script" uid="uid://t8bsiegtsiwo" path="res://Scripts/Node Types/GL_Output.gd" id="2_nkf8v"]
+[ext_resource type="Script" uid="uid://dfxs3vmqxy1eu" path="res://Scripts/Node Types/GL_AudioType.gd" id="3_cvqie"]
 
 [node name="Node" type="Control"]
 layout_mode = 3
@@ -12,9 +13,13 @@ mouse_filter = 1
 layout_mode = 0
 tooltip_text = "Outputs audio directly to your device speakers."
 script = ExtResource("2_nkf8v")
-identification = "DIRECT_OUTPUT"
-names = PackedStringArray("Audio", "Volume", "Current Time")
-types = PackedStringArray("audio", "float", "float")
+customRows = {
+"DIRECT_OUTPUT": {
+"Audio": ExtResource("3_cvqie"),
+"Current Time": 0.0,
+"Volume": 1.0
+}
+}
 
 [connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
 [connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]
