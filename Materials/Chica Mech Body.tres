@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://bo4jm6kxggs8i"]
+
+[ext_resource type="Shader" uid="uid://des8a3glk3x31" path="res://Materials/Chica.gdshader" id="1_mxus2"]
+[ext_resource type="Texture2D" uid="uid://dqgkm1kqniev5" path="res://Textures/Chica Body Mech_Main.png" id="2_ey2d8"]
+[ext_resource type="Texture2D" uid="uid://crh2cbyabn7t5" path="res://Textures/Chica Body Mech_MaskMap.png" id="3_htfq6"]
+[ext_resource type="Texture2D" uid="uid://btavyn4d2mi38" path="res://Textures/Chica Body Mech_NormalMap.png" id="4_mxus2"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_mxus2")
+shader_parameter/diffuse_texture = ExtResource("2_ey2d8")
+shader_parameter/normal_map = ExtResource("4_mxus2")
+shader_parameter/normal_scale = 1.0
+shader_parameter/mask_map = ExtResource("3_htfq6")
+shader_parameter/paint_color_r = Color(0, 0, 0, 1)
+shader_parameter/paint_color_g = Color(0, 0, 0, 1)
+shader_parameter/paint_color_b = Color(0, 0, 0, 1)
+shader_parameter/paint_color_a = Color(0, 0, 0, 1)
+shader_parameter/blacklight_color = Vector3(0.423, 0.361, 0.851)

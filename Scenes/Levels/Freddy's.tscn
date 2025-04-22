@@ -47,7 +47,7 @@ transform = Transform3D(575, 0, 0, 0, -2.5134e-05, 575, 0, -575, -2.5134e-05, 0,
 mesh = ExtResource("1_hw7w6")
 
 [node name="Chica" parent="." instance=ExtResource("1_5nprb")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.59754, 3.16007, -2.61132)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.43548, 1.74247, -2.61132)
 
 [node name="OmniLight3D2" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.7277, 0.161832, -2.93382)

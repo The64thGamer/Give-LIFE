@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://birk5r0s5o8d0"]
+
+[ext_resource type="Shader" uid="uid://des8a3glk3x31" path="res://Materials/Chica.gdshader" id="1_q0jmb"]
+[ext_resource type="Texture2D" uid="uid://k5nphbxum0ns" path="res://Textures/Alternate Cylinders_Main.png" id="2_b5lwi"]
+[ext_resource type="Texture2D" uid="uid://dc4ijptwjf63h" path="res://Textures/Alternate Cylinders_NormalMap.png" id="3_52m15"]
+[ext_resource type="Texture2D" uid="uid://bhdnqmbhiof5j" path="res://Textures/Alternate Cylinders_MaskMap.png" id="3_xb6ht"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_q0jmb")
+shader_parameter/diffuse_texture = ExtResource("2_b5lwi")
+shader_parameter/normal_map = ExtResource("3_52m15")
+shader_parameter/normal_scale = 1.0
+shader_parameter/mask_map = ExtResource("3_xb6ht")
+shader_parameter/paint_color_r = Color(0, 0, 0, 1)
+shader_parameter/paint_color_g = Color(0, 0, 0, 1)
+shader_parameter/paint_color_b = Color(0, 0, 0, 1)
+shader_parameter/paint_color_a = Color(0, 0, 0, 1)
+shader_parameter/blacklight_color = Vector3(0.423, 0.361, 0.851)

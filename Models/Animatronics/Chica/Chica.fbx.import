@@ -34,29 +34,41 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
+"Alt Cylinders": {
+"use_external/enabled": true,
+"use_external/path": "uid://birk5r0s5o8d0"
+},
 "Chica Main": {
 "use_external/enabled": true,
 "use_external/path": "uid://b51m30fupimsx"
 },
-"Material.015": {
+"Cupcake": {
 "use_external/enabled": true,
-"use_external/path": "uid://c64nx5pjielba"
+"use_external/path": "uid://ib27jt1hintu"
 },
-"Material.016": {
+"Cylinders": {
 "use_external/enabled": true,
-"use_external/path": "uid://cjmaxbq2g1fac"
+"use_external/path": "uid://k7jss4yy3n64"
 },
-"Material.017": {
+"Endo": {
 "use_external/enabled": true,
-"use_external/path": "uid://eh4k2esv6081"
+"use_external/path": "uid://bo4jm6kxggs8i"
 },
-"hair yellow": {
-"use_external/enabled": true,
-"use_external/path": "uid://bimexjbcml72"
-},
-"hair yellow.001": {
+"Eyebrow Hair": {
 "use_external/enabled": true,
 "use_external/path": "uid://2a27fe7w8jef"
+},
+"Glass": {
+"use_external/enabled": true,
+"use_external/path": "uid://ddx50lgsgirmm"
+},
+"The Head": {
+"use_external/enabled": true,
+"use_external/path": "uid://omgcl80v3kxt"
+},
+"Yellow Hair": {
+"use_external/enabled": true,
+"use_external/path": "uid://bimexjbcml72"
 }
 }
 }

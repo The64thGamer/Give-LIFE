@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://k7jss4yy3n64"]
+
+[ext_resource type="Shader" uid="uid://des8a3glk3x31" path="res://Materials/Chica.gdshader" id="1_myl26"]
+[ext_resource type="Texture2D" uid="uid://r8r2f6v6d1wi" path="res://Textures/Cylinders_Cylinders Grime_BaseMap.png" id="2_mlpgd"]
+[ext_resource type="Texture2D" uid="uid://b76m7hgimheq" path="res://Textures/Cylinders_Cylinders Grime_MaskMap.png" id="3_broy6"]
+[ext_resource type="Texture2D" uid="uid://dsuy5cu2io3m4" path="res://Textures/Cylinders_Cylinders Grime_Normal.png" id="4_myl26"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_myl26")
+shader_parameter/diffuse_texture = ExtResource("2_mlpgd")
+shader_parameter/normal_map = ExtResource("4_myl26")
+shader_parameter/normal_scale = 1.0
+shader_parameter/mask_map = ExtResource("3_broy6")
+shader_parameter/paint_color_r = Color(0, 0, 0, 1)
+shader_parameter/paint_color_g = Color(0, 0, 0, 1)
+shader_parameter/paint_color_b = Color(0, 0, 0, 1)
+shader_parameter/paint_color_a = Color(0, 0, 0, 1)
+shader_parameter/blacklight_color = Vector3(0.423, 0.361, 0.851)

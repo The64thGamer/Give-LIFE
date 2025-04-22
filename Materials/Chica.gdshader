@@ -5,7 +5,7 @@ uniform sampler2D diffuse_texture;
 uniform sampler2D normal_map : hint_normal;
 uniform float normal_scale : hint_range(-16.0, 16.0);
 uniform sampler2D mask_map;
-uniform sampler2D paint_map;
+uniform sampler2D paint_map : hint_default_transparent;
 uniform sampler2D blacklight_map : hint_default_black;
 
 uniform vec3 paint_color_r : source_color;
