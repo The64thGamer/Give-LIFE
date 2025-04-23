@@ -183,6 +183,7 @@ spot_angle_attenuation = 0.329877
 script = ExtResource("3_2ymb8")
 canChangeColor = true
 canChangeSize = true
+energyMultiplier = 200.0
 
 [node name="Chica Light 1" type="SpotLight3D" parent="."]
 transform = Transform3D(0.879784, 0.149746, -0.451173, -0.00999805, 0.954708, 0.297375, 0.475269, -0.257115, 0.841434, -1.4462, 5.91597, 5.13714)
@@ -231,6 +232,7 @@ spot_angle_attenuation = 0.329877
 script = ExtResource("3_2ymb8")
 canChangeColor = true
 canChangeSize = true
+energyMultiplier = 200.0
 
 [node name="Freddy Light 1" type="SpotLight3D" parent="."]
 transform = Transform3D(0.946965, 0.112137, -0.301137, 0.0164324, 0.919009, 0.393894, 0.320918, -0.377952, 0.868426, -2.44347, 5.91597, 5.13714)
@@ -279,6 +281,7 @@ spot_angle_attenuation = 0.329877
 script = ExtResource("3_2ymb8")
 canChangeColor = true
 canChangeSize = true
+energyMultiplier = 200.0
 
 [node name="Guest Light 1" type="SpotLight3D" parent="."]
 transform = Transform3D(0.993787, 0.0434336, -0.102475, -0.00586134, 0.939859, 0.341513, 0.111145, -0.33879, 0.934274, -3.57721, 5.91597, 5.13714)

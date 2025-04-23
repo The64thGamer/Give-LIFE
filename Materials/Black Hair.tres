@@ -3,10 +3,10 @@
 [resource]
 albedo_color = Color(0.0666928, 0.0646792, 0.0591421, 1)
 metallic = 1.0
-roughness = 0.41
+roughness = 0.54
 normal_enabled = true
 anisotropy_enabled = true
 subsurf_scatter_enabled = true
-subsurf_scatter_strength = 1.0
+subsurf_scatter_strength = 0.3
 subsurf_scatter_transmittance_depth = 3.016
 subsurf_scatter_transmittance_boost = 1.0

@@ -14,6 +14,15 @@ tooltip_text = "Controls animatronic movements. Certain movements can be set to 
 script = ExtResource("2_6fnvm")
 customRows = {
 "AA_CHICA": {
+"Armature_001|Arm L Bend": 0.0,
+"Armature_001|Arm L Turn": 0.0,
+"Armature_001|Arm R Bend": 0.0,
+"Armature_001|Arm R Out": 0.0,
+"Armature_001|Body Lean": 0.0,
+"Armature_001|Body Turn L": 0.0,
+"Armature_001|Body Turn R": 0.0,
+"Armature_001|Cupcake Candle": 0.0,
+"Armature_001|Cupcake Mouth": 0.0,
 "Armature_001|Eyebrow L Down": 0.0,
 "Armature_001|Eyebrow L Up": 0.0,
 "Armature_001|Eyebrow R Down": 0.0,
@@ -24,13 +33,16 @@ customRows = {
 "Armature_001|Eyes Left": 0.0,
 "Armature_001|Eyes Right": 0.0,
 "Armature_001|Eyes Up": 0.0,
-"Armature_001|Head Down": 0.0,
+"Armature_001|Hand R Bend": 0.0,
 "Armature_001|Head L": 0.0,
 "Armature_001|Head R": 0.0,
-"Armature_001|Head Tilt L": 0.0,
-"Armature_001|Head Tilt R": 0.0,
-"Armature_001|Head Up": 0.0,
+"Armature_001|Head Tilt Down L": 0.0,
+"Armature_001|Head Tilt Down R": 0.0,
+"Armature_001|Head Tilt Up L": 0.0,
+"Armature_001|Head Tilt Up R": 0.0,
 "Armature_001|Jaw": 0.0,
+"Armature_001|Shoulder L": 0.0,
+"Armature_001|Shoulder R": 0.0,
 "Armature_001|Underlid L": 0.0,
 "Armature_001|Underlid R": 0.0
 }

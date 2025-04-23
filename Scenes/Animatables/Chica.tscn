@@ -7,138 +7,222 @@
 [node name="Chica" type="Node3D" groups=["AA_CHICA"]]
 script = ExtResource("1_vcqxk")
 animParameters = {
-"Armature_001|Eyebrow L Down": {
-"in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"Armature_001|Arm L Bend": {
+"in_speed": 2.0,
+"out_speed": 3.0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
+},
+"Armature_001|Arm L Turn": {
+"in_speed": 2.7,
+"out_speed": 3.0,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
+},
+"Armature_001|Arm R Bend": {
+"in_speed": 3.0,
+"out_speed": 2.5,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
+},
+"Armature_001|Arm R Out": {
+"in_speed": 2.5,
+"out_speed": 1.0,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
+},
+"Armature_001|Body Lean": {
+"in_speed": 2.0,
+"out_speed": 2.5,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
+},
+"Armature_001|Body Turn L": {
+"in_speed": 2.5,
+"out_speed": 2.5,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
+},
+"Armature_001|Body Turn R": {
+"in_speed": 2.5,
+"out_speed": 2.5,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
+},
+"Armature_001|Cupcake Candle": {
+"in_speed": 1.0,
+"out_speed": 1.0,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
+},
+"Armature_001|Cupcake Mouth": {
+"in_speed": 5.0,
+"out_speed": 4.0,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
+},
+"Armature_001|Eyebrow L Down": {
+"in_speed": 7.0,
+"out_speed": 9.0,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
 },
 "Armature_001|Eyebrow L Up": {
-"in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"in_speed": 7.0,
+"out_speed": 9.0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
 "Armature_001|Eyebrow R Down": {
-"in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"in_speed": 7.0,
+"out_speed": 9.0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
 "Armature_001|Eyebrow R Up": {
-"in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"in_speed": 7.0,
+"out_speed": 9.0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
 "Armature_001|Eyelid L": {
 "in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"out_speed": 10.0,
+"signal_value": 0.0,
 "type": "move_to",
 "value": 0.0
 },
 "Armature_001|Eyelid R": {
 "in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"out_speed": 10.0,
+"signal_value": 0.0,
 "type": "move_to",
 "value": 0.0
 },
 "Armature_001|Eyes Down": {
-"in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"in_speed": 6.0,
+"out_speed": 7.0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
 "Armature_001|Eyes Left": {
-"in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"in_speed": 6.0,
+"out_speed": 7.0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
 "Armature_001|Eyes Right": {
-"in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"in_speed": 6.0,
+"out_speed": 7.0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
 "Armature_001|Eyes Up": {
-"in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"in_speed": 6.0,
+"out_speed": 7.0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
-"Armature_001|Head Down": {
-"in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"Armature_001|Hand R Bend": {
+"in_speed": 3.0,
+"out_speed": 4.0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
 "Armature_001|Head L": {
 "in_speed": 5.0,
 "out_speed": 5.0,
-"signal_value": 0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
 "Armature_001|Head R": {
 "in_speed": 5.0,
 "out_speed": 5.0,
-"signal_value": 0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
-"Armature_001|Head Tilt L": {
-"in_speed": 5.0,
+"Armature_001|Head Tilt Down L": {
+"in_speed": 4.0,
 "out_speed": 5.0,
-"signal_value": 0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
-"Armature_001|Head Tilt R": {
-"in_speed": 5.0,
+"Armature_001|Head Tilt Down R": {
+"in_speed": 4.0,
 "out_speed": 5.0,
-"signal_value": 0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
 },
-"Armature_001|Head Up": {
-"in_speed": 5.0,
+"Armature_001|Head Tilt Up L": {
+"in_speed": 4.0,
 "out_speed": 5.0,
-"signal_value": 0,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
+},
+"Armature_001|Head Tilt Up R": {
+"in_speed": 4.0,
+"out_speed": 5.0,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
 },
 "Armature_001|Jaw": {
-"in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"in_speed": 5.5,
+"out_speed": 6.5,
+"signal_value": 0.0,
 "type": "standard",
-"value": 0.0
+"value": 0
+},
+"Armature_001|Shoulder L": {
+"in_speed": 2.5,
+"out_speed": 1.5,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
+},
+"Armature_001|Shoulder R": {
+"in_speed": 2.5,
+"out_speed": 1.5,
+"signal_value": 0.0,
+"type": "standard",
+"value": 0
 },
 "Armature_001|Underlid L": {
 "in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"out_speed": 10.0,
+"signal_value": 0.0,
 "type": "move_to",
-"value": 0.0
+"value": 5.70421e-21
 },
 "Armature_001|Underlid R": {
 "in_speed": 5.0,
-"out_speed": 5.0,
-"signal_value": 0,
+"out_speed": 10.0,
+"signal_value": 0.0,
 "type": "move_to",
-"value": 0.0
+"value": 2.67653e-20
 }
 }
 

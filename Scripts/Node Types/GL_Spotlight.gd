@@ -2,7 +2,7 @@ extends GL_Animatable
 var light:SpotLight3D
 @export var canChangeColor:bool = false
 @export var canChangeSize:bool = false
-@export var energyMultiplier:float = 500
+@export var energyMultiplier:float = 300
 
 func _ready():
 	light = self.get_parent()
