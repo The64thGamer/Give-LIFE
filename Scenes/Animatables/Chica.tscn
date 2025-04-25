@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://m7s5j51nrkg1" path="res://Models/Animatronics/Chica/Chica.fbx" id="1_4j8or"]
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Node Types/GL_Animatronic.gd" id="1_vcqxk"]
-[ext_resource type="Script" uid="uid://dbnboki1oqf6o" path="res://Scripts/test_hide.gd" id="3_aslrn"]
+[ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Physics_Bones.gd" id="3_aslrn"]
 
 [node name="Chica" type="Node3D" groups=["AA_CHICA"]]
 script = ExtResource("1_vcqxk")

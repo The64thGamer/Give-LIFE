@@ -49,10 +49,11 @@ grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("2_2eix6")
 theme_override_font_sizes/font_size = 8
-text = "Give LIFE: TEST_E_1_UNPERCEIVABLE_DECEPTION
+text = "Give LIFE: TEST_F_OVERWHELMING_CHOICES
 Press Esc for Nodes, Right Click to search node.
 Tab toggles background.Middle Click hold to pan. 
-Scroll to Zoom. Hover things for tooltips."
+Scroll to Zoom. Hover things for tooltips.
+Read GJ Description for important keybinds"
 horizontal_alignment = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

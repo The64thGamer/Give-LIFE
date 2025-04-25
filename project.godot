@@ -23,6 +23,10 @@ config/icon="uid://c1usct57qv2oa"
 
 display_server/driver.linuxbsd="wayland"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/wigglebone/plugin.cfg")
+
 [filesystem]
 
 import/blender/enabled=false
