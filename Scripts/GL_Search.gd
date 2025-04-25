@@ -64,9 +64,10 @@ func _set_rows():
 func _create_node(name:String):
 	var path = "res://Scenes/Node Types/" + name + ".tscn"
 	var node = load(path).instantiate()
-	get_parent().get_node("Holder").add_child(node)
+	var holder = get_parent().get_node("Holder")
+	holder.add_child(node)
 	node = (node as Control).get_child(0) as GL_Node
 	node.nodePath = path
-	node.position = lastMousePos
+	node.position = lastMousePos - holder.position
 	node._create_uuid()
 	

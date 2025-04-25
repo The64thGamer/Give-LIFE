@@ -65,7 +65,7 @@ enum BonePreset {
 	"arm r": BonePreset.ANIMATRONIC_MOVEMENT_HEAVY,
 	"arm l": BonePreset.ANIMATRONIC_MOVEMENT_HEAVY,
 	"forearm r": BonePreset.ANIMATRONIC_MOVEMENT_LIGHT,
-	"forearm l": BonePreset.ANIMATRONIC_MOVEMENT_LIGHT,
+	"arm mech bend l": BonePreset.ANIMATRONIC_MOVEMENT_LIGHT,
 	"hand 0 r": BonePreset.ANIMATRONIC_MOVEMENT_LIGHT,
 	"hand 0 l": BonePreset.ANIMATRONIC_MOVEMENT_LIGHT,
 	"apron r": BonePreset.SLOW_HAIR,
