@@ -11,9 +11,10 @@ const ZOOM_SPEED = 5.0
 const TILT_SPEED = 0.05
 const MAX_TILT = 0.6
 const MIN_TILT = -0.6
+const MIN_SPEED_MULTIPLIER = 0.5
 
-const COLLISION_CHECK_MIN = 0.5
-const COLLISION_CHECK_MAX = 20.0
+const COLLISION_CHECK_MIN = 0.4
+const COLLISION_CHECK_MAX = 4
 
 @onready var camera = $Camera3D
 @onready var foot_probe: Node3D = $FootProbe
@@ -23,6 +24,8 @@ var rotation_x := 0.0
 var rotation_z := 0.0
 var target_tilt := 0.0
 var target_fov := 70.0
+var speed_mult_target = 1.0
+var speed_mult = 1.0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -70,7 +73,8 @@ func _physics_process(delta: float) -> void:
 	var right = camera.global_basis.x
 	var direction = (right * input_dir.x + forward * input_dir.y).normalized()
 
-	var speed_mult := get_collision_speed_multiplier()
+	speed_mult_target = get_collision_speed_multiplier()
+	speed_mult = lerp(speed_mult,speed_mult_target,delta*0.5)
 
 	if direction:
 		velocity.x = direction.x * SPEED * speed_mult
@@ -89,4 +93,5 @@ func get_collision_speed_multiplier() -> float:
 			if dist < shortest_dist:
 				shortest_dist = dist
 	
-	return clamp((shortest_dist - COLLISION_CHECK_MIN) / (COLLISION_CHECK_MAX - COLLISION_CHECK_MIN), 0.0, 1.0)
+
+	return clamp((shortest_dist - COLLISION_CHECK_MIN) / (COLLISION_CHECK_MAX - COLLISION_CHECK_MIN), MIN_SPEED_MULTIPLIER, 1.0)
