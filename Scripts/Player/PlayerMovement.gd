@@ -77,7 +77,6 @@ func _process_scroll(direction: int):
 		accel_lerp = clamp(accel_lerp + (direction * ACCEL_LERP_STEP), MIN_ACCEL_LERP, MAX_ACCEL_LERP)
 
 func _process(delta: float) -> void:
-	# Smooth Cam Hold/Toggle Logic
 	if Input.is_action_pressed("Smooth Cam"):
 		smooth_held_time += delta
 		if smooth_held_time >= HOLD_THRESHOLD:
@@ -96,7 +95,6 @@ func _process(delta: float) -> void:
 
 	was_smooth_pressed = Input.is_action_pressed("Smooth Cam")
 
-	# Smooth Movement Hold/Toggle Logic
 	if Input.is_action_pressed("Smooth Movement"):
 		move_held_time += delta
 		if move_held_time >= HOLD_THRESHOLD:
@@ -112,7 +110,6 @@ func _process(delta: float) -> void:
 
 	was_move_pressed = Input.is_action_pressed("Smooth Movement")
 
-	# Fly toggle
 	if Input.is_action_just_pressed("Fly"):
 		fly_mode = !fly_mode
 
@@ -150,15 +147,19 @@ func _physics_process(delta: float) -> void:
 	var currentSpeed = SPEED
 	if Input.is_action_pressed("Sprint"):
 		currentSpeed = SPRINT_SPEED
-	if Input.is_action_pressed("Crouch") && !fly_mode:
+	if Input.is_action_pressed("Crouch") and not fly_mode:
 		currentSpeed = CROUCH_SPEED
 
-	# Flying vertical input
 	var vertical_input := 0.0
 	if fly_mode:
 		vertical_input += Input.get_action_strength("Move Up")
 		vertical_input -= Input.get_action_strength("Move Down")
-		velocity.y = vertical_input * currentSpeed
+		var target_y = vertical_input * currentSpeed
+		if smooth_move:
+			velocity.y = lerp(velocity.y, target_y, delta * accel_lerp)
+		else:
+			velocity.y = target_y
+
 
 	speed_mult_target = get_collision_speed_multiplier()
 	speed_mult = lerp(speed_mult, speed_mult_target, delta * 0.5)
@@ -176,8 +177,12 @@ func _physics_process(delta: float) -> void:
 		velocity.z = target_vel.z
 
 	if not direction and not fly_mode:
-		velocity.x = move_toward(velocity.x, 0, currentSpeed)
-		velocity.z = move_toward(velocity.z, 0, currentSpeed)
+		if smooth_move:
+			velocity.x = lerp(velocity.x, 0.0, delta * accel_lerp)
+			velocity.z = lerp(velocity.z, 0.0, delta * accel_lerp)
+		else:
+			velocity.x = move_toward(velocity.x, 0, currentSpeed)
+			velocity.z = move_toward(velocity.z, 0, currentSpeed)
 
 	move_and_slide()
 
