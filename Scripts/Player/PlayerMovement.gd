@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
 const SPEED: float = 5.0
+const SPRINT_SPEED: float = 9.0
+const CROUCH_SPEED: float = 2.0
 const JUMP_VELOCITY: float = 4.5
 const MOUSE_SENSITIVITY: float = 0.002
 const MIN_ZOOM_FOV: float = 5.0
@@ -18,6 +20,9 @@ const HOLD_THRESHOLD := 0.2
 const MIN_SMOOTH_LERP := 0.01
 const MAX_SMOOTH_LERP := 2.5
 const SMOOTH_LERP_STEP := 0.05
+const MIN_ACCEL_LERP := 0.01
+const MAX_ACCEL_LERP := 2.5
+const ACCEL_LERP_STEP := 0.05
 
 @onready var camera = $Camera3D
 @onready var foot_probe: Node3D = $FootProbe
@@ -32,10 +37,17 @@ var speed_mult: float = 1.0
 
 var smooth_cam: bool = false
 var smooth_cam_lerp: float = 1.0
+var smooth_move: bool = false
+var accel_lerp: float = 1.0
+var fly_mode: bool = false
 
 var smooth_held_time: float = 0.0
-var is_adjusting_smooth: bool = false
 var was_smooth_pressed: bool = false
+var is_adjusting_smooth: bool = false
+
+var move_held_time: float = 0.0
+var was_move_pressed: bool = false
+var is_adjusting_move: bool = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -61,7 +73,11 @@ func _process_scroll(direction: int):
 	if is_adjusting_smooth:
 		smooth_cam_lerp = clamp(smooth_cam_lerp + (direction * SMOOTH_LERP_STEP), MIN_SMOOTH_LERP, MAX_SMOOTH_LERP)
 
+	if is_adjusting_move:
+		accel_lerp = clamp(accel_lerp + (direction * ACCEL_LERP_STEP), MIN_ACCEL_LERP, MAX_ACCEL_LERP)
+
 func _process(delta: float) -> void:
+	# Smooth Cam Hold/Toggle Logic
 	if Input.is_action_pressed("Smooth Cam"):
 		smooth_held_time += delta
 		if smooth_held_time >= HOLD_THRESHOLD:
@@ -73,7 +89,6 @@ func _process(delta: float) -> void:
 			if smooth_held_time < HOLD_THRESHOLD:
 				smooth_cam = !smooth_cam
 				if not smooth_cam:
-					# Reset rotations to current camera orientation
 					rotation_x = camera.rotation.x
 					rotation_y = camera.rotation.y
 		smooth_held_time = 0.0
@@ -81,7 +96,27 @@ func _process(delta: float) -> void:
 
 	was_smooth_pressed = Input.is_action_pressed("Smooth Cam")
 
-	if !Input.is_action_pressed("Cam Tilt Modifier"):
+	# Smooth Movement Hold/Toggle Logic
+	if Input.is_action_pressed("Smooth Movement"):
+		move_held_time += delta
+		if move_held_time >= HOLD_THRESHOLD:
+			is_adjusting_move = true
+			if not smooth_move:
+				smooth_move = true
+	else:
+		if was_move_pressed:
+			if move_held_time < HOLD_THRESHOLD:
+				smooth_move = !smooth_move
+		move_held_time = 0.0
+		is_adjusting_move = false
+
+	was_move_pressed = Input.is_action_pressed("Smooth Movement")
+
+	# Fly toggle
+	if Input.is_action_just_pressed("Fly"):
+		fly_mode = !fly_mode
+
+	if not Input.is_action_pressed("Cam Tilt Modifier"):
 		target_tilt = 0
 
 	rotation_z = lerp(rotation_z, target_tilt, delta * ZOOM_SPEED)
@@ -97,10 +132,10 @@ func _process(delta: float) -> void:
 		camera.rotation = Vector3(rotation_x, rotation_y, rotation_z)
 
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
+	if not is_on_floor() and not fly_mode:
 		velocity.y += get_gravity().y * delta
 
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
+	if Input.is_action_just_pressed("Jump") and is_on_floor() and not fly_mode:
 		velocity.y = JUMP_VELOCITY
 
 	var input_dir := Vector2(
@@ -111,16 +146,38 @@ func _physics_process(delta: float) -> void:
 	var forward = -camera.global_basis.z
 	var right = camera.global_basis.x
 	var direction = (right * input_dir.x + forward * input_dir.y).normalized()
+	
+	var currentSpeed = SPEED
+	if Input.is_action_pressed("Sprint"):
+		currentSpeed = SPRINT_SPEED
+	if Input.is_action_pressed("Crouch") && !fly_mode:
+		currentSpeed = CROUCH_SPEED
+
+	# Flying vertical input
+	var vertical_input := 0.0
+	if fly_mode:
+		vertical_input += Input.get_action_strength("Move Up")
+		vertical_input -= Input.get_action_strength("Move Down")
+		velocity.y = vertical_input * currentSpeed
 
 	speed_mult_target = get_collision_speed_multiplier()
 	speed_mult = lerp(speed_mult, speed_mult_target, delta * 0.5)
 
+	var target_vel := Vector3.ZERO
 	if direction:
-		velocity.x = direction.x * SPEED * speed_mult
-		velocity.z = direction.z * SPEED * speed_mult
+		target_vel.x = direction.x * currentSpeed * speed_mult
+		target_vel.z = direction.z * currentSpeed * speed_mult
+
+	if smooth_move:
+		velocity.x = lerp(velocity.x, target_vel.x, delta * accel_lerp)
+		velocity.z = lerp(velocity.z, target_vel.z, delta * accel_lerp)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = target_vel.x
+		velocity.z = target_vel.z
+
+	if not direction and not fly_mode:
+		velocity.x = move_toward(velocity.x, 0, currentSpeed)
+		velocity.z = move_toward(velocity.z, 0, currentSpeed)
 
 	move_and_slide()
 
