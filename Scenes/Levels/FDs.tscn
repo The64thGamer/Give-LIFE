@@ -16,6 +16,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_em00n"]
 radius = 0.25
+height = 3.0
 
 [sub_resource type="Environment" id="Environment_h0i1e"]
 background_mode = 1
@@ -58,7 +59,7 @@ collision_layer = 2
 script = ExtResource("1_8ed8e")
 
 [node name="Camera3D" type="Camera3D" parent="Player/CharacterBody3D"]
-transform = Transform3D(0.999998, 0.00163928, -0.000874435, -0.00163943, 0.999999, -0.000166063, 0.000874161, 0.000167496, 1, 0, 2, 0)
+transform = Transform3D(0.999998, 0.00163928, -0.000874435, -0.00163943, 0.999999, -0.000166063, 0.000874161, 0.000167496, 1, 0, 2.87488, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player/CharacterBody3D/Camera3D"]
 
@@ -89,7 +90,7 @@ spot_angle_attenuation = 1.32065e-05
 script = ExtResource("5_piicn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player/CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("CapsuleShape3D_em00n")
 
 [node name="FootProbe" type="Node3D" parent="Player/CharacterBody3D"]
