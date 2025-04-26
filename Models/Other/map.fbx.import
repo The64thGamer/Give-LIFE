@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c1jqilpkwfdrv"
-path="res://.godot/imported/Cupcake.fbx-9c5819de2458b77a458719bb42485bbf.scn"
+uid="uid://dkps3x228esu4"
+path="res://.godot/imported/map.fbx-c711eb78f58e61838eb348296db0bf26.scn"
 
 [deps]
 
-source_file="res://Models/Cupcake.fbx"
-dest_files=["res://.godot/imported/Cupcake.fbx-9c5819de2458b77a458719bb42485bbf.scn"]
+source_file="res://Models/Other/map.fbx"
+dest_files=["res://.godot/imported/map.fbx-c711eb78f58e61838eb348296db0bf26.scn"]
 
 [params]
 
@@ -34,13 +34,19 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
-"Cupcake": {
+"@MATERIAL:0": {
 "use_external/enabled": true,
-"use_external/path": "uid://ib27jt1hintu"
+"use_external/path": "uid://h7hiac0qjxf"
+}
 },
-"glass": {
-"use_external/enabled": true,
-"use_external/path": "uid://ddx50lgsgirmm"
+"meshes": {
+"Circle_004": {
+"generate/lightmap_uv": 1,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Models/map.res"
 }
 }
 }

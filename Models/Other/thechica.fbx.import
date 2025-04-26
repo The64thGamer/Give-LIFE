@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://k5kmn6pc1b7y"
-path="res://.godot/imported/chica mech.fbx-30b4af2fe9d5d95a6aaab8f2bd3a621a.scn"
+uid="uid://bu3cf620necik"
+path="res://.godot/imported/thechica.fbx-c49420504d77b1ed732a282d58d49f1e.scn"
 
 [deps]
 
-source_file="res://Models/chica mech.fbx"
-dest_files=["res://.godot/imported/chica mech.fbx-30b4af2fe9d5d95a6aaab8f2bd3a621a.scn"]
+source_file="res://Models/Other/thechica.fbx"
+dest_files=["res://.godot/imported/thechica.fbx-c49420504d77b1ed732a282d58d49f1e.scn"]
 
 [params]
 

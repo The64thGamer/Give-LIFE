@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dplsnm7qggt1w"
-path="res://.godot/imported/mech head.fbx-f87285dbf2eaef90362d7a3b01fdb7d0.scn"
+uid="uid://k5kmn6pc1b7y"
+path="res://.godot/imported/chica mech.fbx-8aec90a47d900ff357813e5df7d8f56c.scn"
 
 [deps]
 
-source_file="res://Models/mech head.fbx"
-dest_files=["res://.godot/imported/mech head.fbx-f87285dbf2eaef90362d7a3b01fdb7d0.scn"]
+source_file="res://Models/Other/chica mech.fbx"
+dest_files=["res://.godot/imported/chica mech.fbx-8aec90a47d900ff357813e5df7d8f56c.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://gyotcpgjltlo"
-path="res://.godot/imported/aCupcake.fbx-49d3e625977fbcee9240bb10980c2e52.scn"
+uid="uid://c1jqilpkwfdrv"
+path="res://.godot/imported/Cupcake.fbx-df51d055c67f9791678bae46191ef233.scn"
 
 [deps]
 
-source_file="res://Models/aCupcake.fbx"
-dest_files=["res://.godot/imported/aCupcake.fbx-49d3e625977fbcee9240bb10980c2e52.scn"]
+source_file="res://Models/Other/Cupcake.fbx"
+dest_files=["res://.godot/imported/Cupcake.fbx-df51d055c67f9791678bae46191ef233.scn"]
 
 [params]
 
@@ -32,7 +32,18 @@ animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Cupcake": {
+"use_external/enabled": true,
+"use_external/path": "uid://ib27jt1hintu"
+},
+"glass": {
+"use_external/enabled": true,
+"use_external/path": "uid://ddx50lgsgirmm"
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1
