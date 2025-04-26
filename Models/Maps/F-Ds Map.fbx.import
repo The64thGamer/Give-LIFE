@@ -22,7 +22,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=false
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=1
+meshes/light_baking=2
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -35,7 +35,7 @@ import_script/path=""
 _subresources={
 "meshes": {
 "Ceiling_001": {
-"generate/lightmap_uv": 0,
+"generate/lightmap_uv": 1,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
@@ -43,20 +43,28 @@ _subresources={
 "save_to_file/path": "res://Models/Maps/Ceiling_001.res"
 },
 "Floor_001": {
-"generate/lightmap_uv": 0,
+"generate/lightmap_uv": 1,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
 "save_to_file/path": "res://Models/Maps/Floor_001.res"
 },
-"Walls_001": {
+"Ground": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Models/Maps/Ground.res"
+},
+"Walls_002": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Models/Maps/Walls_001.res"
+"save_to_file/path": "res://Models/Maps/Walls_002.res"
 }
 }
 }

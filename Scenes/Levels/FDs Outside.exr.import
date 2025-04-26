@@ -1,0 +1,28 @@
+[remap]
+
+importer="2d_array_texture"
+type="CompressedTexture2DArray"
+uid="uid://duy5bddrjvjr0"
+path.bptc="res://.godot/imported/FDs Outside.exr-c0d652460fdd8691c5ca642965dd6967.bptc.ctexarray"
+path.astc="res://.godot/imported/FDs Outside.exr-c0d652460fdd8691c5ca642965dd6967.astc.ctexarray"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Scenes/Levels/FDs Outside.exr"
+dest_files=["res://.godot/imported/FDs Outside.exr-c0d652460fdd8691c5ca642965dd6967.bptc.ctexarray", "res://.godot/imported/FDs Outside.exr-c0d652460fdd8691c5ca642965dd6967.astc.ctexarray"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/channel_pack=1
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=1
+slices/vertical=4

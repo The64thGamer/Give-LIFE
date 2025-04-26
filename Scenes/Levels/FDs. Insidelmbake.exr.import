@@ -1,0 +1,28 @@
+[remap]
+
+importer="2d_array_texture"
+type="CompressedTexture2DArray"
+uid="uid://ddlxdp6moxxtt"
+path.bptc="res://.godot/imported/FDs. Insidelmbake.exr-05255c1f9141b90f854f2b1e4ff200a1.bptc.ctexarray"
+path.astc="res://.godot/imported/FDs. Insidelmbake.exr-05255c1f9141b90f854f2b1e4ff200a1.astc.ctexarray"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Scenes/Levels/FDs. Insidelmbake.exr"
+dest_files=["res://.godot/imported/FDs. Insidelmbake.exr-05255c1f9141b90f854f2b1e4ff200a1.bptc.ctexarray", "res://.godot/imported/FDs. Insidelmbake.exr-05255c1f9141b90f854f2b1e4ff200a1.astc.ctexarray"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/channel_pack=1
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=1
+slices/vertical=8
