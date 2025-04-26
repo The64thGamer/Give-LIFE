@@ -484,3 +484,4 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map Mesh & Collision/Map/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_nohax")
+debug_color = Color(0, 0.595, 0.7, 0)

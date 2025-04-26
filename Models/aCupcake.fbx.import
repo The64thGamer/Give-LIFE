@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://gyotcpgjltlo"
-path="res://.godot/imported/cupcake.fbx-00f911e52cd8416932c7ac1063d8fe57.scn"
+path="res://.godot/imported/aCupcake.fbx-49d3e625977fbcee9240bb10980c2e52.scn"
 
 [deps]
 
-source_file="res://Models/cupcake.fbx"
-dest_files=["res://.godot/imported/cupcake.fbx-00f911e52cd8416932c7ac1063d8fe57.scn"]
+source_file="res://Models/aCupcake.fbx"
+dest_files=["res://.godot/imported/aCupcake.fbx-49d3e625977fbcee9240bb10980c2e52.scn"]
 
 [params]
 
