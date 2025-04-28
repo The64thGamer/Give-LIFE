@@ -10,3 +10,6 @@ albedo_texture = ExtResource("1_ry2db")
 roughness_texture = ExtResource("3_5rev6")
 normal_enabled = true
 normal_texture = ExtResource("2_cv8xx")
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.36
+subsurf_scatter_transmittance_depth = 3.889

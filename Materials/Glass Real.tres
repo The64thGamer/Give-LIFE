@@ -2,9 +2,9 @@
 
 [resource]
 transparency = 1
-albedo_color = Color(1, 1, 1, 0)
+albedo_color = Color(1, 1, 1, 0.478431)
 metallic = 1.0
-roughness = 0.11
+roughness = 0.0
 anisotropy = -0.1
 backlight = Color(1, 1, 1, 1)
 refraction_scale = 0.0

@@ -10,3 +10,7 @@ albedo_texture = ExtResource("1_2brq1")
 roughness_texture = ExtResource("3_esvvl")
 normal_enabled = true
 normal_texture = ExtResource("2_vvejx")
+rim_tint = 1.0
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.36
+backlight = Color(1, 1, 1, 1)
