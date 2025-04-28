@@ -33,6 +33,60 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
+"materials": {
+"Black Shiny": {
+"use_external/enabled": true,
+"use_external/path": "uid://d0i7i6ix51nlw"
+},
+"Carpet Red": {
+"use_external/enabled": true,
+"use_external/path": "uid://bih5rftylul4y"
+},
+"Carpet Yellow": {
+"use_external/enabled": true,
+"use_external/path": "uid://hk132lbstb07"
+},
+"Default": {
+"use_external/enabled": true,
+"use_external/path": "uid://b836fmbunh66i"
+},
+"Fake Grass": {
+"use_external/enabled": true,
+"use_external/path": "uid://bg8u80kltut8y"
+},
+"Floor Tiles": {
+"use_external/enabled": true,
+"use_external/path": "uid://b45mwkysd7f0m"
+},
+"Glass": {
+"use_external/enabled": true,
+"use_external/path": "uid://ddx50lgsgirmm"
+},
+"Grass": {
+"use_external/enabled": true,
+"use_external/path": "uid://d3330uwlgm4d2"
+},
+"Outside Tiles": {
+"use_external/enabled": true,
+"use_external/path": "uid://birmh2dr3tsyo"
+},
+"Plaster": {
+"use_external/enabled": true,
+"use_external/path": "uid://xqugp8oihvr8"
+},
+"Plaster Black": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Plaster Black.tres"
+},
+"Wood A": {
+"use_external/enabled": true,
+"use_external/path": "uid://cmlg4aw2f86wl"
+},
+"Wood B": {
+"use_external/enabled": true,
+"use_external/path": "uid://d1c22fl7hw3cp"
+}
+},
 "meshes": {
 "Ceiling_001": {
 "generate/lightmap_uv": 1,
@@ -40,7 +94,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Models/Maps/Ceiling_001.res"
+"save_to_file/path": "res://Models/Maps/Ceiling.res"
 },
 "Floor_001": {
 "generate/lightmap_uv": 1,
@@ -48,7 +102,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Models/Maps/Floor_001.res"
+"save_to_file/path": "res://Models/Maps/Floor.res"
 },
 "Ground": {
 "generate/lightmap_uv": 2,
@@ -58,13 +112,29 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/path": "res://Models/Maps/Ground.res"
 },
-"Walls_002": {
+"Outer Store_001": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Models/Maps/Walls_002.res"
+"save_to_file/path": "res://Models/Maps/outerstore.res"
+},
+"Plane_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Models/Maps/Ceiling_Tiles.res"
+},
+"Walls_005": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "uid://bq5j7mlf1m16g"
 }
 }
 }

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://xqugp8oihvr8"]
+
+[ext_resource type="Texture2D" uid="uid://dxudq88ypef8h" path="res://Textures/painted_plaster_wall_diff_4k.jpg" id="1_4hev3"]
+[ext_resource type="Texture2D" uid="uid://cp61taj5f5etu" path="res://Textures/painted_plaster_wall_nor_gl_4k.jpg" id="2_rl34i"]
+[ext_resource type="Texture2D" uid="uid://6ind3itsmu4g" path="res://Textures/painted_plaster_wall_rough_4k.jpg" id="3_yjtwx"]
+
+[resource]
+albedo_texture = ExtResource("1_4hev3")
+roughness_texture = ExtResource("3_yjtwx")
+normal_enabled = true
+normal_texture = ExtResource("2_rl34i")
