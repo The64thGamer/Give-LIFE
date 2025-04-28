@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bn1umb3njvyku" path="res://Textures/dirty_carpet_rough_4k.jpg" id="3_5rev6"]
 
 [resource]
-albedo_color = Color(0.87, 0.65192, 0.0522, 1)
+albedo_color = Color(0.998623, 0.843255, 0.530525, 1)
 albedo_texture = ExtResource("1_ry2db")
 roughness_texture = ExtResource("3_5rev6")
 normal_enabled = true
