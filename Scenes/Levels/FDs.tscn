@@ -603,7 +603,7 @@ collision_layer = 2
 script = ExtResource("1_8ed8e")
 
 [node name="Camera3D" type="Camera3D" parent="Player/CharacterBody3D"]
-transform = Transform3D(0.999998, 0.00163928, -0.000874435, -0.00163943, 0.999999, -0.000166063, 0.000874161, 0.000167496, 1, 0, 2.87488, 0)
+transform = Transform3D(0.999998, 0.00163928, -0.000874435, -0.00163943, 0.999999, -0.000166063, 0.000874161, 0.000167496, 1, 0, 2.9, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player/CharacterBody3D/Camera3D"]
 
@@ -726,6 +726,7 @@ shape = SubResource("WorldBoundaryShape3D_stiks")
 [node name="LightmapGI" type="LightmapGI" parent="Map"]
 bounces = 6
 directional = true
+bias = 0.00769
 generate_probes_subdiv = 0
 light_data = ExtResource("7_u04dm")
 
@@ -739,6 +740,186 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24322, 2.96196, 9.99644)
 
 [node name="LightmapProbe3" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24322, 5.57754, 9.99644)
+
+[node name="LightmapProbe230" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 0.163014, -12.6186)
+
+[node name="LightmapProbe231" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 4.5469, -12.6186)
+
+[node name="LightmapProbe232" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 2.56964, -12.6186)
+
+[node name="LightmapProbe233" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 0.163014, -15.7779)
+
+[node name="LightmapProbe234" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 4.5469, -15.7779)
+
+[node name="LightmapProbe235" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 2.56964, -15.7779)
+
+[node name="LightmapProbe236" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 0.163014, -19.8185)
+
+[node name="LightmapProbe237" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 4.5469, -19.8185)
+
+[node name="LightmapProbe238" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 2.56964, -19.8185)
+
+[node name="LightmapProbe239" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 0.163014, -22.3613)
+
+[node name="LightmapProbe240" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 4.5469, -22.3613)
+
+[node name="LightmapProbe241" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0856, 2.56964, -22.3613)
+
+[node name="LightmapProbe242" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 0.163014, -12.6186)
+
+[node name="LightmapProbe243" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 4.5469, -12.6186)
+
+[node name="LightmapProbe244" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 2.56964, -12.6186)
+
+[node name="LightmapProbe245" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 0.163014, -15.7779)
+
+[node name="LightmapProbe246" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 4.5469, -15.7779)
+
+[node name="LightmapProbe247" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 2.56964, -15.7779)
+
+[node name="LightmapProbe248" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 0.163014, -19.8185)
+
+[node name="LightmapProbe249" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 4.5469, -19.8185)
+
+[node name="LightmapProbe250" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 2.56964, -19.8185)
+
+[node name="LightmapProbe251" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 0.163014, -22.3613)
+
+[node name="LightmapProbe252" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 4.5469, -22.3613)
+
+[node name="LightmapProbe253" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3246, 2.56964, -22.3613)
+
+[node name="LightmapProbe254" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 0.163014, -12.6186)
+
+[node name="LightmapProbe255" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 4.5469, -12.6186)
+
+[node name="LightmapProbe256" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 2.56964, -12.6186)
+
+[node name="LightmapProbe257" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 0.163014, -15.7779)
+
+[node name="LightmapProbe258" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 4.5469, -15.7779)
+
+[node name="LightmapProbe259" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 2.56964, -15.7779)
+
+[node name="LightmapProbe260" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 0.163014, -19.8185)
+
+[node name="LightmapProbe261" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 4.5469, -19.8185)
+
+[node name="LightmapProbe262" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 2.56964, -19.8185)
+
+[node name="LightmapProbe263" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 0.163014, -22.3613)
+
+[node name="LightmapProbe264" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 4.5469, -22.3613)
+
+[node name="LightmapProbe265" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0312, 2.56964, -22.3613)
+
+[node name="LightmapProbe266" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 0.163014, -12.6186)
+
+[node name="LightmapProbe267" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 4.5469, -12.6186)
+
+[node name="LightmapProbe268" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 2.56964, -12.6186)
+
+[node name="LightmapProbe269" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 0.163014, -15.7779)
+
+[node name="LightmapProbe270" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 4.5469, -15.7779)
+
+[node name="LightmapProbe271" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 2.56964, -15.7779)
+
+[node name="LightmapProbe272" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 0.163014, -19.8185)
+
+[node name="LightmapProbe273" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 4.5469, -19.8185)
+
+[node name="LightmapProbe274" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 2.56964, -19.8185)
+
+[node name="LightmapProbe275" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 0.163014, -22.3613)
+
+[node name="LightmapProbe276" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 4.5469, -22.3613)
+
+[node name="LightmapProbe277" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27667, 2.56964, -22.3613)
+
+[node name="LightmapProbe278" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 0.163014, -12.6186)
+
+[node name="LightmapProbe279" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 4.5469, -12.6186)
+
+[node name="LightmapProbe280" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 2.56964, -12.6186)
+
+[node name="LightmapProbe281" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 0.163014, -15.7779)
+
+[node name="LightmapProbe282" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 4.5469, -15.7779)
+
+[node name="LightmapProbe283" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 2.56964, -15.7779)
+
+[node name="LightmapProbe284" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 0.163014, -19.8185)
+
+[node name="LightmapProbe285" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 4.5469, -19.8185)
+
+[node name="LightmapProbe286" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 2.56964, -19.8185)
+
+[node name="LightmapProbe287" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 0.163014, -22.3613)
+
+[node name="LightmapProbe288" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 4.5469, -22.3613)
+
+[node name="LightmapProbe289" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.21292, 2.56964, -22.3613)
 
 [node name="LightmapProbe4" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24322, 7.2215, 9.99644)
@@ -856,6 +1037,96 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35305, 0.126783, -4.51116)
 
 [node name="LightmapProbe42" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35305, 2.96196, -4.51116)
+
+[node name="LightmapProbe200" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73013, 1.91445, -5.12327)
+
+[node name="LightmapProbe201" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0287, 1.91445, -5.12327)
+
+[node name="LightmapProbe202" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73013, 7.2393, -5.12327)
+
+[node name="LightmapProbe203" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0287, 7.2393, -5.12327)
+
+[node name="LightmapProbe204" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.72831, 4.73668, -5.12173)
+
+[node name="LightmapProbe206" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.90533, 4.73668, -2.22048)
+
+[node name="LightmapProbe207" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.90533, 7.38541, -2.22048)
+
+[node name="LightmapProbe208" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.90533, 1.91299, -2.22048)
+
+[node name="LightmapProbe209" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71677, 4.73668, -2.22048)
+
+[node name="LightmapProbe210" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71677, 7.38541, -2.22048)
+
+[node name="LightmapProbe211" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71677, 1.91299, -2.22048)
+
+[node name="LightmapProbe212" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118618, 4.73668, -0.726195)
+
+[node name="LightmapProbe213" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118618, 7.38541, -0.726195)
+
+[node name="LightmapProbe214" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118618, 1.91299, -0.726195)
+
+[node name="LightmapProbe215" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118618, 4.73668, -4.21831)
+
+[node name="LightmapProbe216" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118618, 7.38541, -4.21831)
+
+[node name="LightmapProbe217" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118618, 1.91299, -4.21831)
+
+[node name="LightmapProbe218" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.65285, 4.73668, 4.84933)
+
+[node name="LightmapProbe219" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.65285, 7.38541, 4.84933)
+
+[node name="LightmapProbe220" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.65285, 1.91299, 4.84933)
+
+[node name="LightmapProbe221" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.65285, 4.73668, 0.412364)
+
+[node name="LightmapProbe222" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.65285, 7.38541, 0.412364)
+
+[node name="LightmapProbe223" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.65285, 1.91299, 0.412364)
+
+[node name="LightmapProbe224" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.56802, 4.73668, 2.4601)
+
+[node name="LightmapProbe225" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.56802, 7.38541, 2.4601)
+
+[node name="LightmapProbe226" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.56802, 1.91299, 2.4601)
+
+[node name="LightmapProbe227" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35167, 4.73668, 2.4601)
+
+[node name="LightmapProbe228" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35167, 7.38541, 2.4601)
+
+[node name="LightmapProbe229" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35167, 1.91299, 2.4601)
+
+[node name="LightmapProbe205" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0287, 4.73668, -5.12327)
 
 [node name="LightmapProbe43" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35305, 5.57754, -4.51116)
@@ -1328,23 +1599,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.7808, 0.329039, -90.0125)
 [node name="LightmapProbe199" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.7808, 23.2537, -90.0125)
 
-[node name="Reflection Probes" type="Node" parent="Map/LightmapGI"]
-
-[node name="ReflectionProbe" type="ReflectionProbe" parent="Map/LightmapGI/Reflection Probes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4468, 2.86165, -3.02589)
-size = Vector3(11.85, 8.2959, 20)
-box_projection = true
-
-[node name="ReflectionProbe3" type="ReflectionProbe" parent="Map/LightmapGI/Reflection Probes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9375, 2.86165, -21.3568)
-size = Vector3(13.1312, 8.2959, 9.42358)
-box_projection = true
-
-[node name="ReflectionProbe2" type="ReflectionProbe" parent="Map/LightmapGI/Reflection Probes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0904, 2.86165, -17.7544)
-size = Vector3(19.3527, 8.2959, 13.48)
-box_projection = true
-
 [node name="Map Mesh & Collision" type="Node" parent="Map"]
 
 [node name="Ceiling Tiles" type="MeshInstance3D" parent="Map/Map Mesh & Collision"]
@@ -1420,8 +1674,8 @@ debug_color = Color(0, 0.595, 0.7, 0)
 
 [node name="Map Lights" type="Node" parent="Map"]
 
-[node name="OmniLight3D2" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.7277, 0.161832, -2.93382)
+[node name="OmniLight3D3" type="SpotLight3D" parent="Map/Map Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.92791, 7.17043, -6.29602)
 light_color = Color(1, 0.847351, 0.610521, 1)
 light_energy = 3.968
 light_size = 0.106
@@ -1429,83 +1683,11 @@ light_bake_mode = 1
 shadow_enabled = true
 spot_range = 15.0
 spot_attenuation = 2.0
-spot_angle = 23.69
-spot_angle_attenuation = 6.40543
-
-[node name="OmniLight3D9" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -6.9724, 0.161832, 5.31928)
-light_color = Color(1, 0.847351, 0.610521, 1)
-light_energy = 3.968
-light_size = 0.106
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_attenuation = 2.0
-spot_angle = 23.69
-spot_angle_attenuation = 6.40543
-
-[node name="OmniLight3D10" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -6.9724, 0.161832, -0.0584822)
-light_color = Color(1, 0.847351, 0.610521, 1)
-light_energy = 3.968
-light_size = 0.106
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_attenuation = 2.0
-spot_angle = 23.69
-spot_angle_attenuation = 6.40543
-
-[node name="OmniLight3D11" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -5.7436, 0.161832, 0.604027)
-light_color = Color(1, 0.847351, 0.610521, 1)
-light_energy = 3.968
-light_size = 0.106
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_attenuation = 2.0
-spot_angle = 23.69
-spot_angle_attenuation = 6.40543
-
-[node name="OmniLight3D12" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4.86174, 0.161832, 2.05897)
-light_color = Color(1, 0.847351, 0.610521, 1)
-light_energy = 3.968
-light_size = 0.106
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_attenuation = 2.0
-spot_angle = 23.69
-spot_angle_attenuation = 6.40543
-
-[node name="OmniLight3D13" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -5.02534, 0.161832, 3.49403)
-light_color = Color(1, 0.847351, 0.610521, 1)
-light_energy = 3.968
-light_size = 0.106
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_attenuation = 2.0
-spot_angle = 23.69
-spot_angle_attenuation = 6.40543
-
-[node name="OmniLight3D14" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -5.78495, 0.161832, 4.66688)
-light_color = Color(1, 0.847351, 0.610521, 1)
-light_energy = 3.968
-light_size = 0.106
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_attenuation = 2.0
-spot_angle = 23.69
+spot_angle = 30.48
 spot_angle_attenuation = 6.40543
 
 [node name="OmniLight3D4" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.99713, 0.161832, -1.41821)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.59159, 7.17043, -6.29602)
 light_color = Color(1, 0.847351, 0.610521, 1)
 light_energy = 3.968
 light_size = 0.106
@@ -1513,67 +1695,7 @@ light_bake_mode = 1
 shadow_enabled = true
 spot_range = 15.0
 spot_attenuation = 2.0
-spot_angle = 23.69
-spot_angle_attenuation = 6.40543
-
-[node name="OmniLight3D5" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.35166, 0.161832, -0.239285)
-light_color = Color(1, 0.847351, 0.610521, 1)
-light_energy = 3.968
-light_size = 0.106
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_attenuation = 2.0
-spot_angle = 23.69
-spot_angle_attenuation = 6.40543
-
-[node name="OmniLight3D6" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.451, 0.161832, 0.273278)
-light_color = Color(1, 0.847351, 0.610521, 1)
-light_energy = 3.968
-light_size = 0.106
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_attenuation = 2.0
-spot_angle = 23.69
-spot_angle_attenuation = 6.40543
-
-[node name="OmniLight3D7" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.86245, 0.161832, 0.0329102)
-light_color = Color(1, 0.847351, 0.610521, 1)
-light_energy = 3.968
-light_size = 0.106
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_attenuation = 2.0
-spot_angle = 23.69
-spot_angle_attenuation = 6.40543
-
-[node name="OmniLight3D8" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3.48523, 0.161832, -1.10841)
-light_color = Color(1, 0.847351, 0.610521, 1)
-light_energy = 3.968
-light_size = 0.106
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_attenuation = 2.0
-spot_angle = 23.69
-spot_angle_attenuation = 6.40543
-
-[node name="OmniLight3D3" type="SpotLight3D" parent="Map/Map Lights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4.73952, 0.161832, -2.93382)
-light_color = Color(1, 0.847351, 0.610521, 1)
-light_energy = 3.968
-light_size = 0.106
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 15.0
-spot_attenuation = 2.0
-spot_angle = 23.69
+spot_angle = 30.48
 spot_angle_attenuation = 6.40543
 
 [node name="OmniLight3D20" type="OmniLight3D" parent="Map/Map Lights"]
@@ -1854,10 +1976,10 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -11.4979, -0.0990836, -
 [node name="Animatables" type="Node" parent="Map"]
 
 [node name="Chica" parent="Map/Animatables" instance=ExtResource("8_ey3tq")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.43548, 1.74247, -2.61132)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.9581, 1.74247, -3.28439)
 
 [node name="Chica Spot" type="SpotLight3D" parent="Map/Animatables"]
-transform = Transform3D(0.976122, 0.0551108, -0.210113, -0.00945105, 0.97714, 0.212388, 0.217015, -0.205331, 0.954329, 1.01632, 5.91597, 5.13714)
+transform = Transform3D(0.976123, 0.0551108, -0.210114, -0.0368523, 0.995274, 0.0898469, 0.214072, -0.0799584, 0.97354, 1.01632, 5.91597, 5.13714)
 light_color = Color(0.944285, 0.839984, 0.7003, 1)
 light_energy = 0.0
 light_size = 0.124
@@ -1906,7 +2028,7 @@ canChangeColor = true
 canChangeSize = true
 
 [node name="Freddy Spot" type="SpotLight3D" parent="Map/Animatables"]
-transform = Transform3D(0.99984, 0.00601343, 0.0168257, -0.00945105, 0.97714, 0.212388, -0.0151639, -0.212513, 0.977041, 0.202691, 5.91597, 5.13714)
+transform = Transform3D(0.99984, 0.00601344, 0.0168257, -0.00745502, 0.996183, 0.086971, -0.0162385, -0.0870826, 0.996069, 0.202691, 5.91597, 5.13714)
 light_color = Color(0.944285, 0.839984, 0.7003, 1)
 light_energy = 0.0
 light_size = 0.124
@@ -1955,7 +2077,7 @@ canChangeColor = true
 canChangeSize = true
 
 [node name="Guest Spot" type="SpotLight3D" parent="Map/Animatables"]
-transform = Transform3D(0.973659, -0.0393965, 0.22458, -0.00945106, 0.97714, 0.212388, -0.227813, -0.208916, 0.951029, -0.598785, 5.91597, 5.13714)
+transform = Transform3D(0.973659, -0.0393965, 0.22458, 0.0194694, 0.995727, 0.0902646, -0.227176, -0.0835145, 0.970266, -0.598785, 5.91597, 5.13714)
 light_color = Color(0.944285, 0.839984, 0.7003, 1)
 light_energy = 0.0
 light_size = 0.124
