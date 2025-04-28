@@ -20,8 +20,8 @@
 [ext_resource type="Material" uid="uid://d1c22fl7hw3cp" path="res://Materials/Wood B.tres" id="15_vjihw"]
 [ext_resource type="Material" uid="uid://bih5rftylul4y" path="res://Materials/Carpet Red.tres" id="16_x4om4"]
 [ext_resource type="Material" uid="uid://d0i7i6ix51nlw" path="res://Materials/Shiny Black.tres" id="17_x2kbk"]
+[ext_resource type="Material" uid="uid://nolg26kxrges" path="res://Materials/Glass Real.tres" id="18_3ih5i"]
 [ext_resource type="Material" uid="uid://bb215h5xd0t5" path="res://Materials/Plaster Black.tres" id="18_8ke8u"]
-[ext_resource type="Material" uid="uid://ddx50lgsgirmm" path="res://Materials/Glass.tres" id="19_0wwlb"]
 [ext_resource type="Material" uid="uid://birmh2dr3tsyo" path="res://Materials/Outside Tiles.tres" id="24_x60xq"]
 [ext_resource type="Material" uid="uid://bg8u80kltut8y" path="res://Materials/Fake Grass.tres" id="25_ghqkc"]
 
@@ -130,7 +130,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_krma8"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_mfnkb"]
 resource_name = "Floor_001"
 lightmap_size_hint = Vector2i(762, 814)
 _surfaces = [{
@@ -198,7 +198,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_3yc2r"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_krma8"]
 resource_name = "Ceiling_001"
 lightmap_size_hint = Vector2i(926, 718)
 _surfaces = [{
@@ -316,7 +316,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_27etk"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_3yc2r"]
 resource_name = "Walls_005"
 lightmap_size_hint = Vector2i(1530, 1498)
 _surfaces = [{
@@ -402,7 +402,7 @@ _surfaces = [{
 "format": 34359742527,
 "index_count": 264,
 "index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAA5ADoAOgA7ADgAPAA9AD4APgA/ADwAQABBAEIAQgBDAEAARABFAEYARgBHAEQASABJAEoASgBLAEgATABNAE4ATgBPAEwAUABRAFIAUgBTAFAAVABVAFYAVgBXAFQAWABZAFoAWgBbAFgAXABdAF4AXgBfAFwAYABhAGIAYgBjAGAAZABlAGYAZgBnAGQAaABpAGoAagBrAGgAbABtAG4AbgBvAGwAcABxAHIAcgBzAHAAdAB1AHYAdgB3AHQAeAB5AHoAegB7AHgAfAB9AH4AfgB/AHwAgACBAIIAggCDAIAAhACFAIYAhgCHAIQAiACJAIoAigCLAIgAjACNAI4AjgCPAIwAkACRAJIAkgCTAJAAlACVAJYAlgCXAJQAmACZAJoAmgCbAJgAnACdAJ4AngCfAJwAoAChAKIAogCjAKAApAClAKYApgCnAKQAqACpAKoAqgCrAKgArACtAK4ArgCvAKwA"),
-"material": ExtResource("19_0wwlb"),
+"material": ExtResource("18_3ih5i"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 176,
@@ -482,7 +482,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_se7vh"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_27etk"]
 resource_name = "Outer Store_001"
 lightmap_size_hint = Vector2i(1334, 1294)
 _surfaces = [{
@@ -495,7 +495,7 @@ _surfaces = [{
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 363,
-"vertex_data": PackedByteArray("mpmZvhSuR78AAAAAKFyPvs3MTL8AAAAAKFyPvj0K174AAAAAmpmZvj0K174AAAAA9iicv83MTL8AAAAAmpmZvxSuR78AAAAA9iicv43C9b0AAAAAmpmZv43C9b0AAAAAKFyPvj0K177NzMw9KFyPvs3MTL/NzMw9mpmZvhSuR7/NzMw9mpmZvj0K177NzMw99iicv83MTL/NzMw9mpmZvxSuR7/NzMw99iicv43C9b3NzMw9mpmZv43C9b3NzMw9mpmZvxSuR7/NzMw9mpmZv43C9b3NzMw9mpmZv43C9b0AAAAAmpmZvxSuR78AAAAAKFyPvj0K177NzMw9mpmZvj0K177NzMw9mpmZvj0K174AAAAAKFyPvj0K174AAAAAKFyPvs3MTL/NzMw9KFyPvj0K177NzMw9KFyPvj0K174AAAAAKFyPvs3MTL8AAAAAmpmZvj0K177NzMw9mpmZvhSuR7/NzMw9mpmZvhSuR78AAAAAmpmZvj0K174AAAAA9iicv43C9b3NzMw99iicv83MTL/NzMw99iicv83MTL8AAAAA9iicv43C9b0AAAAAmpmZv43C9b3NzMw99iicv43C9b3NzMw99iicv43C9b0AAAAAmpmZv43C9b0AAAAA9iicv83MTL/NzMw9KFyPvs3MTL/NzMw9KFyPvs3MTL8AAAAA9iicv83MTL8AAAAAmpmZvhSuR7/NzMw9mpmZvxSuR7/NzMw9mpmZvxSuR78AAAAAmpmZvhSuR78AAAAA9iicv///fz/D9ag+9iicv///fz8fhWs+9iicv61HgT8fhWs+9iicv61HgT/D9ag+9iicv0bhej/D9ag+9iicv61HgT/sUTg+9iicv2Zmhj8fhWs+9iicv2Zmhj/D9ag+9iicvzIzkz8fhWs+9iicvzIzkz/D9ag+9iicvzIzkz/sUTg+9iicv2Zmhj/sUTg+9iicvzIzkz8AAAAA9iicv2Zmhj8AAAAA9iicv+pRmD8fhWs+9iicv+pRmD/D9ag+9iicv/QonD8fhWs+9iicv/QonD/D9ag+9iicv/QonD/sUTg+9iicv+pRmD/sUTg+9iicv/QonD8AAAAA9iicv+pRmD8AAAAA9iicv/QonD/D9ag+9iicv/QonD8fhWs+7FGYv/QonD8fhWs+7FGYv/QonD/D9ag+7FGYv/QonD/sUTg+9iicv/QonD/sUTg+7FGYv/QonD8AAAAA9iicv/QonD8AAAAAMzOTv/QonD8fhWs+MzOTv/QonD/D9ag+9ihcv/QonD8fhWs+9ihcv/QonD/D9ag+9ihcv/QonD/sUTg+MzOTv/QonD/sUTg+9ihcv/QonD8AAAAAMzOTv/QonD8AAAAAhetRv/QonD8fhWs+hetRv/QonD/D9ag+cT1Kv/QonD8fhWs+cT1Kv/QonD/D9ag+cT1Kv/QonD/sUTg+hetRv/QonD/sUTg+cT1Kv/QonD8AAAAAhetRv/QonD8AAAAAAABAv/QonD8fhWs+AABAv/QonD/D9ag+cD0Kv/QonD8fhWs+cD0Kv/QonD/D9ag+cD0Kv/QonD/sUTg+AABAv/QonD/sUTg+cD0Kv/QonD8AAAAAAABAv/QonD8AAAAA////vvQonD8fhWs+////vvQonD/D9ag+jsL1vvQonD8fhWs+jsL1vvQonD/D9ag+CtejvvQonD/D9ag+jsL1vvQonD/sUTg+////vvQonD/sUTg+jsL1vvQonD8AAAAA////vvQonD8AAAAACtejvvQonD8fhWs+CtejvvQonD/sUTg+mZmZvvQonD/D9ag+mZmZvvQonD8fhWs+uB6FvvQonD/D9ag+mZmZvvQonD/sUTg+CtejvvQonD8AAAAAmZmZvvQonD8AAAAAuB6FvvQonD8fhWs+yMxMvfQonD/D9ag+yMxMvfQonD8fhWs+9tYjvPQonD/D9ag+uB6FvvQonD/sUTg+9tYjvPQonD8fhWs+yMxMvfQonD/sUTg+uB6FvvQonD8AAAAAyMxMvfQonD8AAAAAE9ejPPQonD/D9ag+E9ejPPQonD8fhWs+9tYjvPQonD/sUTg+E9ejPPQonD/sUTg+9tYjvPQonD8AAAAAE9ejPPQonD8AAAAAUrgev43C9b3D9ag+Urgev65HYb7D9ag+Urgev65HYb4fhWs+Urgev43C9b0fhWs+Urgev65HYb7sUTg+Urgev43C9b3sUTg+Urgev65HYb4AAAAAUrgev43C9b0AAAAA9iicv43C9b3D9ag+Urgev43C9b3D9ag+Urgev43C9b0fhWs+9iicv43C9b0fhWs+Urgev43C9b3sUTg+9iicv43C9b3sUTg+Urgev43C9b0AAAAA9iicv43C9b0AAAAAmZkZv65HYb7D9ag+mZkZv65HYb4fhWs+Urgev65HYb4fhWs+Urgev65HYb7D9ag+Urgev65HYb7sUTg+mZkZv65HYb7sUTg+Urgev65HYb4AAAAAmZkZv65HYb4AAAAAuB4Fv65HYb7sUTg+uB4Fv65HYb4fhWs+uB4Fv65HYb7D9ag+////vq5HYb4fhWs+////vq5HYb7D9ag+////vq5HYb7sUTg+////vq5HYb4AAAAAuB4Fv65HYb4AAAAA9iicvwrXozLD9ag+9iicv43C9b3D9ag+9iicv43C9b0fhWs+9iicvwrXozIfhWs+9iicv43C9b3sUTg+9iicvwrXozLsUTg+9iicv43C9b0AAAAA9iicvwrXozIAAAAA9iicv43CdT3sUTg+9iicv43CdT0fhWs+9iicv43CdT3D9ag+9iicvz0K1z7D9ag+9iicvz0K1z4fhWs+9iicv4/C9T7D9ag+9iicvz0K1z7sUTg+9iicv43CdT0AAAAA9iicvz0K1z4AAAAA9iicv4/C9T4fhWs+9iicv4/C9T7sUTg+9iicv7geBT8fhWs+9iicv7geBT/D9ag+9iicv7geBT/sUTg+9iicv7geBT8AAAAA9iicv4/C9T4AAAAA9iicvylcDz8fhWs+9iicvylcDz/D9ag+9iicv2VmJj8fhWs+9iicv2VmJj/D9ag+9iicv2VmJj/sUTg+9iicvylcDz/sUTg+9iicv2VmJj8AAAAA9iicvylcDz8AAAAA9iicv9ajMD8fhWs+9iicv9ajMD/D9ag+9iicv+pROD8fhWs+9iicv+pROD/D9ag+9iicv+pROD/sUTg+9iicv9ajMD/sUTg+9iicv+pROD8AAAAA9iicv9ajMD8AAAAA9iicv1uPQj8fhWs+9iicv1uPQj/D9ag+9iicv9ajcD8fhWs+9iicv9ajcD/D9ag+9iicv9ajcD/sUTg+9iicv1uPQj/sUTg+9iicv9ajcD8AAAAA9iicv1uPQj8AAAAA9iicv0bhej8fhWs+9iicv///fz/sUTg+9iicv61HgT8AAAAA9iicv0bhej/sUTg+9iicv///fz8AAAAA9iicv0bhej8AAAAAmpmZvj0K177D9ag+CtejPj0K177D9ag+CtejPj0K174fhWs+mpmZvj0K174fhWs+CtejPj0K177sUTg+mpmZvj0K177sUTg+CtejPj0K174AAAAAmpmZvj0K174AAAAACtejPj0K177D9ag+CtejPrgeBT/D9ag+CtejPrgeBT8fhWs+CtejPj0K174fhWs+CtejPrgeBT/sUTg+CtejPj0K177sUTg+CtejPrgeBT8AAAAACtejPj0K174AAAAACtejPrgeBT/D9ag+E9ejPLgeBT/D9ag+E9ejPLgeBT8fhWs+CtejPrgeBT8fhWs+E9ejPLgeBT/sUTg+CtejPrgeBT/sUTg+E9ejPLgeBT8AAAAACtejPrgeBT8AAAAAE9ejPPQonD/D9ag+E9ejPPQonD8fhWs+E9ejPOpRmD8fhWs+E9ejPOpRmD/D9ag+E9ejPOpRmD/sUTg+E9ejPPQonD/sUTg+E9ejPOpRmD8AAAAAE9ejPPQonD8AAAAAE9ejPDIzkz8fhWs+E9ejPDIzkz/D9ag+E9ejPBSuhz8fhWs+E9ejPBSuhz/D9ag+E9ejPBSuhz/sUTg+E9ejPDIzkz/sUTg+E9ejPBSuhz8AAAAAE9ejPDIzkz8AAAAAE9ejPFyPgj8fhWs+E9ejPFyPgj/D9ag+E9ejPKRwfT8fhWs+E9ejPKRwfT/D9ag+E9ejPKRwfT/sUTg+E9ejPFyPgj/sUTg+E9ejPKRwfT8AAAAAE9ejPFyPgj8AAAAAE9ejPDMzcz8fhWs+E9ejPDMzcz/D9ag+E9ejPMP1aD8fhWs+E9ejPMP1aD/D9ag+E9ejPMP1aD/sUTg+E9ejPDMzcz/sUTg+E9ejPMP1aD8AAAAAE9ejPDMzcz8AAAAAE9ejPFK4Xj8fhWs+E9ejPFK4Xj/D9ag+E9ejPMP1KD8fhWs+E9ejPMP1KD/D9ag+E9ejPMP1KD/sUTg+E9ejPFK4Xj/sUTg+E9ejPMP1KD8AAAAAE9ejPFK4Xj8AAAAAE9ejPFK4Hj8fhWs+E9ejPFK4Hj/D9ag+E9ejPOF6FD8fhWs+E9ejPOF6FD/D9ag+E9ejPOF6FD/sUTg+E9ejPFK4Hj/sUTg+E9ejPOF6FD8AAAAAE9ejPFK4Hj8AAAAAE9ejPHE9Cj8fhWs+E9ejPHE9Cj/D9ag+E9ejPLgeBT8fhWs+E9ejPLgeBT/D9ag+E9ejPLgeBT/sUTg+E9ejPHE9Cj/sUTg+E9ejPLgeBT8AAAAAE9ejPHE9Cj8AAAAA////vq5HYb7D9ag+mpmZvj0K177D9ag+mpmZvj0K174fhWs+////vq5HYb4fhWs+mpmZvj0K177sUTg+////vq5HYb7sUTg+mpmZvj0K174AAAAA////vq5HYb4AAAAAE9ejPLgeBT/D9ag+Urgev65HYb7D9ag+Urgev43C9b3D9ag+mZkZv65HYb7D9ag+9iicv43C9b3D9ag+uB4Fv65HYb7D9ag+9iicvwrXozLD9ag+9iicv43CdT3D9ag+9iicvz0K1z7D9ag+9iicv4/C9T7D9ag+9iicv7geBT/D9ag+9iicvylcDz/D9ag+9iicv2VmJj/D9ag+9iicv9ajMD/D9ag+9iicv+pROD/D9ag+9iicv1uPQj/D9ag+9iicv9ajcD/D9ag+////vq5HYb7D9ag+CtejPrgeBT/D9ag+CtejPj0K177D9ag+mpmZvj0K177D9ag+9iicv0bhej/D9ag+E9ejPHE9Cj/D9ag+E9ejPOF6FD/D9ag+E9ejPFK4Hj/D9ag+E9ejPMP1KD/D9ag+E9ejPFK4Xj/D9ag+E9ejPMP1aD/D9ag+E9ejPDMzcz/D9ag+E9ejPKRwfT/D9ag+E9ejPFyPgj/D9ag+E9ejPBSuhz/D9ag+E9ejPDIzkz/D9ag+E9ejPOpRmD/D9ag+E9ejPPQonD/D9ag+9iicv///fz/D9ag+9iicv61HgT/D9ag+9iicv2Zmhj/D9ag+9iicvzIzkz/D9ag+9iicv+pRmD/D9ag+9tYjvPQonD/D9ag+yMxMvfQonD/D9ag+uB6FvvQonD/D9ag+mZmZvvQonD/D9ag+CtejvvQonD/D9ag+jsL1vvQonD/D9ag+////vvQonD/D9ag+cD0Kv/QonD/D9ag+AABAv/QonD/D9ag+cT1Kv/QonD/D9ag+hetRv/QonD/D9ag+9ihcv/QonD/D9ag+MzOTv/QonD/D9ag+7FGYv/QonD/D9ag+9iicv/QonD/D9ag+/////////7//////////v/////////+//////////7//////////v/////////+//////////7//////////v/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z///wCA////v///AID///+///8AgP///7///wCA////vwCA//////+/AID//////78AgP//////vwCA//////+///8AgP///7///wCA////v///AID///+///8AgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AID//////78AgP//////vwCA//////+/AID//////78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCA//////+/AID//////78AgP//////vwCA//////+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP9//z8AAACA////vwAAAID/f/8/AAAAgP///78AAACA/3//PwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP///////wCA////////AID///9//z8AgP//////vwCA////f/8/AID///9//z8AgP///3//PwCA////f/8/AID//////78AgP//////vwCA////f/8/AID//////78AgP//////vwCA////f/8/AID//////78AgP//////vwCA//////+/AID///9//z8AgP///3//PwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA////f/8/AID///9//z8AgP///3//PwCA//////+/AID///9//z8AgP//////vwCA////f/8/AID///9//z8AgP///3//PwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP9//z8AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA/3//vwCAAAD/f/+/AIAAAP///78AgAAA/3//vwCAAAD/f/+/AIAAAP///78AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA////vwCAAAD/f/+/AIAAAP///78AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AAACA////vwAAAID///+/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID///+/AAAAgP///78AAACA/3//PwAAAID///+/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA/3//PwAAAID///+/AAAAgP9//z8AAACA////vwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AgAAA////vwCAAAD///+/AIAAAP9//78AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA/3//vwCAAAD/f/+///8AgP9//7///wCA/3//v///AID/f/+///8AgP9//7///wCA/3//v///AID/f/+///8AgP9//7///wCA/3//vwCA//////+/AID//////78AgP///3//PwCA////f/8/AID///9//z8AgP///3//PwCA////f/8/AID///9//z///wCA////v///AID///+///8AgP///7///wCA////v///AID///+///8AgP///7///wCA////v///AID///+///8AgP9//7///wCA//8AAP//AIAbxwCA//8AgBvHAID//wCA/3//v///AID/f/+///8AgP9//7///wCA/3//v///AIAbxwCA//8AgP///7///wCAbNsAgP//AIBs2wCA//8AgP///7///wCA////v///AID///+///8AgP///7///wCA2e0AgP//AID///////8AgC23/////wCAAID/////AID/f44j//8AgP///7///wCA////v///AID///+///8AgP9/zgb//wCA////v///AIBF0v////8AgBvH/n///wCA/3/OBv//AID///+///8AgP///7///wCA////v///AID/f/+///8AgP///7///wCA/3//v///AID///+///8AgP9//7///wCA////v///AID///+///8AgP///7///wCA////v///AID///+///8AgP///7///wCA////v///AID///+///8AgP///7///wCA////v///AID///+//z//P/9//z//P/8//3//P/8//z//f/8//z//P/9//z//P/8//3//P/8//z//f/8//z//P/9//z//P/8//3//P/9//38AgP///3//f/9//v//f/9/AID///9//3//f/7//3//fwCA////f/9//3/+//9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//f////z//f/9/AID///9//38AgP///3//f////z//f/9/////P/9//3////8//3//f////z//f/9//3/+//9//38AgP///3//fwCA////f/9//3/+//9//38AgP///3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//fwCA////f/9/AID///9//3////8//3//fwCA////f/9/////P/9//3////8//3//fwCA////f/9/AID///9//3++Sd9k/3//f////z//f/9/1whqRP9//3/XCGpE/3//f////z//f/9/AID+f/9//38AgP5//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8/")
+"vertex_data": PackedByteArray("mpmZvhSuR78AAAAAKFyPvs3MTL8AAAAAKFyPvj0K174AAAAAmpmZvj0K174AAAAA9iicv83MTL8AAAAAmpmZvxSuR78AAAAA9iicv43C9b0AAAAAmpmZv43C9b0AAAAAKFyPvj0K177NzMw9KFyPvs3MTL/NzMw9mpmZvhSuR7/NzMw9mpmZvj0K177NzMw99iicv83MTL/NzMw9mpmZvxSuR7/NzMw99iicv43C9b3NzMw9mpmZv43C9b3NzMw9mpmZvxSuR7/NzMw9mpmZv43C9b3NzMw9mpmZv43C9b0AAAAAmpmZvxSuR78AAAAAKFyPvj0K177NzMw9mpmZvj0K177NzMw9mpmZvj0K174AAAAAKFyPvj0K174AAAAAKFyPvs3MTL/NzMw9KFyPvj0K177NzMw9KFyPvj0K174AAAAAKFyPvs3MTL8AAAAAmpmZvj0K177NzMw9mpmZvhSuR7/NzMw9mpmZvhSuR78AAAAAmpmZvj0K174AAAAA9iicv43C9b3NzMw99iicv83MTL/NzMw99iicv83MTL8AAAAA9iicv43C9b0AAAAAmpmZv43C9b3NzMw99iicv43C9b3NzMw99iicv43C9b0AAAAAmpmZv43C9b0AAAAA9iicv83MTL/NzMw9KFyPvs3MTL/NzMw9KFyPvs3MTL8AAAAA9iicv83MTL8AAAAAmpmZvhSuR7/NzMw9mpmZvxSuR7/NzMw9mpmZvxSuR78AAAAAmpmZvhSuR78AAAAA9iicv///fz/D9ag+9iicv///fz8fhWs+9iicv61HgT8fhWs+9iicv61HgT/D9ag+9iicv0bhej/D9ag+9iicv61HgT/sUTg+9iicv2Zmhj8fhWs+9iicv2Zmhj/D9ag+9iicvzIzkz8fhWs+9iicvzIzkz/D9ag+9iicvzIzkz/sUTg+9iicv2Zmhj/sUTg+9iicvzIzkz8AAAAA9iicv2Zmhj8AAAAA9iicv+pRmD8fhWs+9iicv+pRmD/D9ag+9iicv/QonD8fhWs+9iicv/QonD/D9ag+9iicv/QonD/sUTg+9iicv+pRmD/sUTg+9iicv/QonD8AAAAA9iicv+pRmD8AAAAA9iicv/QonD/D9ag+9iicv/QonD8fhWs+7FGYv/QonD8fhWs+7FGYv/QonD/D9ag+7FGYv/QonD/sUTg+9iicv/QonD/sUTg+7FGYv/QonD8AAAAA9iicv/QonD8AAAAAMzOTv/QonD8fhWs+MzOTv/QonD/D9ag+9ihcv/QonD8fhWs+9ihcv/QonD/D9ag+9ihcv/QonD/sUTg+MzOTv/QonD/sUTg+9ihcv/QonD8AAAAAMzOTv/QonD8AAAAAhetRv/QonD8fhWs+hetRv/QonD/D9ag+cT1Kv/QonD8fhWs+cT1Kv/QonD/D9ag+cT1Kv/QonD/sUTg+hetRv/QonD/sUTg+cT1Kv/QonD8AAAAAhetRv/QonD8AAAAAAABAv/QonD8fhWs+AABAv/QonD/D9ag+cD0Kv/QonD8fhWs+cD0Kv/QonD/D9ag+cD0Kv/QonD/sUTg+AABAv/QonD/sUTg+cD0Kv/QonD8AAAAAAABAv/QonD8AAAAA////vvQonD8fhWs+////vvQonD/D9ag+jsL1vvQonD8fhWs+jsL1vvQonD/D9ag+CtejvvQonD/D9ag+jsL1vvQonD/sUTg+////vvQonD/sUTg+jsL1vvQonD8AAAAA////vvQonD8AAAAACtejvvQonD8fhWs+CtejvvQonD/sUTg+mZmZvvQonD/D9ag+mZmZvvQonD8fhWs+uB6FvvQonD/D9ag+mZmZvvQonD/sUTg+CtejvvQonD8AAAAAmZmZvvQonD8AAAAAuB6FvvQonD8fhWs+yMxMvfQonD/D9ag+yMxMvfQonD8fhWs+9tYjvPQonD/D9ag+uB6FvvQonD/sUTg+9tYjvPQonD8fhWs+yMxMvfQonD/sUTg+uB6FvvQonD8AAAAAyMxMvfQonD8AAAAAE9ejPPQonD/D9ag+E9ejPPQonD8fhWs+9tYjvPQonD/sUTg+E9ejPPQonD/sUTg+9tYjvPQonD8AAAAAE9ejPPQonD8AAAAAUrgev43C9b3D9ag+Urgev65HYb7D9ag+Urgev65HYb4fhWs+Urgev43C9b0fhWs+Urgev65HYb7sUTg+Urgev43C9b3sUTg+Urgev65HYb4AAAAAUrgev43C9b0AAAAA9iicv43C9b3D9ag+Urgev43C9b3D9ag+Urgev43C9b0fhWs+9iicv43C9b0fhWs+Urgev43C9b3sUTg+9iicv43C9b3sUTg+Urgev43C9b0AAAAA9iicv43C9b0AAAAAmZkZv65HYb7D9ag+mZkZv65HYb4fhWs+Urgev65HYb4fhWs+Urgev65HYb7D9ag+Urgev65HYb7sUTg+mZkZv65HYb7sUTg+Urgev65HYb4AAAAAmZkZv65HYb4AAAAAuB4Fv65HYb7sUTg+uB4Fv65HYb4fhWs+uB4Fv65HYb7D9ag+////vq5HYb4fhWs+////vq5HYb7D9ag+////vq5HYb7sUTg+////vq5HYb4AAAAAuB4Fv65HYb4AAAAA9iicvwrXozLD9ag+9iicv43C9b3D9ag+9iicv43C9b0fhWs+9iicvwrXozIfhWs+9iicv43C9b3sUTg+9iicvwrXozLsUTg+9iicv43C9b0AAAAA9iicvwrXozIAAAAA9iicv43CdT3sUTg+9iicv43CdT0fhWs+9iicv43CdT3D9ag+9iicvz0K1z7D9ag+9iicvz0K1z4fhWs+9iicv4/C9T7D9ag+9iicvz0K1z7sUTg+9iicv43CdT0AAAAA9iicvz0K1z4AAAAA9iicv4/C9T4fhWs+9iicv4/C9T7sUTg+9iicv7geBT8fhWs+9iicv7geBT/D9ag+9iicv7geBT/sUTg+9iicv7geBT8AAAAA9iicv4/C9T4AAAAA9iicvylcDz8fhWs+9iicvylcDz/D9ag+9iicv2VmJj8fhWs+9iicv2VmJj/D9ag+9iicv2VmJj/sUTg+9iicvylcDz/sUTg+9iicv2VmJj8AAAAA9iicvylcDz8AAAAA9iicv9ajMD8fhWs+9iicv9ajMD/D9ag+9iicv+pROD8fhWs+9iicv+pROD/D9ag+9iicv+pROD/sUTg+9iicv9ajMD/sUTg+9iicv+pROD8AAAAA9iicv9ajMD8AAAAA9iicv1uPQj8fhWs+9iicv1uPQj/D9ag+9iicv9ajcD8fhWs+9iicv9ajcD/D9ag+9iicv9ajcD/sUTg+9iicv1uPQj/sUTg+9iicv9ajcD8AAAAA9iicv1uPQj8AAAAA9iicv0bhej8fhWs+9iicv///fz/sUTg+9iicv61HgT8AAAAA9iicv0bhej/sUTg+9iicv///fz8AAAAA9iicv0bhej8AAAAAmpmZvj0K177D9ag+CtejPj0K177D9ag+CtejPj0K174fhWs+mpmZvj0K174fhWs+CtejPj0K177sUTg+mpmZvj0K177sUTg+CtejPj0K174AAAAAmpmZvj0K174AAAAACtejPj0K177D9ag+CtejPrgeBT/D9ag+CtejPrgeBT8fhWs+CtejPj0K174fhWs+CtejPrgeBT/sUTg+CtejPj0K177sUTg+CtejPrgeBT8AAAAACtejPj0K174AAAAACtejPrgeBT/D9ag+E9ejPLgeBT/D9ag+E9ejPLgeBT8fhWs+CtejPrgeBT8fhWs+E9ejPLgeBT/sUTg+CtejPrgeBT/sUTg+E9ejPLgeBT8AAAAACtejPrgeBT8AAAAAE9ejPPQonD/D9ag+E9ejPPQonD8fhWs+E9ejPOpRmD8fhWs+E9ejPOpRmD/D9ag+E9ejPOpRmD/sUTg+E9ejPPQonD/sUTg+E9ejPOpRmD8AAAAAE9ejPPQonD8AAAAAE9ejPDIzkz8fhWs+E9ejPDIzkz/D9ag+E9ejPBSuhz8fhWs+E9ejPBSuhz/D9ag+E9ejPBSuhz/sUTg+E9ejPDIzkz/sUTg+E9ejPBSuhz8AAAAAE9ejPDIzkz8AAAAAE9ejPFyPgj8fhWs+E9ejPFyPgj/D9ag+E9ejPKRwfT8fhWs+E9ejPKRwfT/D9ag+E9ejPKRwfT/sUTg+E9ejPFyPgj/sUTg+E9ejPKRwfT8AAAAAE9ejPFyPgj8AAAAAE9ejPDMzcz8fhWs+E9ejPDMzcz/D9ag+E9ejPMP1aD8fhWs+E9ejPMP1aD/D9ag+E9ejPMP1aD/sUTg+E9ejPDMzcz/sUTg+E9ejPMP1aD8AAAAAE9ejPDMzcz8AAAAAE9ejPFK4Xj8fhWs+E9ejPFK4Xj/D9ag+E9ejPMP1KD8fhWs+E9ejPMP1KD/D9ag+E9ejPMP1KD/sUTg+E9ejPFK4Xj/sUTg+E9ejPMP1KD8AAAAAE9ejPFK4Xj8AAAAAE9ejPFK4Hj8fhWs+E9ejPFK4Hj/D9ag+E9ejPOF6FD8fhWs+E9ejPOF6FD/D9ag+E9ejPOF6FD/sUTg+E9ejPFK4Hj/sUTg+E9ejPOF6FD8AAAAAE9ejPFK4Hj8AAAAAE9ejPHE9Cj8fhWs+E9ejPHE9Cj/D9ag+E9ejPLgeBT8fhWs+E9ejPLgeBT/D9ag+E9ejPLgeBT/sUTg+E9ejPHE9Cj/sUTg+E9ejPLgeBT8AAAAAE9ejPHE9Cj8AAAAA////vq5HYb7D9ag+mpmZvj0K177D9ag+mpmZvj0K174fhWs+////vq5HYb4fhWs+mpmZvj0K177sUTg+////vq5HYb7sUTg+mpmZvj0K174AAAAA////vq5HYb4AAAAAE9ejPLgeBT/D9ag+Urgev65HYb7D9ag+Urgev43C9b3D9ag+mZkZv65HYb7D9ag+9iicv43C9b3D9ag+uB4Fv65HYb7D9ag+9iicvwrXozLD9ag+9iicv43CdT3D9ag+9iicvz0K1z7D9ag+9iicv4/C9T7D9ag+9iicv7geBT/D9ag+9iicvylcDz/D9ag+9iicv2VmJj/D9ag+9iicv9ajMD/D9ag+9iicv+pROD/D9ag+9iicv1uPQj/D9ag+9iicv9ajcD/D9ag+////vq5HYb7D9ag+CtejPrgeBT/D9ag+CtejPj0K177D9ag+mpmZvj0K177D9ag+9iicv0bhej/D9ag+E9ejPHE9Cj/D9ag+E9ejPOF6FD/D9ag+E9ejPFK4Hj/D9ag+E9ejPMP1KD/D9ag+E9ejPFK4Xj/D9ag+E9ejPMP1aD/D9ag+E9ejPDMzcz/D9ag+E9ejPKRwfT/D9ag+E9ejPFyPgj/D9ag+E9ejPBSuhz/D9ag+E9ejPDIzkz/D9ag+E9ejPOpRmD/D9ag+E9ejPPQonD/D9ag+9iicv///fz/D9ag+9iicv61HgT/D9ag+9iicv2Zmhj/D9ag+9iicvzIzkz/D9ag+9iicv+pRmD/D9ag+9tYjvPQonD/D9ag+yMxMvfQonD/D9ag+uB6FvvQonD/D9ag+mZmZvvQonD/D9ag+CtejvvQonD/D9ag+jsL1vvQonD/D9ag+////vvQonD/D9ag+cD0Kv/QonD/D9ag+AABAv/QonD/D9ag+cT1Kv/QonD/D9ag+hetRv/QonD/D9ag+9ihcv/QonD/D9ag+MzOTv/QonD/D9ag+7FGYv/QonD/D9ag+9iicv/QonD/D9ag+/////////7//////////v/////////+//////////7//////////v/////////+//////////7//////////v/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z///wCA////v///AID///+///8AgP///7///wCA////vwCA//////+/AID//////78AgP//////vwCA//////+///8AgP///7///wCA////v///AID///+///8AgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AID//////78AgP//////vwCA//////+/AID//////78AgAAA////vwCAAAD///+/AIAAAP///78AgAAA////vwCA//////+/AID//////78AgP//////vwCA//////+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP9//z8AAACA////vwAAAID/f/8/AAAAgP///78AAACA/3//PwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP///////wCA////////AID///9//z8AgP//////vwCA////f/8/AID///9//z8AgP///3//PwCA////f/8/AID//////78AgP//////vwCA////f/8/AID//////78AgP//////vwCA////f/8/AID//////78AgP//////vwCA//////+/AID///9//z8AgP///3//PwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwCA////f/8/AID///9//z8AgP///3//PwCA//////+/AID///9//z8AgP//////vwCA////f/8/AID///9//z8AgP///3//PwCA//////+/AID//////78AgP//////vwCA//////+/AID//////78AgP//////vwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP9//z8AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA/3//vwCAAAD/f/+/AIAAAP///78AgAAA/3//vwCAAAD/f/+/AIAAAP///78AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA////vwCAAAD/f/+/AIAAAP///78AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AAACA////vwAAAID///+/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID///+/AAAAgP///78AAACA/3//PwAAAID///+/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA/3//PwAAAID///+/AAAAgP9//z8AAACA////vwAAAID/f/8/AAAAgP9//z8AAACA/3//PwAAAID/f/8/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AgAAA////vwCAAAD///+/AIAAAP9//78AgAAA/3//vwCAAAD/f/+/AIAAAP9//78AgAAA/3//vwCAAAD/f/+///8AgP9//7///wCA/3//v///AID/f/+///8AgP9//7///wCA/3//v///AID/f/+///8AgP9//7///wCA/3//vwCA//////+/AID//////78AgP///3//PwCA////f/8/AID///9//z8AgP///3//PwCA////f/8/AID///9//z///wCA////v///AID///+///8AgP///7///wCA////v///AID///+///8AgP///7///wCA////v///AID///+///8AgP9//7///wCA//8AAP//AIAbxwCA//8AgBvHAID//wCA/3//v///AID/f/+///8AgP9//7///wCA/3//v///AIAbxwCA//8AgP///7///wCAbNsAgP//AIBs2wCA//8AgP///7///wCA////v///AID///+///8AgP///7///wCA2e0AgP//AID///////8AgC23/////wCAAID/////AID/f44j//8AgP///7///wCA////v///AID///+///8AgP9/zgb//wCA////v///AIBF0v////8AgBvH/n///wCA/3/OBv//AID///+///8AgP///7///wCA////v///AID/f/+///8AgP///7///wCA/3//v///AID///+///8AgP9//7///wCA////v///AID///+///8AgP///7///wCA////v///AID///+///8AgP///7///wCA////v///AID///+///8AgP///7///wCA////v///AID///+//z//P/9//z//P/8//3//P/8//z//f/8//z//P/9//z//P/8//3//P/8//z//f/8//z//P/9//z//P/8//3//P/9//38AgP///3//f/9//v//f/9/AID///9//3//f/7//3//fwCA////f/9//3/+//9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//f////z//f/9/AID///9//38AgP///3//f////z//f/9/////P/9//3////8//3//f////z//f/9//3/+//9//38AgP///3//fwCA////f/9//3/+//9//38AgP///3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//fwCA////f/9/AID///9//3////8//3//fwCA////f/9/////P/9//3////8//3//fwCA////f/9/AID///9//3++Sd9k/3//f////z//f/9/1whpRP9//3/XCGlE/3//f////z//f/9/AID+f/9//38AgP5//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8/")
 }, {
 "aabb": AABB(-1.21, -0.79, -0.000837793, 0.92, 0.68, 0.000837793),
 "attribute_data": PackedByteArray("/////4cg8D/aSUm/NbJ/P2X0Fz//////hyDwP9hJSb/lxX8/ResXP/////9gFUNAMpXFPjLjdT+jqwI//////5407z+sIUu/lNV/P9YMGD//////YRVDQDSVxT55z3U/YLMCP/////+eNO8/rCFLv+TBfz/+FRg//////0ow7j9UKk2/cOd/P/oyGD//////SjDuP1YqTb++038/JDwYP/////9Ui0NA0ETJPoTEdT9PkAI//////1SLQ0DQRMk+Tth1P1KLAj//////fw1EQChWzT5wvXU/hWgCP/////9/DURAJlbNPlDRdT9LZgI//////6NsREC4g9Q+r7t1P+k+Aj//////o2xEQLiD1D6qz3U/eD8CP/////+jbERAakTaPmq/dT+0FgI//////6NsREBqRNo+hNN1PwwaAj//////omxEQOB63z53x3U/6vIBP/////+jbERA4HrfPrXbdT8L+QE//////6JsREBDsRxAEsR/P/a9zj7/////o2xEQEOxHEDDr38/3q7OPv////+jbERAREcdQIS7fz8WcM4+/////6NsREBERx1A0s9/Pz1/zj7/////o2xEQJjOHUBPx38/UDHOPv////+jbERAmM4dQJ7bfz+CQM4+/////4ekQ0C2lh5AINN/P4zyzT7/////h6RDQLaWHkBw538/wQHOPv////8ROynARLEcQDttOz/3sr0+/////6enRMBLAzpA3UA1P1WYyT7/////tnIpwOgdR78I5mY/Gcu9Pv////8ROynAFhFHv1vlZj/3sr0+/////1aSKsD67R9Av746P9xHvj7/////n+snwLaWHkAGDDs/diG9Pv////+eVSfAtpYeQAYHOz9l4Lw+//////NyKMC2lh5Aixo7PyhcvT7/////Wt4owLaWHkAoMTs/wIq9Pv////9OIynAtpYeQKZNOz+pqL0+/////xE7KcC2lh5AO207P/eyvT7/////MYdCQLaWHkAGBzs/6UR/Pf////+dVSfAtpYeQAYHOz9l4Lw+/////1+IQkB/uB5A6P86P9JAfz3/////o2xEQLaWHkAGBzs/6UR/Pf////+ibERA8n4eQAYMOz9XPH09/////+bDRUD67R9Av746PxsJdD3/////o2xEQP45HkCLGjs/umZ7Pf////+jbERAmM4dQCgxOz8H8nk9/////xnGRECVuRxAems7P9h5dz3/////o2xEQERHHUCmTTs/wAJ5Pf////+ibERAQ7EcQDttOz9MsHg9/////zXZX0BLAzpA3UA1P1eFGT3/////XohCQH+4HkDo/zo/0kB/Pf////812V9A1DlFPojSWT9XhRk9/////6JsREDget8+PolWP0yweD3/////o2xEQEOxHEA7bTs/TLB4Pf/////VHkZAfobJPigdVz+KzXI9/////2EVQ0A0lcU+uTdXP35XfT3/////1R5GQICGyT4oHVc/is1yPf////9HbwRAZgiVv10bbD+YX+s9/////4gg8D/aSUm/SwNnP15rAD7/////hmXvP/YnVb81o2c/fbwAPv////8ylvY/ZgiVv10bbD8YPPs9/////1xfRUAS5dc+PolWP0yweD3/////jwNFQKIG1T5erFY/nep4Pf////8ij0RAQGPRPh7TVj/Pk3k9/////38NREAmVs0+uflWP1qbej3/////VItDQNBEyT5kHFc/aud7Pf////9gFUNAMpXFPrk3Vz9+V309/////2sw7j/4Fla/yq9nP5NCAT7/////iCDwP+CmTr9LA2c/XmsAPv/////bHO8/4qZOv6AZZz8C3AA+/////5LT7T/ipk6/xi1nP9lqAT7/////52TsP+SmTr/DPWc/5wkCPv////9LIeo/6FVSvzV9Zz9TBQM+/////7r06j/kpk6/CEhnP5upAj7/////HKfpP+SmTr+QS2c/UjoDPv////9FLJs/ZgiVv10bbD9HRSU+/////0wh6j/oVVK/NX1nP1MFAz7/////eHelvuSmTr+QS2c/bIZ6Pv/////hPF2+hpb5v1Kxdj++k3Q+/////0Usmz+Glvm/UrF2P0dFJT7/////nlUnwOKmTr+QS2c/ZeC8Pv////+np0TAhpb5v1Kxdj9VmMk+/////4TlKcAMwVW/RatnP+b8vT7/////ETspwOSmTr+QS2c/ZeC8Pv////8ROynA2EdOv5BGZz92Ib0+/////xE7KcAINE2/CzhnPyhcvT7/////ETspwHSGS79vIWc/wIq9Pv////+2cinA7B1HvwjmZj8Zy70+/////xE7KcAkaUm/8QRnP6movT7/////ETspwBoRR79b5WY/97K9Pv////94d6W+5KZOvwXqDT91TiM//////3h3pb7kpk6/BeoNPwweIz//////HKfpP+SmTr9EBis/rR0jP/////8cp+k/5KZOv0QGKz8WTiM//////55VJ8Dipk6/u7zdPtpOIz//////u/TqP+SmTr+UKSs/WU4jP/////+fVSfA5KZOv7q83T5wHiM//////7r06j/kpk6/lCkrP/EdIz//////n+snwOSmTr84fd0+0R4jP//////nZOw/5KZOv4xQKz8fTyM//////5/rJ8Dkpk6/OX3dPjpPIz//////8nIowOSmTr/vQ90+6R8jP//////zcijA5KZOv/FD3T5SUCM//////+dk7D/kpk6/jFArP7YeIz//////SjDuP1YqTb9ddys/UlAjP/////9KMO4/VCpNv113Kz/pHyM//////xE7KcBEsRxA/JxlP6yeSj//////ETspwEKxHEAbzmU/rJ5KP/////8ROynAGhFHvxvOZT9MLR0//////xE7KcBERx1AG85lPxvASj//////ETspwBYRR7/6nGU/TC0dP/////8ROynAREcdQPycZT8bwEo//////xE7KcCYzh1AG85lP4nhSj//////ETspwJfOHUD8nGU/ieFKP/////8ROynAJmlJv/qcZT/eCx0//////xE7KcAkaUm/G85lP94LHT//////ETspwHKGS7/6nGU/b+ocP/////8ROynAdIZLvxvOZT9v6hw///////NyKMDkpk6/+pxlPwDJHD//////8nIowOSmTr8bzmU/AMkcP/////8xh0JAtpYeQAD7Nj8Gn+Q+/////y+HQkC2lh5A4sk2Pwaf5D7/////nlUnwLaWHkDjyTY/c/9AP/////8zHUNAtpYeQOLJNj/3XOQ+/////51VJ8C2lh5AAPs2P3P/QD//////Mx1DQLaWHkAA+zY/91zkPv////+HpENAtpYeQOTJNj/oGuQ+/////4ekQ0C2lh5AA/s2P+ka5D7/////nusnwLaWHkAC+zY/eCBBP/////+f6yfAtpYeQOTJNj94IEE///////NyKMC2lh5AAvs2P35BQT//////83IowLaWHkDkyTY/fkFBP/////8ROynAl84dQAP7Nj+FYkE//////xE7KcCYzh1A5ck2P4ZiQT8="),
@@ -506,7 +506,7 @@ _surfaces = [{
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 133,
-"vertex_data": PackedByteArray("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////v/9//3/+//+//3//f////7//f/9//P8AwP9//3/8/wDA/3//f/7//7//f/9/buY2s/9//3997j63/3//f73L3qX/f/9/QbQgmv9//3+OmceM/3//f3+Rv4j/f/9//v//v/9//3////+//3//f/7//7//f/9/AAD/P/9//3/+//+//3//f/7//7//f/9//v//v/9//3/+//+//3//f/7//7//f/9/+P/8v/9//3/+//+//3//f////7//f/9//v//v/9//3/+//+//3//f/7//7//f/9/////v/9//3/d+m69/3//f/7//7//f/9//v//v/9//3////+//3//f/7//7//f/9/j/nHvP9//3////+//3//f97l77L/f/9/ZOoytf9//38z+hm9/3//f+D+jsD/f/9/g/08wf9//3+X/TPB/3//f8L/HcD/f/9/csY4o/9//3/hyfCk/3//f0nVpKr/f/9/TegmtP9//3/k+HG8/3//f7/p37T/f/9/SPQkuv9//3/+//+//3//f/7//7//f/9/////v/9//3////+//3//f////7//f/9/////v/9//3/+//+//3//f/7//7//f/9//v//v/9//3/+//+//3//f/7//7//f/9//v//v/9//3/+//+//3//f+n/CsD/f/9//P8AwACAAAD///+/AIAAAP///7/geR4G////v+B5Hgb///+/VolXCaf2qsRTbKsT////v1aJVwmn9qrEU2yrE////79jn2MfmuCxz6xfUSD///+/Y59jH////7/btdw1/3//P9u13DX+//7/rF9RIP7//n+fVWAq/v/+f59VYCr+//5/p/ZWif///7+n9laJ////v6j2qHb///+/muBjn////7+o9qh2////v5rgY5////+/Icrctf7/AIAhyty1/v8AgJngm2D///+/meCbYP///78hyiJK/v/+/yHKIkr+//7/27XcNf7//v/btdw1/3//P6h2pvb///+/qHam9v///79Wiaf2////v5tgmeD///+/Vomn9v///7+bYJng////vyJKIcr///+/Ikohyv///79jn5rg////v2OfmuD///+/3LUiyv///7/ctSLK/v8AgCHK3LX+/wCAIcrctf7/AIA=")
+"vertex_data": PackedByteArray("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////v/9//3/+//+//3//f////7//f/9//P8AwP9//3/8/wDA/3//f/7//7//f/9/buY2s/9//3997j63/3//f73L3qX/f/9/QbQgmv9//3+OmceM/3//f3+Rv4j/f/9//v//v/9//3////+//3//f/7//7//f/9/AAD/P/9//3/+//+//3//f/7//7//f/9//v//v/9//3/+//+//3//f/7//7//f/9/+P/8v/9//3/+//+//3//f////7//f/9//v//v/9//3/+//+//3//f/7//7//f/9/////v/9//3/d+m69/3//f/7//7//f/9//v//v/9//3////+//3//f/7//7//f/9/j/nHvP9//3////+//3//f97l77L/f/9/ZOoytf9//38z+hm9/3//f+D+jsD/f/9/g/08wf9//3+X/TPB/3//f8L/HcD/f/9/csY4o/9//3/hyfCk/3//f0nVpKr/f/9/TegmtP9//3/k+HG8/3//f7/p37T/f/9/SPQkuv9//3/+//+//3//f/7//7//f/9/////v/9//3////+//3//f////7//f/9/////v/9//3/+//+//3//f/7//7//f/9//v//v/9//3/+//+//3//f/7//7//f/9//v//v/9//3/+//+//3//f+n/CsD/f/9//P8AwACAAAD///+/AIAAAP///7/geR0G////v+B5HQb///+/VolXCaf2qsRTbKoT////v1aJVwmn9qrEU2yqE////79jn2MfmuCxz6xfUCD///+/Y59jH////7/btdw1/3//P9u13DX+//7/rF9QIP7//n+fVWAq/v/+f59VYCr+//5/p/ZWif///7+n9laJ////v6j2qHb///+/muBjn////7+o9qh2////v5rgY5////+/Icrctf7/AIAhyty1/v8AgJngm2D///+/meCbYP///78hyiJK/v/+/yHKIkr+//7/27XcNf7//v/btdw1/3//P6h2pvb///+/qHam9v///79Wiaf2////v5tgmeD///+/Vomn9v///7+bYJng////vyJKIcr///+/Ikohyv///79jn5rg////v2OfmuD///+/3LUiyv///7/ctSLK/v8AgCHK3LX+/wCAIcrctf7/AIA=")
 }, {
 "aabb": AABB(-1.15, -0.73, -0.000837793, 0.8, 0.46, 1e-05),
 "attribute_data": PackedByteArray("//////jBjcAcge9AU6viPk7kST//////yAGNwCK37kCmqD0/OjtKP//////dWJ+/S2SEQG+gHj/W/Hc///////jBjcAcge9AcH09P07kST//////Qx6NwBDV7kDGceI+WC5KP/////+QfI3AKzjvQAQG4j4tEEo//////3S2jcABde9ALmziPoPpST//////vXuNwE0370A4M+I+ofhJP/////9gLo3AAObuQNMl4j4iSEo//////xZQjcBsCe9A/t7hPrxOSj//////hG2NwFoo70D/6OE+2C1KP//////Ly6K/RUyFQFsmAT8AmXc//////zzljMAime5A0yXiPiJISj//////3Fifv0pkhEDurwE/1vx3P//////dWJ+/SmSEQNSMAT8m+Xc//////91Yn79LZIRAFWYBP3budz//////Bmmgv8yrhECBPwE/0N13P//////GJKG/IN2EQNocAT/WyHc//////+Z6or8EN4VAhwEBP5Sxdz//////KAajv5pbhUCZ4z0/aJJ3P//////HAY3AIbfuQKaoPT86O0o//////91Yn79LZIRAcH09P9b8dz//////SeOhvy4PhUCa3j0/TLN3P//////i3KC/PsqEQBbQPT/30Hc//////6MMoL+Hk4RAe7k9P4Lodz//////8Iafv2ZwhEABnT0/n/d3P/////+l1ozAzInuQJnjPT+8Tko//////1wfjcA31u5Amt49P9gtSj//////FWyNwNkm70AW0D0/LRBKP/////9Fdo3AjjHvQHu5PT+h+Ek//////6dtjcB/KO9AAZ09P4PpST//////ElONwJAM70BwfT0/TuRJP//////4wY3AG4HvQP7e4T5WiWY//////z3ljMAime5A0yXiPiJISj//////y8uiv0RMhUBbJgE/AJl3P//////4wY3AHIHvQP7e4T68Tko//////+Fhpr98PYZAhwEBP5Sxdz//////t/+LwOun7UB5b+I+Bj9nP//////tq43A8GnvQBLm4T7prWY///////lrjcC7Ju9AlvrhPkXWZj//////XAiNwAq+7kCOGuI+d/5mP//////XiozAITruQNVC4j6PImc/"),
@@ -517,7 +517,7 @@ _surfaces = [{
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 42,
-"vertex_data": PackedByteArray("/VK1vkjhOr9Rn1u6weSSvzgDOr9Rn1u6MzNTv3E9ir5Rn1u6QauSv0jhOr9Rn1u61rm0viEkOr9Rn1u6DpuzvjJxOr9Rn1u686q0vvjTOr9Rn1u6XBO0vlqtOr9Rn1u6tO+zvj/iOb9Rn1u6MzOzvmPROb9Rn1u60U2zvmYlOr9Rn1u6eMAEv4M7jL5Rn1u6tO+zvj/iOb9Rn1u6nS4Gv3E9ir5Rn1u6MNEFv0NQir5Rn1u6FWoFv+CGir5Rn1u6ZgMFv/Hbir5Rn1u6L6cEvyJHi75Rn1u6dl4Ev/S9i75Rn1u6MzOTvzpdjL5Rn1u6weSSvzgDOr9Rn1u6QauSv3E9ir5Rn1u6jCyTvzG1i75Rn1u6PBmTv5odi75Rn1u6KPuSv0ylir5Rn1u6Q9WSvw9Yir5Rn1u6MzOTv2PROb9Rn1u6jCyTv2YlOr9Rn1u6PBmTvzJxOr9Rn1u6KPuSv1qtOr9Rn1u6Q9WSv/jTOr9Rn1u6QauSv0jhOr9Rn1u6MzOzvnhn475Rn1u6tO+zvj/iOb9Rn1u6eMAEv4M7jL5Rn1u6MzOzvmPROb9Rn1u6dl4Ev/S9i75Rn1u6t7O0virH375Rn1u6Bkazvp2s4r5Rn1u6pHyzvmje4b5Rn1u6ttGzvgkR4b5Rn1u65jy0vptY4L5Rn1u6/3//f9IMljn/f/9/AAD/P/9//3////+//3//f////z//f/9/btdH1P9//38i1u3U/3//f58RLjf/f/9/RMAhIP9//3/4voLg/3//fwZBgWD/f/9/AkGAYP9//38uAug+/3//f/3//r//f/9/GgLxPv9//3+1CyM6/3//fzLlmLL/f/9/tSJaUf9//3/HAGJA/3//f/LZBdP/f/9//v//v/9//38By4Cl/3//f/7//7//f/9//v//v/9//38AAP4//3//fwAA/z//f/9//v//v/9//3/9//+//3//fyL+7cD/f/9/+N58r/9//3/+NIAl/3//fwHLgKX/f/9/AcuApf9//3//f/7//3//f/9//n//f/9/AID///9//3//f/5//3//fwCA////f/9//3/+//9//3/+f/7//3//f/5//n//f/9/BID8//9//38EgPz/")
+"vertex_data": PackedByteArray("/VK1vkjhOr9Rn1u6weSSvzgDOr9Rn1u6MzNTv3E9ir5Rn1u6QauSv0jhOr9Rn1u61rm0viEkOr9Rn1u6DpuzvjJxOr9Rn1u686q0vvjTOr9Rn1u6XBO0vlqtOr9Rn1u6tO+zvj/iOb9Rn1u6MzOzvmPROb9Rn1u60U2zvmYlOr9Rn1u6eMAEv4M7jL5Rn1u6tO+zvj/iOb9Rn1u6nS4Gv3E9ir5Rn1u6MNEFv0NQir5Rn1u6FWoFv+CGir5Rn1u6ZgMFv/Hbir5Rn1u6L6cEvyJHi75Rn1u6dl4Ev/S9i75Rn1u6MzOTvzpdjL5Rn1u6weSSvzgDOr9Rn1u6QauSv3E9ir5Rn1u6jCyTvzG1i75Rn1u6PBmTv5odi75Rn1u6KPuSv0ylir5Rn1u6Q9WSvw9Yir5Rn1u6MzOTv2PROb9Rn1u6jCyTv2YlOr9Rn1u6PBmTvzJxOr9Rn1u6KPuSv1qtOr9Rn1u6Q9WSv/jTOr9Rn1u6QauSv0jhOr9Rn1u6MzOzvnhn475Rn1u6tO+zvj/iOb9Rn1u6eMAEv4M7jL5Rn1u6MzOzvmPROb9Rn1u6dl4Ev/S9i75Rn1u6t7O0virH375Rn1u6Bkazvp2s4r5Rn1u6pHyzvmje4b5Rn1u6ttGzvgkR4b5Rn1u65jy0vptY4L5Rn1u6/3//f9IMljn/f/9/AAD/P/9//3////+//3//f////z//f/9/btdH1P9//38i1u3U/3//f54RLTf/f/9/RMAgIP9//3/4voLg/3//fwZBgGD/f/9/AkGAYP9//38tAug+/3//f/3//r//f/9/GQLxPv9//3+0CyI6/3//fzLlmLL/f/9/tSJaUf9//3/HAGFA/3//f/LZBdP/f/9//v//v/9//38By4Cl/3//f/7//7//f/9//v//v/9//38AAP4//3//fwAA/z//f/9//v//v/9//3/9//+//3//fyL+7cD/f/9/+N58r/9//3/+NIAl/3//fwHLgKX/f/9/AcuApf9//3//f/7//3//f/9//n//f/9/AID///9//3//f/5//3//fwCA////f/9//3/+//9//3/+f/7//3//f/5//n//f/9/BID8//9//38EgPz/")
 }, {
 "aabb": AABB(-1.22, -0.22, 0, 0.9, 1.44, 0.18),
 "attribute_data": PackedByteArray("/////3iDVj9sVDTAITFAP4tgVD//////eINWP+bGMsB+Oz8/i2BUP/////8AgxG95sYywH47Pz92+kE//////wCDEb1sVDTAITFAP3b6QT//////cINWP2txhUBrOFc/YV0MP/////8wgxG9anGFQJFfRT9hXQw//////zCDEb2oqoRAkV9FPyZgCz//////cINWP6iqhEBrOFc/JmALP/////94g1Y/bFQ0wF13Kz8AyRw//////wCDEb1sVDTAg54ZPwDJHD//////AIMRvebGMsCDnhk/O8YdP/////94g1Y/5sYywF13Kz87xh0//////3CDVj9rcYVAmAllP1hONj//////cINWP6iqhED1E2Q/WE42P/////8wgxG9qKqEQPUTZD9C6CM//////zCDEb1qcYVAmAllP0LoIz//////zN+PQC98E0D5wsw+woM1P//////M349AyZbDP/nCzD5ufSU//////wkZj0DJlsM/s9fKPm59JT//////CRmPQC98E0Cz18o+woM1P/////8o6h3AFBtyP2bVfD+bkfA7/////693H8ASG3I/ZtV8P0LoYzv/////r3cfwFq+qj8s93Q/QuhjO/////8o6h3AWb6qPyz3dD+bkfA7/////3ODVj9Q6wDATLtIPugaJD//////c4NWP10GBMBMu0g+rR0jP/////8AgxG9XQYEwORXAT6tHSM//////wCDEb1Q6wDA5FcBPugaJD//////c4NWP1DrAMDEky0/WE42P/////8AgxG9UOsAwMSTLT9C6CM//////wCDEb1dBgTAZ4kuP0LoIz//////c4NWP10GBMBniS4/WE42P/////92t2c/UOsAwDq4ID8jGGU+/////3a3Zz9dBgTAOrggPzcjYT7/////QC4dP10GBMAGYxo/NyNhPv////9ALh0/UOsAwAZjGj8jGGU+"),
@@ -572,7 +572,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_vjihw"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_se7vh"]
 resource_name = "Ground"
 lightmap_size_hint = Vector2i(2886, 3086)
 _surfaces = [{
@@ -729,602 +729,621 @@ directional = true
 generate_probes_subdiv = 0
 light_data = ExtResource("7_u04dm")
 
-[node name="LightmapProbe" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="Light Probes" type="Node" parent="Map/LightmapGI"]
+
+[node name="LightmapProbe" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24322, 0.595965, 9.99644)
 
-[node name="LightmapProbe2" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe2" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24322, 2.96196, 9.99644)
 
-[node name="LightmapProbe3" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe3" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24322, 5.57754, 9.99644)
 
-[node name="LightmapProbe4" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe4" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24322, 7.2215, 9.99644)
 
-[node name="LightmapProbe5" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe5" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3014, 0.595965, 9.99644)
 
-[node name="LightmapProbe6" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe6" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3014, 2.96196, 9.99644)
 
-[node name="LightmapProbe7" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe7" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3014, 5.57754, 9.99644)
 
-[node name="LightmapProbe8" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe8" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3014, 7.2215, 9.99644)
 
-[node name="LightmapProbe9" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe9" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14643, 0.595965, 9.99644)
 
-[node name="LightmapProbe10" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe10" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14643, 2.96196, 9.99644)
 
-[node name="LightmapProbe11" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe11" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15595, 5.57754, 9.99773)
 
-[node name="LightmapProbe12" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe12" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14643, 7.2215, 9.99644)
 
-[node name="LightmapProbe13" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe13" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.73039, 0.126783, 9.99644)
 
-[node name="LightmapProbe14" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe14" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.73039, 2.96196, 9.99644)
 
-[node name="LightmapProbe15" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe15" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.73039, 5.57754, 9.99644)
 
-[node name="LightmapProbe16" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe16" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.73039, 7.2215, 9.99644)
 
-[node name="LightmapProbe17" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe17" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29607, 0.126783, 5.88748)
 
-[node name="LightmapProbe18" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe18" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29607, 2.96196, 5.88748)
 
-[node name="LightmapProbe19" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe19" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29607, 5.57754, 5.88748)
 
-[node name="LightmapProbe20" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe20" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29607, 7.2215, 5.88748)
 
-[node name="LightmapProbe21" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe21" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99004, 0.126783, 4.38187)
 
-[node name="LightmapProbe22" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe22" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99004, 2.96196, 4.38187)
 
-[node name="LightmapProbe23" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe23" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99004, 5.57754, 4.38187)
 
-[node name="LightmapProbe24" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe24" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99004, 7.2215, 4.38187)
 
-[node name="LightmapProbe25" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe25" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50986, 0.126783, 2.51916)
 
-[node name="LightmapProbe26" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe26" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50986, 2.96196, 2.51916)
 
-[node name="LightmapProbe27" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe27" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50986, 5.57754, 2.51916)
 
-[node name="LightmapProbe28" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe28" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50986, 7.2215, 2.51916)
 
-[node name="LightmapProbe29" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe29" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33953, 0.126783, 0.613667)
 
-[node name="LightmapProbe30" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe30" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33953, 2.96196, 0.613667)
 
-[node name="LightmapProbe31" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe31" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33953, 5.57754, 0.613667)
 
-[node name="LightmapProbe32" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe32" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33953, 7.2215, 0.613667)
 
-[node name="LightmapProbe33" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe33" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25736, 0.126783, -0.517753)
 
-[node name="LightmapProbe34" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe34" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25736, 2.96196, -0.517753)
 
-[node name="LightmapProbe35" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe35" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25736, 5.57754, -0.517753)
 
-[node name="LightmapProbe36" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe36" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25736, 7.2215, -0.517753)
 
-[node name="LightmapProbe37" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe37" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.96789, 0.126783, -2.38736)
 
-[node name="LightmapProbe38" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe38" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.96789, 2.96196, -2.38736)
 
-[node name="LightmapProbe39" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe39" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.96789, 5.57754, -2.38736)
 
-[node name="LightmapProbe40" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe40" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.96789, 7.2215, -2.38736)
 
-[node name="LightmapProbe41" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe41" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35305, 0.126783, -4.51116)
 
-[node name="LightmapProbe42" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe42" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35305, 2.96196, -4.51116)
 
-[node name="LightmapProbe43" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe43" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35305, 5.57754, -4.51116)
 
-[node name="LightmapProbe44" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe44" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35305, 7.2215, -4.51116)
 
-[node name="LightmapProbe45" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe45" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61281, 0.126783, -2.20202)
 
-[node name="LightmapProbe46" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe46" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61281, 2.96196, -2.20202)
 
-[node name="LightmapProbe47" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe47" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61281, 5.57754, -2.20202)
 
-[node name="LightmapProbe48" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe48" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61281, 7.2215, -2.20202)
 
-[node name="LightmapProbe49" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe49" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9541, 0.126783, -0.512949)
 
-[node name="LightmapProbe50" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe50" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9541, 2.96196, -0.512949)
 
-[node name="LightmapProbe51" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe51" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9541, 5.57754, -0.512949)
 
-[node name="LightmapProbe52" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe52" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9541, 7.2215, -0.512949)
 
-[node name="LightmapProbe53" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe53" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.848493, 0.126783, 0.416126)
 
-[node name="LightmapProbe54" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe54" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.848493, 2.96196, 0.416126)
 
-[node name="LightmapProbe55" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe55" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.848493, 5.57754, 0.416126)
 
-[node name="LightmapProbe56" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe56" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.848493, 7.2215, 0.416126)
 
-[node name="LightmapProbe57" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe57" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42242, 0.126783, 0.302489)
 
-[node name="LightmapProbe58" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe58" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42242, 2.96196, 0.302489)
 
-[node name="LightmapProbe59" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe59" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42242, 5.57754, 0.302489)
 
-[node name="LightmapProbe60" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe60" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42242, 7.2215, 0.302489)
 
-[node name="LightmapProbe61" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe61" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27922, 0.126783, -0.676962)
 
-[node name="LightmapProbe62" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe62" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27922, 2.96196, -0.676962)
 
-[node name="LightmapProbe63" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe63" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27922, 5.57754, -0.676962)
 
-[node name="LightmapProbe64" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe64" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27922, 7.2215, -0.676962)
 
-[node name="LightmapProbe65" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe65" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65873, 0.126783, -2.38274)
 
-[node name="LightmapProbe66" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe66" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65873, 2.96196, -2.38274)
 
-[node name="LightmapProbe67" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe67" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65873, 5.57754, -2.38274)
 
-[node name="LightmapProbe68" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe68" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65873, 7.2215, -2.38274)
 
-[node name="LightmapProbe69" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe69" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.52526, 0.126783, -4.56052)
 
-[node name="LightmapProbe70" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe70" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.52526, 2.96196, -4.56052)
 
-[node name="LightmapProbe71" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe71" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.52526, 5.57754, -4.56052)
 
-[node name="LightmapProbe72" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe72" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.52526, 7.2215, -4.56052)
 
-[node name="LightmapProbe73" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe73" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 0.126783, -4.56052)
 
-[node name="LightmapProbe74" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe74" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 2.96196, -4.56052)
 
-[node name="LightmapProbe75" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe75" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 5.57754, -4.56052)
 
-[node name="LightmapProbe76" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe76" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 7.2215, -4.56052)
 
-[node name="LightmapProbe77" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe77" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 0.126783, -0.362447)
 
-[node name="LightmapProbe78" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe78" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 2.96196, -0.362447)
 
-[node name="LightmapProbe79" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe79" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 5.57754, -0.362447)
 
-[node name="LightmapProbe80" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe80" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 7.2215, -0.362447)
 
-[node name="LightmapProbe81" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe81" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 0.126783, 4.92356)
 
-[node name="LightmapProbe82" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe82" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 2.96196, 4.92356)
 
-[node name="LightmapProbe83" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe83" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 5.57754, 4.92356)
 
-[node name="LightmapProbe84" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe84" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.22029, 7.2215, 4.92356)
 
-[node name="LightmapProbe85" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe85" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83833, 0.126783, 2.05307)
 
-[node name="LightmapProbe86" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe86" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83833, 2.96196, 2.05307)
 
-[node name="LightmapProbe87" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe87" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83833, 5.57754, 2.05307)
 
-[node name="LightmapProbe88" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe88" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83833, 7.2215, 2.05307)
 
-[node name="LightmapProbe89" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe89" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83833, 0.126783, 5.22704)
 
-[node name="LightmapProbe90" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe90" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83833, 2.96196, 5.22704)
 
-[node name="LightmapProbe91" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe91" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83833, 5.57754, 5.22704)
 
-[node name="LightmapProbe92" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe92" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83833, 7.2215, 5.22704)
 
-[node name="LightmapProbe93" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe93" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840803, 0.126783, 5.22704)
 
-[node name="LightmapProbe94" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe94" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840803, 2.96196, 5.22704)
 
-[node name="LightmapProbe95" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe95" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840803, 5.57754, 5.22704)
 
-[node name="LightmapProbe96" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe96" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840803, 7.2215, 5.22704)
 
-[node name="LightmapProbe97" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe97" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840803, 0.126783, 2.01723)
 
-[node name="LightmapProbe98" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe98" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840803, 2.96196, 2.01723)
 
-[node name="LightmapProbe99" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe99" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840803, 5.57754, 2.01723)
 
-[node name="LightmapProbe100" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe100" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840803, 7.2215, 2.01723)
 
-[node name="LightmapProbe101" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe101" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37037, 0.126783, 2.01723)
 
-[node name="LightmapProbe102" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe102" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37037, 2.96196, 2.01723)
 
-[node name="LightmapProbe103" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe103" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37037, 5.57754, 2.01723)
 
-[node name="LightmapProbe104" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe104" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37037, 7.2215, 2.01723)
 
-[node name="LightmapProbe105" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe105" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37037, 0.126783, 5.33708)
 
-[node name="LightmapProbe106" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe106" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37037, 2.96196, 5.33708)
 
-[node name="LightmapProbe107" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe107" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37037, 5.57754, 5.33708)
 
-[node name="LightmapProbe108" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe108" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37037, 7.2215, 5.33708)
 
-[node name="LightmapProbe109" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe109" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98669, 0.126783, 7.58226)
 
-[node name="LightmapProbe110" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe110" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98669, 2.96196, 7.58226)
 
-[node name="LightmapProbe111" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe111" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98669, 5.57754, 7.58226)
 
-[node name="LightmapProbe112" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe112" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98669, 7.2215, 7.58226)
 
-[node name="LightmapProbe113" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe113" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.94024, 0.126783, 6.76686)
 
-[node name="LightmapProbe114" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe114" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.94024, 2.96196, 6.76686)
 
-[node name="LightmapProbe115" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe115" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.94024, 5.57754, 6.76686)
 
-[node name="LightmapProbe116" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe116" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.94024, 7.2215, 6.76686)
 
-[node name="LightmapProbe117" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe117" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.048, 0.126783, 4.65266)
 
-[node name="LightmapProbe118" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe118" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.048, 2.96196, 4.65266)
 
-[node name="LightmapProbe119" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe119" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.048, 5.57754, 4.65266)
 
-[node name="LightmapProbe120" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe120" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.048, 7.2215, 4.65266)
 
-[node name="LightmapProbe121" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe121" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1476, 0.126783, 3.18241)
 
-[node name="LightmapProbe122" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe122" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1476, 2.96196, 3.18241)
 
-[node name="LightmapProbe123" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe123" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1476, 5.57754, 3.18241)
 
-[node name="LightmapProbe124" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe124" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1476, 7.2215, 3.18241)
 
-[node name="LightmapProbe125" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe125" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6531, 0.126783, 2.19943)
 
-[node name="LightmapProbe126" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe126" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6531, 2.96196, 2.19943)
 
-[node name="LightmapProbe127" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe127" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6531, 5.57754, 2.19943)
 
-[node name="LightmapProbe128" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe128" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6531, 7.2215, 2.19943)
 
-[node name="LightmapProbe129" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe129" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6222, 0.126783, -0.0677979)
 
-[node name="LightmapProbe130" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe130" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6222, 2.96196, -0.0677979)
 
-[node name="LightmapProbe131" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe131" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6222, 5.57754, -0.0677979)
 
-[node name="LightmapProbe132" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe132" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6222, 7.2215, -0.0677979)
 
-[node name="LightmapProbe144" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe144" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29422, 0.126783, -5.53355)
 
-[node name="LightmapProbe145" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe145" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29422, 2.96196, -5.53355)
 
-[node name="LightmapProbe146" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe146" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29422, 5.57754, -5.53355)
 
-[node name="LightmapProbe147" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe147" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.29422, 7.2215, -5.53355)
 
-[node name="LightmapProbe148" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe148" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.60537, 0.126782, -6.39124)
 
-[node name="LightmapProbe149" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe149" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.60537, 2.96196, -6.39124)
 
-[node name="LightmapProbe150" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe150" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.60537, 5.57754, -6.39124)
 
-[node name="LightmapProbe151" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe151" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.60537, 7.2215, -6.39124)
 
-[node name="LightmapProbe152" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe152" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.21986, 0.126782, -8.58254)
 
-[node name="LightmapProbe153" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe153" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.21986, 2.96196, -8.58254)
 
-[node name="LightmapProbe154" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe154" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.21986, 5.57754, -8.58254)
 
-[node name="LightmapProbe155" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe155" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.21986, 7.2215, -8.58254)
 
-[node name="LightmapProbe156" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe156" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.03949, 0.126782, -9.02333)
 
-[node name="LightmapProbe157" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe157" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.03949, 2.96196, -9.02333)
 
-[node name="LightmapProbe158" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe158" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.03949, 5.57754, -9.02333)
 
-[node name="LightmapProbe159" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe159" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.03949, 7.2215, -9.02333)
 
-[node name="LightmapProbe160" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe160" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37889, 0.126782, -10.7419)
 
-[node name="LightmapProbe161" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe161" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37889, 2.96196, -10.7419)
 
-[node name="LightmapProbe162" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe162" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37889, 5.57754, -10.7419)
 
-[node name="LightmapProbe163" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe163" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37889, 7.2215, -10.7419)
 
-[node name="LightmapProbe164" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe164" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37696, 0.126783, -11.2809)
 
-[node name="LightmapProbe165" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe165" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37696, 2.96196, -11.2809)
 
-[node name="LightmapProbe166" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe166" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37696, 5.57754, -11.2809)
 
-[node name="LightmapProbe167" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe167" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37696, 7.2215, -11.2809)
 
-[node name="LightmapProbe168" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe168" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.064929, 0.126783, -12.1558)
 
-[node name="LightmapProbe169" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe169" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.064929, 2.96196, -12.1558)
 
-[node name="LightmapProbe170" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe170" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.064929, 5.57754, -12.1558)
 
-[node name="LightmapProbe171" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe171" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.064929, 7.2215, -12.1558)
 
-[node name="LightmapProbe172" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe172" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28603, 0.126783, -10.4369)
 
-[node name="LightmapProbe173" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe173" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28603, 2.96196, -10.4369)
 
-[node name="LightmapProbe174" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe174" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28603, 5.57754, -10.4369)
 
-[node name="LightmapProbe175" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe175" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28603, 7.2215, -10.4369)
 
-[node name="LightmapProbe176" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe176" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1178, 0.126783, -10.5557)
 
-[node name="LightmapProbe177" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe177" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1178, 2.96196, -10.5557)
 
-[node name="LightmapProbe178" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe178" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1178, 5.57754, -10.5557)
 
-[node name="LightmapProbe179" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe179" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1178, 7.2215, -10.5557)
 
-[node name="LightmapProbe180" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe180" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9734, 0.126783, -10.9998)
 
-[node name="LightmapProbe181" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe181" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9734, 2.96196, -10.9998)
 
-[node name="LightmapProbe182" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe182" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9734, 5.57754, -10.9998)
 
-[node name="LightmapProbe183" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe183" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9734, 7.2215, -10.9998)
 
-[node name="LightmapProbe184" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe184" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56182, 0.126783, -8.34382)
 
-[node name="LightmapProbe185" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe185" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56182, 2.96196, -8.34382)
 
-[node name="LightmapProbe186" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe186" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56182, 5.57754, -8.34382)
 
-[node name="LightmapProbe187" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe187" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56182, 7.2215, -8.34382)
 
-[node name="LightmapProbe188" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe188" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.79447, 0.126783, -7.57236)
 
-[node name="LightmapProbe189" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe189" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.79447, 2.96196, -7.57236)
 
-[node name="LightmapProbe190" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe190" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.79447, 5.57754, -7.57236)
 
-[node name="LightmapProbe191" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe191" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.79447, 7.2215, -7.57236)
 
-[node name="LightmapProbe133" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe133" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.48685, 0.126783, -0.0289193)
 
-[node name="LightmapProbe134" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe134" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.48685, 2.96196, -0.0289193)
 
-[node name="LightmapProbe135" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe135" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.48685, 5.57754, -0.0289193)
 
-[node name="LightmapProbe136" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe136" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.48685, 7.2215, -0.0289193)
 
-[node name="LightmapProbe137" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe137" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.05132, 0.126783, -1.98501)
 
-[node name="LightmapProbe138" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe138" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.05132, 2.96196, -1.98501)
 
-[node name="LightmapProbe139" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe139" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.05132, 5.57754, -1.98501)
 
-[node name="LightmapProbe140" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe140" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.05132, 7.2215, -1.98501)
 
-[node name="LightmapProbe141" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe141" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5044, 7.2215, -1.98501)
 
-[node name="LightmapProbe142" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe142" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4684, 7.2215, 5.0393)
 
-[node name="LightmapProbe143" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe143" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.93933, 7.2215, -12.2268)
 
-[node name="LightmapProbe192" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe192" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.7136, 0.329039, -91.4198)
 
-[node name="LightmapProbe193" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe193" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.7136, 23.2537, -91.4198)
 
-[node name="LightmapProbe194" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe194" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.7136, 0.329039, 48.6081)
 
-[node name="LightmapProbe195" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe195" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.7136, 23.2537, 48.6081)
 
-[node name="LightmapProbe196" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe196" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.7808, 0.329039, 48.6081)
 
-[node name="LightmapProbe197" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe197" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.7808, 23.2537, 48.6081)
 
-[node name="LightmapProbe198" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe198" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.7808, 0.329039, -90.0125)
 
-[node name="LightmapProbe199" type="LightmapProbe" parent="Map/LightmapGI"]
+[node name="LightmapProbe199" type="LightmapProbe" parent="Map/LightmapGI/Light Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.7808, 23.2537, -90.0125)
+
+[node name="Reflection Probes" type="Node" parent="Map/LightmapGI"]
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="Map/LightmapGI/Reflection Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4468, 2.86165, -3.02589)
+size = Vector3(11.85, 8.2959, 20)
+box_projection = true
+
+[node name="ReflectionProbe3" type="ReflectionProbe" parent="Map/LightmapGI/Reflection Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9375, 2.86165, -21.3568)
+size = Vector3(13.1312, 8.2959, 9.42358)
+box_projection = true
+
+[node name="ReflectionProbe2" type="ReflectionProbe" parent="Map/LightmapGI/Reflection Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0904, 2.86165, -17.7544)
+size = Vector3(19.3527, 8.2959, 13.48)
+box_projection = true
 
 [node name="Map Mesh & Collision" type="Node" parent="Map"]
 
@@ -1335,7 +1354,7 @@ skeleton = NodePath("../../..")
 
 [node name="Floor" type="MeshInstance3D" parent="Map/Map Mesh & Collision"]
 transform = Transform3D(25, 0, 0, 0, -1.09278e-06, 25, 0, -25, -1.09278e-06, 0, 0, 0.111668)
-mesh = SubResource("ArrayMesh_krma8")
+mesh = SubResource("ArrayMesh_mfnkb")
 skeleton = NodePath("../../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/Map Mesh & Collision/Floor"]
@@ -1347,7 +1366,7 @@ debug_color = Color(0, 0.595, 0.7, 0)
 
 [node name="Ceiling" type="MeshInstance3D" parent="Map/Map Mesh & Collision"]
 transform = Transform3D(25, 0, 0, 0, -1.09278e-06, 25, 0, -25, -1.09278e-06, 0, 0, 0.111668)
-mesh = SubResource("ArrayMesh_3yc2r")
+mesh = SubResource("ArrayMesh_krma8")
 skeleton = NodePath("../../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/Map Mesh & Collision/Ceiling"]
@@ -1359,7 +1378,7 @@ debug_color = Color(0, 0.595, 0.7, 0)
 
 [node name="Walls" type="MeshInstance3D" parent="Map/Map Mesh & Collision"]
 transform = Transform3D(25, 0, 0, 0, -1.09278e-06, 25, 0, -25, -1.09278e-06, 0, 0, 0.111668)
-mesh = SubResource("ArrayMesh_27etk")
+mesh = SubResource("ArrayMesh_3yc2r")
 skeleton = NodePath("../../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/Map Mesh & Collision/Walls"]
@@ -1376,7 +1395,7 @@ mesh = SubResource("PlaneMesh_mfnkb")
 
 [node name="Outside Store" type="MeshInstance3D" parent="Map/Map Mesh & Collision"]
 transform = Transform3D(25, 0, 0, 0, -1.09278e-06, 25, 0, -25, -1.09278e-06, 0, 0, 0.111668)
-mesh = SubResource("ArrayMesh_se7vh")
+mesh = SubResource("ArrayMesh_27etk")
 skeleton = NodePath("../../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/Map Mesh & Collision/Outside Store"]
@@ -1390,7 +1409,7 @@ debug_color = Color(0, 0.595, 0.7, 0)
 transform = Transform3D(50, 0, 0, 0, -2.18557e-06, 50, 0, -50, -2.18557e-06, -0.0457802, 0, 0.156676)
 material_override = ExtResource("9_8ed8e")
 gi_lightmap_texel_scale = 0.01
-mesh = SubResource("ArrayMesh_vjihw")
+mesh = SubResource("ArrayMesh_se7vh")
 skeleton = NodePath("../../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/Map Mesh & Collision/Ground"]

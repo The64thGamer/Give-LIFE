@@ -60,7 +60,7 @@ _subresources={
 },
 "Glass": {
 "use_external/enabled": true,
-"use_external/path": "uid://ddx50lgsgirmm"
+"use_external/path": "uid://nolg26kxrges"
 },
 "Grass": {
 "use_external/enabled": true,
@@ -126,7 +126,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Models/Maps/Ceiling_Tiles.res"
+"save_to_file/path": "uid://kwnlg6norq0b"
 },
 "Walls_005": {
 "generate/lightmap_uv": 0,
@@ -134,7 +134,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "uid://bq5j7mlf1m16g"
+"save_to_file/path": "res://Models/Maps/Walls.res"
 }
 }
 }

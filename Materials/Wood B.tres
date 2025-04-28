@@ -6,7 +6,7 @@
 
 [resource]
 albedo_texture = ExtResource("1_i3im1")
-roughness = 0.75
+roughness = 0.46
 roughness_texture = ExtResource("3_wmxh5")
 normal_enabled = true
 normal_texture = ExtResource("2_52vva")
