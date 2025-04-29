@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://doe47bro2kqt6"]
+[gd_scene load_steps=49 format=4 uid="uid://doe47bro2kqt6"]
 
 [ext_resource type="Script" uid="uid://0g3ls7hffy0" path="res://Scripts/Player/PlayerMovement.gd" id="1_8ed8e"]
 [ext_resource type="Material" uid="uid://o4fe7jj6qk7v" path="res://addons/Godot-4-Color-Correction-and-Screen-Effects-main/Materials and Shaders/Shade.tres" id="2_u04dm"]
@@ -11,6 +11,7 @@
 [ext_resource type="LightmapGIData" uid="uid://dmpo1u4oiyrs0" path="res://Scenes/Levels/FDs. Insidelmbake.lmbake" id="7_u04dm"]
 [ext_resource type="PackedScene" uid="uid://cry2msqosqx0u" path="res://Scenes/Animatables/Chica.tscn" id="8_ey3tq"]
 [ext_resource type="Material" uid="uid://b836fmbunh66i" path="res://Materials/Default.tres" id="8_jyaij"]
+[ext_resource type="ArrayOccluder3D" uid="uid://p6edmgi2v4kd" path="res://Scenes/Levels/FDs.occ" id="8_mfnkb"]
 [ext_resource type="Material" uid="uid://d3330uwlgm4d2" path="res://Materials/Grass.tres" id="9_8ed8e"]
 [ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Node Types/GL_Spotlight.gd" id="9_qjcwm"]
 [ext_resource type="Material" uid="uid://xqugp8oihvr8" path="res://Materials/Plaster.tres" id="11_krma8"]
@@ -710,6 +711,11 @@ collide_with_areas = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Map"]
 environment = SubResource("Environment_h0i1e")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="Map"]
+occluder = ExtResource("8_mfnkb")
+bake_mask = 4294967289
+bake_simplification_distance = 0.25
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
 transform = Transform3D(0.684824, 0.4093, -0.602901, 0.655921, 0.0142101, 0.754696, 0.317464, -0.912289, -0.258737, -42.9853, 42.2979, 3.36134)
@@ -1602,9 +1608,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.7808, 23.2537, -90.0125)
 [node name="Reflection Probes" type="Node" parent="Map/LightmapGI"]
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="Map/LightmapGI/Reflection Probes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0071, 2.89134, -17.6148)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0071, 4.1853, -17.6148)
 max_distance = 1000.0
-size = Vector3(18.8842, 8.5274, 12.5632)
+size = Vector3(18.8842, 5.93948, 12.5632)
+box_projection = true
+enable_shadows = true
+
+[node name="ReflectionProbe24" type="ReflectionProbe" parent="Map/LightmapGI/Reflection Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0071, 0.899891, -17.6148)
+max_distance = 1000.0
+size = Vector3(18.8842, 4.18678, 12.5632)
+box_projection = true
+enable_shadows = true
+
+[node name="ReflectionProbe22" type="ReflectionProbe" parent="Map/LightmapGI/Reflection Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.762, 2.89134, -7.0427)
+max_distance = 1000.0
+size = Vector3(8.03905, 8.5274, 10.5162)
+box_projection = true
+enable_shadows = true
+
+[node name="ReflectionProbe23" type="ReflectionProbe" parent="Map/LightmapGI/Reflection Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.329844, 4.07386, -7.68624)
+max_distance = 1000.0
+size = Vector3(12.5377, 9.13441, 6.48055)
 box_projection = true
 enable_shadows = true
 
@@ -2113,6 +2140,94 @@ light_bake_mode = 1
 shadow_enabled = true
 omni_range = 30.0
 omni_attenuation = 2.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/Map Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.35638, 7.15405, 8.59424)
+light_color = Color(1, 0.848, 0.62, 1)
+light_energy = 8.911
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle = 18.25
+spot_angle_attenuation = 0.466516
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Map/Map Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.94778, 7.15405, 8.59424)
+light_color = Color(1, 0.848, 0.62, 1)
+light_energy = 8.911
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle = 18.25
+spot_angle_attenuation = 0.466516
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Map/Map Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.14053, 7.15405, 8.59424)
+light_color = Color(1, 0.848, 0.62, 1)
+light_energy = 8.911
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle = 18.25
+spot_angle_attenuation = 0.466516
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Map/Map Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.842999, 7.15405, 8.59424)
+light_color = Color(1, 0.848, 0.62, 1)
+light_energy = 8.911
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle = 18.25
+spot_angle_attenuation = 0.466516
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Map/Map Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.35638, 7.15405, 5.0212)
+light_color = Color(1, 0.848, 0.62, 1)
+light_energy = 8.911
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle = 18.25
+spot_angle_attenuation = 0.466516
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="Map/Map Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.94778, 7.15405, 5.0212)
+light_color = Color(1, 0.848, 0.62, 1)
+light_energy = 8.911
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle = 18.25
+spot_angle_attenuation = 0.466516
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="Map/Map Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.14053, 7.15405, 5.0212)
+light_color = Color(1, 0.848, 0.62, 1)
+light_energy = 8.911
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle = 18.25
+spot_angle_attenuation = 0.466516
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="Map/Map Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.842999, 7.15405, 5.0212)
+light_color = Color(1, 0.848, 0.62, 1)
+light_energy = 8.911
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle = 18.25
+spot_angle_attenuation = 0.466516
 
 [node name="Map Props" type="Node" parent="Map"]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://i4p62x8fnqpn" path="res://Scripts/GL_Node_Map.gd" id="1_jyqbx"]
 [ext_resource type="PackedScene" uid="uid://mowdu1i1rldt" path="res://Scenes/UI/Search.tscn" id="1_xwfut"]
-[ext_resource type="Theme" uid="uid://b3wjoiiv6sq22" path="res://UI/Themes/Default.tres" id="2_2eix6"]
+[ext_resource type="Theme" uid="uid://b3wjoiiv6sq22" path="res://UI/Fonts/Themes/Default.tres" id="2_2eix6"]
 
 [sub_resource type="Gradient" id="Gradient_xwfut"]
 colors = PackedColorArray(0.448074, 0.0582233, 0.099986, 1, 0.330802, 0.066494, 0.0423852, 1)
@@ -49,7 +49,7 @@ grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("2_2eix6")
 theme_override_font_sizes/font_size = 8
-text = "Give LIFE: TEST_F_OVERWHELMING_CHOICES
+text = "Give LIFE: TEST_G_BLUEPRINTS
 Press Esc for Nodes, Right Click to search node.
 Tab toggles background.Middle Click hold to pan. 
 Scroll to Zoom. Hover things for tooltips.

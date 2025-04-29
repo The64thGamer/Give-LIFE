@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b3wjoiiv6sq22"]
+
+[ext_resource type="FontFile" uid="uid://d1fox3cy2qhx" path="res://UI/Fonts/lectus.otf" id="1_crk4k"]
+[ext_resource type="StyleBox" uid="uid://crsm0yvhb6rv1" path="res://UI/Fonts/Themes/NodeTheme.tres" id="1_ne1i0"]
+
+[resource]
+Label/font_sizes/font_size = 12
+Label/fonts/font = ExtResource("1_crk4k")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+Panel/styles/panel = ExtResource("1_ne1i0")
+PanelContainer/styles/panel = ExtResource("1_ne1i0")

@@ -70,6 +70,35 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "uid://bimexjbcml72"
 }
+},
+"nodes": {
+"PATH:Armature_001/Skeleton3D/Cosmetic Body": {
+"mesh_instance/layers": 4
+},
+"PATH:Armature_001/Skeleton3D/Cosmetic Hand L": {
+"mesh_instance/layers": 4
+},
+"PATH:Armature_001/Skeleton3D/Cosmetic Hand R": {
+"mesh_instance/layers": 4
+},
+"PATH:Armature_001/Skeleton3D/Cosmetic Head": {
+"mesh_instance/layers": 4
+},
+"PATH:Armature_001/Skeleton3D/Cupcake": {
+"mesh_instance/layers": 4
+},
+"PATH:Armature_001/Skeleton3D/Cutter": {
+"mesh_instance/layers": 4
+},
+"PATH:Armature_001/Skeleton3D/Eyes": {
+"mesh_instance/layers": 4
+},
+"PATH:Armature_001/Skeleton3D/Mech": {
+"mesh_instance/layers": 4
+},
+"PATH:Armature_001/Skeleton3D/Mech Head": {
+"mesh_instance/layers": 4
+}
 }
 }
 fbx/importer=0
