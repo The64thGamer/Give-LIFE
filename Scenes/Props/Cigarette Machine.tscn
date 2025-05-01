@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq1h06s0snrud"]
+
+[ext_resource type="PackedScene" uid="uid://b2mp0s2k2gp3g" path="res://Models/Arcade/Cig Machine.fbx" id="1_2uuj1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lw830"]
+size = Vector3(1.09424, 1.46564, 0.505005)
+
+[node name="CigaretteMachine" type="Node3D"]
+
+[node name="Cig Machine" parent="." instance=ExtResource("1_2uuj1")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010498, 0.732635, 0.000549316)
+shape = SubResource("BoxShape3D_lw830")

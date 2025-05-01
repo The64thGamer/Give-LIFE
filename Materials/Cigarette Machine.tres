@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://dencrv3tt2vv6"]
+
+[ext_resource type="Shader" uid="uid://des8a3glk3x31" path="res://Materials/Chica.gdshader" id="1_2w4bv"]
+[ext_resource type="Texture2D" uid="uid://dq7tm66jw4a3e" path="res://Textures/Cig_Machine_BlacklightMap.png" id="2_2w4bv"]
+[ext_resource type="Texture2D" uid="uid://cu4rpqvj12xm7" path="res://Textures/Cig_Machine_Main.png" id="3_lxqx7"]
+[ext_resource type="Texture2D" uid="uid://k48ny4uh1vyk" path="res://Textures/Cig_Machine_MaskMap.png" id="4_ygeg8"]
+[ext_resource type="Texture2D" uid="uid://t2msbibc0dqd" path="res://Textures/Cig_Machine_NormalMap.png" id="5_u33dd"]
+[ext_resource type="Texture2D" uid="uid://dkndbb6ne6g62" path="res://Textures/Cig_Machine_PaintMap.png" id="6_wihlu"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_2w4bv")
+shader_parameter/diffuse_texture = ExtResource("3_lxqx7")
+shader_parameter/normal_map = ExtResource("5_u33dd")
+shader_parameter/normal_scale = 1.0
+shader_parameter/mask_map = ExtResource("4_ygeg8")
+shader_parameter/paint_map = ExtResource("6_wihlu")
+shader_parameter/blacklight_map = ExtResource("2_2w4bv")
+shader_parameter/paint_color_r = Color(0.86, 0.0258, 0.0258, 1)
+shader_parameter/paint_color_g = Color(0.89, 0.664533, 0.0445, 1)
+shader_parameter/paint_color_b = Color(0.103588, 0.293645, 0.673721, 1)
+shader_parameter/paint_color_a = Color(0.368215, 0.139786, 0.494931, 1)
+shader_parameter/blacklight_color = Vector3(0.423, 0.361, 0.851)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://doe47bro2kqt6"]
+[gd_scene load_steps=51 format=4 uid="uid://doe47bro2kqt6"]
 
 [ext_resource type="Script" uid="uid://0g3ls7hffy0" path="res://Scripts/Player/PlayerMovement.gd" id="1_8ed8e"]
 [ext_resource type="Material" uid="uid://o4fe7jj6qk7v" path="res://addons/Godot-4-Color-Correction-and-Screen-Effects-main/Materials and Shaders/Shade.tres" id="2_u04dm"]
@@ -25,6 +25,8 @@
 [ext_resource type="Material" uid="uid://bb215h5xd0t5" path="res://Materials/Plaster Black.tres" id="18_8ke8u"]
 [ext_resource type="Material" uid="uid://birmh2dr3tsyo" path="res://Materials/Outside Tiles.tres" id="24_x60xq"]
 [ext_resource type="Material" uid="uid://bg8u80kltut8y" path="res://Materials/Fake Grass.tres" id="25_ghqkc"]
+[ext_resource type="PackedScene" uid="uid://dq1h06s0snrud" path="res://Scenes/Props/Cigarette Machine.tscn" id="25_krma8"]
+[ext_resource type="PackedScene" uid="uid://cm6xii444sjb2" path="res://Models/Arcade/Fight.fbx" id="26_twv3y"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_em00n"]
 radius = 0.25
@@ -46,9 +48,7 @@ ambient_light_source = 1
 reflected_light_source = 1
 tonemap_mode = 4
 ssr_enabled = true
-ssao_enabled = true
-ssil_radius = 16.0
-ssil_intensity = 20.95
+ssil_enabled = true
 glow_enabled = true
 fog_mode = 1
 fog_light_color = Color(1, 1, 1, 1)
@@ -713,6 +713,7 @@ collide_with_areas = true
 environment = SubResource("Environment_h0i1e")
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Map"]
+visible = false
 occluder = ExtResource("8_mfnkb")
 bake_mask = 4294967289
 bake_simplification_distance = 0.25
@@ -2233,6 +2234,12 @@ spot_angle_attenuation = 0.466516
 
 [node name="Cupcake" parent="Map/Map Props" instance=ExtResource("7_52w2v")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -11.4979, -0.0990836, -29.078)
+
+[node name="Fight" parent="Map/Map Props" instance=ExtResource("26_twv3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.3808, -2.14577e-06, -21.2872)
+
+[node name="CigaretteMachine" parent="Map/Map Props" instance=ExtResource("25_krma8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12.8198, 1.76922, -22.8858)
 
 [node name="Animatables" type="Node" parent="Map"]
 
