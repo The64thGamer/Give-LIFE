@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d2pj88wya6o7w"]
+
+[ext_resource type="Texture2D" uid="uid://ktqnj6yjrsbn" path="res://Textures/Flashlight.png" id="1_orr41"]
+
+[resource]
+emission_enabled = true
+emission_energy_multiplier = 5.64
+emission_texture = ExtResource("1_orr41")

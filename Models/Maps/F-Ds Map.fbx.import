@@ -66,6 +66,10 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "uid://d3330uwlgm4d2"
 },
+"Light Emission": {
+"use_external/enabled": true,
+"use_external/path": "uid://d2pj88wya6o7w"
+},
 "Outside Tiles": {
 "use_external/enabled": true,
 "use_external/path": "uid://birmh2dr3tsyo"
@@ -96,6 +100,14 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/path": "res://Models/Maps/Ceiling.res"
 },
+"Circle_007": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Models/Maps/Lights.res"
+},
 "Floor_001": {
 "generate/lightmap_uv": 1,
 "generate/lods": 0,
@@ -120,21 +132,21 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/path": "res://Models/Maps/outerstore.res"
 },
-"Plane_001": {
+"Plane_002": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "uid://kwnlg6norq0b"
+"save_to_file/path": "uid://cvhd764lxneg1"
 },
-"Walls_005": {
+"Walls_002": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Models/Maps/Walls.res"
+"save_to_file/path": "uid://did0a8ibpw52y"
 }
 }
 }

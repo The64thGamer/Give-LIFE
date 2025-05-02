@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://2katefgfkg4"]
+
+[ext_resource type="Shader" uid="uid://des8a3glk3x31" path="res://Materials/Chica.gdshader" id="1_oqyua"]
+[ext_resource type="Texture2D" uid="uid://bxgst4ttsm7u4" path="res://Textures/Possessed Mr Hugs Canon_BlacklightMap.png" id="2_oqyua"]
+[ext_resource type="Texture2D" uid="uid://6x0bt7ltocwk" path="res://Textures/Possessed Mr Hugs Canon_Main.png" id="3_oyvcq"]
+[ext_resource type="Texture2D" uid="uid://kq0thiofqcj8" path="res://Textures/Possessed Mr Hugs Canon_MaskMap.png" id="4_x5m4m"]
+[ext_resource type="Texture2D" uid="uid://bk00sh38chv7l" path="res://Textures/Possessed Mr Hugs Canon_NormalMap.png" id="5_job51"]
+[ext_resource type="Texture2D" uid="uid://dv4pf0srs361" path="res://Textures/Possessed Mr Hugs Canon_PaintMap.png" id="6_un7mn"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_oqyua")
+shader_parameter/diffuse_texture = ExtResource("3_oyvcq")
+shader_parameter/normal_map = ExtResource("5_job51")
+shader_parameter/normal_scale = 1.0
+shader_parameter/mask_map = ExtResource("4_x5m4m")
+shader_parameter/paint_map = ExtResource("6_un7mn")
+shader_parameter/blacklight_map = ExtResource("2_oqyua")
+shader_parameter/paint_color_r = Color(0.9, 0.39, 0.135, 1)
+shader_parameter/paint_color_g = Color(0.46, 0.332273, 0.2346, 1)
+shader_parameter/paint_color_b = Color(0.53, 0.154583, 0.0795, 1)
+shader_parameter/paint_color_a = Color(0.79, 0.768275, 0.6715, 1)
+shader_parameter/blacklight_color = Vector3(0.423, 0.361, 0.851)
