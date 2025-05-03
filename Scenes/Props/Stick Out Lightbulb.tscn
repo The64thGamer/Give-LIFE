@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cje1m664ngbr0"]
+
+[ext_resource type="PackedScene" uid="uid://bf28d53tv64vn" path="res://Models/Props/Stick Out Lightbulb.fbx" id="1_378ji"]
+
+[node name="StickOutLightbulb" type="Node3D"]
+
+[node name="Stick Out Lightbulb" parent="." instance=ExtResource("1_378ji")]

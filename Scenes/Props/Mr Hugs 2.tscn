@@ -30,8 +30,6 @@ height = 1.32125
 
 [node name="MrHugs2" type="Node3D"]
 
-[node name="Mr_ Hugs 2" parent="." instance=ExtResource("1_kfwm8")]
-
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
@@ -65,3 +63,5 @@ shape = SubResource("BoxShape3D_fip82")
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00680339, 0.937591, -0.436109)
 shape = SubResource("CapsuleShape3D_kfwm8")
+
+[node name="Mr_ Hugs 2" parent="RigidBody3D" instance=ExtResource("1_kfwm8")]

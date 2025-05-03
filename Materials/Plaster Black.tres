@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://6ind3itsmu4g" path="res://Textures/painted_plaster_wall_rough_4k.jpg" id="3_qtgf5"]
 
 [resource]
-albedo_color = Color(0.10748, 0.10748, 0.10748, 1)
+albedo_color = Color(0.354417, 0.309637, 0.264806, 1)
 albedo_texture = ExtResource("1_1vs8t")
 roughness_texture = ExtResource("3_qtgf5")
 normal_enabled = true

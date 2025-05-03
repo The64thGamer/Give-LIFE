@@ -3,6 +3,7 @@ extends Control
 var rows : Dictionary = {
 	"Add":1,
 	"Advanced Spotlight":1,
+	"Advanced Stage Lights":1,
 	"Animatronic":1,
 	"Audio":1,
 	"Blacklight":1,

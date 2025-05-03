@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bikq4dlo68n3w"]
+
+[ext_resource type="PackedScene" uid="uid://b0arjg8r75f8y" path="res://Scenes/Nodes/Node.tscn" id="1_nupga"]
+[ext_resource type="Script" uid="uid://t8bsiegtsiwo" path="res://Scripts/Node Types/GL_Output.gd" id="2_tjv77"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_nupga")]
+layout_mode = 0
+tooltip_text = "Controls a spotlight."
+script = ExtResource("2_tjv77")
+customRows = {
+"L_CHASER_MAIN_STAGE": {
+"chase": 0.0,
+"grouping": 0.0,
+"intensity": 0.0
+}
+}
+
+[connection signal="mouse_entered" from="Node" to="Node" method="mouse_enter"]
+[connection signal="mouse_exited" from="Node" to="Node" method="mouse_exit"]
