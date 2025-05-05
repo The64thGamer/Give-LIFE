@@ -14,6 +14,8 @@ var is_adjusting := false
 var was_flashlight_pressed := false
 
 func _process(delta):
+	if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
+		return
 	if Input.is_action_pressed("Flashlight"):
 		flashlight_held_time += delta
 

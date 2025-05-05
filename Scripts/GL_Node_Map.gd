@@ -64,7 +64,7 @@ func _input(event: InputEvent) -> void:
 			KEY_ESCAPE:
 				visible = not visible
 			KEY_TAB:
-				background.self_modulate.a = abs(background.self_modulate.a - 1)
+				background.visible = !background.visible
 	if not visible:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	else:

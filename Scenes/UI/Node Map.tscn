@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c57u187iciexi"]
+[gd_scene load_steps=6 format=3 uid="uid://c57u187iciexi"]
 
 [ext_resource type="Script" uid="uid://i4p62x8fnqpn" path="res://Scripts/GL_Node_Map.gd" id="1_jyqbx"]
 [ext_resource type="PackedScene" uid="uid://mowdu1i1rldt" path="res://Scenes/UI/Search.tscn" id="1_xwfut"]
-[ext_resource type="Theme" uid="uid://b3wjoiiv6sq22" path="res://UI/Fonts/Themes/Default.tres" id="2_2eix6"]
 [ext_resource type="Texture2D" uid="uid://cvudj0qai2hrn" path="res://UI/Nodes/Backing.jpg" id="2_msys2"]
 [ext_resource type="Shader" uid="uid://dx643ne23bukf" path="res://Materials/Node Map.gdshader" id="2_x1ecx"]
 
@@ -36,24 +35,6 @@ stretch_mode = 1
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="."]
-z_index = 1000
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 14.0
-offset_top = -63.0
-offset_right = 1146.0
-offset_bottom = -14.0
-grow_vertical = 0
-theme = ExtResource("2_2eix6")
-theme_override_font_sizes/font_size = 8
-text = "Give LIFE: TEST_
-Tab toggles background.Middle Click hold to pan. 
-Scroll to Zoom. Hover things for tooltips.
-Read GJ Description for important keybinds"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

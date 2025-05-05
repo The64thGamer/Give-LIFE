@@ -57,12 +57,12 @@ func _input(event):
 		if event is InputEventMouseMotion:
 			rotation_y -= event.relative.x * MOUSE_SENSITIVITY
 			rotation_x = clamp(rotation_x - event.relative.y * MOUSE_SENSITIVITY, deg_to_rad(-80), deg_to_rad(80))
-
-	if event is InputEventMouseButton and event.pressed:
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			_process_scroll(1)
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			_process_scroll(-1)
+	
+		if event is InputEventMouseButton and event.pressed:
+			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+				_process_scroll(1)
+			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+				_process_scroll(-1)
 
 func _process_scroll(direction: int):
 	if Input.is_action_pressed("Cam Zoom Modifier"):
@@ -78,6 +78,9 @@ func _process_scroll(direction: int):
 		accel_lerp = clamp(accel_lerp + (direction * ACCEL_LERP_STEP), MIN_ACCEL_LERP, MAX_ACCEL_LERP)
 
 func _process(delta: float) -> void:
+	if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
+		return
+		
 	if Input.is_action_pressed("Smooth Cam"):
 		smooth_held_time += delta
 		if smooth_held_time >= HOLD_THRESHOLD:
@@ -133,33 +136,39 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor() and not fly_mode:
 		velocity.y += get_gravity().y * delta
 
-	if Input.is_action_just_pressed("Jump") and is_on_floor() and not fly_mode:
-		velocity.y = JUMP_VELOCITY
+	
 
-	var input_dir := Vector2(
-		Input.get_action_strength("Move Right") - Input.get_action_strength("Move Left"),
-		Input.get_action_strength("Move Forward") - Input.get_action_strength("Move Backward")
-	).normalized()
+	var input_dir := Vector2.ZERO
+	var currentSpeed = SPEED
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		input_dir = Vector2(
+				Input.get_action_strength("Move Right") - Input.get_action_strength("Move Left"),
+				Input.get_action_strength("Move Forward") - Input.get_action_strength("Move Backward")
+			).normalized()
+			
+		if Input.is_action_just_pressed("Jump") and is_on_floor() and not fly_mode:
+			velocity.y = JUMP_VELOCITY
+			
+		if Input.is_action_pressed("Sprint"):
+			currentSpeed = SPRINT_SPEED
+			
+		if Input.is_action_pressed("Crouch") and not fly_mode:
+			currentSpeed = CROUCH_SPEED
 
 	var forward = -camera.global_basis.z
 	var right = camera.global_basis.x
 	var direction = (right * input_dir.x + forward * input_dir.y).normalized()
-	
-	var currentSpeed = SPEED
-	if Input.is_action_pressed("Sprint"):
-		currentSpeed = SPRINT_SPEED
-	if Input.is_action_pressed("Crouch") and not fly_mode:
-		currentSpeed = CROUCH_SPEED
-
 	var vertical_input := 0.0
-	if fly_mode:
-		vertical_input += Input.get_action_strength("Move Up")
-		vertical_input -= Input.get_action_strength("Move Down")
-		var target_y = vertical_input * currentSpeed
-		if smooth_move:
-			velocity.y = lerp(velocity.y, target_y, delta * accel_lerp)
-		else:
-			velocity.y = target_y
+	
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		if fly_mode:
+			vertical_input += Input.get_action_strength("Move Up")
+			vertical_input -= Input.get_action_strength("Move Down")
+			var target_y = vertical_input * currentSpeed
+			if smooth_move:
+				velocity.y = lerp(velocity.y, target_y, delta * accel_lerp)
+			else:
+				velocity.y = target_y
 
 
 	speed_mult_target = get_collision_speed_multiplier()
