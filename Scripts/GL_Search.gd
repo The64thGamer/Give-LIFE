@@ -20,6 +20,7 @@ var rows : Dictionary = {
 	"Multiply":1,
 	"Random":1,
 	"Record":1,
+	"Sawtooth":1,
 	"Sine":1,
 	"Speaker":1,
 	"Subtract":1,
