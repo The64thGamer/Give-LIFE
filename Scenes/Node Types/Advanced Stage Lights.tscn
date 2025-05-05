@@ -11,7 +11,7 @@ mouse_filter = 1
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_nupga")]
 clip_contents = false
 layout_mode = 0
-tooltip_text = "Controls a spotlight."
+tooltip_text = "Controls a stage light."
 script = ExtResource("2_tjv77")
 customRows = {
 "L_CHASER_MAIN_STAGE": {
