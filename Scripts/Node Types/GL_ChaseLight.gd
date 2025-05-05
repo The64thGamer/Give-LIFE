@@ -6,7 +6,7 @@ var light: OmniLight3D
 
 @export var energyMultiplier: float = 200
 @export var baseEnergy: float = 0.0  # min energy when "off"
-@export var lerp_speed: float = 5.0  # How fast intensity adjusts
+@export var lerp_speed: float = 15.0  # How fast intensity adjusts
 var visible_energy: float = 0.0
 
 var current_chase: float = 0.0
@@ -16,7 +16,6 @@ var current_intensity: float = 1.0
 func _ready():
 	light = self.get_parent()
 	visible_energy = light.light_energy
-
 
 func _sent_signals(signal_ID: String, the_signal):
 	match signal_ID:
@@ -53,3 +52,5 @@ func _update_light():
 
 	var target_energy = (baseEnergy + current_intensity * energyMultiplier) if is_on else baseEnergy
 	visible_energy = target_energy  # or interpolate here immediately if you prefer
+func _process(delta: float) -> void:
+	light.light_energy = lerp(light.light_energy, visible_energy, delta * lerp_speed)
