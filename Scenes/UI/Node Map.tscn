@@ -54,7 +54,6 @@ Press Esc for Nodes, Right Click to search node.
 Tab toggles background.Middle Click hold to pan. 
 Scroll to Zoom. Hover things for tooltips.
 Read GJ Description for important keybinds"
-horizontal_alignment = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -92,7 +91,21 @@ text = "Edit"
 layout_mode = 2
 text = "Save"
 
+[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Search"
+
 [node name="Search" parent="." instance=ExtResource("1_xwfut")]
 layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+offset_left = -211.0
+offset_top = -253.0
+offset_right = -11.0
+offset_bottom = -53.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Button2" to="." method="save_everything"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Button3" to="Search" method="toggleSearch"]
