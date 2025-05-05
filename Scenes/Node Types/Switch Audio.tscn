@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_mx713")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "Toggles between two audio sources using the 'Toggle' input."
 script = ExtResource("2_mx713")

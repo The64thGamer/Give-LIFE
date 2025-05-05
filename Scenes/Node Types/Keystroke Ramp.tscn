@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_lgcd0")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "Changes a single float from 0.0 to 1.0 based on which of the number keys are pressed, if none are pressed it will default to 0.0. The 'Toggle' bool will keep the value the same as the last held key."
 script = ExtResource("2_lgcd0")

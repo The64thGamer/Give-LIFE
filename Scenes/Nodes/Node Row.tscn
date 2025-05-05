@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdcxusbd86oox"]
+[gd_scene load_steps=7 format=3 uid="uid://bdcxusbd86oox"]
 
 [ext_resource type="Script" uid="uid://dwl36vn5chqmq" path="res://Scripts/Node Class/GL_Node_Point.gd" id="1_fygh4"]
+[ext_resource type="Script" uid="uid://detlnnhbk4w38" path="res://Scripts/Node Class/GL_Node_R_Click_Row.gd" id="2_4uocr"]
 [ext_resource type="Script" uid="uid://q5qlhwvjb16w" path="res://Scripts/Node Class/GL_Node_Picker_Float.gd" id="2_vlx6y"]
 [ext_resource type="Script" uid="uid://dflftb37a7ind" path="res://Scripts/Node Class/GL_Node_Picker_Color.gd" id="3_tf34m"]
 [ext_resource type="Script" uid="uid://b7ysqwtxh8pf" path="res://Scripts/Node Class/GL_Node_Picker_Bool.gd" id="4_yal7b"]
@@ -18,6 +19,7 @@ script = ExtResource("1_fygh4")
 layout_mode = 2
 mouse_filter = 1
 text = "Testtesttesttesttest"
+script = ExtResource("2_4uocr")
 
 [node name="Pick Float" type="HSlider" parent="."]
 visible = false
@@ -75,6 +77,8 @@ script = ExtResource("1_fygh4")
 [connection signal="button_down" from="Input" to="Input" method="_detatch"]
 [connection signal="mouse_entered" from="Input" to="Input" method="mouse_enter"]
 [connection signal="mouse_exited" from="Input" to="Input" method="mouse_exit"]
+[connection signal="mouse_entered" from="Label" to="Label" method="mouse_enter"]
+[connection signal="mouse_exited" from="Label" to="Label" method="mouse_exit"]
 [connection signal="value_changed" from="Pick Float" to="Pick Float" method="value_changed"]
 [connection signal="color_changed" from="Pick Color" to="Pick Color" method="color_changed"]
 [connection signal="toggled" from="Pick Bool" to="Pick Bool" method="toggled"]

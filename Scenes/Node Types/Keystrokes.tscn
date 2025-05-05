@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_ua37n")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "Sets a bool for any of the number keys that are pressed."
 script = ExtResource("2_ua37n")

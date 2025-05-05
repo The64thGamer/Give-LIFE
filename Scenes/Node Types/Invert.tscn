@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_x0ewx")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "Inverts the input, not the same as multiplying by -1. This is 1 - Input. The 'On' input toggles the inversion."
 script = ExtResource("2_x0ewx")

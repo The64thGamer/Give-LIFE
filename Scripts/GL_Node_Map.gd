@@ -19,6 +19,7 @@ var game_title: String = ProjectSettings.get_setting("application/config/name")
 var time_created: String = ""
 var last_updated: String = ""
 
+const carpetScale:float = 1.5
 
 func _notification(what):
 	if what == NOTIFICATION_EXIT_TREE:
@@ -37,13 +38,24 @@ func _ready():
 	_workspace_ID = generate_new_workspace_id()
 	populate_workspace_options()
 	optionsVar.connect("item_selected", Callable(self, "_on_workspace_selected"))
-
+	
+	if background.material is ShaderMaterial:
+		background.material.set_shader_parameter("uv_offset", Vector2.ZERO)
+		background.material.set_shader_parameter("uv_scale", Vector2.ONE)
 
 func _on_mouse_entered():
 	is_hovered = true
 
 func _on_mouse_exited():
 	is_hovered = false
+
+func _process(delta):
+	if background.material is ShaderMaterial:
+		var scale = Vector2.ONE / holder.scale * carpetScale
+		var offset = -holder.position / holder.scale * 0.001 * carpetScale
+
+		background.material.set_shader_parameter("uv_scale", scale)
+		background.material.set_shader_parameter("uv_offset", offset)
 
 
 func _input(event: InputEvent) -> void:

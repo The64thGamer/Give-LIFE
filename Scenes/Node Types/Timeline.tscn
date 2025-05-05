@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_1cicv")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "Generates a time that always counts up. 'Play' toggle determines if it counts or not. 'Rewind' determines if playback is in reverse. 'Restart' sets time back to 0."
 script = ExtResource("2_1cicv")

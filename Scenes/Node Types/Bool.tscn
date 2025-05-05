@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_qf2se")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "A bool refers to something on or off. Can also connect to float inputs as a converted 0.0 or 1.0."
 script = ExtResource("2_qf2se")

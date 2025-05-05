@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_vak63")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "Subtracts Float B from Float A."
 script = ExtResource("2_vak63")

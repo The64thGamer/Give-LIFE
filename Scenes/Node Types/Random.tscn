@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_wswgt")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "Outputs a random value from 0.0 to 1.0. 'Time' changes how long it takes to change number."
 script = ExtResource("2_wswgt")

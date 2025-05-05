@@ -9,6 +9,7 @@ var dragOffset : Vector2
 var loadNodeRow : Resource
 var special_condition : String
 var special_saved_values : Dictionary
+var optionsMenu : Node
 
 func _ready():
 	loadNodeRow = preload("res://Scenes/Nodes/Node Row.tscn")
@@ -61,7 +62,12 @@ func _update_visuals():
 		var nodeRow = loadNodeRow.instantiate()
 		holder.add_child(nodeRow)
 		nodeRow.name = "Node Row"
-		(nodeRow.get_node("Label") as Label).text = str(key)
+		var label = nodeRow.get_node("Label")
+		(label as Label).text = str(key)
+		match(special_condition):
+			"Record Node":
+				(label as GL_Node_R_Click_Row).mainNode = self
+				(label as GL_Node_R_Click_Row).valueName = str(key)
 		var input = nodeRow.get_node("Input") as GL_Node_Point
 		var output = nodeRow.get_node("Output") as GL_Node_Point
 		input.valueName = str(key)
@@ -221,6 +227,17 @@ func mouse_enter():
 func mouse_exit():
 	canDrag = false
 	
+func r_click_row(rowName:String):
+	var node = load("res://Scenes/UI/Node Options.tscn").instantiate()
+	var outerArea = get_parent().get_parent().get_parent()
+	outerArea.add_child(node)
+	node.global_position = get_viewport().get_mouse_position() - (node.size / 2.0)
+	node.mainNode = self
+	node.valueName = rowName
+	if optionsMenu != null:
+		optionsMenu.queue_free()
+	optionsMenu = node
+	
 func apply_pick_values():
 	for key in rows:
 		if rows[key]["picker"] == true && rows[key]["backConnected"] == false:
@@ -231,4 +248,6 @@ func delete_whole_node():
 			if node is GL_Node_Point:
 				for key in rows:
 					node.mainNode.destroy_connection(self,key)
+	if optionsMenu != null:
+		optionsMenu.queue_free()
 	get_parent().queue_free()

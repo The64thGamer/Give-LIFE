@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_jwmxn")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "Outputs a special color that will reveal UV reactive paint on objects when connected to a light's color value."
 script = ExtResource("2_jwmxn")

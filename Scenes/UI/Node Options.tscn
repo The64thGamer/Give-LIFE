@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://syjquikldcho"]
+
+[ext_resource type="Script" uid="uid://dq7loqa5xh0sc" path="res://Scripts/GL_Node_Options.gd" id="1_fiq66"]
+
+[node name="Options" type="Control"]
+z_index = 100
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 104.0
+script = ExtResource("1_fiq66")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="Container" type="VBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/Container"]
+layout_mode = 2
+text = "Clear Row Recordings"
+
+[node name="Button2" type="Button" parent="Panel/ScrollContainer/Container"]
+layout_mode = 2
+text = "Delete Row"
+
+[node name="Button3" type="Button" parent="Panel/ScrollContainer/Container"]
+layout_mode = 2
+text = "Rename Row"
+
+[connection signal="pressed" from="Panel/ScrollContainer/Container/Button" to="." method="clear_row_recording"]
+[connection signal="pressed" from="Panel/ScrollContainer/Container/Button2" to="." method="delete_row"]
+[connection signal="pressed" from="Panel/ScrollContainer/Container/Button3" to="." method="rename_row"]

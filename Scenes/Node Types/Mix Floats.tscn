@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_njggm")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "Mixes two floats (numbers) together using the 'Factor', with 0.0 being fully Float A, and 1.0 being fully Float B."
 script = ExtResource("2_njggm")

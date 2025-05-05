@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_6fnvm")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "Controls animatronic movements. Certain movements can be set to a particular position using values of 0.0 to 1.0, while most will just control the speed of extention and retraction."
 script = ExtResource("2_6fnvm")

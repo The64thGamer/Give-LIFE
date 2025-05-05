@@ -9,6 +9,7 @@ anchors_preset = 0
 mouse_filter = 1
 
 [node name="Node" parent="." groups=["GL Node"] instance=ExtResource("1_db1pk")]
+clip_contents = false
 layout_mode = 0
 tooltip_text = "Outputs the path to an audio source saved in the workspace. Does not output live audio- playback on nodes this is plugged into must be handled by a Timeline node or similar."
 script = ExtResource("2_db1pk")
