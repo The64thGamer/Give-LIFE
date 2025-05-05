@@ -66,8 +66,9 @@ func _update_visuals():
 		(label as Label).text = str(key)
 		match(special_condition):
 			"Record Node":
-				(label as GL_Node_R_Click_Row).mainNode = self
-				(label as GL_Node_R_Click_Row).valueName = str(key)
+				var rclickrow = (label as GL_Node_R_Click_Row)
+				rclickrow.mainNode = self
+				rclickrow.valueName = str(key)
 		var input = nodeRow.get_node("Input") as GL_Node_Point
 		var output = nodeRow.get_node("Output") as GL_Node_Point
 		input.valueName = str(key)
@@ -234,6 +235,7 @@ func r_click_row(rowName:String):
 	node.global_position = get_viewport().get_mouse_position() - (node.size / 2.0)
 	node.mainNode = self
 	node.valueName = rowName
+	node.set_line_name(rowName)
 	if optionsMenu != null:
 		optionsMenu.queue_free()
 	optionsMenu = node
@@ -251,3 +253,7 @@ func delete_whole_node():
 	if optionsMenu != null:
 		optionsMenu.queue_free()
 	get_parent().queue_free()
+
+func delete_node_row(rowName:String):
+	rows.erase(rowName)
+	_update_visuals()

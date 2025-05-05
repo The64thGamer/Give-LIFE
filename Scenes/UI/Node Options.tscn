@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dq7loqa5xh0sc" path="res://Scripts/GL_Node_Options.gd" id="1_fiq66"]
 
-[node name="Options" type="Control"]
+[node name="Options" type="Control" node_paths=PackedStringArray("lineEdit")]
 z_index = 100
 custom_minimum_size = Vector2(200, 25)
 layout_mode = 3
@@ -10,6 +10,7 @@ anchors_preset = 0
 offset_right = 200.0
 offset_bottom = 104.0
 script = ExtResource("1_fiq66")
+lineEdit = NodePath("Panel/ScrollContainer/Container/Name Edit")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -32,6 +33,11 @@ horizontal_scroll_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="Name Edit" type="LineEdit" parent="Panel/ScrollContainer/Container"]
+layout_mode = 2
+text = "New Name"
+alignment = 1
+
 [node name="Button" type="Button" parent="Panel/ScrollContainer/Container"]
 layout_mode = 2
 text = "Clear Row Recordings"
@@ -40,10 +46,6 @@ text = "Clear Row Recordings"
 layout_mode = 2
 text = "Delete Row"
 
-[node name="Button3" type="Button" parent="Panel/ScrollContainer/Container"]
-layout_mode = 2
-text = "Rename Row"
-
+[connection signal="text_submitted" from="Panel/ScrollContainer/Container/Name Edit" to="." method="finish_rename"]
 [connection signal="pressed" from="Panel/ScrollContainer/Container/Button" to="." method="clear_row_recording"]
 [connection signal="pressed" from="Panel/ScrollContainer/Container/Button2" to="." method="delete_row"]
-[connection signal="pressed" from="Panel/ScrollContainer/Container/Button3" to="." method="rename_row"]

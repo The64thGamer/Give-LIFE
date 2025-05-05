@@ -143,6 +143,15 @@ func _record():
 				continue
 	pass
 
+func _rename_row(rowName:String, newName:String):
+	recording[newName] = recording[rowName]
+	recording.erase(rowName)
+	rows[newName] = rows[rowName]
+	rows.erase(rowName)
+	_update_visuals()
+
+func _clear_row_recordings(rowName:String):
+	recording[rowName] = {"start":null,"end":null,"current":null,"list":{},"lastUsed":null}
 
 func _create_row(name:String,input,output,picker:bool,pickDefault,pickFloatMaximum:float):
 	super._create_row(name,input,output,picker,pickDefault,pickFloatMaximum)
