@@ -148,6 +148,10 @@ func _rename_row(rowName:String, newName:String):
 	recording.erase(rowName)
 	rows[newName] = rows[rowName]
 	rows.erase(rowName)
+	for node in get_tree().get_nodes_in_group("Outputs"):
+			if node is GL_Node_Point:
+				for key in rows:
+					node.mainNode.destroy_connection(self,rowName)
 	_update_visuals()
 
 func _clear_row_recordings(rowName:String):
