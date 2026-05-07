@@ -121,7 +121,7 @@ press_sound = ExtResource("9_e12if")
 press_pitch_multiplier_on = 2.0
 press_pitch_multiplier_off = 2.0
 
-[node name="Settings" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=2042416531]
+[node name="Animatables" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=1407192095]
 self_modulate = Color(1, 1, 1, 0.5019608)
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -129,6 +129,23 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 metadata/_tab_index = 0
+
+[node name="MarginContainer" type="Control" parent="Full Editor/Editor/Modifiers/Animatables" unique_id=1790830055]
+layout_mode = 2
+
+[node name="GroupContainer" type="HFlowContainer" parent="Full Editor/Editor/Modifiers/Animatables/MarginContainer" unique_id=1512246324]
+layout_mode = 0
+size_flags_vertical = 3
+
+[node name="Settings" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=2042416531]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5019608)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/_tab_index = 1
 
 [node name="MarginContainer" type="Control" parent="Full Editor/Editor/Modifiers/Settings" unique_id=244532628]
 layout_mode = 2
@@ -198,7 +215,7 @@ vertical_alignment = 1
 visible = false
 self_modulate = Color(1, 1, 1, 0.5019608)
 layout_mode = 2
-metadata/_tab_index = 1
+metadata/_tab_index = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Full Editor/Editor/Modifiers/Save & Quit" unique_id=145945991]
 layout_mode = 2
@@ -250,7 +267,7 @@ press_pitch_randomize_enabled = false
 visible = false
 self_modulate = Color(1, 1, 1, 0.5019608)
 layout_mode = 2
-metadata/_tab_index = 2
+metadata/_tab_index = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Full Editor/Editor/Modifiers/Media" unique_id=2066953861]
 layout_mode = 2
