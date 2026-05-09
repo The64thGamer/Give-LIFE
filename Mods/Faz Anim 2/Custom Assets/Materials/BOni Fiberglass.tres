@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bxe545lj34pi1"]
+
+[ext_resource type="Texture2D" uid="uid://c7x6btwwykaw3" path="res://Mods/Faz Anim 2/Custom Assets/Textures/Boni_Fiberglass_Diffuse.webp" id="2_nqfyh"]
+[ext_resource type="Texture2D" uid="uid://dsj2ytwsny7fe" path="res://Mods/Faz Anim 2/Custom Assets/Textures/BOni_Fiberglass_Rough.png" id="3_yx8jk"]
+[ext_resource type="Texture2D" uid="uid://cns2ivq5fi2to" path="res://Mods/Faz Anim 2/Custom Assets/Textures/Boni_Fiberglass_Normal.webp" id="4_4b4qd"]
+
+[resource]
+albedo_texture = ExtResource("2_nqfyh")
+roughness = 0.55
+roughness_texture = ExtResource("3_yx8jk")
+normal_enabled = true
+normal_scale = 3.38
+normal_texture = ExtResource("4_4b4qd")

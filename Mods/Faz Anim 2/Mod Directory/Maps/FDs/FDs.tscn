@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c5dh0vxqdur1v" path="res://Scenes/player.tscn" id="1_keexa"]
 [ext_resource type="Texture2D" uid="uid://ktqnj6yjrsbn" path="res://UI/Flashlight.png" id="4_c2ebw"]
 [ext_resource type="LightmapGIData" uid="uid://cychv2gp86o0" path="res://Mods/Faz Anim 2/Mod Directory/Maps/FDs/FDs.lmbake" id="4_nu5ek"]
+[ext_resource type="PackedScene" uid="uid://dca3qbxtgr8t" path="res://Mods/Faz Anim 2/Mod Directory/Animatables/BOni.tscn" id="5_wr3ah"]
 [ext_resource type="PackedScene" uid="uid://d3avgvt0tojqc" path="res://Mods/Faz Anim 2/Mod Directory/Animatables/Vennard.tscn" id="6_1ynf4"]
 [ext_resource type="Texture2D" uid="uid://dowy3y05fvof4" path="res://Mods/Faz Anim 2/Custom Assets/Textures/pretoria_gardens_2k.exr" id="7_s4vlx"]
 [ext_resource type="PackedScene" uid="uid://cwak8nt3ou0fw" path="res://Mods/Faz Anim 2/Mod Directory/Animatables/HVAC.tscn" id="7_twqsy"]
@@ -2138,6 +2139,9 @@ enable_shadows = true
 
 [node name="Animatables" type="Node" parent="Map" unique_id=1785364853]
 
+[node name="BOni" parent="Map/Animatables" unique_id=1621682742 groups=["AA_FD"] instance=ExtResource("5_wr3ah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6142268, 1.7575662, -3.3975303)
+
 [node name="Chica" parent="Map/Animatables" unique_id=2121303090 instance=ExtResource("8_ey3tq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9581, 1.74247, -3.28439)
 
@@ -2442,7 +2446,7 @@ canChangeSize = true
 lerp_speed = 15.0
 
 [node name="Guest Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=2085024446]
-transform = Transform3D(0.973659, -0.0393965, 0.22458, 0.0194694, 0.995727, 0.0902646, -0.227176, -0.0835145, 0.970266, -0.598785, 5.91597, 5.13714)
+transform = Transform3D(0.9739493, -0.031260192, 0.22460029, 0.019167507, 0.99825627, 0.0558215, -0.22595374, -0.05006227, 0.9728507, -0.598785, 5.91597, 5.13714)
 light_color = Color(0.944285, 0.839984, 0.7003, 1)
 light_energy = 0.0
 light_size = 0.124
@@ -2453,6 +2457,24 @@ spot_angle = 5.59
 spot_angle_attenuation = 0.329877
 
 [node name="Node" type="Node3D" parent="Map/Animatables/Guest Spot" unique_id=1874272105 groups=["L_SPOT_GUEST"]]
+script = ExtResource("9_qjcwm")
+canChangeColor = true
+canChangeSize = true
+energyMultiplier = 200.0
+lerp_speed = 15.0
+
+[node name="Keytar Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=1288985952]
+transform = Transform3D(0.9805786, -0.06402722, 0.1853803, 0.018651256, 0.97136956, 0.23683812, -0.19523695, -0.22878076, 0.9536989, -0.598785, 5.91597, 5.13714)
+light_color = Color(0.944285, 0.839984, 0.7003, 1)
+light_energy = 0.0
+light_size = 0.124
+shadow_enabled = true
+spot_range = 25.0
+spot_attenuation = 2.0
+spot_angle = 5.59
+spot_angle_attenuation = 0.329877
+
+[node name="Node" type="Node3D" parent="Map/Animatables/Keytar Spot" unique_id=2014703113 groups=["L_SPOT_KEYTAR"]]
 script = ExtResource("9_qjcwm")
 canChangeColor = true
 canChangeSize = true

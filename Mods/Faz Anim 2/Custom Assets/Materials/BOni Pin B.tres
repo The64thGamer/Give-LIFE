@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d3c86bpiequhk"]
+
+[ext_resource type="Texture2D" uid="uid://b1s5vhuybjnlk" path="res://Mods/Faz Anim 2/Custom Assets/Textures/KillsPony.webp" id="1_eigt0"]
+
+[resource]
+albedo_texture = ExtResource("1_eigt0")
+roughness = 0.1
+normal_enabled = true
+normal_scale = 3.38
+texture_filter = 5

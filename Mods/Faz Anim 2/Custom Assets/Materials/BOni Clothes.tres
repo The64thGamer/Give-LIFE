@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://gi74fi44fx0"]
+
+[ext_resource type="Shader" uid="uid://des8a3glk3x31" path="res://Shaders/GL_Paintable.gdshader" id="1_imyo0"]
+[ext_resource type="Texture2D" uid="uid://bp7ld4m7sbu8w" path="res://Mods/Faz Anim 2/Custom Assets/Textures/Boni_Clothes_Diffuse.webp" id="3_imyo0"]
+[ext_resource type="Texture2D" uid="uid://b3u1tm1p1mr08" path="res://Mods/Faz Anim 2/Custom Assets/Textures/BOni_Clothes_Mask.webp" id="4_imyo0"]
+[ext_resource type="Texture2D" uid="uid://b0e1dxtkv5rk5" path="res://Mods/Faz Anim 2/Custom Assets/Textures/BOni_Clothes_Paint.png" id="5_b1xhe"]
+[ext_resource type="Texture2D" uid="uid://ct8jupt0t3fc6" path="res://Mods/Faz Anim 2/Custom Assets/Textures/Boni_Clothes_Normal.webp" id="5_hdl3j"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_imyo0")
+shader_parameter/diffuse_texture = ExtResource("3_imyo0")
+shader_parameter/normal_map = ExtResource("5_hdl3j")
+shader_parameter/normal_scale = 1.0
+shader_parameter/mask_map = ExtResource("4_imyo0")
+shader_parameter/paint_map = ExtResource("5_b1xhe")
+shader_parameter/paint_color_r = Color(0.11764706, 0.12156863, 0.14901961, 1)
+shader_parameter/paint_color_g = Color(0.6745098, 0.67058825, 0.53333336, 1)
+shader_parameter/paint_color_b = Color(0.44313726, 0.45882353, 0.4745098, 1)
+shader_parameter/paint_color_a = Color(0.5016728, 0.12443342, 0.119355045, 1)
+shader_parameter/blacklight_color = Vector3(0.423, 0.361, 0.851)

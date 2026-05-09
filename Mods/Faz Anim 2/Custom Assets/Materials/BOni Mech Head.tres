@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cb7gohiq3awch"]
+
+[ext_resource type="Shader" uid="uid://des8a3glk3x31" path="res://Shaders/GL_Paintable.gdshader" id="1_6cmtg"]
+[ext_resource type="Texture2D" uid="uid://dq5srxfyltfjw" path="res://Mods/Faz Anim 2/Custom Assets/Textures/Chica Mech Head_Main.webp" id="2_4f2e2"]
+[ext_resource type="Texture2D" uid="uid://cry08e78wqa51" path="res://Mods/Faz Anim 2/Custom Assets/Textures/Chica Mech Head_MaskMap.webp" id="3_kmctt"]
+[ext_resource type="Texture2D" uid="uid://cosh46k7lrjdu" path="res://Mods/Faz Anim 2/Custom Assets/Textures/Chica Mech Head_NormalMap.webp" id="4_pexe3"]
+[ext_resource type="Texture2D" uid="uid://bxec6vupwgv6k" path="res://Mods/Faz Anim 2/Custom Assets/Textures/Chica Mech Head_PaintMap.webp" id="5_5gp67"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_6cmtg")
+shader_parameter/diffuse_texture = ExtResource("2_4f2e2")
+shader_parameter/normal_map = ExtResource("4_pexe3")
+shader_parameter/normal_scale = 1.0
+shader_parameter/mask_map = ExtResource("3_kmctt")
+shader_parameter/paint_map = ExtResource("5_5gp67")
+shader_parameter/paint_color_r = Color(0, 0, 0, 1)
+shader_parameter/paint_color_g = Color(0.33333334, 0.16078432, 0.16078432, 1)
+shader_parameter/paint_color_b = Color(0.75686276, 0.67058825, 0.5686275, 1)
+shader_parameter/paint_color_a = Color(0, 0, 0, 1)
+shader_parameter/blacklight_color = Vector3(0.423, 0.361, 0.851)

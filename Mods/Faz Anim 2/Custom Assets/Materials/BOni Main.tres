@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c452ckkdo2pu4"]
+
+[ext_resource type="Shader" uid="uid://des8a3glk3x31" path="res://Shaders/GL_Paintable.gdshader" id="1_ro457"]
+[ext_resource type="Texture2D" uid="uid://cm1yrml5uf2yu" path="res://Mods/Faz Anim 2/Custom Assets/Textures/Boni_Diffuse.webp" id="2_wrj3y"]
+[ext_resource type="Texture2D" uid="uid://o443lqgenype" path="res://Mods/Faz Anim 2/Custom Assets/Textures/BOni_Mask.webp" id="3_wrj3y"]
+[ext_resource type="Texture2D" uid="uid://88d0egd1lmq2" path="res://Mods/Faz Anim 2/Custom Assets/Textures/Boni_Normal.webp" id="4_wrj3y"]
+[ext_resource type="Texture2D" uid="uid://13avff1pwrh" path="res://Mods/Faz Anim 2/Custom Assets/Textures/BOni_Paint.png" id="5_wrj3y"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ro457")
+shader_parameter/diffuse_texture = ExtResource("2_wrj3y")
+shader_parameter/normal_map = ExtResource("4_wrj3y")
+shader_parameter/normal_scale = 1.000000807500001
+shader_parameter/mask_map = ExtResource("3_wrj3y")
+shader_parameter/paint_map = ExtResource("5_wrj3y")
+shader_parameter/paint_color_r = Color(0.5305589, 0.51051694, 0.012725193, 1)
+shader_parameter/paint_color_g = Color(0.64705884, 0.6039216, 0.42745098, 1)
+shader_parameter/paint_color_b = Color(0.101960786, 0.105882354, 0.11372549, 1)
+shader_parameter/paint_color_a = Color(0.38431373, 0.08627451, 0.08235294, 1)
+shader_parameter/blacklight_color = Vector3(0.423, 0.361, 0.851)
