@@ -11,7 +11,9 @@ radius = 0.703125
 [node name="Ringmaster Base" type="Node3D" unique_id=233530727 groups=["SOTM_MRHELPFUL_ALT"]]
 script = ExtResource("1_h01b8")
 animParametersFileName = "Mr Helpful"
-skinAuthors = "Steel Wool"
+animatableName = "Ringmaster Base"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.6, 0.16078432, 0.1764706, 1)
 
 [node name="Ringmaster Base2" parent="." unique_id=1566518242 instance=ExtResource("2_vj8x0")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)

@@ -10,7 +10,9 @@ size = Vector3(1.3438562, 3.200069, 1.4037695)
 [node name="Jug Band Monty" type="Node3D" unique_id=233530727 groups=["SOTM_MONTY"]]
 script = ExtResource("1_6ntc2")
 animParametersFileName = "Jug Band Monty"
-skinAuthors = "Steel Wool"
+animatableName = "Jug Band Monty"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.43106496, 0.73, 0.2701, 1)
 
 [node name="Jug Band Monty" parent="." unique_id=553181949 instance=ExtResource("2_jei37")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)

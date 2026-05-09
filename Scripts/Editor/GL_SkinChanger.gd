@@ -67,8 +67,8 @@ func _scan_animatables(path: String) -> void:
 							skin_db[group] = {}
 						skin_db[group][file.get_basename()] = {
 							"path": "%s/%s" % [path, actual_file],
-							"icon": instance.get("skinIcon") if instance.get_script() else null,
-							"authors": instance.get("skinAuthors") if instance.get_script() else "",
+							"icon": instance.get("animatableIcon") if instance.get_script() else null,
+							"authors": instance.get("animatableAuthors") if instance.get_script() else "",
 							"materials": _extract_paintable_materials(instance),
 						}
 					instance.queue_free()

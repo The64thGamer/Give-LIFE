@@ -11,8 +11,10 @@ size = Vector3(1.0846777, 1.7489548, 1.0778503)
 [node name="Juggling Duck" type="Node3D" unique_id=233530727 groups=["SOTM_DUCK"]]
 script = ExtResource("1_e0u7d")
 animParametersFileName = "Juggling Duck"
-skinIcon = ExtResource("2_kypyh")
-skinAuthors = "Steel Wool"
+animatableIcon = ExtResource("2_kypyh")
+animatableName = "Juggling Duck"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.8804148, 0.8637018, 0.81132066, 1)
 
 [node name="Juggling Duck" parent="." unique_id=962705700 instance=ExtResource("3_fgbyb")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)

@@ -1,144 +1,145 @@
 {
-  "Body Lean L": {
+  "AA_BOni|Body Lean L": {
 	"animation": "Body Lean L",
 	"in_speed": 2.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "Body Lean R": {
+  "AA_BOni|Body Lean R": {
 	"animation": "Body Lean R",
 	"in_speed": 2.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "Body Turn L": {
+  "AA_BOni|Body Turn L": {
 	"animation": "Body Turn L",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "Body Turn R": {
+  "AA_BOni|Body Turn R": {
 	"animation": "Body Turn R",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "Eyelid L": {
+  "AA_BOni|Eyelid L": {
 	"animation": "Eyelid L",
 	"in_speed": 5.0,
 	"out_speed": 10.0,
 	"type": "move_to"
   },
-  "Eyelid R": {
+  "AA_BOni|Eyelid R": {
 	"animation": "Eyelid R",
 	"in_speed": 5.0,
 	"out_speed": 10.0,
 	"type": "move_to"
   },
-  "Eyes Down": {
+  "AA_BOni|Eyes Down": {
 	"animation": "Eyes Down",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "Eyes Left": {
+  "AA_BOni|Eyes Left": {
 	"animation": "Eyes Left",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "Eyes Right": {
+  "AA_BOni|Eyes Right": {
 	"animation": "Eyes Right",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "Eyes Up": {
+  "AA_BOni|Eyes Up": {
 	"animation": "Eyes Up",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "Finger L": {
+  "AA_BOni|Finger L": {
 	"animation": "Finger L",
 	"in_speed": 3.0,
 	"out_speed": 3.5,
 	"type": "standard"
   },
-  "Guitar Lower": {
+  "AA_BOni|Guitar Lower": {
 	"animation": "Guitar Lower",
-	"in_speed": 2.0,
-	"out_speed": 2.5,
+	"in_speed": 1.5,
+	"out_speed": 3.0,
 	"type": "standard"
   },
-  "Guitar Raise": {
+  "AA_BOni|Guitar Raise": {
 	"animation": "Guitar Raise",
-	"in_speed": 2.0,
-	"out_speed": 2.5,
+	"in_speed": 3.0,
+	"out_speed": 1.5,
 	"type": "standard"
   },
-  "Hand L": {
+  "AA_BOni|Hand L": {
 	"animation": "Hand L",
 	"in_speed": 3.0,
 	"out_speed": 3.5,
 	"type": "standard"
   },
-  "Hand Strum": {
+  "AA_BOni|Hand Strum": {
 	"animation": "Hand Strum",
-	"in_speed": 3.5,
-	"out_speed": 3.0,
-	"type": "standard"
+	"in_speed": 8,
+	"out_speed": 8,
+	"type": "move_to",
+	"value": 0
   },
-  "Head Down L": {
+  "AA_BOni|Head Down L": {
 	"animation": "Head Down L",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "Head Down R": {
+  "AA_BOni|Head Down R": {
 	"animation": "Head Down R",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "Head Turn L": {
+  "AA_BOni|Head Turn L": {
 	"animation": "Head Turn L",
 	"in_speed": 5.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "Head Turn R": {
+  "AA_BOni|Head Turn R": {
 	"animation": "Head Turn R",
 	"in_speed": 5.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "Head Up L": {
+  "AA_BOni|Head Up L": {
 	"animation": "Head Up L",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "Head Up R": {
+  "AA_BOni|Head Up R": {
 	"animation": "Head Up R",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "Jaw": {
+  "AA_BOni|Jaw": {
 	"animation": "Jaw",
 	"in_speed": 5.5,
 	"out_speed": 6.5,
 	"type": "standard"
   },
-  "Underlid L": {
+  "AA_BOni|Underlid L": {
 	"animation": "Underlid L",
 	"in_speed": 5.0,
 	"out_speed": 10.0,
 	"type": "move_to",
 	"value": 5.70421e-21
   },
-  "Underlid R": {
+  "AA_BOni|Underlid R": {
 	"animation": "Underlid R",
 	"in_speed": 5.0,
 	"out_speed": 10.0,

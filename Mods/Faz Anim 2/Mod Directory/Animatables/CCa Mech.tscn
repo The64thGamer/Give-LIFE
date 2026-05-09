@@ -5,10 +5,16 @@
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_gfes3"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_g0exr"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_64a77"]
+height = 44.741333
+radius = 5.1870117
+
 [node name="CCa Mech" type="Node3D" unique_id=2099849415 groups=["AA_CCA"]]
 script = ExtResource("1_64a77")
 animParametersFileName = "CCa"
-skinAuthors = "sudo trans --pony"
+animatableName = "C. Ca Mech"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.86, 0.69445, 0.19780003, 1)
 
 [node name="CCA Mech2" parent="." unique_id=250172871 instance=ExtResource("3_64a77")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
@@ -18,3 +24,10 @@ boneConfigFileName = "CCa"
 [node name="Color Check" type="Node3D" parent="." unique_id=299466512 groups=["AA_CCA"]]
 script = ExtResource("4_g0exr")
 check_siblings = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=582596657]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=567972607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.370667, -3.95149)
+shape = SubResource("CylinderShape3D_64a77")

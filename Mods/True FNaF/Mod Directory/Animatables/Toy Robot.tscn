@@ -10,8 +10,10 @@ size = Vector3(0.50082016, 1.0684662, 0.258667)
 [node name="Toy Robot" type="Node3D" unique_id=233530727 groups=["FNAF4_ROBOT"]]
 script = ExtResource("1_5vy8f")
 animParametersFileName = "Toy Robot"
-skinIcon = ExtResource("2_7hgbu")
-skinAuthors = "sudo trans --pony"
+animatableIcon = ExtResource("2_7hgbu")
+animatableName = "Toy Robot"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.49200517, 0.08569523, 1, 1)
 
 [node name="Toy Robot" parent="." unique_id=1029607388 instance=ExtResource("2_5vy8f")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

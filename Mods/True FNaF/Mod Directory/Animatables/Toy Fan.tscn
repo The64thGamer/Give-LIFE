@@ -12,6 +12,9 @@ script = ExtResource("1_lmi3k")
 animParametersFileName = "Toy Fan"
 skinIcon = ExtResource("2_1h754")
 skinAuthors = "sudo trans --pony"
+animatableIcon = ExtResource("2_1h754")
+animatableName = "Toy Fan"
+animatableAuthors = "sudo trans --pony"
 
 [node name="Toy Fan" parent="." unique_id=190730935 instance=ExtResource("3_1h754")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

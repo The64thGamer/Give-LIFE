@@ -15,6 +15,9 @@ radius = 0.29141408
 [node name="Chica" type="Node3D" unique_id=233530727 groups=["FA_CHICA"]]
 script = ExtResource("1_pw3yd")
 animParametersFileName = "Chica"
+animatableName = "Chica"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.6175376, 0.579872, 5.7756904e-07, 1)
 
 [node name="Chica FNaF1" parent="." unique_id=288875953 instance=ExtResource("2_5oist")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)

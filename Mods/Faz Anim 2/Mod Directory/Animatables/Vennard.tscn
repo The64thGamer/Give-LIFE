@@ -5,13 +5,25 @@
 [ext_resource type="PackedScene" uid="uid://b86ssrsttyjyu" path="res://Mods/Faz Anim 2/Custom Assets/Models/Animatronics/Vennard/Vennard.glb" id="2_uvd57"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_cn81c"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_j2rxa"]
+size = Vector3(12.167305, 10.461655, 8.026398)
+
 [node name="Vennard" type="Node3D" unique_id=2099849415 groups=["AA_VENNARD"]]
 script = ExtResource("1_j2rxa")
 animParametersFileName = "Vennard"
-skinIcon = ExtResource("2_j2rxa")
-skinAuthors = "sudo trans --pony"
+animatableIcon = ExtResource("2_j2rxa")
+animatableName = "Vennard"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.47843137, 0.47843137, 0.47843137, 1)
 
 [node name="Vennard2" parent="." unique_id=1367234588 instance=ExtResource("2_uvd57")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
 script = ExtResource("3_cn81c")
 boneConfigFileName = "Vennard"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=154873430]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1827014779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.042247772, 0.2908015, -1.8092321)
+shape = SubResource("BoxShape3D_j2rxa")

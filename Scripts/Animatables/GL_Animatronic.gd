@@ -1,10 +1,10 @@
 extends GL_Animatable
+class_name GL_Animatronic
+
 var anim_tree: AnimationTree
 var blend_tree: AnimationNodeBlendTree
 var animParameters: Dictionary
 @export var animParametersFileName: String
-@export var skinIcon : Texture2D
-@export var skinAuthors : String
 
 var initialPos: Vector3
 var initialRot: Vector3

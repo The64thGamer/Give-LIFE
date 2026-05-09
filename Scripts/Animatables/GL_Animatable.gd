@@ -1,6 +1,10 @@
 extends Node3D
 class_name GL_Animatable
 
+@export var animatableIcon : Texture2D
+@export var animatableName : String
+@export var animatableAuthors : String
+@export var animatableColor : Color = Color.BLUE_VIOLET
 @export var delete_parent_instead: bool = false
 
 var _bbox_visual: MeshInstance3D = null
@@ -124,9 +128,13 @@ func _do_duplicate() -> void:
 	var dir := Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)).normalized()
 	dup.global_position = global_position + Vector3(dir.x, 0.0, dir.y) * 2.0
 	_close_interaction()
+	get_tree().get_first_node_in_group("AnimatableImporter").refresh()
 
 func _do_delete() -> void:
-	(get_parent() if delete_parent_instead else self).queue_free()
+	var target = get_parent() if delete_parent_instead else self
+	var tree := get_tree()
+	target.tree_exited.connect(func(): tree.get_first_node_in_group("AnimatableImporter").refresh())
+	target.queue_free()
 
 func _process_moving() -> void:
 	var player := get_tree().get_nodes_in_group("Player Raycast").front() as Node3D

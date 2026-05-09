@@ -12,6 +12,9 @@ radius = 4.594
 [node name="Freddy" type="Node3D" unique_id=233530727 groups=["FA_FREDDY"]]
 script = ExtResource("1_v24xh")
 animParametersFileName = "Freddy"
+animatableName = "Freddy"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.59, 0.354, 0.23599997, 1)
 
 [node name="Freddy" parent="." unique_id=333598121 instance=ExtResource("3_v24xh")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)

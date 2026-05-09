@@ -13,8 +13,10 @@ size = Vector3(0.7965355, 0.2172699, 0.18804932)
 [node name="Toy Phone" type="Node3D" unique_id=233530727 groups=["FNAF4_PHONE"]]
 script = ExtResource("1_hfxbb")
 animParametersFileName = "Toy Phone"
-skinIcon = ExtResource("2_n7fck")
-skinAuthors = "sudo trans --pony"
+animatableIcon = ExtResource("2_n7fck")
+animatableName = "Toy Phone"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0, 0.42105618, 0.7997986, 1)
 
 [node name="Toy Phone" parent="." unique_id=1957082576 instance=ExtResource("2_hfxbb")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

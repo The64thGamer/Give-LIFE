@@ -5,11 +5,16 @@
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_s2a2j"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="5_beu73"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bb2qk"]
+height = 49.3385
+radius = 5.1870117
+
 [node name="BOni" type="Node3D" unique_id=1621682742 groups=["AA_BOni"]]
 script = ExtResource("1_s2a2j")
 animParametersFileName = "BOni"
-skinAuthors = "sudo trans --pony"
-delete_parent_instead = null
+animatableName = "B. Oni"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.41295138, 0.45651543, 0.10925091, 1)
 
 [node name="B Oni2" parent="." unique_id=706295883 instance=ExtResource("3_bb2qk")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
@@ -19,3 +24,10 @@ boneConfigFileName = "BOni"
 [node name="Color Check" type="Node3D" parent="." unique_id=1873943061 groups=["AA_FD"]]
 script = ExtResource("5_beu73")
 check_siblings = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1027489538]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1233756288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.66925, 0)
+shape = SubResource("CylinderShape3D_bb2qk")

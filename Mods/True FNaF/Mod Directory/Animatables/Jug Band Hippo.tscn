@@ -10,7 +10,9 @@ size = Vector3(1.7560401, 4.3879223, 1.6678123)
 [node name="Jug Band Hippo" type="Node3D" unique_id=233530727 groups=["SOTM_HIPPO"]]
 script = ExtResource("1_3ggbg")
 animParametersFileName = "Jug Band Hippo"
-skinAuthors = "Steel Wool"
+animatableName = "Jug Band Hippo"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.7095599, 0.3212, 0.73, 1)
 
 [node name="Jug Band Hippo" parent="." unique_id=1961381330 instance=ExtResource("3_b51cq")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)

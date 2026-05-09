@@ -12,6 +12,9 @@ height = 14.482178
 [node name="Bird" type="Node3D" unique_id=233530727 groups=["FA_PARROT"]]
 script = ExtResource("1_h3jdu")
 animParametersFileName = "Bird"
+animatableName = "Bird"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(2.3584068e-06, 0.7013687, 0.23792127, 1)
 
 [node name="FoxyParrot" parent="." unique_id=105100726 instance=ExtResource("2_h3jdu")]
 transform = Transform3D(-1.0053619e-07, 0, -2.3, 0, 2.3, 0, 2.3, 0, -1.0053619e-07, 6.426, -1.275, 11.646)

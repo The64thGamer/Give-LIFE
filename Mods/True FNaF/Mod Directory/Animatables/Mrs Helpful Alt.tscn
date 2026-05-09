@@ -11,7 +11,9 @@ radius = 0.18066406
 [node name="Mrs Helpful Alt" type="Node3D" unique_id=233530727 groups=["SOTM_MRSHELPFUL_ALT"]]
 script = ExtResource("1_5g2cr")
 animParametersFileName = "Mr Helpful"
-skinAuthors = "Steel Wool"
+animatableName = "Mrs. Helpful"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.57254905, 0.38431373, 0.6313726, 1)
 
 [node name="Mrs Helpful2" parent="." unique_id=1572116511 instance=ExtResource("2_7bdgl")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)

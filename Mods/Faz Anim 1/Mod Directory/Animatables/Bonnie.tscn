@@ -12,6 +12,9 @@ radius = 5.1870117
 [node name="Bonnie" type="Node3D" unique_id=233530727 groups=["FA_BONNIE"]]
 script = ExtResource("1_irsr8")
 animParametersFileName = "Bonnie"
+animatableName = "Bonnie"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.43828076, 0.34464037, 0.7397582, 1)
 
 [node name="Bonnie FNaF" parent="." unique_id=760411560 instance=ExtResource("2_irsr8")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)

@@ -14,6 +14,10 @@ class_name GL_Master
 var currentlyLoadedPath : String = ""
 var currentlyLoadedFile : Dictionary = {}
 
+var scene_groups: Dictionary = {}
+
+var displayed_group: String = ""
+
 const defaultShowName = "My Unnamed Show"
 
 func _ready() -> void:
@@ -30,19 +34,6 @@ func load_show(path: String) -> bool:
 		return false
 	return false
 
-func create_channel(type: String) -> bool:
-	if currentlyLoadedFile == {}:
-		print("Can't Create Channel, No File")
-		return false
-	var rng = RandomNumberGenerator.new()
-	rng.seed = Time.get_ticks_msec()
-	var id = type + "_" + str(rng.randi())
-	var index = currentlyLoadedFile["channels"].size()
-	currentlyLoadedFile["channels"][id] = {"type": type, "data": "","index": index}
-	print("Created Channel: (" + str(id) + ") "+ str(currentlyLoadedFile["channels"][id]))
-	save()
-	return true
-	
 func save_and_quit():
 	save()
 	var parentRoot = root.get_parent()
@@ -93,6 +84,27 @@ func _import_show() -> void:
 	add_child(file_dialog)
 	file_dialog.popup_centered_ratio(0.6)
 
+func set_displayed_group(group_name: String) -> void:
+	if group_name == displayed_group:
+		return
+	displayed_group = group_name
+	timeline.on_group_changed()
+
+func ensure_channel_exists(channel_id: String) -> void:
+	if currentlyLoadedFile.is_empty():
+		return
+	if currentlyLoadedFile["channels"].has(channel_id):
+		return
+	var pipe = channel_id.find("|")
+	var group = channel_id.left(pipe) if pipe != -1 else ""
+	var type = "bool"
+	if scene_groups.has(group) and scene_groups[group].has(channel_id):
+		type = scene_groups[group][channel_id].get("type", "bool")
+	currentlyLoadedFile["channels"][channel_id] = { "type": type, "data": [] }
+	print("Auto-created channel: " + channel_id)
+	save()
+	playback.invalidate_all_cache()
+
 func setAuthor(changed: String):
 	if currentlyLoadedPath == "":
 		return
@@ -104,6 +116,7 @@ func setTitle(changed: String):
 	currentlyLoadedFile["title"] = changed
 
 func _load_settings_general() -> void:
+	get_tree().get_first_node_in_group("AnimatableImporter").refresh()
 	timeline.reload_timeline()
 	mediaLoader.reload_media()
 	playback.reload_audio()

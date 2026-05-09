@@ -1,4 +1,5 @@
 extends GL_Animatable
+class_name GL_Spotlight
 
 var spotLight: SpotLight3D
 var omniLight: OmniLight3D

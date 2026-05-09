@@ -1,7 +1,6 @@
 extends Control
 class_name GL_Timeline
 @onready var master : GL_Master= $"../../Master"
-@onready var createChannel : OptionButton = $MarginContainer/TimelineBox/CreateChannel
 @onready var timelineBox : VBoxContainer = $MarginContainer/TimelineBox
 @onready var playButton : Button = $"../TimeManager/HBoxContainer/Play Button"
 @onready var timeStartText : Label = $"../TimeManager/MarginContainer/StartTime"
@@ -49,8 +48,11 @@ func endEdit(channel_id: String) -> void:
 	_mark_dirty()
 
 func getDataForChannel(channel_id: String) -> Array:
-	var base: Array = master.currentlyLoadedFile["channels"][channel_id]["data"].duplicate()
-	return base
+	var channels = master.currentlyLoadedFile.get("channels", {})
+	if not channels.has(channel_id):
+		return []
+	var data = channels[channel_id].get("data", [])
+	return data.duplicate() if data is Array else []
 
 func time_to_int(t: float) -> int:
 	return int(t / (1.0 / 120.0))
@@ -148,17 +150,38 @@ func _input(event: InputEvent) -> void:
 		togglePlayback()
 
 	if event is InputEventKey:
-		for channel_id in master.currentlyLoadedFile["channels"]:
+		# Build a unified set of channel IDs to check for keybinds.
+		# Priority: all channels in scene_groups (covers visible + off-screen
+		# scene channels), plus any extra channels only in the save file
+		# (legacy shows without scene objects).
+		var all_channel_ids: Array = []
+		for group in master.scene_groups:
+			for channel_id in master.scene_groups[group]:
+				all_channel_ids.append(channel_id)
+		for channel_id in master.currentlyLoadedFile.get("channels", {}):
+			if not all_channel_ids.has(channel_id):
+				all_channel_ids.append(channel_id)
+
+		for channel_id in all_channel_ids:
 			var bind = channelBinds.get(channel_id, null)
 			if bind == null:
 				continue
 			if event.keycode != bind:
 				continue
 
-			var ch_data = master.currentlyLoadedFile["channels"][channel_id]
-			var type = GL_ChannelData.get_type(ch_data)
+			# Resolve type: scene_groups is authoritative, save file is fallback.
+			var type: String = GL_ChannelData.TYPE_BOOL
+			var pipe = channel_id.find("|")
+			var group = channel_id.left(pipe) if pipe != -1 else ""
+			var sg_entry = master.scene_groups.get(group, {}).get(channel_id, {})
+			if sg_entry.has("type"):
+				type = sg_entry["type"]
+			elif master.currentlyLoadedFile["channels"].has(channel_id):
+				type = GL_ChannelData.get_type(master.currentlyLoadedFile["channels"][channel_id])
 
 			if event.pressed and not event.echo:
+				# Create the save file entry now if it doesn't exist yet.
+				master.ensure_channel_exists(channel_id)
 				match type:
 					GL_ChannelData.TYPE_BOOL:
 						startEdit(channel_id, timeCurrent, true)
@@ -320,7 +343,7 @@ func pan(left: bool):
 func scroll(down: bool):
 	if master.currentlyLoadedPath == "":
 		return
-	var total = master.currentlyLoadedFile["channels"].size()
+	var total = _get_displayed_keys().size()
 	if down:
 		if scrolledIndex < total - 1:
 			scrolledIndex += 1
@@ -329,11 +352,15 @@ func scroll(down: bool):
 			scrolledIndex -= 1
 	_reassign_channel_slots()
 
-func _get_sorted_keys() -> Array:
-	var channels = master.currentlyLoadedFile["channels"]
-	var sorted_keys = channels.keys()
-	sorted_keys.sort_custom(func(a, b): return channels[a]["index"] < channels[b]["index"])
-	return sorted_keys
+# Returns the channel IDs for the currently displayed group, sorted by name.
+# Falls back to an empty array when no group is selected or no show is loaded.
+func _get_displayed_keys() -> Array:
+	if master.displayed_group == "":
+		return []
+	var group = master.scene_groups.get(master.displayed_group, {})
+	var keys = group.keys()
+	keys.sort()
+	return keys
 
 func _get_channel_slots() -> Array:
 	var slots = []
@@ -348,22 +375,32 @@ func _reassign_channel_slots() -> void:
 
 	await get_tree().process_frame
 
-	var sorted_keys = _get_sorted_keys()
+	var displayed_keys = _get_displayed_keys()
 	var slots = _get_channel_slots()
+
+	# Resolve the color for a channel ID. scene_groups is the authority;
+	# the save file entry is a fallback for legacy data.
+	var resolve_color = func(key: String) -> String:
+		var pipe = key.find("|")
+		var group = key.left(pipe) if pipe != -1 else ""
+		var sg = master.scene_groups.get(group, {}).get(key, {})
+		if sg.has("color"):
+			return sg["color"]
+		if master.currentlyLoadedFile["channels"].has(key):
+			return master.currentlyLoadedFile["channels"][key].get("color", "")
+		return ""
 
 	for i in range(slots.size()):
 		var data_index = scrolledIndex + i
-		if i >= slots.size(): break
-
 		var slot : GL_Channel = slots[i]
-		if data_index < sorted_keys.size():
-			var key = sorted_keys[data_index]
+		if data_index < displayed_keys.size():
+			var key = displayed_keys[data_index]
 			slot.id = key
-			var color = master.currentlyLoadedFile["channels"][key].get("color", null)
-			if color != null:
-				var r = ("0x" + color.substr(0, 2)).hex_to_int() / 255.0
-				var g = ("0x" + color.substr(2, 2)).hex_to_int() / 255.0
-				var b = ("0x" + color.substr(4, 2)).hex_to_int() / 255.0
+			var color_hex = resolve_color.call(key)
+			if color_hex != "":
+				var r = ("0x" + color_hex.substr(0, 2)).hex_to_int() / 255.0
+				var g = ("0x" + color_hex.substr(2, 2)).hex_to_int() / 255.0
+				var b = ("0x" + color_hex.substr(4, 2)).hex_to_int() / 255.0
 				slot.color = Color(r, g, b)
 			slot.master = master
 			slot.timeline = self
@@ -381,52 +418,15 @@ func repaintTimeline() -> void:
 func _ready() -> void:
 	reload_timeline()
 
-func create_channel(type: int) -> void:
-	var finished = false
-	match(type):
-		0:
-			return
-		1:
-			finished = master.create_channel("bool")
-			print("Creating Bool Channel")
-		2:
-			finished = master.create_channel("float")
-			print("Creating Float Channel")
-		3:
-			finished = master.create_channel("color")
-			print("Creating Color Channel")
-		4:
-			finished = master.create_channel("audio")
-			print("Creating Audio Channel")
-		5:
-			finished = master.create_channel("video")
-			print("Creating Video Channel")
-		6:
-			finished = master.create_channel("image")
-			print("Creating Image Channel")
-		7:
-			finished = master.create_channel("string")
-			print("Creating Text Channel")
-	if finished:
-		reload_timeline()
-		createChannel.selected = 0
-	else:
-		print("Creating Channel Failed")
-
 func reload_timeline() -> void:
-	if master.currentlyLoadedPath == "":
-		createChannel.visible = false
-	else:
-		createChannel.visible = true
 
 	for child in timelineBox.get_children():
-		if child.name != "CreateChannel":
-			child.queue_free()
+		child.queue_free()
 
 	if master.currentlyLoadedPath == "":
 		return
 
-	var total = master.currentlyLoadedFile["channels"].size()
+	var total = _get_displayed_keys().size()
 
 	if scrolledIndex >= total:
 		scrolledIndex = max(0, total - 1)
@@ -436,12 +436,20 @@ func reload_timeline() -> void:
 		var channelBox : GL_Channel = channelPrefab.instantiate()
 		timelineBox.add_child(channelBox)
 
-	timelineBox.move_child(timelineBox.get_node("CreateChannel"), timelineBox.get_child_count() - 1)
-
-	# Prime the dispatch table now so first play-start has zero setup cost.
-	# Deferred so group memberships are stable after the scene settles.
 	call_deferred("_prime_playback_deferred")
 	call_deferred("_reassign_channel_slots")
+
+func clear_group_binds() -> void:
+	for channel_id in _get_displayed_keys():
+		channelBinds.erase(channel_id)
+	for child in timelineBox.get_children():
+		if child is GL_Channel:
+			child.updateBindLabel()
+	get_tree().get_first_node_in_group("AnimatableImporter").refresh_bind_alerts()
+
+func on_group_changed() -> void:
+	scrolledIndex = 0
+	reload_timeline()
 
 func _prime_playback_deferred() -> void:
 	var playback = _get_playback()

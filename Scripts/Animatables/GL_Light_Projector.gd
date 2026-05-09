@@ -1,4 +1,6 @@
 extends GL_Animatable
+class_name GL_LightProjector
+
 var video_player: VideoStreamPlayer
 var spot_light: SpotLight3D
 var oldPath: String

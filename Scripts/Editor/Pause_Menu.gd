@@ -417,11 +417,15 @@ func load_map_scene(map_name: String):
 			currentSettings["recent_map"] = map_name
 			save_settings()
 			apply_settings()
+			get_tree().get_first_node_in_group("AnimatableImporter").refresh()
 	else:
 		push_error("Map not found or not available: " + map_name)
 
 func unload_current_map():
 	if currentMapInstance:
+		currentMapInstance.tree_exited.connect(func():
+			get_tree().get_first_node_in_group("AnimatableImporter").refresh()
+		)
 		currentMapInstance.queue_free()
 		currentMapInstance = null
 		self.visible = true

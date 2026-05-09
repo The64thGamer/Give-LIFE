@@ -2171,6 +2171,8 @@ spot_angle_attenuation = 0.06208374
 script = ExtResource("20_0fewr")
 canChangeColor = true
 energyMultiplier = 50.0
+animatableColor = Color(0.8509804, 0.8117647, 0.8901961, 1)
+delete_parent_instead = true
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Map/Animatables/Projector/Node" unique_id=987786370]
 visible = false
@@ -2198,6 +2200,9 @@ script = ExtResource("9_qjcwm")
 canChangeColor = true
 energyMultiplier = 50.0
 lerp_speed = 15.0
+animatableName = "Vennard Spot"
+animatableColor = Color(0.94509804, 0.8392157, 0.7019608, 1)
+delete_parent_instead = true
 
 [node name="AC Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=1680550387]
 transform = Transform3D(-0.9993379, -0.03621837, -0.0034645735, -0.036370568, 0.9918795, 0.12186935, -0.0009774698, 0.12191467, -0.9925401, -9.661119, 5.4309382, -16.792427)
@@ -2215,6 +2220,9 @@ script = ExtResource("9_qjcwm")
 canChangeColor = true
 energyMultiplier = 50.0
 lerp_speed = 15.0
+animatableName = "A.C. Spot"
+animatableColor = Color(0.94509804, 0.8392157, 0.7019608, 1)
+delete_parent_instead = true
 
 [node name="HVAC Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=1300895029]
 transform = Transform3D(-0.9993379, -0.036218375, -0.0034645735, -0.036370568, 0.9918796, 0.121869355, -0.0009774698, 0.12191468, -0.9925401, -10.689208, 5.4309382, -16.792427)
@@ -2232,6 +2240,9 @@ script = ExtResource("9_qjcwm")
 canChangeColor = true
 energyMultiplier = 50.0
 lerp_speed = 15.0
+animatableName = "H.Vac Spot"
+animatableColor = Color(0.94509804, 0.8392157, 0.7019608, 1)
+delete_parent_instead = true
 
 [node name="Chica Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=1199173444]
 transform = Transform3D(0.976123, 0.0551108, -0.210114, -0.0368523, 0.995274, 0.0898469, 0.214072, -0.0799584, 0.97354, 1.01632, 5.91597, 5.13714)
@@ -2250,6 +2261,9 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 200.0
 lerp_speed = 15.0
+animatableName = "C.Ca Spot"
+animatableColor = Color(0.94509804, 0.8392157, 0.7019608, 1)
+delete_parent_instead = true
 
 [node name="Chica Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=1255439034]
 transform = Transform3D(0.879784, 0.149746, -0.451172, -0.0850888, 0.983368, 0.160461, 0.467697, -0.102781, 0.877893, -1.4462, 5.91597, 5.13714)
@@ -2267,6 +2281,9 @@ script = ExtResource("9_qjcwm")
 canChangeColor = true
 canChangeSize = true
 lerp_speed = 15.0
+animatableName = "C.Ca Color A"
+animatableColor = Color(0.8627451, 0, 0.5254902, 1)
+delete_parent_instead = true
 
 [node name="Chica Light 2" type="SpotLight3D" parent="Map/Animatables" unique_id=1777644854]
 transform = Transform3D(0.982287, -0.0483945, 0.181026, 0.013338, 0.981681, 0.190062, -0.186908, -0.184281, 0.964938, 4.02785, 5.91597, 5.13714)
@@ -2284,6 +2301,9 @@ script = ExtResource("9_qjcwm")
 canChangeColor = true
 canChangeSize = true
 lerp_speed = 15.0
+animatableName = "C.Ca Color B"
+animatableColor = Color(0.3372549, 0.39215687, 1, 1)
+delete_parent_instead = true
 
 [node name="Backlight Bonnie 1" type="SpotLight3D" parent="Map/Animatables" unique_id=255214102]
 transform = Transform3D(0.8889305, 0.020348437, -0.45758998, 0.42194512, -0.42510116, 0.8007818, -0.17822737, -0.9049172, -0.38647136, -4.183295, 7.053027, -5.0487566)
@@ -2302,6 +2322,9 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
+animatableName = "B.Oni Back A"
+animatableColor = Color(0.49411765, 0.8980392, 0, 1)
+delete_parent_instead = true
 
 [node name="Backlight Bonnie 2" type="SpotLight3D" parent="Map/Animatables" unique_id=1317914519]
 transform = Transform3D(0.5041679, -0.6677882, 0.54760724, -0.7217319, 0.022411296, 0.6918099, -0.47425506, -0.7440139, -0.470665, 1.084602, 7.053027, -5.0487566)
@@ -2320,6 +2343,9 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
+animatableName = "B.Oni Back B"
+animatableColor = Color(0.49411765, 0.8980392, 0, 1)
+delete_parent_instead = true
 
 [node name="Backlight Chica 1" type="SpotLight3D" parent="Map/Animatables" unique_id=1870108278]
 transform = Transform3D(0.65803826, -0.6370983, 0.401362, -0.5407571, -0.028914198, 0.84068173, -0.5239919, -0.77024007, -0.36354205, 4.0615163, 7.053027, -5.0487566)
@@ -2338,6 +2364,9 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
+animatableName = "C.Ca Back A"
+animatableColor = Color(0.4862745, 0.1882353, 0.9843137, 1)
+delete_parent_instead = true
 
 [node name="Backlight Chica 2" type="SpotLight3D" parent="Map/Animatables" unique_id=1396142724]
 transform = Transform3D(0.7724748, 0.076425456, -0.6304299, 0.5479, -0.58212423, 0.60078037, -0.3210736, -0.8095002, -0.49154982, -0.6033286, 7.053027, -5.0487566)
@@ -2356,6 +2385,9 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
+animatableName = "C.Ca Back B"
+animatableColor = Color(0.4862745, 0.1882353, 0.9843137, 1)
+delete_parent_instead = true
 
 [node name="Backlight FD 1" type="SpotLight3D" parent="Map/Animatables" unique_id=1282174640]
 transform = Transform3D(0.85166365, -0.04239276, -0.5223714, 0.2225932, -0.8730968, 0.43376723, -0.47446954, -0.4857002, -0.73414874, -2.3501406, 7.053027, -5.0487566)
@@ -2374,6 +2406,9 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
+animatableName = "F.D. Back A"
+animatableColor = Color(0.89411765, 0, 0.043137256, 1)
+delete_parent_instead = true
 
 [node name="Backlight FD 2" type="SpotLight3D" parent="Map/Animatables" unique_id=2094733144]
 transform = Transform3D(0.72382605, -0.61071026, 0.32110542, -0.67071444, -0.51356244, 0.53515965, -0.16191982, -0.60273254, -0.78134215, 2.2435718, 7.053027, -5.0487566)
@@ -2392,6 +2427,9 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
+animatableName = "F.D. Back B"
+animatableColor = Color(0.89411765, 0, 0.043137256, 1)
+delete_parent_instead = true
 
 [node name="Freddy Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=327632570]
 transform = Transform3D(0.99984, 0.00601344, 0.0168257, -0.00854907, 0.987885, 0.154949, -0.0156901, -0.155068, 0.987779, 0.202691, 5.91597, 5.13714)
@@ -2410,6 +2448,9 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 200.0
 lerp_speed = 15.0
+animatableName = "F.D. Spot"
+animatableColor = Color(0.94509804, 0.8392157, 0.7019608, 1)
+delete_parent_instead = true
 
 [node name="Freddy Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=1773037412]
 transform = Transform3D(0.946964, 0.112137, -0.301137, -0.0214853, 0.957132, 0.288853, 0.320619, -0.267064, 0.90878, -2.44347, 5.91597, 5.13714)
@@ -2427,6 +2468,9 @@ script = ExtResource("9_qjcwm")
 canChangeColor = true
 canChangeSize = true
 lerp_speed = 15.0
+animatableName = "F.D. Color A"
+animatableColor = Color(0.8627451, 0, 0.5254902, 1)
+delete_parent_instead = true
 
 [node name="Freddy Light 2" type="SpotLight3D" parent="Map/Animatables" unique_id=2088761650]
 transform = Transform3D(0.935025, -0.102068, 0.339574, 0.00623846, 0.962261, 0.272056, -0.354528, -0.252261, 0.900375, 3.01709, 5.91597, 5.13714)
@@ -2444,6 +2488,9 @@ script = ExtResource("9_qjcwm")
 canChangeColor = true
 canChangeSize = true
 lerp_speed = 15.0
+animatableName = "F.D. Color B"
+animatableColor = Color(0.3372549, 0.39215687, 1, 1)
+delete_parent_instead = true
 
 [node name="Guest Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=2085024446]
 transform = Transform3D(0.9739493, -0.031260192, 0.22460029, 0.019167507, 0.99825627, 0.0558215, -0.22595374, -0.05006227, 0.9728507, -0.598785, 5.91597, 5.13714)
@@ -2462,17 +2509,20 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 200.0
 lerp_speed = 15.0
+animatableName = "B.Oni Spot"
+animatableColor = Color(0.94509804, 0.8392157, 0.7019608, 1)
+delete_parent_instead = true
 
 [node name="Keytar Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=1288985952]
-transform = Transform3D(0.9805786, -0.06402722, 0.1853803, 0.018651256, 0.97136956, 0.23683812, -0.19523695, -0.22878076, 0.9536989, -0.598785, 5.91597, 5.13714)
+transform = Transform3D(0.9669534, -0.07148771, 0.2447254, 0.018763887, 0.9772358, 0.2113248, -0.25426155, -0.19974925, 0.9462829, -0.1840576, 5.91597, 5.13714)
 light_color = Color(0.944285, 0.839984, 0.7003, 1)
 light_energy = 0.0
 light_size = 0.124
 shadow_enabled = true
 spot_range = 25.0
 spot_attenuation = 2.0
-spot_angle = 5.59
-spot_angle_attenuation = 0.329877
+spot_angle = 4.49
+spot_angle_attenuation = 0.78458416
 
 [node name="Node" type="Node3D" parent="Map/Animatables/Keytar Spot" unique_id=2014703113 groups=["L_SPOT_KEYTAR"]]
 script = ExtResource("9_qjcwm")
@@ -2480,6 +2530,9 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 200.0
 lerp_speed = 15.0
+animatableName = "Keytar Spot"
+animatableColor = Color(0.94509804, 0.8392157, 0.7019608, 1)
+delete_parent_instead = true
 
 [node name="Guest Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=967556088]
 transform = Transform3D(0.993787, 0.0434335, -0.102475, -0.0233774, 0.981631, 0.189349, 0.108817, -0.185777, 0.976548, -3.57721, 5.91597, 5.13714)
@@ -2497,10 +2550,13 @@ script = ExtResource("9_qjcwm")
 canChangeColor = true
 canChangeSize = true
 lerp_speed = 15.0
+animatableName = "B.Oni Color A"
+animatableColor = Color(0.8627451, 0, 0.5254902, 1)
+delete_parent_instead = true
 
 [node name="Guest Light 2" type="SpotLight3D" parent="Map/Animatables" unique_id=1517498483]
 transform = Transform3D(0.888096, -0.128845, 0.441231, 0.0636136, 0.985125, 0.159629, -0.455235, -0.113698, 0.883082, 1.93794, 5.91597, 5.13714)
-light_color = Color(0.336683, 0.394011, 1, 1)
+light_color = Color(0.3372549, 0.39215687, 1, 1)
 light_energy = 0.0
 light_size = 0.124
 shadow_enabled = true
@@ -2514,6 +2570,9 @@ script = ExtResource("9_qjcwm")
 canChangeColor = true
 canChangeSize = true
 lerp_speed = 15.0
+animatableName = "B.Oni Color B"
+animatableColor = Color(0.3372549, 0.39215687, 1, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb" type="OmniLight3D" parent="Map/Animatables" unique_id=1706852450]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000909001, 2.26172, -0.213689)
@@ -2529,6 +2588,9 @@ script = ExtResource("31_vjihw")
 number = 8
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb2" type="OmniLight3D" parent="Map/Animatables" unique_id=1555943099]
 transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.812021, 2.26172, -0.284886)
@@ -2544,6 +2606,9 @@ script = ExtResource("31_vjihw")
 number = 9
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb3" type="OmniLight3D" parent="Map/Animatables" unique_id=1018715092]
 transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 1.59845, 2.26172, -0.495851)
@@ -2559,6 +2624,9 @@ script = ExtResource("31_vjihw")
 number = 10
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb4" type="OmniLight3D" parent="Map/Animatables" unique_id=198774743]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 2.33629, 2.26172, -0.84017)
@@ -2574,6 +2642,9 @@ script = ExtResource("31_vjihw")
 number = 11
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb5" type="OmniLight3D" parent="Map/Animatables" unique_id=386329331]
 transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 3.00314, 2.26172, -1.30739)
@@ -2589,6 +2660,9 @@ script = ExtResource("31_vjihw")
 number = 12
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb6" type="OmniLight3D" parent="Map/Animatables" unique_id=1219352129]
 transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 3.57872, 2.26172, -1.8833)
@@ -2604,6 +2678,9 @@ script = ExtResource("31_vjihw")
 number = 13
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb7" type="OmniLight3D" parent="Map/Animatables" unique_id=1039009886]
 transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 4.04555, 2.26172, -2.55041)
@@ -2619,6 +2696,9 @@ script = ExtResource("31_vjihw")
 number = 14
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb8" type="OmniLight3D" parent="Map/Animatables" unique_id=1032503834]
 transform = Transform3D(0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 4.38945, 2.26172, -3.28845)
@@ -2634,6 +2714,9 @@ script = ExtResource("31_vjihw")
 number = 15
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb9" type="OmniLight3D" parent="Map/Animatables" unique_id=1739284967]
 transform = Transform3D(0.173648, 0, 0.984808, 0, 1, 0, -0.984808, 0, 0.173648, 4.59996, 2.26172, -4.075)
@@ -2649,6 +2732,9 @@ script = ExtResource("31_vjihw")
 number = 16
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb10" type="OmniLight3D" parent="Map/Animatables" unique_id=534383810]
 transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, -0.810243, 2.26172, -0.284422)
@@ -2664,6 +2750,9 @@ script = ExtResource("31_vjihw")
 number = 7
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb11" type="OmniLight3D" parent="Map/Animatables" unique_id=367633780]
 transform = Transform3D(0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, -1.59679, 2.26172, -0.494935)
@@ -2679,6 +2768,9 @@ script = ExtResource("31_vjihw")
 number = 6
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb12" type="OmniLight3D" parent="Map/Animatables" unique_id=166199480]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -2.33483, 2.26172, -0.838832)
@@ -2694,6 +2786,9 @@ script = ExtResource("31_vjihw")
 number = 5
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb13" type="OmniLight3D" parent="Map/Animatables" unique_id=1039810949]
 transform = Transform3D(0.766044, 0, -0.642788, 0, 1, 0, 0.642788, 0, 0.766044, -3.00194, 2.26172, -1.30566)
@@ -2709,6 +2804,9 @@ script = ExtResource("31_vjihw")
 number = 4
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb14" type="OmniLight3D" parent="Map/Animatables" unique_id=1687646261]
 transform = Transform3D(0.642788, 0, -0.766044, 0, 1, 0, 0.766044, 0, 0.642788, -3.57786, 2.26172, -1.88125)
@@ -2724,6 +2822,9 @@ script = ExtResource("31_vjihw")
 number = 3
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb15" type="OmniLight3D" parent="Map/Animatables" unique_id=1153732888]
 transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, -4.04507, 2.26172, -2.54809)
@@ -2739,6 +2840,9 @@ script = ExtResource("31_vjihw")
 number = 2
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb16" type="OmniLight3D" parent="Map/Animatables" unique_id=326835030]
 transform = Transform3D(0.34202, 0, -0.939693, 0, 1, 0, 0.939693, 0, 0.34202, -4.38939, 2.26172, -3.28594)
@@ -2754,6 +2858,9 @@ script = ExtResource("31_vjihw")
 number = 1
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Stage Chaser Bulb17" type="OmniLight3D" parent="Map/Animatables" unique_id=1972217433]
 transform = Transform3D(0.173648, 0, -0.984808, 0, 1, 0, 0.984808, 0, 0.173648, -4.60035, 2.26172, -4.07236)
@@ -2768,6 +2875,9 @@ omni_attenuation = 2.0
 script = ExtResource("31_vjihw")
 total = 17
 energyMultiplier = 0.31
+animatableName = "Chaser"
+animatableColor = Color(0.8509804, 0.78431374, 0.4862745, 1)
+delete_parent_instead = true
 
 [node name="Map Lights" type="Node3D" parent="Map" unique_id=2059291326]
 

@@ -12,6 +12,9 @@ radius = 4.5527344
 [node name="Foxy" type="Node3D" unique_id=233530727 groups=["FA_FOXY"]]
 script = ExtResource("1_78mci")
 animParametersFileName = "Foxy"
+animatableName = "Foxy"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.772659, 0.15336296, 0, 1)
 
 [node name="Foxy FNaF1" parent="." unique_id=1159389777 instance=ExtResource("2_78mci")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)

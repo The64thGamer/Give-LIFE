@@ -4,11 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://cmw4scb1fh4v4" path="res://Mods/Faz Anim 2/Custom Assets/UI/HVAC.webp" id="2_glnju"]
 [ext_resource type="PackedScene" uid="uid://dhkpc6spppxxn" path="res://Mods/Faz Anim 2/Custom Assets/Models/Animatronics/Vennard/HVAC.glb" id="2_on63g"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_glnju"]
+size = Vector3(5.249298, 5.0409546, 1.43396)
+
 [node name="HVAC" type="Node3D" unique_id=2099849415 groups=["AA_HVAC"]]
 script = ExtResource("1_on63g")
 animParametersFileName = "HVAC"
-skinIcon = ExtResource("2_glnju")
-skinAuthors = "sudo trans --pony"
+animatableIcon = ExtResource("2_glnju")
+animatableName = "HVAC"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.79, 0.76472, 0.60040003, 1)
 
 [node name="HVAC2" parent="." unique_id=1801061979 instance=ExtResource("2_on63g")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=249161303]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=21486645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.625888e-05, -0.06967967, -0.33399725)
+shape = SubResource("BoxShape3D_glnju")

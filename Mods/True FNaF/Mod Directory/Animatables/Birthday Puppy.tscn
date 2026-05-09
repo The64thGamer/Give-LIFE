@@ -17,8 +17,10 @@ size = Vector3(2.8544528, 0.8517587, 0.4216528)
 [node name="Birthday Puppy" type="Node3D" unique_id=233530727 groups=["SOTM_PUPPY"]]
 script = ExtResource("1_edhyg")
 animParametersFileName = "Birthday Puppy"
-skinIcon = ExtResource("2_qli6u")
-skinAuthors = "Steel Wool"
+animatableIcon = ExtResource("2_qli6u")
+animatableName = "Birthday Puppy"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.4673789, 0.43780503, 1.92523e-07, 1)
 
 [node name="Birthday Puppy" parent="." unique_id=1123093394 instance=ExtResource("2_adr0u")]
 transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)

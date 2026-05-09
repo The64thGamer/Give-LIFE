@@ -10,8 +10,10 @@ size = Vector3(0.42525387, 0.27895737, 0.87068176)
 [node name="Toy Bug" type="Node3D" unique_id=233530727 groups=["FNAF4_BUG"]]
 script = ExtResource("1_t36te")
 animParametersFileName = "Toy Bug"
-skinIcon = ExtResource("2_x6rt4")
-skinAuthors = "sudo trans --pony"
+animatableIcon = ExtResource("2_x6rt4")
+animatableName = "Toy Bug"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.2736533, 0.49508882, 0, 1)
 
 [node name="Toy Bug" parent="." unique_id=1783539745 instance=ExtResource("2_t36te")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

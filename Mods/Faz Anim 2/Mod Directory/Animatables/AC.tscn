@@ -4,11 +4,23 @@
 [ext_resource type="PackedScene" uid="uid://bhx8gap67ov1r" path="res://Mods/Faz Anim 2/Custom Assets/Models/Animatronics/Vennard/AC.glb" id="2_6xdrl"]
 [ext_resource type="Texture2D" uid="uid://dwxmc71givml" path="res://Mods/Faz Anim 2/Custom Assets/UI/AC.webp" id="2_lbis5"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lbis5"]
+size = Vector3(9.150215, 6.417465, 1.70755)
+
 [node name="AC" type="Node3D" unique_id=2099849415 groups=["AA_AC"]]
 script = ExtResource("1_6xdrl")
 animParametersFileName = "AC"
-skinIcon = ExtResource("2_lbis5")
-skinAuthors = "sudo trans --pony"
+animatableIcon = ExtResource("2_lbis5")
+animatableName = "A. C."
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.5449747, 0.5449742, 0.5449738, 1)
 
 [node name="AC2" parent="." unique_id=1061858407 instance=ExtResource("2_6xdrl")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1737188828]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=559930047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1482659e-05, -1.8116153, -0.70449585)
+shape = SubResource("BoxShape3D_lbis5")

@@ -6,11 +6,17 @@
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_nfbpk"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_6yq8t"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0fssb"]
+height = 41.523468
+radius = 5.1870117
+
 [node name="FD" type="Node3D" unique_id=1621682742 groups=["AA_FD"]]
 script = ExtResource("1_nfbpk")
 animParametersFileName = "FD"
-skinIcon = ExtResource("2_xsyun")
-skinAuthors = "sudo trans --pony"
+animatableIcon = ExtResource("2_xsyun")
+animatableName = "F.D."
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.6745098, 0.3019608, 0.06666667, 1)
 
 [node name="FD Full" parent="." unique_id=2100193556 instance=ExtResource("2_0fssb")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
@@ -20,3 +26,10 @@ boneConfigFileName = "FD"
 [node name="Color Check" type="Node3D" parent="." unique_id=1873943061 groups=["AA_FD"]]
 script = ExtResource("4_6yq8t")
 check_siblings = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=879744993]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1349013019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.761734, -3.95149)
+shape = SubResource("CylinderShape3D_0fssb")

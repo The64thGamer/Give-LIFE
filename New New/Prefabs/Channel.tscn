@@ -28,11 +28,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "[]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bind Hint" type="Label" parent="Bind" unique_id=1611707882]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 9
+text = "Press
+Number
+Key Here"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1878812516]
+visible = false
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 theme_override_constants/margin_left = 5
@@ -56,14 +70,11 @@ mouse_filter = 1
 layout_mode = 2
 mouse_filter = 1
 
-[node name="title" type="LineEdit" parent="ChannelTimeline" unique_id=56768950]
+[node name="title" type="Label" parent="ChannelTimeline" unique_id=620251293]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "test"
-expand_to_text_length = true
 
 [connection signal="mouse_entered" from="Bind" to="." method="binder_entered"]
 [connection signal="mouse_exited" from="Bind" to="." method="binder_exited"]
-[connection signal="focus_exited" from="ChannelTimeline/title" to="." method="_on_title_focus_exited"]
-[connection signal="text_submitted" from="ChannelTimeline/title" to="." method="_on_title_text_submitted"]

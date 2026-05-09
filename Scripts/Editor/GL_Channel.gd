@@ -1,7 +1,8 @@
 extends Node
 class_name GL_Channel
-@onready var title : LineEdit = $ChannelTimeline/title
+@onready var title : Label = $ChannelTimeline/title
 @onready var bindLabel : Label = $"Bind/Bind Label"
+@onready var bindHint : Label = $"Bind/Bind Hint"
 @onready var channelTimeline : Control = $ChannelTimeline
 @onready var bitHolder = $ChannelTimeline/BitHolder
 
@@ -33,7 +34,7 @@ var _was_mouse_inside: bool = false
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 func _channel_data() -> Dictionary:
-	return master.currentlyLoadedFile["channels"][id]
+	return master.currentlyLoadedFile["channels"].get(id, {"type": "bool", "data": []})
 
 func _channel_type() -> String:
 	return GL_ChannelData.get_type(_channel_data())
@@ -68,16 +69,13 @@ func _input(event: InputEvent) -> void:
 				timeline.channelBinds[id] = event.keycode
 				updateBindLabel()
 			elif event.keycode == KEY_BACKSPACE:
-				timeline.channelBinds.erase(id)
-				updateBindLabel()
+				timeline.clear_group_binds()
 
 func time_to_int(t: float) -> int:
 	return int(t / timeUnits)
 
 func int_to_time(i: int) -> float:
 	return i * timeUnits
-
-# ── renderBits: dispatches by type ────────────────────────────────────────────
 
 func renderBits() -> void:
 	match _channel_type():
@@ -88,8 +86,6 @@ func renderBits() -> void:
 		GL_ChannelData.TYPE_COLOR, GL_ChannelData.TYPE_AUDIO, GL_ChannelData.TYPE_VIDEO, \
 		GL_ChannelData.TYPE_IMAGE, GL_ChannelData.TYPE_STRING:
 			_render_events()
-
-# ── Bool rendering ────────────────────────────────────────────────────────────
 
 func _render_bool() -> void:
 	_clear_float_nodes()
@@ -314,30 +310,13 @@ func _hide_preview_panel() -> void:
 func updateBindLabel() -> void:
 	var bind = timeline.channelBinds.get(id, null)
 	if bind == null:
-		bindLabel.text = "[]"
+		bindLabel.text = ""
+		bindHint.visible = true
 	else:
 		bindLabel.text = OS.get_keycode_string(bind)
-
-func _on_title_text_submitted(new_text: String) -> void:
-	var final_text = new_text
-	while true:
-		var found = false
-		for key in master.currentlyLoadedFile["channels"]:
-			if key == final_text:
-				found = true
-				break
-		if found:
-			final_text += " (copy)"
-		else:
-			break
-	master.currentlyLoadedFile["channels"][final_text] = master.currentlyLoadedFile["channels"][id]
-	master.currentlyLoadedFile["channels"].erase(id)
-	id = final_text
-	master.save()
-
-func _on_title_focus_exited() -> void:
-	title.text = id
-
+		bindHint.visible = false
+	get_tree().get_first_node_in_group("AnimatableImporter").refresh_bind_alerts()
+	
 func binder_entered() -> void:
 	changingBind = true
 

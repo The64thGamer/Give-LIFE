@@ -1,4 +1,6 @@
 extends GL_Animatable
+class_name GL_ChaseLight
+
 var light: OmniLight3D
 @export var number: int = 0  # index of this light
 @export var total: int = 1   # total number of lights in the string

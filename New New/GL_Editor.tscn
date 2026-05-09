@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://bevbh0ckbw0o4" path="res://Sounds/Tick.wav" id="8_qw38e"]
 [ext_resource type="AudioStream" uid="uid://dajwfjwf772x" path="res://Sounds/Donk.wav" id="9_e12if"]
 [ext_resource type="AudioStream" uid="uid://dt1hdqwuf4r8" path="res://Sounds/Thock.wav" id="10_d1frn"]
+[ext_resource type="Script" uid="uid://da33582mdc2f4" path="res://Scripts/Editor/GL_ImportAnimatables.gd" id="11_isteg"]
 [ext_resource type="Script" uid="uid://b4aa4vacbh1ln" path="res://Scripts/Sound UI/SoundUI.gd" id="11_muhm5"]
 [ext_resource type="AudioStream" uid="uid://cron3phbvrasi" path="res://Sounds/Tick2.wav" id="12_ca78b"]
 [ext_resource type="AudioStream" uid="uid://cnu056nqhchk1" path="res://Sounds/Thack.wav" id="13_ufq68"]
@@ -130,10 +131,44 @@ metadata/_tab_index = 0
 
 [node name="MarginContainer" type="Control" parent="Full Editor/Editor/Modifiers/Animatables" unique_id=1790830055]
 layout_mode = 2
+mouse_filter = 2
 
-[node name="GroupContainer" type="HFlowContainer" parent="Full Editor/Editor/Modifiers/Animatables/MarginContainer" unique_id=1512246324]
-layout_mode = 0
+[node name="ScrollContainer" type="ScrollContainer" parent="Full Editor/Editor/Modifiers/Animatables/MarginContainer" unique_id=1333969216]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="GroupContainer" type="HFlowContainer" parent="Full Editor/Editor/Modifiers/Animatables/MarginContainer/ScrollContainer" unique_id=1512246324 groups=["AnimatableImporter"]]
+layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("11_isteg")
+
+[node name="Media" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=634770456]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5019608)
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Full Editor/Editor/Modifiers/Media" unique_id=2066953861]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Full Editor/Editor/Modifiers/Media/VBoxContainer" unique_id=1558043606]
+layout_mode = 2
+text = "Add Media"
+script = ExtResource("11_muhm5")
+hover_sound = ExtResource("12_ca78b")
+press_sound = ExtResource("13_ufq68")
+
+[node name="MediaContainer" type="HFlowContainer" parent="Full Editor/Editor/Modifiers/Media/VBoxContainer" unique_id=351307767]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("5_mtjvt")
 
 [node name="Settings" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=2042416531]
 visible = false
@@ -143,7 +178,7 @@ theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
-metadata/_tab_index = 1
+metadata/_tab_index = 2
 
 [node name="MarginContainer" type="Control" parent="Full Editor/Editor/Modifiers/Settings" unique_id=244532628]
 layout_mode = 2
@@ -213,7 +248,7 @@ vertical_alignment = 1
 visible = false
 self_modulate = Color(1, 1, 1, 0.5019608)
 layout_mode = 2
-metadata/_tab_index = 2
+metadata/_tab_index = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Full Editor/Editor/Modifiers/Save & Quit" unique_id=145945991]
 layout_mode = 2
@@ -260,27 +295,6 @@ hover_sound = ExtResource("12_ca78b")
 hover_pitch_randomize_enabled = false
 press_sound = ExtResource("14_e12if")
 press_pitch_randomize_enabled = false
-
-[node name="Media" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=634770456]
-visible = false
-self_modulate = Color(1, 1, 1, 0.5019608)
-layout_mode = 2
-metadata/_tab_index = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Full Editor/Editor/Modifiers/Media" unique_id=2066953861]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="Full Editor/Editor/Modifiers/Media/VBoxContainer" unique_id=1558043606]
-layout_mode = 2
-text = "Add Media"
-script = ExtResource("11_muhm5")
-hover_sound = ExtResource("12_ca78b")
-press_sound = ExtResource("13_ufq68")
-
-[node name="MediaContainer" type="HFlowContainer" parent="Full Editor/Editor/Modifiers/Media/VBoxContainer" unique_id=351307767]
-layout_mode = 2
-size_flags_vertical = 3
-script = ExtResource("5_mtjvt")
 
 [node name="Viewer" type="SubViewportContainer" parent="Full Editor/Editor" unique_id=1455862654]
 layout_mode = 2
@@ -351,35 +365,6 @@ theme_override_constants/margin_bottom = 5
 [node name="TimelineBox" type="VBoxContainer" parent="Full Editor/Data Timeline/MarginContainer" unique_id=454508545]
 layout_mode = 2
 
-[node name="CreateChannel" type="OptionButton" parent="Full Editor/Data Timeline/MarginContainer/TimelineBox" unique_id=1319803717]
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 2
-size_flags_horizontal = 3
-alignment = 1
-selected = 0
-item_count = 8
-popup/item_0/text = "Create New Channel"
-popup/item_0/id = 0
-popup/item_1/text = "On / Off"
-popup/item_1/id = 1
-popup/item_2/text = "0.0 -> 0.1"
-popup/item_2/id = 2
-popup/item_3/text = "Color"
-popup/item_3/id = 3
-popup/item_4/text = "Audio"
-popup/item_4/id = 4
-popup/item_5/text = "Video"
-popup/item_5/id = 5
-popup/item_6/text = "Image"
-popup/item_6/id = 6
-popup/item_7/text = "Text"
-popup/item_7/id = 7
-script = ExtResource("11_muhm5")
-hover_sound = ExtResource("12_ca78b")
-hover_pitch_randomize_enabled = false
-press_sound = ExtResource("13_ufq68")
-press_pitch_randomize_enabled = false
-
 [node name="TimelineBar" type="ColorRect" parent="Full Editor/Data Timeline" unique_id=64446410]
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
@@ -420,6 +405,7 @@ volume_db = 10.0
 
 [connection signal="pressed" from="File Loader/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Create Showtape" to="Master" method="_create_new_show"]
 [connection signal="pressed" from="File Loader/MarginContainer/VBoxContainer/HBoxContainer/Button" to="Master" method="_import_show"]
+[connection signal="pressed" from="Full Editor/Editor/Modifiers/Media/VBoxContainer/Button" to="Full Editor/Editor/Modifiers/Media/VBoxContainer/MediaContainer" method="import_file"]
 [connection signal="text_changed" from="Full Editor/Editor/Modifiers/Settings/MarginContainer/HBoxContainer/VBoxContainer2/LineEdit" to="Master" method="setTitle"]
 [connection signal="text_changed" from="Full Editor/Editor/Modifiers/Settings/MarginContainer/HBoxContainer/VBoxContainer2/LineEdit2" to="File Loader/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Create Showtape" method="setAuthor"]
 [connection signal="pressed" from="Full Editor/Editor/Modifiers/Save & Quit/VBoxContainer/Button" to="Master" method="save"]
@@ -428,6 +414,4 @@ volume_db = 10.0
 [connection signal="button_down" from="Full Editor/Editor/Modifiers/Save & Quit/VBoxContainer/Button4" to="Full Editor/Editor/Modifiers/Save & Quit/VBoxContainer/Button4" method="_on_button_down"]
 [connection signal="button_held" from="Full Editor/Editor/Modifiers/Save & Quit/VBoxContainer/Button4" to="Master" method="_delete_show"]
 [connection signal="button_up" from="Full Editor/Editor/Modifiers/Save & Quit/VBoxContainer/Button4" to="Full Editor/Editor/Modifiers/Save & Quit/VBoxContainer/Button4" method="_on_button_up"]
-[connection signal="pressed" from="Full Editor/Editor/Modifiers/Media/VBoxContainer/Button" to="Full Editor/Editor/Modifiers/Media/VBoxContainer/MediaContainer" method="import_file"]
 [connection signal="pressed" from="Full Editor/TimeManager/HBoxContainer/Play Button" to="Full Editor/Data Timeline" method="togglePlayback"]
-[connection signal="item_selected" from="Full Editor/Data Timeline/MarginContainer/TimelineBox/CreateChannel" to="Full Editor/Data Timeline" method="create_channel"]
