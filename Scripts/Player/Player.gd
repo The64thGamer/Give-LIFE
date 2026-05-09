@@ -106,19 +106,15 @@ func _input(event):
 		if Input.is_action_just_pressed("Scroll Down (Mouse)"):
 			_process_scroll(-1)
 		if event.is_action_pressed("Interact"):
-			if interact_ray.is_colliding():
+			if interact_ray.is_colliding() && construction_mode:
 				var collider = interact_ray.get_collider()
 				if collider.has_method("interact"):
 					collider.interact()
-			elif construction_mode:
-				create_animatable()
 				
 		if Input.is_action_just_pressed("Toggle Construction"):
 			construction_mode = !construction_mode
 			_notify_animatables(construction_mode)
 
-func create_animatable():
-	pass
 
 func _notify_animatables(is_active: bool) -> void:
 	construction_toggled.emit(is_active)

@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://vo6e7e1iu4dn" path="res://UI/Backgrounds/Normal4.png" id="13_8dgrc"]
 [ext_resource type="Texture2D" uid="uid://dyiswdb1owyty" path="res://UI/Icons/trash-can-solid-full.svg" id="13_mu3iq"]
 [ext_resource type="Texture2D" uid="uid://djgeiohbwcre7" path="res://UI/Backgrounds/Normal5.png" id="14_lrdyb"]
+[ext_resource type="Texture2D" uid="uid://u0qhfjfex43e" path="res://UI/Backgrounds/BNIE 2.png" id="15_fygpv"]
 [ext_resource type="StyleBox" uid="uid://crsm0yvhb6rv1" path="res://UI/Themes/Main.tres" id="15_o2xf1"]
 [ext_resource type="StyleBox" uid="uid://8vn4doi14jgv" path="res://UI/Themes/Button.tres" id="16_xrto2"]
 [ext_resource type="FontFile" uid="uid://5wbjikluy4eo" path="res://UI/Fonts/3270-Regular.otf" id="17_l5do0"]
@@ -83,7 +84,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_6gw5s")
-images = Array[Texture2D]([ExtResource("6_obwv7"), ExtResource("7_4btaj"), ExtResource("8_ywq15"), ExtResource("9_m8e0j"), ExtResource("10_4btaj"), ExtResource("11_3txel"), ExtResource("12_lijsr"), ExtResource("13_8dgrc"), ExtResource("14_lrdyb")])
+images = Array[Texture2D]([ExtResource("6_obwv7"), ExtResource("7_4btaj"), ExtResource("8_ywq15"), ExtResource("9_m8e0j"), ExtResource("10_4btaj"), ExtResource("11_3txel"), ExtResource("12_lijsr"), ExtResource("13_8dgrc"), ExtResource("14_lrdyb"), ExtResource("15_fygpv")])
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1828179665]
 layout_mode = 1

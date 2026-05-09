@@ -44,7 +44,9 @@ func _ready():
 	_build_bbox()
 func on_construction_toggled(is_active: bool) -> void:
 	if _bbox_visual: _bbox_visual.visible = is_active
-	if _construction_area: _construction_area.visible = is_active
+	if _construction_area:
+		_construction_area.visible = is_active
+		_construction_area.input_ray_pickable = is_active
 	if not is_active and _interact_state != InteractState.NONE:
 		_close_interaction()
 
@@ -131,6 +133,7 @@ func _do_duplicate() -> void:
 	get_tree().get_first_node_in_group("AnimatableImporter").refresh()
 
 func _do_delete() -> void:
+	_close_interaction()
 	var target = get_parent() if delete_parent_instead else self
 	var tree := get_tree()
 	target.tree_exited.connect(func(): tree.get_first_node_in_group("AnimatableImporter").refresh())
@@ -251,7 +254,7 @@ func _build_construction_area(combined: AABB) -> void:
 	_construction_area.name = "_construction_area"
 	_construction_area.collision_layer = 1
 	_construction_area.collision_mask = 1
-	_construction_area.input_ray_pickable = true
+	_construction_area.input_ray_pickable = false
 	_construction_area.position = combined.get_center()
 	_construction_area.visible = false
 	var constructor_script := load("res://Scripts/Animatables/GL_Constructor.gd")

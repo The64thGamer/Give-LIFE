@@ -85,8 +85,8 @@
   },
   "AA_BOni|Hand Strum": {
 	"animation": "Hand Strum",
-	"in_speed": 8,
-	"out_speed": 8,
+	"in_speed": 5,
+	"out_speed": 5,
 	"type": "move_to",
 	"value": 0
   },

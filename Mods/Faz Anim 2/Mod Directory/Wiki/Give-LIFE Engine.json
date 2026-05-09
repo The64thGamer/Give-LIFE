@@ -14,7 +14,6 @@ Faz Anim 2
 		Maps
 		Node Settings
 		Physics Bones
-		Save Templates
 		Mod Icon.png
 		Mod Info.cfg
 		Mod Thumbnail.png
@@ -62,7 +61,7 @@ maptitle=\"F.D's Burgers - Bots - Barcade\"
 [/code]
 
 [font_size=26]/Mod Directory/Bit Charts/(whatever name).json[/font_size]
-The [code]Bit Charts[/code] folder will house optional .json files that contain dictionaries for RR-Engine bits and their equivalent channel names needed for the Give-LIFE engine. Keep in mind that Give-LIFE channel names consist of the Group, a pipe '|', and then the signal name. If you're converting spot lights, it'll likely just use LIGHT|intensity. Additionally, a Save Template of the same filename will need to be created in the mod to be paired properly.
+The [code]Bit Charts[/code] folder will house optional .json files that contain dictionaries for RR-Engine bits and their equivalent channel names needed for the Give-LIFE engine. Keep in mind that Give-LIFE channel names consist of the Group, a pipe '|', and then the signal name. If you're converting spot lights, it'll likely just use LIGHT|intensity. 
 
 Example:
 [code]{
@@ -71,9 +70,6 @@ Example:
 	\"3\": \"FA_FREDDY|Eyes Right\",
 	}
 [/code]
-
-[font_size=26]/Mod Directory/Save Templates/(whatever name).json[/font_size]
-Save Templates start you off with a pre-formatted arrangement of channels with their settings, types, colors, and metadata ordered. To create one you can use the data from any save file and modify it to what you'll need. Inside each channel ensure the 'data' value is \"\" to prevent issues. Try and remove any title, author, creation, or other save data that will be generated regardless. If you create a Bit Chart you'll need to have a Save Template with the same name for it to be paired correctly.
 
 [font_size=26]Creating Your Mod[/font_size]
 It is recommended to download the Give-LIFE project source code and build directly off of the in-project /Mods/ folder (there are two built-in mods in there already for reference), which will automatically load into the game. This lets you test immediately against actual code to ensure your mod will function.
