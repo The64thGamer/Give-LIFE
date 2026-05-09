@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://123cosa0dlrp" path="res://Scripts/Editor/GL_Master.gd" id="1_4kpso"]
 [ext_resource type="Theme" uid="uid://b3wjoiiv6sq22" path="res://UI/Themes/Theme Node.tres" id="1_j1env"]
-[ext_resource type="Script" uid="uid://cwcncmd4ee1xf" path="res://Scripts/Editor/GL_ImportSaveTemplates.gd" id="1_mtjvt"]
 [ext_resource type="Script" uid="uid://cfp3tpowbcpot" path="res://Scripts/Editor/GL_SaveLoad.gd" id="2_2bvfm"]
 [ext_resource type="Script" uid="uid://cv0ko0w0oijq4" path="res://Scripts/Editor/GL_LoadTapes.gd" id="2_7jq2w"]
 [ext_resource type="Material" uid="uid://csvd0ihwnb3ov" path="res://UI/Themes/Static Material.tres" id="2_a842l"]
@@ -66,10 +65,9 @@ alignment = 1
 layout_mode = 2
 theme_override_styles/panel = ExtResource("3_1mlnq")
 
-[node name="MenuButton2" type="MenuButton" parent="File Loader/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer" unique_id=985709907]
+[node name="Create Showtape" type="Button" parent="File Loader/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer" unique_id=571592151]
 layout_mode = 2
 text = "Create Showtape"
-script = ExtResource("1_mtjvt")
 
 [node name="Button" type="Button" parent="File Loader/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1694301157]
 layout_mode = 2
@@ -420,9 +418,10 @@ script = ExtResource("5_4tobp")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Master" unique_id=2090168520]
 volume_db = 10.0
 
+[connection signal="pressed" from="File Loader/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Create Showtape" to="Master" method="_create_new_show"]
 [connection signal="pressed" from="File Loader/MarginContainer/VBoxContainer/HBoxContainer/Button" to="Master" method="_import_show"]
 [connection signal="text_changed" from="Full Editor/Editor/Modifiers/Settings/MarginContainer/HBoxContainer/VBoxContainer2/LineEdit" to="Master" method="setTitle"]
-[connection signal="text_changed" from="Full Editor/Editor/Modifiers/Settings/MarginContainer/HBoxContainer/VBoxContainer2/LineEdit2" to="File Loader/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MenuButton2" method="setAuthor"]
+[connection signal="text_changed" from="Full Editor/Editor/Modifiers/Settings/MarginContainer/HBoxContainer/VBoxContainer2/LineEdit2" to="File Loader/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Create Showtape" method="setAuthor"]
 [connection signal="pressed" from="Full Editor/Editor/Modifiers/Save & Quit/VBoxContainer/Button" to="Master" method="save"]
 [connection signal="pressed" from="Full Editor/Editor/Modifiers/Save & Quit/VBoxContainer/Button2" to="Master" method="save_and_quit"]
 [connection signal="pressed" from="Full Editor/Editor/Modifiers/Save & Quit/VBoxContainer/Button3" to="Master" method="_export_show"]

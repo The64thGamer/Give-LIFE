@@ -93,19 +93,6 @@ func _import_show() -> void:
 	add_child(file_dialog)
 	file_dialog.popup_centered_ratio(0.6)
 
-func _create_new_show_template(template: Dictionary):
-	load_show(saveLoad.generate_savefile(defaultShowName))
-	for key in template:
-		if key == "channels":
-			for channel_name in template["channels"]:
-				var ch = template["channels"][channel_name].duplicate(true)
-				ch["data"] = []
-				currentlyLoadedFile["channels"][channel_name] = ch
-		else:
-			currentlyLoadedFile[key] = template[key]
-	save()
-	_load_settings_general()
-
 func setAuthor(changed: String):
 	if currentlyLoadedPath == "":
 		return

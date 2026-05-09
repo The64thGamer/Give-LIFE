@@ -2,15 +2,19 @@
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_s2a2j"]
 [ext_resource type="PackedScene" uid="uid://loi7yat7plrq" path="res://Mods/Faz Anim 2/Custom Assets/Models/Animatronics/B Oni/B Oni.glb" id="3_bb2qk"]
+[ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_s2a2j"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="5_beu73"]
 
 [node name="BOni" type="Node3D" unique_id=1621682742 groups=["AA_BOni"]]
 script = ExtResource("1_s2a2j")
 animParametersFileName = "BOni"
 skinAuthors = "sudo trans --pony"
+delete_parent_instead = null
 
 [node name="B Oni2" parent="." unique_id=706295883 instance=ExtResource("3_bb2qk")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+script = ExtResource("3_s2a2j")
+boneConfigFileName = "BOni"
 
 [node name="Color Check" type="Node3D" parent="." unique_id=1873943061 groups=["AA_FD"]]
 script = ExtResource("5_beu73")

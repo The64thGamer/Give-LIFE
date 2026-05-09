@@ -143,25 +143,6 @@ func _pack_folder_to_zip(source_dir: String, dest_zip: String) -> void:
 		writer.close()
 		print("Export successful: " + dest_zip)
 
-func _xshw_load_template(chart_name: String) -> Dictionary:
-	var mods_dir = DirAccess.open("res://Mods")
-	if mods_dir == null:
-		return {}
-	mods_dir.list_dir_begin()
-	var mod_folder = mods_dir.get_next()
-	while mod_folder != "":
-		if mods_dir.current_is_dir() and mod_folder != "." and mod_folder != "..":
-			var template_path = "res://Mods/" + mod_folder + "/Mod Directory/Save Templates/" + chart_name + ".json"
-			if FileAccess.file_exists(template_path):
-				var file = FileAccess.open(template_path, FileAccess.READ)
-				if file:
-					var json = JSON.new()
-					var parsed = json.parse_string(file.get_as_text())
-					file.close()
-					if typeof(parsed) == TYPE_DICTIONARY:
-						return parsed
-		mod_folder = mods_dir.get_next()
-	return {}
 
 func import_and_load_zip(zip_path: String) -> Dictionary:
 	var reader = ZIPReader.new()
@@ -308,12 +289,6 @@ func xshw_convert_file(in_path: String, chart_name: String) -> String:
 		push_error("Chart not loaded: " + chart_name)
 		return ""
 
-	# Load matching save template
-	var template_data: Dictionary = _xshw_load_template(chart_name)
-	if template_data.is_empty():
-		push_error("No save template found for chart: " + chart_name)
-		return ""
-
 	var id_to_name: Dictionary = _xshw_bit_charts[chart_name]
 	_xshw_unknown_id_cache.clear()
 	_xshw_audio_data = null
@@ -382,24 +357,35 @@ func xshw_convert_file(in_path: String, chart_name: String) -> String:
 		if channel_stamps[channel_key].size() % 2 != 0:
 			channel_stamps[channel_key].append(eof_stamp)
 
-	# Apply stamps into template channels
-	var channels: Dictionary = template_data.get("channels", {})
-	for channel_key in channels:
-		channels[channel_key]["data"] = channel_stamps.get(channel_key, [])
+	# Build channels directly from the bit chart — no template needed
+	var channels: Dictionary = {}
+	var index := 0
+	for bit_id in id_to_name:
+		var channel_key: String = id_to_name[bit_id]
+		channels[channel_key] = {
+			"type": GL_ChannelData.TYPE_BOOL,
+			"data": channel_stamps.get(channel_key, []),
+			"index": index,
+		}
+		index += 1
 
-	# Build save using template as base, override key fields
-	template_data["title"] = in_path.get_file().get_basename()
-	template_data["author"] = "Converted"
-	template_data["timeCreated"] = Time.get_datetime_string_from_system(true)
-	template_data["lastUpdated"] = Time.get_datetime_string_from_system(true)
-	template_data["saveFileVersion"] = str(saveFileVersion)
-	template_data["channels"] = channels
+	var save_data := {
+		"title": in_path.get_file().get_basename(),
+		"author": "Converted",
+		"timeCreated": Time.get_datetime_string_from_system(true),
+		"lastUpdated": Time.get_datetime_string_from_system(true),
+		"saveFileVersion": str(saveFileVersion),
+		"projectVersion": ProjectSettings.get_setting("application/config/version"),
+		"projectName": ProjectSettings.get_setting("application/config/name"),
+		"channels": channels,
+		"media": {},
+	}
 
 	var rng = RandomNumberGenerator.new()
 	rng.seed = Time.get_ticks_msec()
 	var save_root = "user://My Precious Save Files/" + str(rng.randi())
 	DirAccess.make_dir_recursive_absolute(save_root)
-	save_to_folder(template_data, save_root)
+	save_to_folder(save_data, save_root)
 
 	var af = FileAccess.open(save_root + "/audio.wav", FileAccess.WRITE)
 	if af:
