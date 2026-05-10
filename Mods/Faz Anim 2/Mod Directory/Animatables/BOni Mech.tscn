@@ -26,6 +26,10 @@ boneConfigFileName = "BOni"
 [node name="Color Check" type="Node3D" parent="." unique_id=1873943061 groups=["AA_FD"]]
 script = ExtResource("4_1fgwj")
 check_siblings = true
+animatableIcon = ExtResource("2_l0bvy")
+animatableName = "B.Oni Mech"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.3372549, 0.47843137, 0.14901961, 1)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1027489538]
 transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
