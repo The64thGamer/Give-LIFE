@@ -3,13 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c5dh0vxqdur1v" path="res://Scenes/player.tscn" id="1_sma8e"]
 [ext_resource type="ArrayOccluder3D" uid="uid://cna4pjucrmwis" path="res://Mods/True FNaF/Mod Directory/Maps/Candy's/Candys.occ" id="2_2qirg"]
 [ext_resource type="PackedScene" uid="uid://cqi3wpo3e11l6" path="res://Mods/True FNaF/Custom Assets/Models/Maps/Candys 1.glb" id="3_exfuh"]
-[ext_resource type="PackedScene" uid="uid://crrvq2y25ynjx" path="res://Mods/True FNaF/Mod Directory/Animatables/Candy Big Eyes.tscn" id="4_h8lul"]
 [ext_resource type="PackedScene" uid="uid://dbepdak5kulre" path="res://Mods/True FNaF/Mod Directory/Animatables/Cindy.tscn" id="5_a6ffr"]
-[ext_resource type="PackedScene" uid="uid://cmj2y20rq440p" path="res://Mods/True FNaF/Mod Directory/Animatables/Candy Early.tscn" id="5_qyy1t"]
-[ext_resource type="PackedScene" uid="uid://dhr5gkax28x8" path="res://Mods/True FNaF/Mod Directory/Animatables/Cindy Big Eyes.tscn" id="7_3ljp7"]
-[ext_resource type="PackedScene" uid="uid://brd4jddpwp4wa" path="res://Mods/True FNaF/Mod Directory/Animatables/Cindy Early.tscn" id="8_ul3mt"]
-[ext_resource type="PackedScene" uid="uid://dvi3n3uyd1xgo" path="res://Mods/True FNaF/Mod Directory/Animatables/Sugar Earliest.tscn" id="10_5vu36"]
-[ext_resource type="PackedScene" uid="uid://g1lomv27dgdt" path="res://Mods/True FNaF/Mod Directory/Animatables/Sugar Early.tscn" id="11_b8ht6"]
 [ext_resource type="PackedScene" uid="uid://b7w3tl5jvax8c" path="res://Mods/True FNaF/Mod Directory/Animatables/Candy.tscn" id="11_ow6uv"]
 [ext_resource type="PackedScene" uid="uid://bx8e2ygjxcwaq" path="res://Mods/True FNaF/Mod Directory/Animatables/Sugar.tscn" id="12_dtdfo"]
 
@@ -66,6 +60,15 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -0.24416068, 2.907654, 
 
 [node name="Animatables" type="Node" parent="Map" unique_id=1193136051]
 
+[node name="Candy" parent="Map/Animatables" unique_id=1551005081 instance=ExtResource("11_ow6uv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9255466, -0.03175068, -1.5111327)
+
+[node name="Cindy" parent="Map/Animatables" unique_id=233530727 instance=ExtResource("5_a6ffr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.71015203, -0.031751774, -1.5163145)
+
+[node name="Sugar2" parent="Map/Animatables" unique_id=1946561123 instance=ExtResource("12_dtdfo")]
+transform = Transform3D(0.38268343, 0, 0.9238795, 0, 1, 0, -0.9238795, 0, 0.38268343, -12.513468, -0.031752396, -5.12404)
+
 [node name="Node" type="Node" parent="Map" unique_id=651683685]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Map/Node" unique_id=1185821677]
@@ -79,30 +82,3 @@ transform = Transform3D(-0.15619394, -0.7064869, 0.69027513, -0.7354567, 0.54968
 light_color = Color(1, 0.8862745, 0.7607843, 1)
 spot_range = 2.77
 spot_angle = 70.34
-
-[node name="Candy Big Eyes" parent="." unique_id=233530727 instance=ExtResource("4_h8lul")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.414721, -0.03175068, -1.0548978)
-
-[node name="Candy Long Fangs" parent="." unique_id=1569140448 instance=ExtResource("5_qyy1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0601268, -0.03175068, -1.0295069)
-
-[node name="Candy" parent="." unique_id=1551005081 instance=ExtResource("11_ow6uv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.711778, -0.03175068, -1.0042691)
-
-[node name="Cindy Big Eyes" parent="." unique_id=241444435 instance=ExtResource("7_3ljp7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5800063, -0.03175068, -1.0191212)
-
-[node name="Cindy" parent="." unique_id=1118438427 instance=ExtResource("8_ul3mt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9022546, -0.03175044, -1.0097816)
-
-[node name="Cindy2" parent="." unique_id=198111515 instance=ExtResource("5_a6ffr")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.0216837, -0.031750917, -0.14787257)
-
-[node name="Sugar Earliest" parent="." unique_id=127622461 instance=ExtResource("10_5vu36")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.0405278, -0.03175068, 1.3413835)
-
-[node name="Sugar Early" parent="." unique_id=1191121190 instance=ExtResource("11_b8ht6")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.1660604, -0.03175068, 2.5307674)
-
-[node name="Sugar" parent="." unique_id=601709568 instance=ExtResource("12_dtdfo")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.1639179, -0.03175068, 2.6267462)

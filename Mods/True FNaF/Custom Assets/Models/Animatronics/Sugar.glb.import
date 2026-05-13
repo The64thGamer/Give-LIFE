@@ -46,13 +46,13 @@ _subresources={
 },
 "Eye": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/Eye.tres",
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/pupil.tres",
 "use_external/path": "uid://c3p7ec55alpqu"
 },
 "Purple": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/purple.tres",
-"use_external/path": "uid://dril7q2ppmax4"
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/gray.tres",
+"use_external/path": "uid://cew6meqlvsksg"
 },
 "Teeth": {
 "use_external/enabled": true,
