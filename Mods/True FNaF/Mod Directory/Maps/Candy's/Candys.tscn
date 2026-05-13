@@ -30,7 +30,6 @@ adjustment_saturation = 1.3
 
 [node name="Player" parent="." unique_id=912065313 instance=ExtResource("1_sma8e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.449, 0)
-visible = false
 flashlightType = 1
 
 [node name="Map" type="Node" parent="." unique_id=150341188]
