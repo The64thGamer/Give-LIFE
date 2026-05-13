@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://x73ql8xx7a3r"
-path="res://.godot/imported/Candy Long Fangs.glb-45ea5ccad2e4a1be60ec984cb1cbc33c.scn"
+uid="uid://dgu5moalpxxsr"
+path="res://.godot/imported/Sugar.glb-6698ab05c074a43348b283243081f7d2.scn"
 
 [deps]
 
-source_file="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Candy Long Fangs.glb"
-dest_files=["res://.godot/imported/Candy Long Fangs.glb-45ea5ccad2e4a1be60ec984cb1cbc33c.scn"]
+source_file="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Sugar.glb"
+dest_files=["res://.godot/imported/Sugar.glb-6698ab05c074a43348b283243081f7d2.scn"]
 
 [params]
 
@@ -54,11 +54,6 @@ _subresources={
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/purple.tres",
 "use_external/path": "uid://dril7q2ppmax4"
 },
-"Red": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/red shine.tres",
-"use_external/path": "uid://bwt5gfohy8bk8"
-},
 "Teeth": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/white shine.tres",
@@ -74,16 +69,6 @@ _subresources={
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/blue shine.tres",
 "use_external/path": "uid://dgq3707ljxt7e"
 },
-"bun": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/bun.tres",
-"use_external/path": "uid://cyjqjmfbci4fm"
-},
-"cheese": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/cheese.tres",
-"use_external/path": "uid://deq4le3a8xdcb"
-},
 "eye": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/white shine.tres",
@@ -93,21 +78,6 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/gray.tres",
 "use_external/path": "uid://cew6meqlvsksg"
-},
-"lettuce": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/lettuce.tres",
-"use_external/path": "uid://bo01o2hm4oseg"
-},
-"patty": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/patty.tres",
-"use_external/path": "uid://dcw1l5mu3ng4x"
-},
-"seed": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/seed.tres",
-"use_external/path": "uid://cl34td17lloui"
 },
 "white": {
 "use_external/enabled": true,

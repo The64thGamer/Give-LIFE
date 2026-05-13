@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cial6t8o47b73"]
+
+[ext_resource type="Shader" uid="uid://ckoei3xklifg" path="res://Mods/True FNaF/Custom Assets/Materials/FNaF4/TrueFNaFSpec.gdshader" id="1_3y8rl"]
+[ext_resource type="Texture2D" uid="uid://5sdhdnsiwflu" path="res://Mods/Faz Anim 1/Custom Assets/Models/Props/Wooden Freddy Head_Image.png" id="2_hwl8m"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_3y8rl")
+shader_parameter/albedo = Color(0.36209998, 0.5070583, 0.71, 1)
+shader_parameter/normal_strength = 1.0
+shader_parameter/roughness_min = 0.2999999932944
+shader_parameter/roughness_max = 0.00999999977648
+shader_parameter/metallic = 0.0
+shader_parameter/metallic_uv2_scale = Vector2(1, 1)
+shader_parameter/specular_strength = 0.1999999955296
+shader_parameter/texture_specular = ExtResource("2_hwl8m")
+shader_parameter/specular_uv2_scale = Vector2(10, 10)
+shader_parameter/specular_tint_color = Color(1, 1, 1, 1)
+shader_parameter/emission_strength = 0.0

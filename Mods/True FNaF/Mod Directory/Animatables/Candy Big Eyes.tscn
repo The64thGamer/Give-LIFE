@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://crrvq2y25ynjx"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_awlme"]
+[ext_resource type="PackedScene" uid="uid://br6npw56qok12" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Candy Big Eyes.glb" id="2_awlme"]
+[ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_escku"]
+[ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_kxihl"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ih3pj"]
+height = 41.394672
+radius = 4.517578
+
+[node name="Candy Big Eyes" type="Node3D" unique_id=233530727 groups=["FNAC_CANDY"]]
+script = ExtResource("1_awlme")
+animParametersFileName = "Candy"
+animatableName = "Candy Big Eyes"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.34079635, 0.38063368, 0.72797734, 1)
+
+[node name="Candy Big Eyes2" parent="." unique_id=1279779530 instance=ExtResource("2_awlme")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+script = ExtResource("3_escku")
+boneConfigFileName = "Candy"
+
+[node name="Color Check" type="Node3D" parent="." unique_id=268845291 groups=["FNAC_CANDY"]]
+script = ExtResource("4_kxihl")
+check_siblings = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=184460475]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1893282418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.142292, 0)
+shape = SubResource("CylinderShape3D_ih3pj")

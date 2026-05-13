@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bx8e2ygjxcwaq"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_tr447"]
+[ext_resource type="PackedScene" uid="uid://dgu5moalpxxsr" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Sugar.glb" id="2_tr447"]
+[ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_0bq8f"]
+[ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_q7gnm"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ih3pj"]
+height = 41.394672
+radius = 4.517578
+
+[node name="Sugar" type="Node3D" unique_id=233530727 groups=["FNAC_CANDY"]]
+script = ExtResource("1_tr447")
+animParametersFileName = "Candy"
+animatableName = "Sugar"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.34079635, 0.38063368, 0.72797734, 1)
+
+[node name="Sugar2" parent="." unique_id=1796881039 instance=ExtResource("2_tr447")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+script = ExtResource("3_0bq8f")
+boneConfigFileName = "Candy"
+
+[node name="Color Check" type="Node3D" parent="." unique_id=268845291 groups=["FNAC_CANDY"]]
+script = ExtResource("4_q7gnm")
+check_siblings = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=184460475]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1893282418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.142292, 0)
+shape = SubResource("CylinderShape3D_ih3pj")
