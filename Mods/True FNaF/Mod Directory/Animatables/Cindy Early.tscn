@@ -11,7 +11,7 @@ radius = 4.517578
 
 [node name="Cindy" type="Node3D" unique_id=233530727 groups=["FNAC_CINDY"]]
 script = ExtResource("1_js1ha")
-animParametersFileName = "Candy"
+animParametersFileName = "Cindy"
 animatableName = "Cindy Early"
 animatableAuthors = "sudo trans --pony"
 animatableColor = Color(0.55198765, 0.25180084, 0.7354601, 1)
