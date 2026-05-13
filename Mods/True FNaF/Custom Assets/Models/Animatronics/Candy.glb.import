@@ -1,0 +1,136 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://btcvipdot5eof"
+path="res://.godot/imported/Candy.glb-066f1252483c28d14c9cf63eabf7c73b.scn"
+
+[deps]
+
+source_file="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Candy.glb"
+dest_files=["res://.godot/imported/Candy.glb-066f1252483c28d14c9cf63eabf7c73b.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Dark Red": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/dark red.tres",
+"use_external/path": "uid://cuv22ey53frp0"
+},
+"Eye": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/Eye.tres",
+"use_external/path": "uid://c3p7ec55alpqu"
+},
+"Glow": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/Glow.tres",
+"use_external/path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/Glow.tres"
+},
+"Purple": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/purple.tres",
+"use_external/path": "uid://dril7q2ppmax4"
+},
+"Red": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/red.tres",
+"use_external/path": "uid://bc65q2kqtp7wx"
+},
+"Teeth": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/teeth.tres",
+"use_external/path": "uid://cxu2wdhqh1eau"
+},
+"black": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/black.tres",
+"use_external/path": "uid://cp16ardvdtn5p"
+},
+"blue": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/blue.tres",
+"use_external/path": "uid://bpgqj4dgyppn8"
+},
+"bun": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/bun.tres",
+"use_external/path": "uid://cyjqjmfbci4fm"
+},
+"cheese": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/cheese.tres",
+"use_external/path": "uid://deq4le3a8xdcb"
+},
+"eye": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/eye.tres",
+"use_external/path": "uid://brl24lkhdx20b"
+},
+"gray": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/gray.tres",
+"use_external/path": "uid://cew6meqlvsksg"
+},
+"lettuce": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/lettuce.tres",
+"use_external/path": "uid://bo01o2hm4oseg"
+},
+"patty": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/patty.tres",
+"use_external/path": "uid://dcw1l5mu3ng4x"
+},
+"seed": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/seed.tres",
+"use_external/path": "uid://cl34td17lloui"
+},
+"white": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/white.tres",
+"use_external/path": "uid://do4sfitp8temj"
+}
+},
+"meshes": {
+"Candy_Plane_004": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=0

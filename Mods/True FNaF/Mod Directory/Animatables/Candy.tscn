@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b7w3tl5jvax8c"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_iv3m3"]
+[ext_resource type="PackedScene" uid="uid://btcvipdot5eof" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Candy.glb" id="2_0hlhd"]
+[ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="3_1sode"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ih3pj"]
+height = 41.394672
+radius = 4.517578
+
+[node name="Candy" type="Node3D" unique_id=233530727 groups=["FNAC_CANDY"]]
+script = ExtResource("1_iv3m3")
+animParametersFileName = "Freddy"
+animatableName = "Freddy"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.59, 0.354, 0.23599997, 1)
+
+[node name="Candy2" parent="." unique_id=373924293 instance=ExtResource("2_0hlhd")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[node name="Color Check" type="Node3D" parent="." unique_id=268845291 groups=["FNAC_CANDY"]]
+script = ExtResource("3_1sode")
+check_siblings = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=184460475]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1893282418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.142292, 0)
+shape = SubResource("CylinderShape3D_ih3pj")

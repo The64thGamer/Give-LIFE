@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c5bvh70m41eiu"]
+
+[ext_resource type="Texture2D" uid="uid://y0ty050v3eap" path="res://Mods/True FNaF/Custom Assets/Textures/Candys/Walls_Light.webp" id="1_3jpa5"]
+
+[resource]
+albedo_texture = ExtResource("1_3jpa5")

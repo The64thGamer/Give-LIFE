@@ -1,0 +1,65 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cqi3wpo3e11l6"
+path="res://.godot/imported/Candys 1.glb-8ed39d48c9536f369f6e3c0b55a52736.scn"
+
+[deps]
+
+source_file="res://Mods/True FNaF/Custom Assets/Models/Maps/Candys 1.glb"
+dest_files=["res://.godot/imported/Candys 1.glb-8ed39d48c9536f369f6e3c0b55a52736.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=2
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Desk": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/desk.tres",
+"use_external/path": "uid://d101o6qtytlbl"
+},
+"Tile": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/tiles.tres",
+"use_external/path": "uid://dv3nhkh18ej30"
+},
+"TomCandy": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/tom.tres",
+"use_external/path": "uid://dffpesqwvuk4"
+},
+"Walls": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/Wall.tres",
+"use_external/path": "uid://c5bvh70m41eiu"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=0
