@@ -24,7 +24,18 @@
 [ext_resource type="AudioStream" uid="uid://cnu056nqhchk1" path="res://Sounds/Thack.wav" id="13_ufq68"]
 [ext_resource type="AudioStream" uid="uid://d32r2h55ktsse" path="res://Mods/Faz Anim 2/Custom Assets/Sounds/Trashed.wav" id="14_e12if"]
 [ext_resource type="Texture2D" uid="uid://g3x10ge11yel" path="res://UI/Icons/file-pen-solid-full.svg" id="19_pbeab"]
+[ext_resource type="Script" uid="uid://bi68na8v07s55" path="res://Scripts/Editor/GL_ChannelConfig.gd" id="19_w7ro2"]
 [ext_resource type="Script" uid="uid://p57psuh23hii" path="res://Scripts/Player/PlayerCamera.gd" id="20_isteg"]
+[ext_resource type="Texture2D" uid="uid://bnie4ltau04j1" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_A.png" id="21_crika"]
+[ext_resource type="Texture2D" uid="uid://b13cl8321tif4" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_B.png" id="22_et1pk"]
+[ext_resource type="Texture2D" uid="uid://bbcglbokkvgxm" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_X.png" id="23_32mol"]
+[ext_resource type="Texture2D" uid="uid://m5b2k8hmww71" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_Y.png" id="24_aow6y"]
+[ext_resource type="Texture2D" uid="uid://ple5pu003bbc" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_LB.png" id="25_hgnfx"]
+[ext_resource type="Texture2D" uid="uid://cft6ykowhp2er" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_RB.png" id="26_u67nk"]
+[ext_resource type="Texture2D" uid="uid://dsyte5oddaokd" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_Dpad_Up.png" id="27_ivrqh"]
+[ext_resource type="Texture2D" uid="uid://cn25bnftyyr0m" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_Dpad_Down.png" id="28_kfaed"]
+[ext_resource type="Texture2D" uid="uid://btn3akwt3i5vh" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_Dpad_Left.png" id="29_h7jru"]
+[ext_resource type="Texture2D" uid="uid://bhqiuef0vfo50" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_Dpad_Right.png" id="30_svn66"]
 
 [node name="GlEditor" type="Control" unique_id=270496900]
 texture_filter = 1
@@ -114,7 +125,7 @@ size_flags_vertical = 3
 [node name="Modifiers" type="TabContainer" parent="Full Editor/Editor" unique_id=120351013]
 layout_mode = 2
 size_flags_horizontal = 3
-current_tab = 0
+current_tab = 4
 script = ExtResource("11_muhm5")
 hover_sound = ExtResource("8_qw38e")
 press_sound = ExtResource("9_e12if")
@@ -122,6 +133,7 @@ press_pitch_multiplier_on = 2.0
 press_pitch_multiplier_off = 2.0
 
 [node name="Animatables" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=1407192095]
+visible = false
 self_modulate = Color(1, 1, 1, 0.5019608)
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -298,24 +310,45 @@ press_sound = ExtResource("14_e12if")
 press_pitch_randomize_enabled = false
 
 [node name="Edit Channel" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=1616820540]
-visible = false
 self_modulate = Color(1, 1, 1, 0.5019608)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
+script = ExtResource("19_w7ro2")
 metadata/_tab_index = 4
 
 [node name="MarginContainer" type="Control" parent="Full Editor/Editor/Modifiers/Edit Channel" unique_id=1537202341]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="Full Editor/Editor/Modifiers/Edit Channel/MarginContainer" unique_id=772028224]
+[node name="Hint" type="Control" parent="Full Editor/Editor/Modifiers/Edit Channel/MarginContainer" unique_id=1749255225]
+visible = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="hint text" type="Label" parent="Full Editor/Editor/Modifiers/Edit Channel/MarginContainer/Hint" unique_id=772028224]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -265.0
+offset_top = -44.5
+offset_right = 265.0
+offset_bottom = 44.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Select this icon on a channel to edit properties:
@@ -325,7 +358,7 @@ text = "Select this icon on a channel to edit properties:
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/MarginContainer" unique_id=469896206]
+[node name="hint rect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/MarginContainer/Hint" unique_id=469896206]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -340,6 +373,246 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("19_pbeab")
 expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Full Editor/Editor/Modifiers/Edit Channel" unique_id=1868753093]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer" unique_id=64630472]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2" unique_id=1224650312]
+layout_mode = 2
+text = "Key Binds"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2" unique_id=1079781083]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer" unique_id=1506120021]
+layout_mode = 2
+
+[node name="HFlowContainer" type="HFlowContainer" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer" unique_id=1666469765]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1652803267]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "1"
+
+[node name="Button3" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=629616652]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "2"
+
+[node name="Button4" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=262112099]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "3"
+
+[node name="Button5" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1513592576]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "4"
+
+[node name="Button6" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1295794470]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "5"
+
+[node name="Button7" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1184946273]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "6"
+
+[node name="Button8" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1195981031]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "7"
+
+[node name="Button9" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1301447159]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "8"
+
+[node name="Button10" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1694853273]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "9"
+
+[node name="Button11" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1142735561]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "0"
+
+[node name="Button2" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=674016236]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button2" unique_id=441959559]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_crika")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button12" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1254625739]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button12" unique_id=2054722866]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_et1pk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button13" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=525444524]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button13" unique_id=67355220]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_32mol")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button14" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=465295582]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button14" unique_id=1565657802]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("24_aow6y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button15" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=554477074]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button15" unique_id=1929644385]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("25_hgnfx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button16" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=530699538]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button16" unique_id=9687827]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("26_u67nk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button17" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=14443641]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button17" unique_id=1225991618]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("27_ivrqh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button18" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1281731751]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button18" unique_id=1243313476]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_kfaed")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button19" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=951382365]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button19" unique_id=1099457696]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("29_h7jru")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button20" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1665676129]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button20" unique_id=507914423]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_svn66")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer" unique_id=1966826757]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer" unique_id=231056897]
+layout_mode = 2
+text = "Channel ???"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer" unique_id=1715243797]
+layout_mode = 2
+text = "Erase Channel Data"
+
+[node name="Button2" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer" unique_id=160990501]
+layout_mode = 2
+text = "Erase + Convert to Float (0.0 -> 1.0)"
 
 [node name="Viewer" type="SubViewportContainer" parent="Full Editor/Editor" unique_id=1455862654]
 layout_mode = 2
@@ -433,7 +706,7 @@ text = "00:00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Master" type="Node" parent="." unique_id=1303165483]
+[node name="Master" type="Node" parent="." unique_id=1303165483 groups=["GL_Master"]]
 script = ExtResource("1_4kpso")
 
 [node name="SaveLoad" type="Node" parent="Master" unique_id=1672595791]

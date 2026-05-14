@@ -30,8 +30,8 @@ var _timeline_dirty: bool = false
 var _last_start_text: String = ""
 var _last_end_text: String = ""
 var _scrub_handled_this_frame: bool = false
-var channelControllerBinds: Dictionary = {}  # channel_id -> { "type", "input", "component" }
-var controller_poll_rate: float = 1.0 / 30.0  # seconds between axis samples during recording
+var channelControllerBinds: Dictionary = {}  
+var controller_poll_rate: float = 1.0 / 30.0 
 var _controller_poll_accum: float = 0.0
 
 const CONTROLLER_BUTTONS = [
@@ -57,7 +57,6 @@ const AXIS_COMPONENTS = {
 	JOY_AXIS_TRIGGER_LEFT:  ["value"],
 	JOY_AXIS_TRIGGER_RIGHT: ["value"],
 }
-
 
 func _mark_dirty() -> void:
 	_timeline_dirty = true
@@ -95,6 +94,7 @@ func setTimeFromTimeline(local_mouse_x: float, width: float) -> void:
 	_scrub_handled_this_frame = true
 
 func _process(delta: float) -> void:
+	_poll_controller_binds(delta)
 	_scrub_handled_this_frame = false
 	if playing:
 		setCurrentTime(delta)
@@ -137,9 +137,6 @@ func _physics_process(delta: float) -> void:
 	if _timeline_dirty:
 		_timeline_dirty = false
 		repaintTimeline()
-		
-	if playing:
-		_poll_controller_binds(delta)
 		
 func setCurrentTime(delta: float) -> void:
 	timeCurrent += delta

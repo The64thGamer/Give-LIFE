@@ -125,7 +125,7 @@ transform = Transform3D(-0.6089553, 0, 0.79320455, 0, 1, 0, -0.79320455, 0, -0.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66971225, 1.8965249, -10.723003)
 
 [node name="Mrs Helpful" parent="Map/Animatables" unique_id=1246275726 instance=ExtResource("11_7ks7s")]
-transform = Transform3D(0.8161376, 0.53192073, 0.22578692, 0, 0.39073107, -0.92050487, -0.5778576, 0.7512587, 0.31889033, -7.873198, 3.5225246, -10.425881)
+transform = Transform3D(0.8188479, 0.54579943, 0.17773888, 0.033617962, 0.26351207, -0.96407026, -0.5730252, 0.79540217, 0.19742763, -7.873198, 3.5225246, -10.46052)
 
 [node name="Ringmaster Base" parent="Map/Animatables" unique_id=810956668 instance=ExtResource("6_6f5je")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66971225, 1.8965249, -10.723003)
