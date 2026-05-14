@@ -12,7 +12,6 @@ Faz Anim 2
 		Animatables
 		Bit Charts
 		Maps
-		Node Settings
 		Physics Bones
 		Mod Icon.png
 		Mod Info.cfg
@@ -34,18 +33,16 @@ Faz Anim 2
 [font_size=22]/Mod Directory/[/font_size]
 This can contain a few different folders depending on what you want added to your mod:
 
-[code]/Animatables/[/code] - This is where any .tscn that contains an object that can remotely receive signals (like animatronics, spotlight props, TVs, speakers, etc.) should go if you intend on them being accessible and spawn-able by the player (this implementation hasn't happened yet but will)
+[code]/Animatables/[/code] - This is where any .tscn that contains an object that can remotely receive signals (like animatronics, spotlight props, TVs, speakers, etc.) should go if you intend on them being accessible and spawn-able by the player.
 
 [code]/Maps/[/code] - This folder will contain your loadable maps with additional data required (details below).
-
-[code]/Node Settings/[/code] - This folder will contain links between your Animatables and any node in the game or in a mod. These let you hook up say the 'Advanced Spotlight' node to have 'My Spotlight' as a selectable option, or similar with animatronics and their movements. (details below).
 
 [font_size=26]Mod Info.cfg[/font_size]
 This contains info that will be displayed in the mod list. You can just open this in a text editor and write your variation of the following example/
 
 [code][mods]
 modtitle=\"Faz Anim 2\"
-modauthor=\"The 64th Gamer\"
+modauthor=\"sudo trans --pony\"
 moddescription=\"The game, Faz Anim 2!
 [/code]
 

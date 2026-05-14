@@ -53,7 +53,7 @@ shape = SubResource("WorldBoundaryShape3D_stiks")
 
 [node name="Map Mesh & Collision" type="Node" parent="Map" unique_id=807558692]
 
-[node name="Candys 1" parent="Map/Map Mesh & Collision" unique_id=1107018618 instance=ExtResource("3_exfuh")]
+[node name="Candys 1" parent="Map/Map Mesh & Collision" unique_id=1679975357 instance=ExtResource("3_exfuh")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -0.24416068, 2.907654, 0.72043633)
 
 [node name="Map Props" type="Node" parent="Map" unique_id=890356910]
@@ -75,10 +75,12 @@ transform = Transform3D(0.38268343, 0, 0.9238795, 0, 1, 0, -0.9238795, 0, 0.3826
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8075821, 0)
 light_color = Color(0.92999995, 0.9, 1, 1)
 light_energy = 0.549
+shadow_enabled = true
 omni_range = 5.7912884
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Map/Node" unique_id=262432002]
 transform = Transform3D(-0.15619394, -0.7064869, 0.69027513, -0.7354567, 0.54968154, 0.39617375, -0.6593231, -0.4457875, -0.6054475, 1.3139824, 2.6181247, -2.503259)
 light_color = Color(1, 0.8862745, 0.7607843, 1)
+shadow_enabled = true
 spot_range = 2.77
 spot_angle = 70.34

@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://t1ud2t3qajg8"]
+
+[ext_resource type="PackedScene" uid="uid://c5dh0vxqdur1v" path="res://Scenes/player.tscn" id="1_7jcr6"]
+[ext_resource type="PackedScene" uid="uid://bmhcm3nggtnr6" path="res://Mods/Faz Anim 1/Mod Directory/Animatables/Freddy.tscn" id="2_dffdm"]
+[ext_resource type="PackedScene" uid="uid://cdcyekvvr0d5h" path="res://Mods/True FNaF/Mod Directory/Animatables/Juggling Duck.tscn" id="3_p75t4"]
+
+[sub_resource type="Environment" id="Environment_72bhr"]
+background_mode = 1
+background_color = Color(0.1721791, 0.8848981, 0, 1)
+background_canvas_max_layer = 1
+sky_rotation = Vector3(0, -1.07338, 0)
+ambient_light_source = 1
+reflected_light_source = 1
+tonemap_mode = 4
+tonemap_agx_contrast = 1.0
+ssr_enabled = true
+ssil_enabled = true
+glow_enabled = true
+fog_mode = 1
+fog_light_color = Color(1, 1, 1, 1)
+fog_density = 1.0
+fog_sky_affect = 0.0
+volumetric_fog_density = 0.01
+volumetric_fog_detail_spread = 1.0
+volumetric_fog_sky_affect = 0.0
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 1.3
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_stiks"]
+
+[node name="Green Screen" type="Node3D" unique_id=2086066372]
+
+[node name="Player" parent="." unique_id=912065313 instance=ExtResource("1_7jcr6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.449, 0)
+flashlightType = 1
+
+[node name="Map" type="Node" parent="." unique_id=150341188]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Map" unique_id=184637484]
+environment = SubResource("Environment_72bhr")
+
+[node name="World Boundary" type="StaticBody3D" parent="Map" unique_id=1654655482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.032405853, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/World Boundary" unique_id=1755227430]
+shape = SubResource("WorldBoundaryShape3D_stiks")
+
+[node name="Animatables" type="Node" parent="Map" unique_id=1193136051]
+
+[node name="Freddy" parent="." unique_id=233530727 instance=ExtResource("2_dffdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03341019, 0.027383875, -6.107952)
+
+[node name="Juggling Duck" parent="." unique_id=1762599374 instance=ExtResource("3_p75t4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4740233, -0.028486755, -6.6138377)

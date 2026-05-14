@@ -44,6 +44,16 @@ _subresources={
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/desk.tres",
 "use_external/path": "uid://d101o6qtytlbl"
 },
+"Office Calendar": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/Calendar.tres",
+"use_external/path": "uid://bbhdntk8mka78"
+},
+"Office Poster": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/Poster Office.tres",
+"use_external/path": "uid://i6vrqxafpg4m"
+},
 "Tile": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/tiles.tres",

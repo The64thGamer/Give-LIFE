@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bbhdntk8mka78"]
+
+[ext_resource type="Texture2D" uid="uid://wfxy6ywns6m5" path="res://Mods/True FNaF/Custom Assets/Textures/Candys/officecalendar.png" id="1_6qo8g"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_6qo8g")
+texture_filter = 5

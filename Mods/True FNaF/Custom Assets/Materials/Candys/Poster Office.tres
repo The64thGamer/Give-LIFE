@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://i6vrqxafpg4m"]
+
+[ext_resource type="Texture2D" uid="uid://clo6snd0xia32" path="res://Mods/True FNaF/Custom Assets/Textures/Candys/officeposter.png" id="1_521su"]
+
+[resource]
+albedo_texture = ExtResource("1_521su")
+texture_filter = 5
