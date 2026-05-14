@@ -31,19 +31,15 @@ grow_vertical = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Bind Hint" type="Label" parent="Bind" unique_id=1611707882]
+[node name="Bind Hint" type="TextureRect" parent="Bind" unique_id=687599533]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 9
-text = "Press
-Number
-Key Here"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture = ExtResource("3_qsxjb")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1878812516]
 visible = false

@@ -28,14 +28,15 @@ var _group_node_cache: Dictionary = {}
 
 func refresh_animatables() -> void:
 	_group_node_cache.clear()
-	var animatables = get_tree().get_nodes_in_group("Animatable")
-	for node in animatables:
-		for group in node.get_groups():
-			if group == "Animatable":
-				continue
-			if not _group_node_cache.has(group):
-				_group_node_cache[group] = []
-			_group_node_cache[group].append(node)
+	if is_instance_valid(get_tree()):
+		var animatables = get_tree().get_nodes_in_group("Animatable")
+		for node in animatables:
+			for group in node.get_groups():
+				if group == "Animatable":
+					continue
+				if not _group_node_cache.has(group):
+					_group_node_cache[group] = []
+				_group_node_cache[group].append(node)
 
 func _get_group_nodes(group: String) -> Array:
 	return _group_node_cache.get(group, [])

@@ -26,15 +26,38 @@ const zoomMax = 60
 const panAmount = 0.1
 const MAX_VISIBLE_CHANNELS = 10
 
-# ── Dirty flag ────────────────────────────────────────────────────────────────
 var _timeline_dirty: bool = false
-
-# ── Label update guards ───────────────────────────────────────────────────────
-# Cache the last string written to each label so we skip setText when unchanged.
 var _last_start_text: String = ""
 var _last_end_text: String = ""
-
 var _scrub_handled_this_frame: bool = false
+var channelControllerBinds: Dictionary = {}  # channel_id -> { "type", "input", "component" }
+var controller_poll_rate: float = 1.0 / 30.0  # seconds between axis samples during recording
+var _controller_poll_accum: float = 0.0
+
+const CONTROLLER_BUTTONS = [
+	JOY_BUTTON_A, JOY_BUTTON_B, JOY_BUTTON_X, JOY_BUTTON_Y,
+	JOY_BUTTON_LEFT_SHOULDER, JOY_BUTTON_RIGHT_SHOULDER,
+	JOY_BUTTON_LEFT_STICK, JOY_BUTTON_RIGHT_STICK,
+	JOY_BUTTON_BACK, JOY_BUTTON_START,
+	JOY_BUTTON_DPAD_UP, JOY_BUTTON_DPAD_DOWN,
+	JOY_BUTTON_DPAD_LEFT, JOY_BUTTON_DPAD_RIGHT
+]
+
+const CONTROLLER_AXES = [
+	JOY_AXIS_LEFT_X, JOY_AXIS_LEFT_Y,
+	JOY_AXIS_RIGHT_X, JOY_AXIS_RIGHT_Y,
+	JOY_AXIS_TRIGGER_LEFT, JOY_AXIS_TRIGGER_RIGHT
+]
+
+const AXIS_COMPONENTS = {
+	JOY_AXIS_LEFT_X:        ["positive", "negative", "magnitude"],
+	JOY_AXIS_LEFT_Y:        ["positive", "negative", "magnitude"],
+	JOY_AXIS_RIGHT_X:       ["positive", "negative", "magnitude"],
+	JOY_AXIS_RIGHT_Y:       ["positive", "negative", "magnitude"],
+	JOY_AXIS_TRIGGER_LEFT:  ["value"],
+	JOY_AXIS_TRIGGER_RIGHT: ["value"],
+}
+
 
 func _mark_dirty() -> void:
 	_timeline_dirty = true
@@ -114,6 +137,10 @@ func _physics_process(delta: float) -> void:
 	if _timeline_dirty:
 		_timeline_dirty = false
 		repaintTimeline()
+		
+	if playing:
+		_poll_controller_binds(delta)
+		
 func setCurrentTime(delta: float) -> void:
 	timeCurrent += delta
 	
@@ -148,12 +175,33 @@ func _input(event: InputEvent) -> void:
 					scroll(true)
 	if event.is_action_pressed("Toggle Play"):
 		togglePlayback()
+		
+	if event is InputEventJoypadButton:
+		for channel_id in channelControllerBinds:
+			var bind = channelControllerBinds[channel_id]
+			if bind["type"] != "button":
+				continue
+			if event.button_index != bind["input"]:
+				continue
+			var type = _resolve_channel_type(channel_id)
+			master.ensure_channel_exists(channel_id)
+			if event.pressed:
+				match type:
+					GL_ChannelData.TYPE_BOOL:
+						startEdit(channel_id, timeCurrent, true)
+					GL_ChannelData.TYPE_FLOAT:
+						startEdit(channel_id, timeCurrent, true)
+					GL_ChannelData.TYPE_COLOR, GL_ChannelData.TYPE_AUDIO, GL_ChannelData.TYPE_VIDEO, \
+					GL_ChannelData.TYPE_IMAGE, GL_ChannelData.TYPE_STRING:
+						_commit_event(channel_id, type)
+			else:
+				match type:
+					GL_ChannelData.TYPE_BOOL:
+						_commit_edit(channel_id)
+					GL_ChannelData.TYPE_FLOAT:
+						_commit_float(channel_id)
 
 	if event is InputEventKey:
-		# Build a unified set of channel IDs to check for keybinds.
-		# Priority: all channels in scene_groups (covers visible + off-screen
-		# scene channels), plus any extra channels only in the save file
-		# (legacy shows without scene objects).
 		var all_channel_ids: Array = []
 		for group in master.scene_groups:
 			for channel_id in master.scene_groups[group]:
@@ -169,7 +217,6 @@ func _input(event: InputEvent) -> void:
 			if event.keycode != bind:
 				continue
 
-			# Resolve type: scene_groups is authoritative, save file is fallback.
 			var type: String = GL_ChannelData.TYPE_BOOL
 			var pipe = channel_id.find("|")
 			var group = channel_id.left(pipe) if pipe != -1 else ""
@@ -180,7 +227,6 @@ func _input(event: InputEvent) -> void:
 				type = GL_ChannelData.get_type(master.currentlyLoadedFile["channels"][channel_id])
 
 			if event.pressed and not event.echo:
-				# Create the save file entry now if it doesn't exist yet.
 				master.ensure_channel_exists(channel_id)
 				match type:
 					GL_ChannelData.TYPE_BOOL:
@@ -198,7 +244,15 @@ func _input(event: InputEvent) -> void:
 					GL_ChannelData.TYPE_FLOAT:
 						_commit_float(channel_id)
 
-# ── Bool commit ───────────────────────────────────────────────────────────────
+func _resolve_channel_type(channel_id: String) -> String:
+	var pipe = channel_id.find("|")
+	var group = channel_id.left(pipe) if pipe != -1 else ""
+	var sg_entry = master.scene_groups.get(group, {}).get(channel_id, {})
+	if sg_entry.has("type"):
+		return sg_entry["type"]
+	if master.currentlyLoadedFile["channels"].has(channel_id):
+		return GL_ChannelData.get_type(master.currentlyLoadedFile["channels"][channel_id])
+	return GL_ChannelData.TYPE_BOOL
 
 func _commit_edit(channel_id: String) -> void:
 	if not activeEdit.has(channel_id):
@@ -246,8 +300,6 @@ func _commit_edit(channel_id: String) -> void:
 	call_deferred("endEdit", channel_id)
 	_mark_dirty()
 
-# ── Float commit ──────────────────────────────────────────────────────────────
-
 func _commit_float(channel_id: String) -> void:
 	if not activeEdit.has(channel_id):
 		return
@@ -269,18 +321,14 @@ func _commit_float(channel_id: String) -> void:
 	entries = GL_ChannelData.insert_entry(entries, { "time": start_int, "value": last_value })
 	entries = GL_ChannelData.insert_entry(entries, { "time": release_int, "value": release_value })
 
-	# FIX: Save the array directly, no encoding!
 	master.currentlyLoadedFile["channels"][channel_id]["data"] = entries
 	_invalidate_playback_cache(channel_id)
 	call_deferred("endEdit", channel_id)
 	_mark_dirty()
 
-# ── Event commit ──────────────────────────────────────────────────────────────
-
 func _commit_event(channel_id: String, type: String) -> void:
 	var ch_data = master.currentlyLoadedFile["channels"][channel_id]
 	
-	# FIX: Get the live array directly, no decoding!
 	var entries: Array = ch_data.get("data", [])
 	var t_int = time_to_int(timeCurrent)
 
@@ -297,7 +345,6 @@ func _commit_event(channel_id: String, type: String) -> void:
 
 	entries = GL_ChannelData.insert_entry(entries, entry)
 	
-	# FIX: Save the array directly, no encoding!
 	master.currentlyLoadedFile["channels"][channel_id]["data"] = entries
 	_invalidate_playback_cache(channel_id)
 	_mark_dirty()
@@ -324,7 +371,7 @@ func zoom(out: bool):
 	if timeStart < 0.0:
 		timeEnd += -timeStart
 		timeStart = 0.0
-	_last_start_text = ""   # force label refresh after range change
+	_last_start_text = ""   
 	_last_end_text = ""
 	_mark_dirty()
 
@@ -352,8 +399,6 @@ func scroll(down: bool):
 			scrolledIndex -= 1
 	_reassign_channel_slots()
 
-# Returns the channel IDs for the currently displayed group, sorted by name.
-# Falls back to an empty array when no group is selected or no show is loaded.
 func _get_displayed_keys() -> Array:
 	if master.displayed_group == "":
 		return []
@@ -378,8 +423,6 @@ func _reassign_channel_slots() -> void:
 	var displayed_keys = _get_displayed_keys()
 	var slots = _get_channel_slots()
 
-	# Resolve the color for a channel ID. scene_groups is the authority;
-	# the save file entry is a fallback for legacy data.
 	var resolve_color = func(key: String) -> String:
 		var pipe = key.find("|")
 		var group = key.left(pipe) if pipe != -1 else ""
@@ -442,6 +485,7 @@ func reload_timeline() -> void:
 func clear_group_binds() -> void:
 	for channel_id in _get_displayed_keys():
 		channelBinds.erase(channel_id)
+		channelControllerBinds.erase(channel_id)
 	for child in timelineBox.get_children():
 		if child is GL_Channel:
 			child.updateBindLabel()
@@ -455,3 +499,72 @@ func _prime_playback_deferred() -> void:
 	var playback = _get_playback()
 	if playback:
 		playback.prime_group_cache()
+
+func set_controller_bind(channel_id: String, bind: Dictionary) -> void:
+	channelControllerBinds[channel_id] = bind
+	for child in timelineBox.get_children():
+		if child is GL_Channel and child.id == channel_id:
+			child.updateBindLabel()
+			break
+
+func clear_controller_bind(channel_id: String) -> void:
+	channelControllerBinds.erase(channel_id)
+
+func clear_channel(channel_id: String) -> void:
+	if not master.currentlyLoadedFile["channels"].has(channel_id):
+		return
+	var type = GL_ChannelData.get_type(master.currentlyLoadedFile["channels"][channel_id])
+	master.currentlyLoadedFile["channels"][channel_id]["data"] = []
+	activeEdit.erase(channel_id)
+	_invalidate_playback_cache(channel_id)
+	_mark_dirty()
+
+func _get_axis_value(bind: Dictionary) -> float:
+	var axis: int = bind["input"]
+	var component: String = bind["component"]
+	var device: int = 0
+	match component:
+		"value":
+			return Input.get_joy_axis(device, axis)
+		"positive":
+			return max(0.0, Input.get_joy_axis(device, axis))
+		"negative":
+			return max(0.0, -Input.get_joy_axis(device, axis))
+		"magnitude":
+			var paired = {
+				JOY_AXIS_LEFT_X:  JOY_AXIS_LEFT_Y,
+				JOY_AXIS_LEFT_Y:  JOY_AXIS_LEFT_X,
+				JOY_AXIS_RIGHT_X: JOY_AXIS_RIGHT_Y,
+				JOY_AXIS_RIGHT_Y: JOY_AXIS_RIGHT_X,
+			}
+			if paired.has(axis):
+				var other = paired[axis]
+				return Vector2(
+					Input.get_joy_axis(device, axis),
+					Input.get_joy_axis(device, other)
+				).length()
+			return abs(Input.get_joy_axis(device, axis))
+	return 0.0
+
+func _poll_controller_binds(delta: float) -> void:
+	if master.currentlyLoadedPath == "":
+		return
+
+	_controller_poll_accum += delta
+	if _controller_poll_accum < controller_poll_rate:
+		return
+	_controller_poll_accum = 0.0
+
+	for channel_id in channelControllerBinds:
+		var bind: Dictionary = channelControllerBinds[channel_id]
+		if bind["type"] != "axis":
+			continue
+		var value = _get_axis_value(bind)
+		master.ensure_channel_exists(channel_id)
+		var ch_data = master.currentlyLoadedFile["channels"][channel_id]
+		var entries: Array = ch_data.get("data", [])
+		var t_int = time_to_int(timeCurrent)
+		entries = GL_ChannelData.insert_entry(entries, { "time": t_int, "value": value })
+		master.currentlyLoadedFile["channels"][channel_id]["data"] = entries
+		_invalidate_playback_cache(channel_id)
+	_mark_dirty()

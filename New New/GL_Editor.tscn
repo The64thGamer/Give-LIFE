@@ -23,6 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://cron3phbvrasi" path="res://Sounds/Tick2.wav" id="12_ca78b"]
 [ext_resource type="AudioStream" uid="uid://cnu056nqhchk1" path="res://Sounds/Thack.wav" id="13_ufq68"]
 [ext_resource type="AudioStream" uid="uid://d32r2h55ktsse" path="res://Mods/Faz Anim 2/Custom Assets/Sounds/Trashed.wav" id="14_e12if"]
+[ext_resource type="Texture2D" uid="uid://g3x10ge11yel" path="res://UI/Icons/file-pen-solid-full.svg" id="19_pbeab"]
 [ext_resource type="Script" uid="uid://p57psuh23hii" path="res://Scripts/Player/PlayerCamera.gd" id="20_isteg"]
 
 [node name="GlEditor" type="Control" unique_id=270496900]
@@ -295,6 +296,50 @@ hover_sound = ExtResource("12_ca78b")
 hover_pitch_randomize_enabled = false
 press_sound = ExtResource("14_e12if")
 press_pitch_randomize_enabled = false
+
+[node name="Edit Channel" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=1616820540]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5019608)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/_tab_index = 4
+
+[node name="MarginContainer" type="Control" parent="Full Editor/Editor/Modifiers/Edit Channel" unique_id=1537202341]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Full Editor/Editor/Modifiers/Edit Channel/MarginContainer" unique_id=772028224]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Select this icon on a channel to edit properties:
+
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/MarginContainer" unique_id=469896206]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_pbeab")
+expand_mode = 1
 
 [node name="Viewer" type="SubViewportContainer" parent="Full Editor/Editor" unique_id=1455862654]
 layout_mode = 2

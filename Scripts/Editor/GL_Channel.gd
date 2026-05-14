@@ -2,7 +2,7 @@ extends Node
 class_name GL_Channel
 @onready var title : Label = $ChannelTimeline/title
 @onready var bindLabel : Label = $"Bind/Bind Label"
-@onready var bindHint : Label = $"Bind/Bind Hint"
+@onready var bindHint : TextureRect = $"Bind/Bind Hint"
 @onready var channelTimeline : Control = $ChannelTimeline
 @onready var bitHolder = $ChannelTimeline/BitHolder
 
@@ -23,15 +23,12 @@ var _float_line: Line2D = null
 
 const timeUnits = 1.0 / 120.0
 
-# ── Preview particle state ────────────────────────────────────────────────────
 var preview_particles_template: PackedScene = preload("res://New New/Prefabs/cpu_particles_2d.tscn")
 var _preview_particles: CPUParticles2D = null
 enum PreviewEdge { NONE, LEFT, RIGHT }
 var _last_preview_edge: PreviewEdge = PreviewEdge.NONE
 
 var _was_mouse_inside: bool = false
-
-# ── Helpers ───────────────────────────────────────────────────────────────────
 
 func _channel_data() -> Dictionary:
 	return master.currentlyLoadedFile["channels"].get(id, {"type": "bool", "data": []})
@@ -62,15 +59,28 @@ func _process(_delta: float) -> void:
 				timeline.setTimeFromTimeline(mouse_pos.x, channelTimeline.size.x)
 
 func _input(event: InputEvent) -> void:
-	if changingBind:
-		if event is InputEventKey and event.pressed:
-			get_viewport().set_input_as_handled()
-			if event.keycode >= KEY_0 and event.keycode <= KEY_9:
-				timeline.channelBinds[id] = event.keycode
-				updateBindLabel()
-			elif event.keycode == KEY_BACKSPACE:
-				timeline.clear_group_binds()
+	if not changingBind:
+		return
+	get_viewport().set_input_as_handled()
 
+	if event is InputEventKey and event.pressed:
+		if event.keycode >= KEY_0 and event.keycode <= KEY_9:
+			timeline.channelBinds[id] = event.keycode
+			timeline.clear_controller_bind(id)
+			updateBindLabel()
+		elif event.keycode == KEY_BACKSPACE:
+			timeline.clear_group_binds()
+
+	elif event is InputEventJoypadButton and event.pressed:
+		if event.button_index in GL_Timeline.CONTROLLER_BUTTONS:
+			timeline.channelControllerBinds[id] = {
+				"type": "button",
+				"input": event.button_index,
+				"component": "value"
+			}
+			timeline.channelBinds.erase(id)
+			updateBindLabel()
+			
 func time_to_int(t: float) -> int:
 	return int(t / timeUnits)
 
@@ -308,14 +318,23 @@ func _hide_preview_panel() -> void:
 		_preview_particles.emitting = false
 
 func updateBindLabel() -> void:
-	var bind = timeline.channelBinds.get(id, null)
-	if bind == null:
+	var kb_bind = timeline.channelBinds.get(id, null)
+	var ctrl_bind = timeline.channelControllerBinds.get(id, null)
+	if kb_bind != null:
+		bindLabel.text = OS.get_keycode_string(kb_bind)
+		bindHint.visible = false
+	elif ctrl_bind != null:
+		bindLabel.text = _controller_bind_label(ctrl_bind)
+		bindHint.visible = false
+	else:
 		bindLabel.text = ""
 		bindHint.visible = true
-	else:
-		bindLabel.text = OS.get_keycode_string(bind)
-		bindHint.visible = false
 	get_tree().get_first_node_in_group("AnimatableImporter").refresh_bind_alerts()
+
+func _controller_bind_label(bind: Dictionary) -> String:
+	if bind["type"] == "button":
+		return "BTN %d" % bind["input"]
+	return "AXIS %d [%s]" % [bind["input"], bind["component"]]
 	
 func binder_entered() -> void:
 	changingBind = true
