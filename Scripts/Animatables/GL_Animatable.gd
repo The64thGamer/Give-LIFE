@@ -13,6 +13,7 @@ var _construction_area: Area3D = null
 enum InteractState { NONE, MENU, MOVING, ROTATING, SCALING }
 var _interact_state: InteractState = InteractState.NONE
 var _construction_ui: Node = null
+var _playback : GL_Playback = null
 
 var _menu_items: Array[Node] = []
 var _menu_selection: int = 0
@@ -42,6 +43,15 @@ func _ready():
 		on_construction_toggled(true)
 		
 	_build_bbox()
+	_playback = get_tree().get_first_node_in_group("GL_Playback")
+	if _playback:
+		_playback.refresh_animatables()
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_PREDELETE:
+		if _playback:
+			_playback.refresh_animatables()
+	
 func on_construction_toggled(is_active: bool) -> void:
 	if _bbox_visual: _bbox_visual.visible = is_active
 	if _construction_area:

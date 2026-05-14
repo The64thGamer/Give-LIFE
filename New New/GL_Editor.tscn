@@ -397,7 +397,7 @@ process_thread_group_order = 0
 process_thread_messages = 0
 script = ExtResource("2_2bvfm")
 
-[node name="Playback" type="Node" parent="Master" unique_id=1240717136]
+[node name="Playback" type="Node" parent="Master" unique_id=1240717136 groups=["GL_Playback"]]
 script = ExtResource("5_4tobp")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Master" unique_id=2090168520]

@@ -4,6 +4,7 @@
 [ext_resource type="ArrayOccluder3D" uid="uid://cna4pjucrmwis" path="res://Mods/True FNaF/Mod Directory/Maps/Candy's/Candys.occ" id="2_2qirg"]
 [ext_resource type="PackedScene" uid="uid://cqi3wpo3e11l6" path="res://Mods/True FNaF/Custom Assets/Models/Maps/Candys 1.glb" id="3_exfuh"]
 [ext_resource type="PackedScene" uid="uid://dbepdak5kulre" path="res://Mods/True FNaF/Mod Directory/Animatables/Cindy.tscn" id="5_a6ffr"]
+[ext_resource type="PackedScene" uid="uid://dqkhfebjiyiac" path="res://Mods/True FNaF/Mod Directory/Animatables/Burger.tscn" id="7_n1u15"]
 [ext_resource type="PackedScene" uid="uid://b7w3tl5jvax8c" path="res://Mods/True FNaF/Mod Directory/Animatables/Candy.tscn" id="11_ow6uv"]
 [ext_resource type="PackedScene" uid="uid://bx8e2ygjxcwaq" path="res://Mods/True FNaF/Mod Directory/Animatables/Sugar.tscn" id="12_dtdfo"]
 
@@ -61,13 +62,16 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -0.24416068, 2.907654, 
 [node name="Animatables" type="Node" parent="Map" unique_id=1193136051]
 
 [node name="Candy" parent="Map/Animatables" unique_id=1551005081 instance=ExtResource("11_ow6uv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9255466, -0.03175068, -1.5111327)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9255466, -0.03175068, -1.1803705)
 
 [node name="Cindy" parent="Map/Animatables" unique_id=233530727 instance=ExtResource("5_a6ffr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.71015203, -0.031751774, -1.5163145)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.71015203, -0.031751774, -1.2605436)
 
 [node name="Sugar2" parent="Map/Animatables" unique_id=1946561123 instance=ExtResource("12_dtdfo")]
 transform = Transform3D(0.38268343, 0, 0.9238795, 0, 1, 0, -0.9238795, 0, 0.38268343, -12.513468, -0.031752396, -5.12404)
+
+[node name="Burger" parent="Map/Animatables" unique_id=69939464 instance=ExtResource("7_n1u15")]
+transform = Transform3D(0.9621657, 0, -0.27246496, 0, 1, 0, 0.27246496, 0, 0.9621657, 1.7132276, 1.8387083, -2.9321864)
 
 [node name="Node" type="Node" parent="Map" unique_id=651683685]
 

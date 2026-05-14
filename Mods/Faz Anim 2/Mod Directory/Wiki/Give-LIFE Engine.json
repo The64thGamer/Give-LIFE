@@ -33,7 +33,7 @@ Faz Anim 2
 [font_size=22]/Mod Directory/[/font_size]
 This can contain a few different folders depending on what you want added to your mod:
 
-[code]/Animatables/[/code] - This is where any .tscn that contains an object that can remotely receive signals (like animatronics, spotlight props, TVs, speakers, etc.) should go if you intend on them being accessible and spawn-able by the player.
+[code]/Animatables/[/code] - This is where any .tscn that contains an object that can remotely receive signals (like animatronics, spotlight proaps, TVs, speakers, etc.) should go if you intend on them being accessible and spawn-able by the player.a
 
 [code]/Maps/[/code] - This folder will contain your loadable maps with additional data required (details below).
 

@@ -17,28 +17,33 @@ var _scrubTimer : float = 0.0
 var _media_state: Dictionary = {}
 var _media_timers: Dictionary = {}
 
-# ── Decoded-entry cache ───────────────────────────────────────────────────────
-var _entry_cache: Dictionary = {}
-
-# ── Audio scrub throttle ──────────────────────────────────────────────────────
 const _SCRUB_SEEK_INTERVAL = 0.08
 var _scrub_seek_timer: float = 0.0
 var _scrub_pending_time: float = -1.0
 
-# ── Dispatch table ────────────────────────────────────────────────────────────
-# Built once on load/prime. Pre-parses keys so _process never touches strings.
 var _dispatch: Array = []
 var _dispatch_valid: bool = false
-var _retry_groups: Dictionary = {}
 
-# ── Public API ────────────────────────────────────────────────────────────────
+var _group_node_cache: Dictionary = {} 
+
+func refresh_animatables() -> void:
+	_group_node_cache.clear()
+	var animatables = get_tree().get_nodes_in_group("Animatable")
+	for node in animatables:
+		for group in node.get_groups():
+			if group == "Animatable":
+				continue
+			if not _group_node_cache.has(group):
+				_group_node_cache[group] = []
+			_group_node_cache[group].append(node)
+
+func _get_group_nodes(group: String) -> Array:
+	return _group_node_cache.get(group, [])
 
 func invalidate_channel_cache(channel_id: String) -> void:
-	_entry_cache.erase(channel_id)
 	_lastTime_int = -1
 
 func invalidate_all_cache() -> void:
-	_entry_cache.clear()
 	_dispatch_valid = false
 	_lastTime_int = -1
 
@@ -70,11 +75,6 @@ func _build_dispatch_table() -> void:
 
 	_dispatch_valid = true
 
-func _get_group_nodes(group: String) -> Array:
-	return get_tree().get_nodes_in_group("Animatable").filter(
-		func(n): return n.is_in_group(group)
-	)
-
 
 func _physics_process(delta: float) -> void:
 	if master.currentlyLoadedPath == "":
@@ -91,18 +91,15 @@ func _physics_process(delta: float) -> void:
 		var channels = master.currentlyLoadedFile["channels"]
 
 		for rec in _dispatch:
-			var id: String   = rec["id"]
-			var type: String = rec["type"]
+			var id: String    = rec["id"]
+			var type: String  = rec["type"]
 			var group: String = rec["group"]
+			var nodes: Array  = _get_group_nodes(group)
 
-			var nodes: Array = _get_group_nodes(group)
 			if nodes.is_empty():
-				_retry_groups[group] = 3
 				continue
 
-			_retry_groups.erase(group)
-
-			var ch = channels[id]
+			var ch   = channels[id]
 			var data = ch["data"]
 
 			if type == GL_ChannelData.TYPE_VIDEO or type == GL_ChannelData.TYPE_AUDIO:
@@ -111,31 +108,8 @@ func _physics_process(delta: float) -> void:
 				var state = _get_state_for_type(type, data, id, t_int)
 				var signal_key: String = rec["signal_key"]
 				for node in nodes:
-					node._sent_signals(signal_key, state)
-
-	if not _retry_groups.is_empty():
-		var channels = master.currentlyLoadedFile["channels"]
-		var done: Array = []
-		for group in _retry_groups:
-			var nodes: Array = _get_group_nodes(group)
-			if nodes.is_empty():
-				_retry_groups[group] -= 1
-				if _retry_groups[group] <= 0:
-					done.append(group)
-				continue
-			done.append(group)
-			for rec in _dispatch:
-				if rec["group"] != group:
-					continue
-				var type: String = rec["type"]
-				if type == GL_ChannelData.TYPE_VIDEO or type == GL_ChannelData.TYPE_AUDIO:
-					continue
-				var ch = channels[rec["id"]]
-				var state = _get_state_for_type(type, ch["data"], rec["id"], _lastTime_int)
-				for node in nodes:
-					node._sent_signals(rec["signal_key"], state)
-		for group in done:
-			_retry_groups.erase(group)
+					if is_instance_valid(node):
+						node._sent_signals(signal_key, state)
 
 	_process_audio(delta, time_changed)
 
@@ -200,15 +174,10 @@ func _process_media_channel(rec: Dictionary, data, delta: float, t_int: int) -> 
 func _send_null_media_signals() -> void:
 	if not master or master.currentlyLoadedPath == "":
 		return
-	var scene_tree = Engine.get_main_loop() as SceneTree
-	if not scene_tree:
-		return
 	for rec in _dispatch:
 		if rec["type"] != GL_ChannelData.TYPE_VIDEO and rec["type"] != GL_ChannelData.TYPE_AUDIO:
 			continue
-		var nodes = scene_tree.get_nodes_in_group("Animatable").filter(
-			func(n): return n.is_in_group(rec["group"])
-		)
+		var nodes = _get_group_nodes(rec["group"])
 		for node in nodes:
 			node._sent_signals(rec["signal_key"], null)
 			node._sent_signals("Current Time", 0.0)
@@ -227,7 +196,7 @@ func clean_sweep() -> void:
 		var nodes = _get_group_nodes(rec["group"])
 		for node in nodes:
 			node._sent_signals(rec["signal_key"], 0.0)
-			
+
 func _get_state_for_type(type: String, data, channel_id: String, t_int: int):
 	match type:
 		GL_ChannelData.TYPE_BOOL:
@@ -237,14 +206,13 @@ func _get_state_for_type(type: String, data, channel_id: String, t_int: int):
 			if stamps.is_empty():
 				return false
 			return get_bool_state_at_time(stamps, t_int)
-			
+
 		GL_ChannelData.TYPE_FLOAT:
 			return GL_ChannelData.get_float_at_time(data, t_int)
-			
+
 		GL_ChannelData.TYPE_COLOR:
 			if data.is_empty():
 				return Color.BLACK
-				
 			var result_color: Color = data[0]["color"]
 			var lo = 0
 			var hi = data.size() - 1
@@ -256,15 +224,14 @@ func _get_state_for_type(type: String, data, channel_id: String, t_int: int):
 				else:
 					hi = mid - 1
 			return result_color
-			
+
 		_:
 			return 0.0
+
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_PREDELETE:
 		_send_null_media_signals()
 
-
-# ── Default media seeding ─────────────────────────────────────────────────────
 
 func _seed_default_media() -> void:
 	if master.currentlyLoadedPath == "":
@@ -289,7 +256,6 @@ func _seed_default_media() -> void:
 			continue
 		var entry = { "time": 0, "file": default_file, "offset": 0.0 }
 		ch["data"] = GL_ChannelData.encode_entries(type, [entry])
-		invalidate_channel_cache(key)
 
 func _find_default_file(extensions: Array) -> String:
 	var folder = master.currentlyLoadedPath
@@ -308,8 +274,6 @@ func _find_default_file(extensions: Array) -> String:
 		f = dir.get_next()
 	dir.list_dir_end()
 	return ""
-
-# ── Audio playback ────────────────────────────────────────────────────────────
 
 func reload_audio() -> void:
 	audioPlayer.stop()
@@ -381,8 +345,6 @@ func _load_audio_stream(path: String, ext: String) -> AudioStream:
 		"ogg":
 			return AudioStreamOggVorbis.load_from_file(absolute_path)
 	return null
-
-# ── Bool helpers ──────────────────────────────────────────────────────────────
 
 func get_bool_state_at_time(stamps: Array, t_int_or_time) -> bool:
 	var current_time_int: int
