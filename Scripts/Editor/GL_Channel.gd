@@ -13,12 +13,10 @@ var timeline : GL_Timeline
 var changingBind = false
 var currentBind = null
 
-# Type-specific panel pools
 var _bit_panels: Array = []       # bool GL_BitPanel nodes
 var _float_points: Array = []     # GL_FloatPoint nodes
 var _event_bars: Array = []       # GL_EventBar nodes
 
-# Float line drawing node
 var _float_line: Line2D = null
 
 const timeUnits = 1.0 / 120.0
@@ -66,7 +64,12 @@ func _input(event: InputEvent) -> void:
 	if not changingBind:
 		return
 	get_viewport().set_input_as_handled()
-
+	
+	if event is InputEventMouseButton and event.pressed:
+		var mediator = get_tree().get_first_node_in_group("EditChannel")
+		if mediator:
+			mediator.set_editing_channel(id, self)
+		
 	if event is InputEventKey and event.pressed:
 		if (event.keycode >= KEY_0 and event.keycode <= KEY_9) || event.keycode == KEY_PLUS ||event.keycode == KEY_MINUS:
 			timeline.channelBinds[id] = event.keycode
@@ -285,7 +288,6 @@ func _render_events() -> void:
 		var x = ((t - t_start) / t_range) * width
 		var bar = _event_bars[i]
 		
-		# CHANGE: No duplicate() needed here unless you are immediately modifying it
 		bar.entry = e 
 		bar.entry_type = type
 		bar.size = Vector2(GL_EventBar.BAR_WIDTH, bitHolder.size.y)

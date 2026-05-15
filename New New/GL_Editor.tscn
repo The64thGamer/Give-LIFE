@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://btn3akwt3i5vh" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_Dpad_Left.png" id="29_h7jru"]
 [ext_resource type="Texture2D" uid="uid://bhqiuef0vfo50" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_Dpad_Right.png" id="30_svn66"]
 [ext_resource type="Texture2D" uid="uid://dodiv3n4a028p" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_Right_Stick.png" id="31_32mol"]
+[ext_resource type="Texture2D" uid="uid://f6ipgktbt5qe" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_Left_Stick.png" id="32_aow6y"]
 [ext_resource type="Texture2D" uid="uid://x3u18pbjkdr7" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Arrows/Directional_Arrow_Full_Circle.png" id="32_hgnfx"]
 [ext_resource type="Texture2D" uid="uid://cjutjicacqfnt" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Arrows/Directional_Arrow_Vertical.png" id="34_u67nk"]
 [ext_resource type="Texture2D" uid="uid://cb8qgqb6c1st8" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Arrows/Directional_Arrow_Sides.png" id="35_ivrqh"]
@@ -132,7 +133,7 @@ size_flags_vertical = 3
 [node name="Modifiers" type="TabContainer" parent="Full Editor/Editor" unique_id=120351013]
 layout_mode = 2
 size_flags_horizontal = 3
-current_tab = 4
+current_tab = 0
 script = ExtResource("11_muhm5")
 hover_sound = ExtResource("8_qw38e")
 press_sound = ExtResource("9_e12if")
@@ -140,7 +141,6 @@ press_pitch_multiplier_on = 2.0
 press_pitch_multiplier_off = 2.0
 
 [node name="Animatables" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=1407192095]
-visible = false
 self_modulate = Color(1, 1, 1, 0.5019608)
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -316,7 +316,8 @@ hover_pitch_randomize_enabled = false
 press_sound = ExtResource("14_e12if")
 press_pitch_randomize_enabled = false
 
-[node name="Edit Channel" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=1616820540]
+[node name="Edit Channel" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=1616820540 groups=["EditChannel"]]
+visible = false
 self_modulate = Color(1, 1, 1, 0.5019608)
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -327,11 +328,11 @@ script = ExtResource("19_w7ro2")
 metadata/_tab_index = 4
 
 [node name="MarginContainer" type="Control" parent="Full Editor/Editor/Modifiers/Edit Channel" unique_id=1537202341]
+visible = false
 layout_mode = 2
 mouse_filter = 2
 
 [node name="Hint" type="Control" parent="Full Editor/Editor/Modifiers/Edit Channel/MarginContainer" unique_id=1749255225]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -404,11 +405,11 @@ layout_mode = 2
 [node name="HFlowContainer" type="HFlowContainer" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer" unique_id=1666469765]
 layout_mode = 2
 
-[node name="Button23" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1052872647]
+[node name="ButtonNone" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1052872647]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button23" unique_id=1402015835]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonNone" unique_id=1402015835]
 modulate = Color(0.99215686, 0.9882353, 0.85882354, 1)
 layout_mode = 1
 anchors_preset = 15
@@ -420,71 +421,71 @@ texture = ExtResource("21_aow6y")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1652803267]
+[node name="Button1" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1652803267]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "1"
 
-[node name="Button3" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=629616652]
+[node name="Button2" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=629616652]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "2"
 
-[node name="Button4" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=262112099]
+[node name="Button3" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=262112099]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "3"
 
-[node name="Button5" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1513592576]
+[node name="Button4" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1513592576]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "4"
 
-[node name="Button6" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1295794470]
+[node name="Button5" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1295794470]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "5"
 
-[node name="Button7" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1184946273]
+[node name="Button6" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1184946273]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "6"
 
-[node name="Button8" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1195981031]
+[node name="Button7" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1195981031]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "7"
 
-[node name="Button9" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1301447159]
+[node name="Button8" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1301447159]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "8"
 
-[node name="Button10" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1694853273]
+[node name="Button9" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1694853273]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "9"
 
-[node name="Button11" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1142735561]
+[node name="Button0" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1142735561]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "0"
 
-[node name="Button31" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1138141269]
+[node name="ButtonMinus" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1138141269]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "-"
 
-[node name="Button30" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1577240381]
+[node name="ButtonPlus" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1577240381]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "+"
 
-[node name="Button2" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=674016236]
+[node name="ButtonA" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=674016236]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button2" unique_id=441959559]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonA" unique_id=441959559]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -495,11 +496,11 @@ texture = ExtResource("21_crika")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button12" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1254625739]
+[node name="ButtonB" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1254625739]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button12" unique_id=2054722866]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonB" unique_id=2054722866]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -510,11 +511,11 @@ texture = ExtResource("22_et1pk")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button13" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=525444524]
+[node name="ButtonX" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=525444524]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button13" unique_id=67355220]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonX" unique_id=67355220]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -525,11 +526,11 @@ texture = ExtResource("23_32mol")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button14" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=465295582]
+[node name="ButtonY" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=465295582]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button14" unique_id=1565657802]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonY" unique_id=1565657802]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -540,11 +541,11 @@ texture = ExtResource("24_aow6y")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button15" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=554477074]
+[node name="ButtonLB" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=554477074]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button15" unique_id=1929644385]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonLB" unique_id=1929644385]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -555,11 +556,11 @@ texture = ExtResource("25_hgnfx")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button16" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=530699538]
+[node name="ButtonRB" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=530699538]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button16" unique_id=9687827]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonRB" unique_id=9687827]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -570,11 +571,11 @@ texture = ExtResource("26_u67nk")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button19" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=951382365]
+[node name="DpadL" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=951382365]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button19" unique_id=1099457696]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/DpadL" unique_id=1099457696]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -585,11 +586,11 @@ texture = ExtResource("29_h7jru")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button17" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=14443641]
+[node name="DpadUp" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=14443641]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button17" unique_id=1225991618]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/DpadUp" unique_id=1225991618]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -600,11 +601,11 @@ texture = ExtResource("27_ivrqh")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button20" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1665676129]
+[node name="DpadR" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1665676129]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button20" unique_id=507914423]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/DpadR" unique_id=507914423]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -615,11 +616,11 @@ texture = ExtResource("30_svn66")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button18" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1281731751]
+[node name="DpadDown" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1281731751]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button18" unique_id=1243313476]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/DpadDown" unique_id=1243313476]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -630,11 +631,11 @@ texture = ExtResource("28_kfaed")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button26" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=113868985]
+[node name="RstickL" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=113868985]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button26" unique_id=1810209159]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickL" unique_id=1810209159]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 1
 anchors_preset = 4
@@ -649,7 +650,7 @@ expand_mode = 1
 stretch_mode = 5
 flip_h = true
 
-[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button26" unique_id=1576986217]
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickL" unique_id=1576986217]
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 1
 anchors_preset = 8
@@ -667,11 +668,11 @@ texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button27" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=808995769]
+[node name="RstickUp" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=808995769]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button27" unique_id=391386826]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickUp" unique_id=391386826]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 1
 anchors_preset = 5
@@ -687,7 +688,7 @@ texture = ExtResource("36_ivrqh")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button27" unique_id=702198057]
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickUp" unique_id=702198057]
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 1
 anchors_preset = 8
@@ -705,11 +706,11 @@ texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button25" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=2129994767]
+[node name="RstickR" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=2129994767]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button25" unique_id=233981341]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickR" unique_id=233981341]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 1
 anchors_preset = 6
@@ -726,7 +727,7 @@ texture = ExtResource("36_ivrqh")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button25" unique_id=1921832310]
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickR" unique_id=1921832310]
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 1
 anchors_preset = 8
@@ -744,11 +745,11 @@ texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button28" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1181429090]
+[node name="RstickDown" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1181429090]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button28" unique_id=1306227172]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickDown" unique_id=1306227172]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 1
 anchors_preset = 7
@@ -767,7 +768,7 @@ texture = ExtResource("36_ivrqh")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button28" unique_id=1742220815]
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickDown" unique_id=1742220815]
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 1
 anchors_preset = 8
@@ -785,11 +786,11 @@ texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button21" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=900695509]
+[node name="RstickAngle" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=900695509]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button21" unique_id=123940969]
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickAngle" unique_id=123940969]
 custom_minimum_size = Vector2(35, 35)
 layout_mode = 1
 anchors_preset = 8
@@ -808,7 +809,7 @@ expand_mode = 1
 stretch_mode = 5
 flip_h = true
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button21" unique_id=990311412]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickAngle" unique_id=990311412]
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 1
 anchors_preset = 8
@@ -826,11 +827,11 @@ texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button22" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1809210131]
+[node name="RstickUD" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1809210131]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button22" unique_id=1526959910]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickUD" unique_id=1526959910]
 custom_minimum_size = Vector2(35, 35)
 layout_mode = 1
 anchors_preset = 8
@@ -848,7 +849,7 @@ texture = ExtResource("34_u67nk")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button22" unique_id=1850275041]
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickUD" unique_id=1850275041]
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 1
 anchors_preset = 8
@@ -866,11 +867,11 @@ texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button24" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1301792271]
+[node name="RstickLR" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1301792271]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button24" unique_id=1122960799]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickLR" unique_id=1122960799]
 custom_minimum_size = Vector2(35, 35)
 layout_mode = 1
 anchors_preset = 8
@@ -888,7 +889,7 @@ texture = ExtResource("35_ivrqh")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button24" unique_id=1756368965]
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickLR" unique_id=1756368965]
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 1
 anchors_preset = 8
@@ -906,11 +907,11 @@ texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button29" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1529513896]
+[node name="RstickMagnitude" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1529513896]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button29" unique_id=457770388]
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickMagnitude" unique_id=457770388]
 custom_minimum_size = Vector2(30, 35)
 layout_mode = 1
 anchors_preset = 8
@@ -928,7 +929,7 @@ texture = ExtResource("37_kfaed")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button29" unique_id=590935913]
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/RstickMagnitude" unique_id=590935913]
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 1
 anchors_preset = 8
@@ -943,6 +944,322 @@ offset_bottom = 12.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("31_32mol")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LstickL" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=242267195]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickL" unique_id=365485098]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -5.0
+offset_right = 10.0
+offset_bottom = 5.0
+grow_vertical = 2
+texture = ExtResource("36_ivrqh")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickL" unique_id=43332330]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_aow6y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LstickUp" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=66593285]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickUp" unique_id=1275770313]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_right = 5.0
+offset_bottom = 10.0
+grow_horizontal = 2
+rotation = -1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("36_ivrqh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickUp" unique_id=510019752]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_aow6y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LstickR" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1259816588]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickR" unique_id=484630639]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("36_ivrqh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickR" unique_id=1837548325]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_aow6y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LstickDown" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1420381671]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickDown" unique_id=598693116]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -10.0
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("36_ivrqh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickDown" unique_id=102728050]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_aow6y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LstickAngle" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1715201434]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickAngle" unique_id=1117418146]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.5
+offset_top = -17.5
+offset_right = 17.5
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_hgnfx")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickAngle" unique_id=1331395833]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_aow6y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LstickUD" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=206582147]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickUD" unique_id=239587731]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("34_u67nk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickUD" unique_id=471030218]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_aow6y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LstickLR" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=432103652]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickLR" unique_id=294170560]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("35_ivrqh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickLR" unique_id=836050215]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_aow6y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LstickMagnitude" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=709262556]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickMagnitude" unique_id=1104383322]
+custom_minimum_size = Vector2(30, 35)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("37_kfaed")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickMagnitude" unique_id=302022192]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_aow6y")
 expand_mode = 1
 stretch_mode = 5
 
@@ -961,11 +1278,11 @@ layout_mode = 2
 text = "Channel ???"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer" unique_id=1715243797]
+[node name="erase" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer" unique_id=1715243797]
 layout_mode = 2
 text = "Erase Channel Data"
 
-[node name="Button2" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer" unique_id=160990501]
+[node name="convert" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer" unique_id=160990501]
 layout_mode = 2
 text = "Erase + Convert to Float (0.0 -> 1.0)"
 

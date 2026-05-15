@@ -10,7 +10,7 @@ radius = 0.703125
 
 [node name="Ringmaster Base" type="Node3D" unique_id=233530727 groups=["SOTM_MRHELPFUL_ALT"]]
 script = ExtResource("1_h01b8")
-animParametersFileName = "Mr Helpful"
+animParametersFileName = "Mr Helpful Alt"
 animatableName = "Ringmaster Base"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.6, 0.16078432, 0.1764706, 1)

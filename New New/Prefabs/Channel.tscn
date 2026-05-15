@@ -5,21 +5,25 @@
 [ext_resource type="Script" uid="uid://b4aa4vacbh1ln" path="res://Scripts/Sound UI/SoundUI.gd" id="3_fifuu"]
 [ext_resource type="Texture2D" uid="uid://g3x10ge11yel" path="res://UI/Icons/file-pen-solid-full.svg" id="3_qsxjb"]
 [ext_resource type="AudioStream" uid="uid://bq5a3xyfofaaa" path="res://Sounds/Tip.wav" id="4_fifuu"]
+[ext_resource type="AudioStream" uid="uid://dj62mn2fnp1l4" path="res://Sounds/Cloc.wav" id="5_w7cnh"]
 
 [node name="HBoxContainer" type="HBoxContainer" unique_id=573888745]
 custom_minimum_size = Vector2(0, 40)
 offset_right = 438.0
 offset_bottom = 40.0
 size_flags_horizontal = 3
+mouse_filter = 2
 theme = ExtResource("1_4wtt3")
 script = ExtResource("1_y15e8")
 
-[node name="Bind" type="Control" parent="." unique_id=1308582413]
-custom_minimum_size = Vector2(40, 0)
+[node name="Bind" type="Control" parent="." unique_id=1843786797]
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_vertical = 3
+mouse_default_cursor_shape = 1
 script = ExtResource("3_fifuu")
 hover_sound = ExtResource("4_fifuu")
+press_sound = ExtResource("5_w7cnh")
 
 [node name="Bind Label" type="Label" parent="Bind" unique_id=1844535330]
 layout_mode = 1
@@ -28,6 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -41,21 +46,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_qsxjb")
 expand_mode = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1878812516]
-visible = false
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="Config Menu" type="TextureButton" parent="MarginContainer" unique_id=2046431363]
-layout_mode = 2
-texture_normal = ExtResource("3_qsxjb")
-ignore_texture_size = true
-stretch_mode = 5
 
 [node name="ChannelTimeline" type="PanelContainer" parent="." unique_id=1042388189]
 layout_mode = 2

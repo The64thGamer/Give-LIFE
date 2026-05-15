@@ -10,7 +10,7 @@ radius = 0.18066406
 
 [node name="Mrs Helpful Alt" type="Node3D" unique_id=233530727 groups=["SOTM_MRSHELPFUL_ALT"]]
 script = ExtResource("1_5g2cr")
-animParametersFileName = "Mr Helpful"
+animParametersFileName = "Mrs Helpful Alt"
 animatableName = "Mrs. Helpful"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.57254905, 0.38431373, 0.6313726, 1)

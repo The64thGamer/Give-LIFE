@@ -182,6 +182,9 @@ static func get_float_at_time(entries: Array, t_int: int) -> float:
 	return 0.0
 
 static func insert_entry(entries: Array, entry: Dictionary) -> Array:
+	if entries.is_empty() or not entries[0] is Dictionary:
+		push_error("GL_ChannelData.insert_entry called on non-dict array (bool channel?)")
+		return entries
 	var result = entries.duplicate()
 	for i in range(result.size() - 1, -1, -1):
 		if result[i]["time"] == entry["time"]:

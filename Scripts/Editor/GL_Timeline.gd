@@ -18,6 +18,7 @@ var channelXs = 0
 var channelWidths = 1920
 var activeEdit: Dictionary = {}
 var channelBinds: Dictionary = {}
+var _last_axis_values: Dictionary = {}
 
 const zoomMultOut = 1.1
 const zoomMultIn = 0.9
@@ -31,8 +32,12 @@ var _last_start_text: String = ""
 var _last_end_text: String = ""
 var _scrub_handled_this_frame: bool = false
 var channelControllerBinds: Dictionary = {}  
-var controller_poll_rate: float = 1.0 / 30.0 
+var controller_poll_rate: float = 1.0 / 10.0 
 var _controller_poll_accum: float = 0.0
+const AXIS_COMPONENT_ANGLE = "angle"
+const AXIS_ANGLE_DEADZONE_MAG  = 0.5
+const AXIS_ANGLE_DEAD_DEG_LOW  = 10.0
+const AXIS_ANGLE_DEAD_DEG_HIGH = 10.0
 
 const CONTROLLER_BUTTONS = [
 	JOY_BUTTON_A, JOY_BUTTON_B, JOY_BUTTON_X, JOY_BUTTON_Y,
@@ -517,6 +522,14 @@ func _get_axis_value(bind: Dictionary) -> float:
 	var axis: int = bind["input"]
 	var component: String = bind["component"]
 	var device: int = 0
+
+	var paired = {
+		JOY_AXIS_LEFT_X:  JOY_AXIS_LEFT_Y,
+		JOY_AXIS_LEFT_Y:  JOY_AXIS_LEFT_X,
+		JOY_AXIS_RIGHT_X: JOY_AXIS_RIGHT_Y,
+		JOY_AXIS_RIGHT_Y: JOY_AXIS_RIGHT_X,
+	}
+
 	match component:
 		"value":
 			return Input.get_joy_axis(device, axis)
@@ -525,40 +538,92 @@ func _get_axis_value(bind: Dictionary) -> float:
 		"negative":
 			return max(0.0, -Input.get_joy_axis(device, axis))
 		"magnitude":
-			var paired = {
-				JOY_AXIS_LEFT_X:  JOY_AXIS_LEFT_Y,
-				JOY_AXIS_LEFT_Y:  JOY_AXIS_LEFT_X,
-				JOY_AXIS_RIGHT_X: JOY_AXIS_RIGHT_Y,
-				JOY_AXIS_RIGHT_Y: JOY_AXIS_RIGHT_X,
-			}
+			return abs(Input.get_joy_axis(device, axis))
+		"magnitude_2d":
 			if paired.has(axis):
-				var other = paired[axis]
 				return Vector2(
 					Input.get_joy_axis(device, axis),
-					Input.get_joy_axis(device, other)
+					Input.get_joy_axis(device, paired[axis])
 				).length()
 			return abs(Input.get_joy_axis(device, axis))
+		"angle":
+			if not paired.has(axis):
+				return 0.0
+			var x_axis = axis if axis in [JOY_AXIS_LEFT_X, JOY_AXIS_RIGHT_X] else paired[axis]
+			var y_axis = axis if axis in [JOY_AXIS_LEFT_Y, JOY_AXIS_RIGHT_Y] else paired[axis]
+			var x = Input.get_joy_axis(device, x_axis)
+			var y = Input.get_joy_axis(device, y_axis)
+			if Vector2(x, y).length() < AXIS_ANGLE_DEADZONE_MAG:
+				return 0.0
+			var deg = fmod(rad_to_deg(atan2(-y, x)) - 180.0 + 360.0, 360.0)
+			if deg <= AXIS_ANGLE_DEAD_DEG_LOW:
+				return 0.0
+			if deg >= 360.0 - AXIS_ANGLE_DEAD_DEG_HIGH:
+				return 1.0
+			return (deg - AXIS_ANGLE_DEAD_DEG_LOW) / (360.0 - AXIS_ANGLE_DEAD_DEG_LOW - AXIS_ANGLE_DEAD_DEG_HIGH)
 	return 0.0
+
+func convert_channel_type(channel_id: String, to_type: String) -> void:
+	if not master.currentlyLoadedFile["channels"].has(channel_id):
+		return
+	var ch = master.currentlyLoadedFile["channels"][channel_id]
+	var current_type = GL_ChannelData.get_type(ch)
+	if current_type == to_type:
+		return
+	ch["type"] = to_type
+	ch["data"] = []
+	activeEdit.erase(channel_id)
+	_invalidate_playback_cache(channel_id)
+	_mark_dirty()
+
+func get_channel_type(channel_id: String) -> String:
+	if not master.currentlyLoadedFile["channels"].has(channel_id):
+		return ""
+	return GL_ChannelData.get_type(master.currentlyLoadedFile["channels"][channel_id])
+
+func clear_channel_bind(channel_id: String) -> void:
+	channelBinds.erase(channel_id)
+	channelControllerBinds.erase(channel_id)
+	for child in timelineBox.get_children():
+		if child is GL_Channel and child.id == channel_id:
+			child.updateBindLabel()
+			break
 
 func _poll_controller_binds(delta: float) -> void:
 	if master.currentlyLoadedPath == "":
 		return
-
+	if not playing:
+		return
 	_controller_poll_accum += delta
 	if _controller_poll_accum < controller_poll_rate:
 		return
 	_controller_poll_accum = 0.0
-
 	for channel_id in channelControllerBinds:
 		var bind: Dictionary = channelControllerBinds[channel_id]
 		if bind["type"] != "axis":
 			continue
 		var value = _get_axis_value(bind)
-		master.ensure_channel_exists(channel_id)
-		var ch_data = master.currentlyLoadedFile["channels"][channel_id]
-		var entries: Array = ch_data.get("data", [])
-		var t_int = time_to_int(timeCurrent)
-		entries = GL_ChannelData.insert_entry(entries, { "time": t_int, "value": value })
-		master.currentlyLoadedFile["channels"][channel_id]["data"] = entries
-		_invalidate_playback_cache(channel_id)
+		var last = _last_axis_values.get(channel_id, -INF)
+		if value == last:
+			continue
+		_last_axis_values[channel_id] = value
+		var type = get_channel_type(channel_id)
+		match type:
+			GL_ChannelData.TYPE_FLOAT:
+				master.ensure_channel_exists(channel_id)
+				var entries: Array = master.currentlyLoadedFile["channels"][channel_id].get("data", [])
+				entries = GL_ChannelData.insert_entry(entries, { "time": time_to_int(timeCurrent), "value": value })
+				master.currentlyLoadedFile["channels"][channel_id]["data"] = entries
+				_invalidate_playback_cache(channel_id)
+			GL_ChannelData.TYPE_BOOL:
+				var pressed = value > 0.5
+				var was_pressed = last > 0.5
+				if pressed == was_pressed:
+					continue
+				if pressed:
+					startEdit(channel_id, timeCurrent, true)
+				else:
+					_commit_edit(channel_id)
+			_:
+				continue
 	_mark_dirty()
