@@ -32,6 +32,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bind Hint" type="TextureRect" parent="Bind" unique_id=687599533]
+modulate = Color(0.99215686, 0.9882353, 0.85882354, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

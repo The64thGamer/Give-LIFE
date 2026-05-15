@@ -442,8 +442,6 @@ func _reassign_channel_slots() -> void:
 				var g = ("0x" + color_hex.substr(2, 2)).hex_to_int() / 255.0
 				var b = ("0x" + color_hex.substr(4, 2)).hex_to_int() / 255.0
 				slot.color = Color(r, g, b)
-			slot.master = master
-			slot.timeline = self
 			slot.visible = true
 			slot.start()
 			slot.renderBits()
@@ -459,7 +457,6 @@ func _ready() -> void:
 	reload_timeline()
 
 func reload_timeline() -> void:
-
 	for child in timelineBox.get_children():
 		child.queue_free()
 
@@ -477,7 +474,7 @@ func reload_timeline() -> void:
 		timelineBox.add_child(channelBox)
 
 	call_deferred("_prime_playback_deferred")
-	call_deferred("_reassign_channel_slots")
+	_reassign_channel_slots()
 
 func clear_group_binds() -> void:
 	for channel_id in _get_displayed_keys():

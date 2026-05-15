@@ -31,8 +31,8 @@ var _last_preview_edge: PreviewEdge = PreviewEdge.NONE
 var _was_mouse_inside: bool = false
 
 func _ready() -> void:
-	if master == null:
-		master = get_tree().get_first_node_in_group("GL_Master") as GL_Master
+	master = get_tree().get_first_node_in_group("GL_Master") as GL_Master
+	timeline = get_tree().get_first_node_in_group("GL_Timeline") as GL_Timeline
 
 func _channel_data() -> Dictionary:
 	return master.currentlyLoadedFile["channels"].get(id, {"type": "bool", "data": []})
@@ -68,7 +68,7 @@ func _input(event: InputEvent) -> void:
 	get_viewport().set_input_as_handled()
 
 	if event is InputEventKey and event.pressed:
-		if event.keycode >= KEY_0 and event.keycode <= KEY_9:
+		if (event.keycode >= KEY_0 and event.keycode <= KEY_9) || event.keycode == KEY_PLUS ||event.keycode == KEY_MINUS:
 			timeline.channelBinds[id] = event.keycode
 			timeline.clear_controller_bind(id)
 			updateBindLabel()
