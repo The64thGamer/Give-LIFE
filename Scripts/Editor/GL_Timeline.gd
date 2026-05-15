@@ -602,6 +602,8 @@ func _poll_controller_binds(delta: float) -> void:
 	if poll_ready:
 		_controller_poll_accum = 0.0
 
+	var did_change := false
+
 	for channel_id in channelControllerBinds:
 		var bind: Dictionary = channelControllerBinds[channel_id]
 		if bind["type"] != "axis":
@@ -623,6 +625,7 @@ func _poll_controller_binds(delta: float) -> void:
 				var ch = master.currentlyLoadedFile["channels"][channel_id]
 				ch["data"] = GL_ChannelData.insert_entry(ch.get("data", []), { "time": time_to_int(timeCurrent), "value": value })
 				_invalidate_playback_cache(channel_id)
+				did_change = true
 			GL_ChannelData.TYPE_BOOL:
 				var pressed = value > 0.2
 				var was_pressed = last > 0.2
@@ -632,6 +635,9 @@ func _poll_controller_binds(delta: float) -> void:
 					startEdit(channel_id, timeCurrent, true)
 				else:
 					_commit_edit(channel_id)
+				did_change = true
 			_:
 				continue
-	_mark_dirty()
+
+	if did_change:
+		_mark_dirty()

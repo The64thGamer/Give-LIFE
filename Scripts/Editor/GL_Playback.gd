@@ -16,8 +16,8 @@ var _isScrubbing : bool = false
 var _scrubTimer : float = 0.0
 var _media_state: Dictionary = {}
 var _media_timers: Dictionary = {}
-
-const _SCRUB_SEEK_INTERVAL = 0.08
+var _drift_check_accum: int = 0
+const _SCRUB_SEEK_INTERVAL = 0.25
 var _scrub_seek_timer: float = 0.0
 var _scrub_pending_time: float = -1.0
 
@@ -272,44 +272,30 @@ func _process_audio(delta: float, time_changed: bool) -> void:
 
 	if playing:
 		_isScrubbing = false
-		_scrubTimer = 0.0
-		_scrub_seek_timer = 0.0
-		_scrub_pending_time = -1.0
 		if not audioPlayer.playing:
 			audioPlayer.play(current)
 		else:
-			if abs(audioPlayer.get_playback_position() - current) > 0.2:
-				audioPlayer.seek(current)
+			_drift_check_accum += 1
+			if _drift_check_accum >= 10:
+				_drift_check_accum = 0
+				var audio_pos = audioPlayer.get_playback_position()
+				if abs(audio_pos - current) > 0.2:
+					timeline.timeCurrent = audio_pos
+					timeline.currentTimeText.text = timeline.format_time(audio_pos)
 	else:
-		if audioPlayer.playing and not _isScrubbing:
+		if audioPlayer.playing:
 			audioPlayer.stop()
-
-		if time_changed:
-			_isScrubbing = true
-			_scrubTimer = 0.15
-			_scrub_pending_time = current
-			_scrub_seek_timer += delta
-
-			if _scrub_seek_timer >= _SCRUB_SEEK_INTERVAL:
-				_scrub_seek_timer = 0.0
-				if not audioPlayer.playing:
-					audioPlayer.play(_scrub_pending_time)
-				else:
-					audioPlayer.seek(_scrub_pending_time)
-				_scrub_pending_time = -1.0
-		else:
-			_scrub_seek_timer += delta
-
 		if _isScrubbing:
 			_scrubTimer -= delta
 			if _scrubTimer <= 0.0:
 				_isScrubbing = false
-				_scrub_seek_timer = 0.0
-				_scrub_pending_time = -1.0
-				audioPlayer.stop()
+		if time_changed:
+			_isScrubbing = true
+			_scrubTimer = 0.15
 
 	_lastTime = current
-
+	
+	
 func _load_audio_stream(path: String, ext: String) -> AudioStream:
 	var absolute_path = ProjectSettings.globalize_path(path)
 	match ext:
