@@ -71,7 +71,7 @@ func _input(event: InputEvent) -> void:
 			mediator.set_editing_channel(id, self)
 		
 	if event is InputEventKey and event.pressed:
-		if (event.keycode >= KEY_0 and event.keycode <= KEY_9) || event.keycode == KEY_PLUS ||event.keycode == KEY_MINUS:
+		if (event.keycode >= KEY_0 and event.keycode <= KEY_9) || event.keycode == KEY_EQUAL ||event.keycode == KEY_MINUS:
 			timeline.channelBinds[id] = event.keycode
 			timeline.clear_controller_bind(id)
 			updateBindLabel()

@@ -31,7 +31,8 @@ var _timeline_dirty: bool = false
 var _last_start_text: String = ""
 var _last_end_text: String = ""
 var _scrub_handled_this_frame: bool = false
-var channelControllerBinds: Dictionary = {}  
+var channelControllerBinds: Dictionary = {} 
+var _last_axis_write_time: Dictionary = {}
 var controller_poll_rate: float = 1.0 / 10.0 
 var _controller_poll_accum: float = 0.0
 const AXIS_COMPONENT_ANGLE = "angle"
@@ -595,9 +596,11 @@ func _poll_controller_binds(delta: float) -> void:
 	if not playing:
 		return
 	_controller_poll_accum += delta
-	if _controller_poll_accum < controller_poll_rate:
-		return
-	_controller_poll_accum = 0.0
+
+	var poll_ready = _controller_poll_accum >= controller_poll_rate
+	if poll_ready:
+		_controller_poll_accum = 0.0
+
 	for channel_id in channelControllerBinds:
 		var bind: Dictionary = channelControllerBinds[channel_id]
 		if bind["type"] != "axis":
@@ -606,7 +609,12 @@ func _poll_controller_binds(delta: float) -> void:
 		var last = _last_axis_values.get(channel_id, -INF)
 		if value == last:
 			continue
+		var last_write_age = _last_axis_write_time.get(channel_id, -INF)
+		var time_since_write = Time.get_ticks_msec() / 1000.0 - last_write_age
+		if not poll_ready and time_since_write < controller_poll_rate:
+			continue
 		_last_axis_values[channel_id] = value
+		_last_axis_write_time[channel_id] = Time.get_ticks_msec() / 1000.0
 		var type = get_channel_type(channel_id)
 		match type:
 			GL_ChannelData.TYPE_FLOAT:

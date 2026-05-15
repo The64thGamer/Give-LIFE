@@ -5,7 +5,7 @@ class_name GL_EditChannel
 @onready var hint: Control = $MarginContainer
 @onready var options: Control = $HBoxContainer
 
-@onready var channel_label: Label = $HBoxContainer/VBoxContainer2/Label
+@onready var channel_label: Label = $HBoxContainer/VBoxContainer/Label2
 
 @onready var btn_none:  Button = $HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonNone
 @onready var btn_1:     Button = $HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/Button1
@@ -26,6 +26,8 @@ class_name GL_EditChannel
 @onready var btn_y:     Button = $HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonY
 @onready var btn_lb:    Button = $HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonLB
 @onready var btn_rb:    Button = $HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonRB
+@onready var btn_rt:    Button = $HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonRT
+@onready var btn_lt:    Button = $HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonLT
 
 @onready var btn_dpad_l:    Button = $HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/DpadL
 @onready var btn_dpad_up:   Button = $HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/DpadUp
@@ -90,6 +92,8 @@ func _ready() -> void:
 	btn_y.pressed.connect(func():  _set_joy_button(JOY_BUTTON_Y))
 	btn_lb.pressed.connect(func(): _set_joy_button(JOY_BUTTON_LEFT_SHOULDER))
 	btn_rb.pressed.connect(func(): _set_joy_button(JOY_BUTTON_RIGHT_SHOULDER))
+	btn_lt.pressed.connect(func():  _set_axis(JOY_AXIS_TRIGGER_LEFT, "value"))
+	btn_rt.pressed.connect(func(): _set_axis(JOY_AXIS_TRIGGER_RIGHT, "value"))
 
 	# ── Dpad ──────────────────────────────────────────────────────────────────
 	btn_dpad_l.pressed.connect(func():    _set_joy_button(JOY_BUTTON_DPAD_LEFT))
