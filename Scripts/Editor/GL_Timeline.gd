@@ -494,6 +494,7 @@ func clear_group_binds() -> void:
 func on_group_changed() -> void:
 	scrolledIndex = 0
 	reload_timeline()
+	call_deferred("_reassign_channel_slots")
 
 func _prime_playback_deferred() -> void:
 	var playback = _get_playback()
@@ -619,13 +620,12 @@ func _poll_controller_binds(delta: float) -> void:
 		match type:
 			GL_ChannelData.TYPE_FLOAT:
 				master.ensure_channel_exists(channel_id)
-				var entries: Array = master.currentlyLoadedFile["channels"][channel_id].get("data", [])
-				entries = GL_ChannelData.insert_entry(entries, { "time": time_to_int(timeCurrent), "value": value })
-				master.currentlyLoadedFile["channels"][channel_id]["data"] = entries
+				var ch = master.currentlyLoadedFile["channels"][channel_id]
+				ch["data"] = GL_ChannelData.insert_entry(ch.get("data", []), { "time": time_to_int(timeCurrent), "value": value })
 				_invalidate_playback_cache(channel_id)
 			GL_ChannelData.TYPE_BOOL:
-				var pressed = value > 0.5
-				var was_pressed = last > 0.5
+				var pressed = value > 0.2
+				var was_pressed = last > 0.2
 				if pressed == was_pressed:
 					continue
 				if pressed:

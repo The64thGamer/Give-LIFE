@@ -108,6 +108,8 @@ static func encode_string_entry(t_int: int, value: String) -> PackedByteArray:
 	return b
 
 static func encode_entries(type: String, entries: Array) -> String:
+	if entries.is_empty():
+		return ""
 	var b = PackedByteArray()
 	for entry in entries:
 		match type:
@@ -182,7 +184,7 @@ static func get_float_at_time(entries: Array, t_int: int) -> float:
 	return 0.0
 
 static func insert_entry(entries: Array, entry: Dictionary) -> Array:
-	if entries.is_empty() or not entries[0] is Dictionary:
+	if not entries.is_empty() and not entries[0] is Dictionary:
 		push_error("GL_ChannelData.insert_entry called on non-dict array (bool channel?)")
 		return entries
 	var result = entries.duplicate()

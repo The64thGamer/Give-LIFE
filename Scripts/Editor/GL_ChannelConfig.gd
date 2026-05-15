@@ -126,6 +126,7 @@ func set_editing_channel(channel_id: String, channel: GL_Channel) -> void:
 	_current_channel_id = channel_id
 	_current_channel = channel
 	visible = true
+	timeline.master.ensure_channel_exists(channel_id)
 	hint.visible = false
 	options.visible = true
 	_refresh_ui()
