@@ -1,4 +1,4 @@
-extends Node
+extends Control
 class_name GL_Channel
 @onready var title : Label = $ChannelTimeline/title
 @onready var bindLabel : Label = $"Bind/Bind Label"
@@ -51,7 +51,7 @@ func _process(_delta: float) -> void:
 	if timeline == null:
 		return
 
-	if not timeline.playing:
+	if not timeline.playing and self.is_visible_in_tree():
 		if not timeline._scrub_handled_this_frame:
 			var mouse_pos = channelTimeline.get_local_mouse_position()
 			# Rect2(0,0, size.x, size.y) is the local bounds of the timeline area

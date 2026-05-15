@@ -165,7 +165,7 @@ func refresh_bind_alerts() -> void:
 			continue
 		var has_bind := false
 		for channel_id in master.scene_groups.get(group_name, {}):
-			if timeline.channelBinds.has(channel_id):
+			if timeline.channelBinds.has(channel_id) or timeline.channelControllerBinds.has(channel_id):
 				has_bind = true
 				break
 		alert.visible = has_bind

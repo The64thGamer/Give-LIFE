@@ -233,31 +233,6 @@ func _notification(what: int) -> void:
 	if what == NOTIFICATION_PREDELETE:
 		_send_null_media_signals()
 
-
-func _seed_default_media() -> void:
-	if master.currentlyLoadedPath == "":
-		return
-	var default_audio = _find_default_file(AUDIO_EXTENSIONS)
-	var default_video = _find_default_file(VIDEO_EXTENSIONS)
-	for key in master.currentlyLoadedFile["channels"]:
-		var ch = master.currentlyLoadedFile["channels"][key]
-		var type = GL_ChannelData.get_type(ch)
-		if type != GL_ChannelData.TYPE_AUDIO and type != GL_ChannelData.TYPE_VIDEO:
-			continue
-		var data = ch.get("data", "")
-		var is_empty = (data is String and data == "") or (data is Array and data.is_empty()) or data == null
-		if not is_empty:
-			continue
-		var default_file: String = ""
-		if type == GL_ChannelData.TYPE_AUDIO and default_audio != "":
-			default_file = default_audio
-		elif type == GL_ChannelData.TYPE_VIDEO and default_video != "":
-			default_file = default_video
-		if default_file == "":
-			continue
-		var entry = { "time": 0, "file": default_file, "offset": 0.0 }
-		ch["data"] = GL_ChannelData.encode_entries(type, [entry])
-
 func _find_default_file(extensions: Array) -> String:
 	var folder = master.currentlyLoadedPath
 	var dir = DirAccess.open(ProjectSettings.globalize_path(folder))
@@ -288,7 +263,6 @@ func reload_audio() -> void:
 		if stream:
 			audioPlayer.stream = stream
 			print("Audio loaded: ", default_audio)
-	_seed_default_media()
 
 func _process_audio(delta: float, time_changed: bool) -> void:
 	if not audioPlayer.stream:

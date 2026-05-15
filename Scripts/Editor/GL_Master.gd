@@ -43,6 +43,7 @@ func save_and_quit():
 	root.queue_free()
 	
 func save() -> void:
+	print("Saving File")
 	if currentlyLoadedPath == "":
 		print("Couldn't Save, Missing Path")
 		return
@@ -102,7 +103,6 @@ func ensure_channel_exists(channel_id: String) -> void:
 		type = scene_groups[group][channel_id].get("type", "bool")
 	currentlyLoadedFile["channels"][channel_id] = { "type": type, "data": [] }
 	print("Auto-created channel: " + channel_id)
-	save()
 	playback.invalidate_all_cache()
 
 func setAuthor(changed: String):
