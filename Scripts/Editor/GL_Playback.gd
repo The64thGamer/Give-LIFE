@@ -10,6 +10,7 @@ const AUDIO_EXTENSIONS = ["mp3", "wav", "ogg"]
 const VIDEO_EXTENSIONS = ["mp4", "webm", "ogv"]
 const _VIDEO_TIMESTAMP_INTERVAL = 0.1
 
+var _audio_length : float
 var _lastTime : float = -1.0
 var _lastTime_int : int = -1
 var _isScrubbing : bool = false
@@ -254,6 +255,7 @@ func _find_default_file(extensions: Array) -> String:
 func reload_audio() -> void:
 	audioPlayer.stop()
 	audioPlayer.stream = null
+	_audio_length = 0.0
 	if master.currentlyLoadedPath == "":
 		return
 	var default_audio = _find_default_file(AUDIO_EXTENSIONS)
@@ -262,6 +264,7 @@ func reload_audio() -> void:
 		var stream = _load_audio_stream(full_path, default_audio.get_extension().to_lower())
 		if stream:
 			audioPlayer.stream = stream
+			_audio_length = stream.get_length()
 			print("Audio loaded: ", default_audio)
 
 func _process_audio(delta: float, time_changed: bool) -> void:
@@ -273,15 +276,19 @@ func _process_audio(delta: float, time_changed: bool) -> void:
 	if playing:
 		_isScrubbing = false
 		if not audioPlayer.playing:
-			audioPlayer.play(current)
+			if timeline.timeCurrent < _audio_length:
+				audioPlayer.play(timeline.timeCurrent)
 		else:
-			_drift_check_accum += 1
-			if _drift_check_accum >= 10:
-				_drift_check_accum = 0
-				var audio_pos = audioPlayer.get_playback_position()
-				if abs(audio_pos - current) > 0.2:
-					timeline.timeCurrent = audio_pos
-					timeline.currentTimeText.text = timeline.format_time(audio_pos)
+			if timeline.timeCurrent >= _audio_length:
+				audioPlayer.stop()
+			else:
+				_drift_check_accum += 1
+				if _drift_check_accum >= 10:
+					_drift_check_accum = 0
+					var audio_pos = audioPlayer.get_playback_position()
+					if abs(audio_pos - timeline.timeCurrent) > 0.2:
+						timeline.timeCurrent = audio_pos
+						timeline.currentTimeText.text = timeline.format_time(audio_pos)
 	else:
 		if audioPlayer.playing:
 			audioPlayer.stop()
