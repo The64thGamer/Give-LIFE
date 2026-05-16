@@ -5,6 +5,7 @@ class_name GL_Channel
 @onready var bindHint : TextureRect = $"Bind/Bind Hint"
 @onready var channelTimeline : Control = $ChannelTimeline
 @onready var bitHolder = $ChannelTimeline/BitHolder
+@onready var controllerIcon : ControllerIcon = $"Bind/ControllerIcon"
 
 var id = ""
 var color : Color = Color.YELLOW
@@ -13,9 +14,9 @@ var timeline : GL_Timeline
 var changingBind = false
 var currentBind = null
 
-var _bit_panels: Array = []       # bool GL_BitPanel nodes
-var _float_points: Array = []     # GL_FloatPoint nodes
-var _event_bars: Array = []       # GL_EventBar nodes
+var _bit_panels: Array = []
+var _float_points: Array = []
+var _event_bars: Array = []
 
 var _float_line: Line2D = null
 
@@ -326,16 +327,85 @@ func _hide_preview_panel() -> void:
 func updateBindLabel() -> void:
 	var kb_bind = timeline.channelBinds.get(id, null)
 	var ctrl_bind = timeline.channelControllerBinds.get(id, null)
+
+	# Reset controller icon visibility by default
+	controllerIcon.visible = false
+
 	if kb_bind != null:
-		bindLabel.text = OS.get_keycode_string(kb_bind)
+		var label: String
+		match kb_bind:
+			KEY_EQUAL:  label = "+"
+			KEY_MINUS:  label = "-"
+			_:          label = OS.get_keycode_string(kb_bind)
+		bindLabel.text = label
 		bindHint.visible = false
 	elif ctrl_bind != null:
-		bindLabel.text = _controller_bind_label(ctrl_bind)
+		# Controller bind: try to show icon, fall back to text
 		bindHint.visible = false
+		var icon_name = _controller_bind_to_icon_name(ctrl_bind)
+		if icon_name != "":
+			controllerIcon.button_name = icon_name
+			controllerIcon._update_texture()
+			controllerIcon.visible = true
+			bindLabel.text = ""
+		else:
+			# Unmapped button — fall back to text label
+			bindLabel.text = _controller_bind_label(ctrl_bind)
 	else:
 		bindLabel.text = ""
 		bindHint.visible = true
+
 	get_tree().get_first_node_in_group("AnimatableImporter").refresh_bind_alerts()
+
+func _controller_bind_to_icon_name(bind: Dictionary) -> String:
+	if bind["type"] == "button":
+		match bind["input"]:
+			JOY_BUTTON_A:              return "A"
+			JOY_BUTTON_B:              return "B"
+			JOY_BUTTON_X:              return "X"
+			JOY_BUTTON_Y:              return "Y"
+			JOY_BUTTON_LEFT_SHOULDER:  return "LB"
+			JOY_BUTTON_RIGHT_SHOULDER: return "RB"
+			JOY_BUTTON_DPAD_LEFT:      return "Dpad_Left"
+			JOY_BUTTON_DPAD_RIGHT:     return "Dpad_Right"
+			JOY_BUTTON_DPAD_UP:        return "Dpad_Up"
+			JOY_BUTTON_DPAD_DOWN:      return "Dpad_Down"
+
+	elif bind["type"] == "axis":
+		var component = bind["component"]
+		match bind["input"]:
+			JOY_AXIS_TRIGGER_LEFT:  return "LT"
+			JOY_AXIS_TRIGGER_RIGHT: return "RT"
+			JOY_AXIS_LEFT_X:
+				match component:
+					"negative":    return "LstickL"
+					"positive":    return "LstickR"
+					"magnitude":   return "LstickMagnitude"
+					"magnitude_2d": return "LstickMagnitude"
+					"angle":       return "LstickAngle"
+			JOY_AXIS_LEFT_Y:
+				match component:
+					"negative":    return "LstickUp"
+					"positive":    return "LstickDown"
+					"magnitude":   return "LstickMagnitude"
+					"magnitude_2d": return "LstickMagnitude"
+					"angle":       return "LstickAngle"
+			JOY_AXIS_RIGHT_X:
+				match component:
+					"negative":    return "RstickL"
+					"positive":    return "RstickR"
+					"magnitude":   return "RstickMagnitude"
+					"magnitude_2d": return "RstickMagnitude"
+					"angle":       return "RstickAngle"
+			JOY_AXIS_RIGHT_Y:
+				match component:
+					"negative":    return "RstickUp"
+					"positive":    return "RstickDown"
+					"magnitude":   return "RstickMagnitude"
+					"magnitude_2d": return "RstickMagnitude"
+					"angle":       return "RstickAngle"
+
+	return ""
 
 func _controller_bind_label(bind: Dictionary) -> String:
 	if bind["type"] == "button":

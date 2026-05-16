@@ -136,7 +136,7 @@ size_flags_vertical = 3
 [node name="Modifiers" type="TabContainer" parent="Full Editor/Editor" unique_id=120351013]
 layout_mode = 2
 size_flags_horizontal = 3
-current_tab = 4
+current_tab = 0
 script = ExtResource("11_muhm5")
 hover_sound = ExtResource("8_qw38e")
 press_sound = ExtResource("9_e12if")
@@ -144,7 +144,6 @@ press_pitch_multiplier_on = 2.0
 press_pitch_multiplier_off = 2.0
 
 [node name="Animatables" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=1407192095]
-visible = false
 self_modulate = Color(1, 1, 1, 0.5019608)
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -321,6 +320,7 @@ press_sound = ExtResource("14_e12if")
 press_pitch_randomize_enabled = false
 
 [node name="Edit Channel" type="MarginContainer" parent="Full Editor/Editor/Modifiers" unique_id=1616820540 groups=["EditChannel"]]
+visible = false
 self_modulate = Color(1, 1, 1, 0.5019608)
 layout_mode = 2
 theme_override_constants/margin_left = 10

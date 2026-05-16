@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://g3x10ge11yel" path="res://UI/Icons/file-pen-solid-full.svg" id="3_qsxjb"]
 [ext_resource type="AudioStream" uid="uid://bq5a3xyfofaaa" path="res://Sounds/Tip.wav" id="4_fifuu"]
 [ext_resource type="AudioStream" uid="uid://dj62mn2fnp1l4" path="res://Sounds/Cloc.wav" id="5_w7cnh"]
+[ext_resource type="Script" uid="uid://x7tjh0tpsxv6" path="res://Scripts/Editor/ControllerIcon.gd" id="7_u073q"]
 
 [node name="HBoxContainer" type="HBoxContainer" unique_id=573888745]
 custom_minimum_size = Vector2(0, 40)
@@ -46,6 +47,19 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_qsxjb")
 expand_mode = 1
+
+[node name="ControllerIcon" type="TextureRect" parent="Bind" unique_id=1668553535]
+visible = false
+modulate = Color(0.99215686, 0.9882353, 0.85882354, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_qsxjb")
+expand_mode = 1
+script = ExtResource("7_u073q")
 
 [node name="ChannelTimeline" type="PanelContainer" parent="." unique_id=1042388189]
 layout_mode = 2
