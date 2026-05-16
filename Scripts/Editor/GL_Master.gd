@@ -117,6 +117,7 @@ func setTitle(changed: String):
 
 func _load_settings_general() -> void:
 	get_tree().get_first_node_in_group("AnimatableImporter").refresh()
+	playback.refresh_animatables()
 	timeline.reload_timeline()
 	mediaLoader.reload_media()
 	playback.reload_audio()
