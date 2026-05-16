@@ -11,7 +11,7 @@ radius = 4.517578
 
 [node name="Sugar Red Cheeks" type="Node3D" unique_id=233530727 groups=["FNAC_CANDY"]]
 script = ExtResource("1_6bsak")
-animParametersFileName = "Candy"
+animParametersFileName = "Sugar"
 animatableIcon = ExtResource("2_6bsak")
 animatableName = "Sugar Red Cheeks"
 animatableAuthors = "sudo trans --pony"

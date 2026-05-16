@@ -1,113 +1,113 @@
 {
-  "FNAC_CINDY|Arm L": {
+  "FNAC_CANDY|Arm L": {
 	"animation": "Arm L",
 	"in_speed": 3.0,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Arm R Twist": {
+  "FNAC_CANDY|Arm R Twist": {
 	"animation": "Arm R Twist",
 	"in_speed": 3.5,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Blink": {
+  "FNAC_CANDY|Blink": {
 	"animation": "Blink",
 	"in_speed": 5.0,
 	"out_speed": 8.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Body Lean": {
+  "FNAC_CANDY|Body Lean": {
 	"animation": "Body Lean",
 	"in_speed": 2.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FNAC_CINDY|Body Turn L": {
+  "FNAC_CANDY|Body Turn L": {
 	"animation": "Body Turn L",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FNAC_CINDY|Body Turn R": {
+  "FNAC_CANDY|Body Turn R": {
 	"animation": "Body Turn R",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FNAC_CINDY|Eye L": {
+  "FNAC_CANDY|Eye L": {
 	"animation": "Eye L",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Eye R": {
+  "FNAC_CANDY|Eye R": {
 	"animation": "Eye R",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Fingers L": {
+  "FNAC_CANDY|Fingers L": {
 	"animation": "ExtraFingers L",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Fingers R": {
+  "FNAC_CANDY|Fingers R": {
 	"animation": "ExtraFingers R",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Forearm R Up": {
+  "FNAC_CANDY|Forearm R Up": {
 	"animation": "Forearm R Up",
 	"in_speed": 3.5,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Hand L": {
+  "FNAC_CANDY|Hand L": {
 	"animation": "Hand L",
 	"in_speed": 3.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Hand R": {
+  "FNAC_CANDY|Hand R": {
 	"animation": "Hand R",
 	"in_speed": 3.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Head L": {
+  "FNAC_CANDY|Head L": {
 	"animation": "Head L",
 	"in_speed": 5.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Head R": {
+  "FNAC_CANDY|Head R": {
 	"animation": "Head R",
 	"in_speed": 5.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Head Up": {
+  "FNAC_CANDY|Head Up": {
 	"animation": "Head Up",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FNAC_CINDY|Jaw": {
+  "FNAC_CANDY|Jaw": {
 	"animation": "Jaw",
 	"in_speed": 5.5,
 	"out_speed": 6.5,
 	"type": "standard"
   },
-  "FNAC_CINDY|Tie L": {
+  "FNAC_CANDY|Tie L": {
 	"animation": "Tie L",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FNAC_CINDY|Tie R": {
+  "FNAC_CANDY|Tie R": {
 	"animation": "Tie R",
 	"in_speed": 2.5,
 	"out_speed": 2.5,

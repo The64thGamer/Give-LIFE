@@ -586,23 +586,6 @@ stretch_mode = 5
 script = ExtResource("23_g45qd")
 button_name = "RB"
 
-[node name="ButtonRT" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=863789651]
-custom_minimum_size = Vector2(40, 40)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonRT" unique_id=500236907]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("28_wu0sf")
-expand_mode = 1
-stretch_mode = 5
-script = ExtResource("23_g45qd")
-button_name = "RT"
-
 [node name="ButtonLT" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=778875344]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
@@ -619,6 +602,23 @@ expand_mode = 1
 stretch_mode = 5
 script = ExtResource("23_g45qd")
 button_name = "LT"
+
+[node name="ButtonRT" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=863789651]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/ButtonRT" unique_id=500236907]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_wu0sf")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "RT"
 
 [node name="DpadL" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=951382365]
 custom_minimum_size = Vector2(40, 40)

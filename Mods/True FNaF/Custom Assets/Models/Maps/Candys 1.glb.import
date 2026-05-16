@@ -69,6 +69,17 @@ _subresources={
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/Candys/Wall.tres",
 "use_external/path": "uid://c5bvh70m41eiu"
 }
+},
+"nodes": {
+"PATH:Cube": {
+"generate/physics": true
+},
+"PATH:Cube_001": {
+"generate/physics": true
+},
+"PATH:Plane_012": {
+"generate/physics": true
+}
 }
 }
 gltf/naming_version=2

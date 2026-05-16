@@ -623,7 +623,21 @@ func _poll_controller_binds(delta: float) -> void:
 			GL_ChannelData.TYPE_FLOAT:
 				master.ensure_channel_exists(channel_id)
 				var ch = master.currentlyLoadedFile["channels"][channel_id]
-				ch["data"] = GL_ChannelData.insert_entry(ch.get("data", []), { "time": time_to_int(timeCurrent), "value": value })
+				var data: Array = ch.get("data", [])
+				# Before recording the new value, anchor the previous value one tick
+				# behind the current time. Without this, the interpolation would
+				# gradually slide from the last recorded point toward the new value
+				# across however long the input was held steady, instead of holding
+				# the old value right up until the moment it changed.
+				if last != -INF:
+					var anchor_int = time_to_int(timeCurrent) - 1
+					var current_int = time_to_int(timeCurrent)
+					if anchor_int > current_int - 1:
+						anchor_int = current_int - 1
+					if anchor_int >= 0:
+						data = GL_ChannelData.insert_entry(data, { "time": anchor_int, "value": last })
+				data = GL_ChannelData.insert_entry(data, { "time": time_to_int(timeCurrent), "value": value })
+				ch["data"] = data
 				_invalidate_playback_cache(channel_id)
 				did_change = true
 			GL_ChannelData.TYPE_BOOL:
