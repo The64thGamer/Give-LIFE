@@ -248,7 +248,7 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="Username" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer" unique_id=835588970]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -273,7 +273,7 @@ press_pitch_multiplier_on = 1.5
 press_pitch_multiplier_off = 1.5
 
 [node name="Boot on Start" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer" unique_id=1909171116]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -301,8 +301,37 @@ press_sound = ExtResource("8_mu3iq")
 press_pitch_randomize_enabled = false
 press_pitch_multiplier_off = 0.5
 
+[node name="Controller Icons" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer" unique_id=1075530690]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer/Controller Icons" unique_id=1308152681]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Controller Icons"
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer/Controller Icons" unique_id=1570420044]
+layout_mode = 2
+action_mode = 1
+selected = 0
+item_count = 3
+popup/item_0/text = "XBOX"
+popup/item_0/id = 0
+popup/item_1/text = "PlayStation"
+popup/item_1/id = 1
+popup/item_2/text = "Switch"
+popup/item_2/id = 2
+script = ExtResource("5_8r7np")
+hover_sound = ExtResource("8_lcruc")
+press_sound = ExtResource("8_mu3iq")
+press_pitch_randomize_enabled = false
+press_pitch_multiplier_off = 0.5
+
 [node name="Show Pressed Keys" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer" unique_id=239557491]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -322,7 +351,7 @@ press_pitch_randomize_enabled = false
 press_pitch_multiplier_off = 0.5
 
 [node name="Autorun" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer" unique_id=1327039178]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -342,7 +371,7 @@ press_pitch_randomize_enabled = false
 press_pitch_multiplier_off = 0.5
 
 [node name="FPS" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer" unique_id=1213109753]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -373,7 +402,7 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="Window Mode" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer" unique_id=515176983]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -400,7 +429,7 @@ press_pitch_randomize_enabled = false
 press_pitch_multiplier_off = 0.5
 
 [node name="Anti-Aliasing" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer" unique_id=667348079]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -431,7 +460,7 @@ press_pitch_randomize_enabled = false
 press_pitch_multiplier_off = 0.5
 
 [node name="Render Scale" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer" unique_id=174571073]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -458,7 +487,7 @@ press_max_pitch = 1.1
 audio_player_path = NodePath("../../../../../../../../../AudioStreamPlayer2D")
 
 [node name="Render Scale Mode" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer" unique_id=1718787805]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -487,7 +516,7 @@ press_pitch_randomize_enabled = false
 press_pitch_multiplier_off = 0.5
 
 [node name="Physics Bones" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer" unique_id=1549961033]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -518,7 +547,7 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="Master Volume" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Audio/VBoxContainer" unique_id=463011602]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -1055,6 +1084,7 @@ volume_db = 4.0
 [connection signal="pressed" from="MarginContainer/PanelContainer/Title Screen/Exit" to="." method="_on_quit_button_pressed"]
 [connection signal="text_changed" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer/Username/LineEdit" to="." method="_on_line_edit_changed" binds= ["username"]]
 [connection signal="item_selected" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer/Boot on Start/OptionButton" to="." method="_on_option_changed" binds= ["boot_on_start"]]
+[connection signal="item_selected" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer/Controller Icons/OptionButton" to="." method="_on_option_changed" binds= ["controller_icons"]]
 [connection signal="toggled" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer/Show Pressed Keys/CheckButton" to="." method="_on_button_changed" binds= ["show_key_presses"]]
 [connection signal="toggled" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer/Autorun/CheckButton" to="." method="_on_button_changed" binds= ["auto_run"]]
 [connection signal="toggled" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer/FPS/CheckButton" to="." method="_on_button_changed" binds= ["show_fps"]]

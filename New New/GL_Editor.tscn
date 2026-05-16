@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://bnie4ltau04j1" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_A.png" id="21_crika"]
 [ext_resource type="Texture2D" uid="uid://b13cl8321tif4" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_B.png" id="22_et1pk"]
 [ext_resource type="Texture2D" uid="uid://bbcglbokkvgxm" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_X.png" id="23_32mol"]
+[ext_resource type="Script" uid="uid://x7tjh0tpsxv6" path="res://Scripts/Editor/ControllerIcon.gd" id="23_g45qd"]
 [ext_resource type="Texture2D" uid="uid://m5b2k8hmww71" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_Y.png" id="24_aow6y"]
 [ext_resource type="Texture2D" uid="uid://ple5pu003bbc" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_LB.png" id="25_hgnfx"]
 [ext_resource type="Texture2D" uid="uid://cft6ykowhp2er" path="res://UI/Buttons/Xelu_Free_Controller&Key_Prompts/Others/Xbox 360/360_RB.png" id="26_u67nk"]
@@ -423,7 +424,7 @@ texture = ExtResource("21_aow6y")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Button1" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1652803267]
+[node name="Button1" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=419675350]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 text = "1"
@@ -497,6 +498,8 @@ grow_vertical = 2
 texture = ExtResource("21_crika")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "A"
 
 [node name="ButtonB" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1254625739]
 custom_minimum_size = Vector2(40, 40)
@@ -512,6 +515,8 @@ grow_vertical = 2
 texture = ExtResource("22_et1pk")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "B"
 
 [node name="ButtonX" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=525444524]
 custom_minimum_size = Vector2(40, 40)
@@ -527,6 +532,8 @@ grow_vertical = 2
 texture = ExtResource("23_32mol")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "X"
 
 [node name="ButtonY" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=465295582]
 custom_minimum_size = Vector2(40, 40)
@@ -542,6 +549,8 @@ grow_vertical = 2
 texture = ExtResource("24_aow6y")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "Y"
 
 [node name="ButtonLB" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=554477074]
 custom_minimum_size = Vector2(40, 40)
@@ -557,6 +566,8 @@ grow_vertical = 2
 texture = ExtResource("25_hgnfx")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "LB"
 
 [node name="ButtonRB" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=530699538]
 custom_minimum_size = Vector2(40, 40)
@@ -572,6 +583,8 @@ grow_vertical = 2
 texture = ExtResource("26_u67nk")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "RB"
 
 [node name="ButtonRT" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=863789651]
 custom_minimum_size = Vector2(40, 40)
@@ -587,6 +600,8 @@ grow_vertical = 2
 texture = ExtResource("28_wu0sf")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "RT"
 
 [node name="ButtonLT" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=778875344]
 custom_minimum_size = Vector2(40, 40)
@@ -602,6 +617,8 @@ grow_vertical = 2
 texture = ExtResource("29_g45qd")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "LT"
 
 [node name="DpadL" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=951382365]
 custom_minimum_size = Vector2(40, 40)
@@ -617,6 +634,8 @@ grow_vertical = 2
 texture = ExtResource("29_h7jru")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "Dpad_Left"
 
 [node name="DpadUp" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=14443641]
 custom_minimum_size = Vector2(40, 40)
@@ -632,6 +651,8 @@ grow_vertical = 2
 texture = ExtResource("27_ivrqh")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "Dpad_Up"
 
 [node name="DpadR" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1665676129]
 custom_minimum_size = Vector2(40, 40)
@@ -647,6 +668,8 @@ grow_vertical = 2
 texture = ExtResource("30_svn66")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "Dpad_Right"
 
 [node name="DpadDown" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1281731751]
 custom_minimum_size = Vector2(40, 40)
@@ -662,6 +685,8 @@ grow_vertical = 2
 texture = ExtResource("28_kfaed")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "Dpad_Down"
 
 [node name="RstickL" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=113868985]
 custom_minimum_size = Vector2(40, 40)
@@ -699,6 +724,8 @@ grow_vertical = 2
 texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "RstickAngle"
 
 [node name="RstickUp" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=808995769]
 custom_minimum_size = Vector2(40, 40)
@@ -737,6 +764,8 @@ grow_vertical = 2
 texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "RstickAngle"
 
 [node name="RstickR" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=2129994767]
 custom_minimum_size = Vector2(40, 40)
@@ -776,6 +805,8 @@ grow_vertical = 2
 texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "RstickAngle"
 
 [node name="RstickDown" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1181429090]
 custom_minimum_size = Vector2(40, 40)
@@ -817,6 +848,8 @@ grow_vertical = 2
 texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "RstickAngle"
 
 [node name="RstickAngle" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=900695509]
 custom_minimum_size = Vector2(40, 40)
@@ -858,6 +891,8 @@ grow_vertical = 2
 texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "RstickAngle"
 
 [node name="RstickUD" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1809210131]
 custom_minimum_size = Vector2(40, 40)
@@ -898,6 +933,8 @@ grow_vertical = 2
 texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "RstickAngle"
 
 [node name="RstickLR" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1301792271]
 custom_minimum_size = Vector2(40, 40)
@@ -938,6 +975,8 @@ grow_vertical = 2
 texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "LstickAngle"
 
 [node name="RstickMagnitude" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1529513896]
 custom_minimum_size = Vector2(40, 40)
@@ -978,6 +1017,8 @@ grow_vertical = 2
 texture = ExtResource("31_32mol")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "RstickAngle"
 
 [node name="LstickL" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=242267195]
 custom_minimum_size = Vector2(40, 40)
@@ -1015,6 +1056,8 @@ grow_vertical = 2
 texture = ExtResource("32_aow6y")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "LstickAngle"
 
 [node name="LstickUp" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=66593285]
 custom_minimum_size = Vector2(40, 40)
@@ -1053,6 +1096,8 @@ grow_vertical = 2
 texture = ExtResource("32_aow6y")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "LstickAngle"
 
 [node name="LstickR" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1259816588]
 custom_minimum_size = Vector2(40, 40)
@@ -1092,6 +1137,8 @@ grow_vertical = 2
 texture = ExtResource("32_aow6y")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "LstickAngle"
 
 [node name="LstickDown" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1420381671]
 custom_minimum_size = Vector2(40, 40)
@@ -1133,6 +1180,17 @@ grow_vertical = 2
 texture = ExtResource("32_aow6y")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "LstickAngle"
+
+[node name="Button1" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer/LstickDown" unique_id=1652803267]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 0
+offset_left = 44.0
+offset_top = -176.0
+offset_right = 85.0
+offset_bottom = -136.0
+text = "1"
 
 [node name="LstickAngle" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=1715201434]
 custom_minimum_size = Vector2(40, 40)
@@ -1174,6 +1232,8 @@ grow_vertical = 2
 texture = ExtResource("32_aow6y")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "LstickAngle"
 
 [node name="LstickUD" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=206582147]
 custom_minimum_size = Vector2(40, 40)
@@ -1214,6 +1274,8 @@ grow_vertical = 2
 texture = ExtResource("32_aow6y")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "LstickAngle"
 
 [node name="LstickLR" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=432103652]
 custom_minimum_size = Vector2(40, 40)
@@ -1254,6 +1316,8 @@ grow_vertical = 2
 texture = ExtResource("32_aow6y")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "LstickAngle"
 
 [node name="LstickMagnitude" type="Button" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2/PanelContainer/MarginContainer/HFlowContainer" unique_id=709262556]
 custom_minimum_size = Vector2(40, 40)
@@ -1294,6 +1358,8 @@ grow_vertical = 2
 texture = ExtResource("32_aow6y")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("23_g45qd")
+button_name = "LstickAngle"
 
 [node name="Label2" type="Label" parent="Full Editor/Editor/Modifiers/Edit Channel/HBoxContainer/VBoxContainer2" unique_id=257153427]
 layout_mode = 2
