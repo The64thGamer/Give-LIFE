@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_awlme"]
 [ext_resource type="PackedScene" uid="uid://br6npw56qok12" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Candy Big Eyes.glb" id="2_awlme"]
+[ext_resource type="Texture2D" uid="uid://r2dmg10dpvcd" path="res://Mods/True FNaF/Custom Assets/UI/CandyBigEyes.png" id="2_dcrg7"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_escku"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_kxihl"]
 
@@ -12,6 +13,7 @@ radius = 4.517578
 [node name="Candy Big Eyes" type="Node3D" unique_id=233530727 groups=["FNAC_CANDY"]]
 script = ExtResource("1_awlme")
 animParametersFileName = "Candy"
+animatableIcon = ExtResource("2_dcrg7")
 animatableName = "Candy Big Eyes"
 animatableAuthors = "sudo trans --pony"
 animatableColor = Color(0.34079635, 0.38063368, 0.72797734, 1)

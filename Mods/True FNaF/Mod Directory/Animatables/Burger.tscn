@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_ugh7x"]
 [ext_resource type="PackedScene" uid="uid://cteuashg1jtn1" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Burger.glb" id="2_fr4le"]
+[ext_resource type="Texture2D" uid="uid://bugdtp7j6e614" path="res://Mods/True FNaF/Custom Assets/UI/Burger.webp" id="2_ugh7x"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_ywoif"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ih3pj"]
@@ -11,6 +12,7 @@ radius = 2.5761719
 [node name="Burger" type="Node3D" unique_id=233530727 groups=["FNAC_CANDY"]]
 script = ExtResource("1_ugh7x")
 animParametersFileName = "Candy"
+animatableIcon = ExtResource("2_ugh7x")
 animatableName = "Burger"
 animatableAuthors = "sudo trans --pony"
 animatableColor = Color(0.86139697, 0.50623065, 0.28726542, 1)

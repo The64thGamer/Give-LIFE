@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bc8jbkccmt3mk"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_p1afe"]
+[ext_resource type="Texture2D" uid="uid://biuosbhpyvbgn" path="res://Mods/True FNaF/Custom Assets/UI/RingmasterBase.webp" id="2_sbtkl"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_sbtkl"]
 [ext_resource type="PackedScene" uid="uid://c86xok3gikqpm" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Ringmaster Base.glb" id="4_bxgpv"]
 
@@ -11,6 +12,7 @@ radius = 0.703125
 [node name="Ringmaster Base" type="Node3D" unique_id=233530727 groups=["SOTM_MRHELPFUL"]]
 script = ExtResource("1_p1afe")
 animParametersFileName = "Mr Helpful"
+animatableIcon = ExtResource("2_sbtkl")
 animatableName = "Ringmaster Base"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.6, 0.16078432, 0.1764706, 1)

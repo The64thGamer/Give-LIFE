@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bsqeb3pvpmgic"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_3ggbg"]
+[ext_resource type="Texture2D" uid="uid://bxbifbtr3yy2f" path="res://Mods/True FNaF/Custom Assets/UI/JugHippo.png" id="2_3ggbg"]
 [ext_resource type="PackedScene" uid="uid://cnnhfgktdacbv" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Jug Band Hippo.glb" id="3_b51cq"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="4_od6gr"]
 
@@ -10,6 +11,7 @@ size = Vector3(1.7560401, 4.3879223, 1.6678123)
 [node name="Jug Band Hippo" type="Node3D" unique_id=233530727 groups=["SOTM_HIPPO"]]
 script = ExtResource("1_3ggbg")
 animParametersFileName = "Jug Band Hippo"
+animatableIcon = ExtResource("2_3ggbg")
 animatableName = "Jug Band Hippo"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.7095599, 0.3212, 0.73, 1)

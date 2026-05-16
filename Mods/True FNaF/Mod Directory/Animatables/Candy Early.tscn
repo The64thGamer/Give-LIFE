@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cmj2y20rq440p"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_wy6aq"]
+[ext_resource type="Texture2D" uid="uid://3xsmwe4t1pr2" path="res://Mods/True FNaF/Custom Assets/UI/CandyLongFangs.webp" id="2_drykb"]
 [ext_resource type="PackedScene" uid="uid://x73ql8xx7a3r" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Candy Long Fangs.glb" id="2_sxhq8"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_v0vol"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_e1c2y"]
@@ -12,6 +13,7 @@ radius = 4.517578
 [node name="Candy Early" type="Node3D" unique_id=233530727 groups=["FNAC_CANDY"]]
 script = ExtResource("1_wy6aq")
 animParametersFileName = "Candy"
+animatableIcon = ExtResource("2_drykb")
 animatableName = "Candy Early"
 animatableAuthors = "sudo trans --pony"
 animatableColor = Color(0.34079635, 0.38063368, 0.72797734, 1)

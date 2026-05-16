@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_iv3m3"]
 [ext_resource type="PackedScene" uid="uid://btcvipdot5eof" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Candy.glb" id="2_0hlhd"]
+[ext_resource type="Texture2D" uid="uid://8hlnagdmwe3" path="res://Mods/True FNaF/Custom Assets/UI/Candy.webp" id="2_1sode"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_0hlhd"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="3_1sode"]
 
@@ -12,6 +13,7 @@ radius = 4.517578
 [node name="Candy" type="Node3D" unique_id=233530727 groups=["FNAC_CANDY"]]
 script = ExtResource("1_iv3m3")
 animParametersFileName = "Candy"
+animatableIcon = ExtResource("2_1sode")
 animatableName = "Candy"
 animatableAuthors = "sudo trans --pony"
 animatableColor = Color(0.34079635, 0.38063368, 0.72797734, 1)

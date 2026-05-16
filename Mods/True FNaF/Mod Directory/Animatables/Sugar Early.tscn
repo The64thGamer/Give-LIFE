@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://g1lomv27dgdt"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_vulh0"]
+[ext_resource type="Texture2D" uid="uid://xytqd3r2bplw" path="res://Mods/True FNaF/Custom Assets/UI/SugarEarly.png" id="2_f31co"]
 [ext_resource type="PackedScene" uid="uid://ck41eqb8capl8" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Sugar Early.glb" id="2_vulh0"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_vs5v7"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_478dg"]
@@ -12,6 +13,7 @@ radius = 4.517578
 [node name="Sugar Early" type="Node3D" unique_id=233530727 groups=["FNAC_CANDY"]]
 script = ExtResource("1_vulh0")
 animParametersFileName = "Candy"
+animatableIcon = ExtResource("2_f31co")
 animatableName = "Sugar Early"
 animatableAuthors = "sudo trans --pony"
 animatableColor = Color(0.34079635, 0.38063368, 0.72797734, 1)

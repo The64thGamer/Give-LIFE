@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qmsekhwrbr1r"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_6bsak"]
+[ext_resource type="Texture2D" uid="uid://c4t4wkumilcfk" path="res://Mods/True FNaF/Custom Assets/UI/SugarRedCheeks.webp" id="2_6bsak"]
 [ext_resource type="PackedScene" uid="uid://b73m8gpxbpp8d" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Sugar Red Cheeks.glb" id="2_b1y5h"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_lqkew"]
 
@@ -11,6 +12,7 @@ radius = 4.517578
 [node name="Sugar Red Cheeks" type="Node3D" unique_id=233530727 groups=["FNAC_CANDY"]]
 script = ExtResource("1_6bsak")
 animParametersFileName = "Candy"
+animatableIcon = ExtResource("2_6bsak")
 animatableName = "Sugar Red Cheeks"
 animatableAuthors = "sudo trans --pony"
 animatableColor = Color(0.34079635, 0.38063368, 0.72797734, 1)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dhr5gkax28x8"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_u6u10"]
+[ext_resource type="Texture2D" uid="uid://b1drsx8iwaxv5" path="res://Mods/True FNaF/Custom Assets/UI/CindyBigEyes.webp" id="2_q6yqe"]
 [ext_resource type="PackedScene" uid="uid://bce2a0r5g34xb" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Cindy Big Eyes.glb" id="2_xetex"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_xetex"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_aue0n"]
@@ -12,6 +13,7 @@ radius = 4.517578
 [node name="Cindy Big Eyes" type="Node3D" unique_id=233530727 groups=["FNAC_CINDY"]]
 script = ExtResource("1_u6u10")
 animParametersFileName = "Cindy"
+animatableIcon = ExtResource("2_q6yqe")
 animatableName = "Cindy Big Eyes"
 animatableAuthors = "sudo trans --pony"
 animatableColor = Color(0.55198765, 0.25180084, 0.7354601, 1)

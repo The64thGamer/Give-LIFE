@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bn1b0mbbj71vn"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_yugrg"]
+[ext_resource type="Texture2D" uid="uid://do3htfvf031q" path="res://Mods/True FNaF/Custom Assets/UI/MrHelpfulRingmaster.png" id="2_8xckk"]
 [ext_resource type="PackedScene" uid="uid://bvl7sanoo46y1" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Mr Helpful.glb" id="2_yugrg"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_m876e"]
 
@@ -11,6 +12,7 @@ radius = 0.18066406
 [node name="Mr Helpful Alt" type="Node3D" unique_id=233530727 groups=["SOTM_MRHELPFUL_ALT"]]
 script = ExtResource("1_yugrg")
 animParametersFileName = "Mr Helpful Alt"
+animatableIcon = ExtResource("2_8xckk")
 animatableName = "Mr. Helpful"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.99215686, 0.7607843, 0.64705884, 1)

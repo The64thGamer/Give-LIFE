@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dyhynoyx5qmvk"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_87s5x"]
+[ext_resource type="Texture2D" uid="uid://xavolfpq7cad" path="res://Mods/True FNaF/Custom Assets/UI/MrsHelpful.png" id="2_ckcpd"]
 [ext_resource type="PackedScene" uid="uid://dgp1agqbc5cyg" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Mrs Helpful.glb" id="2_wkop4"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_i4umw"]
 
@@ -11,6 +12,7 @@ radius = 0.18066406
 [node name="Mrs Helpful" type="Node3D" unique_id=233530727 groups=["SOTM_MRSHELPFUL"]]
 script = ExtResource("1_87s5x")
 animParametersFileName = "Mr Helpful"
+animatableIcon = ExtResource("2_ckcpd")
 animatableName = "Mrs. Helpful"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.57254905, 0.38431373, 0.6313726, 1)

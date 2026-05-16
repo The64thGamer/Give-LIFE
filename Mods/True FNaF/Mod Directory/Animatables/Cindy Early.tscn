@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_js1ha"]
 [ext_resource type="PackedScene" uid="uid://ba3aqrfxvdoj" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Cindy Early.glb" id="2_fcp0p"]
+[ext_resource type="Texture2D" uid="uid://e0sm1qwdadi7" path="res://Mods/True FNaF/Custom Assets/UI/CindyEarly.webp" id="2_ip4fn"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_7nsi4"]
 [ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_lywor"]
 
@@ -12,6 +13,7 @@ radius = 4.517578
 [node name="Cindy" type="Node3D" unique_id=233530727 groups=["FNAC_CINDY"]]
 script = ExtResource("1_js1ha")
 animParametersFileName = "Cindy"
+animatableIcon = ExtResource("2_ip4fn")
 animatableName = "Cindy Early"
 animatableAuthors = "sudo trans --pony"
 animatableColor = Color(0.55198765, 0.25180084, 0.7354601, 1)
