@@ -13,6 +13,8 @@ extends Node
 @onready var scaleMode: OptionButton = get_node("MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/Render Scale Mode/OptionButton")
 @onready var renderscale: Slider = get_node("MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/Render Scale/HSlider")
 @onready var renderScaleText: Label = get_node("MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/Render Scale/Label")
+@onready var uiScale: Slider = get_node("MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/UI Scale/HSlider")
+@onready var uiScaleText: Label = get_node("MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/UI Scale/Label")
 @export var fpsButton: CheckButton
 
 @onready var simulatorButton: Button = get_node("MarginContainer/PanelContainer/Title Screen/Start Button")
@@ -52,6 +54,7 @@ var currentSettings := {
 	"recent_map": "",
 	"auto_run": false,
 	"render_scale": 1.0,
+	"ui_scale": 1.0,
 	"scale_mode": 0,
 	"show_fps": false,
 }
@@ -257,9 +260,12 @@ func apply_settings():
 	autorunButton.set_pressed_no_signal(currentSettings["auto_run"])
 	physicsbonesButton.set_pressed_no_signal(currentSettings["physics_bones"])
 	scaleMode.set_pressed_no_signal(currentSettings["scale_mode"])
-	renderscale.set_value_no_signal(currentSettings["render_scale"])
+	renderscale.set_value_no_signal(currentSettings["render_scale"])	
 	renderScaleText.text = "Render Scale (" + str(roundi(currentSettings["render_scale"]*100)) + "%)"
 	
+	uiScale.set_value_no_signal(currentSettings["ui_scale"])
+	uiScaleText.text = "UI Scale (" + str(roundi(currentSettings["ui_scale"]*100)) + "%)"
+
 	var vp = get_tree().root.get_viewport()
 	vp.msaa_3d = currentSettings["msaa_3d"]
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(currentSettings["master_volume"]))
@@ -268,7 +274,7 @@ func apply_settings():
 		1: vp.scaling_3d_mode = Viewport.SCALING_3D_MODE_FSR
 		2: vp.scaling_3d_mode = Viewport.SCALING_3D_MODE_FSR2
 	vp.scaling_3d_scale = currentSettings.get("render_scale", 1.0)
-	
+	get_window().content_scale_factor = currentSettings.get("ui_scale", 1.0)
 	for camera in get_tree().get_nodes_in_group("cameras"):
 		if camera.has_method("refresh"):
 			camera.refresh()

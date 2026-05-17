@@ -461,6 +461,33 @@ press_sound = ExtResource("8_mu3iq")
 press_pitch_randomize_enabled = false
 press_pitch_multiplier_off = 0.5
 
+[node name="UI Scale" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer" unique_id=848863037]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/UI Scale" unique_id=998651634]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "UI Scale (100%) "
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/UI Scale" unique_id=60422279]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 2.0
+step = 0.1
+value = 1.0
+script = ExtResource("9_swo4q")
+hover_sound = ExtResource("10_oqrga")
+press_sound = ExtResource("11_oqrga")
+press_random_pitch_enabled = false
+press_min_pitch = 0.9
+press_max_pitch = 1.1
+audio_player_path = NodePath("../../../../../../../../../AudioStreamPlayer2D")
+
 [node name="Render Scale" type="HBoxContainer" parent="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer" unique_id=174571073]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
@@ -1092,6 +1119,7 @@ volume_db = 4.0
 [connection signal="toggled" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/General/VBoxContainer/FPS/CheckButton" to="." method="_on_button_changed" binds= ["show_fps"]]
 [connection signal="item_selected" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/Window Mode/OptionButton" to="." method="_on_option_changed" binds= ["window_mode"]]
 [connection signal="item_selected" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/Anti-Aliasing/OptionButton" to="." method="_on_option_changed" binds= ["msaa_3d"]]
+[connection signal="value_changed" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/UI Scale/HSlider" to="." method="_on_slider_changed" binds= ["ui_scale"]]
 [connection signal="value_changed" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/Render Scale/HSlider" to="." method="_on_slider_changed" binds= ["render_scale"]]
 [connection signal="item_selected" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/Render Scale Mode/OptionButton" to="." method="_on_option_changed" binds= ["scale_mode"]]
 [connection signal="toggled" from="MarginContainer/PanelContainer/Settings/Settings/TabContainer/Graphical/VBoxContainer/Physics Bones/CheckButton" to="." method="_on_button_changed" binds= ["physics_bones"]]
