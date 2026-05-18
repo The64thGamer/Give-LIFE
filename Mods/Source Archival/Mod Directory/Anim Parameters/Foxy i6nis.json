@@ -1,0 +1,8 @@
+{
+  "FNAF1_FOXY|Jaw": {
+	"animation": "Jaw-foxy_ARM",
+	"in_speed": 5.5,
+	"out_speed": 6.5,
+	"type": "standard"
+  },
+}

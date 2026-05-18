@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ckfiht1b6c35y"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_8mahr"]
+[ext_resource type="PackedScene" uid="uid://32fbpa7x22sd" path="res://Mods/Source Archival/Custom Assets/Models/Animatronics/Foxy i6nis.glb" id="2_qhy32"]
+[ext_resource type="Script" uid="uid://ekdr3r12ydct" path="res://Scripts/Animatables/GL_Paintable.gd" id="4_hrgso"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_l6iry"]
+height = 48.212402
+radius = 4.5527344
+
+[node name="Foxy i6nis" type="Node3D" unique_id=233530727 groups=["FNAF1_FOXY"]]
+script = ExtResource("1_8mahr")
+animParametersFileName = "Foxy i6nis"
+animatableName = "Foxy"
+animatableAuthors = "i6nis"
+animatableColor = Color(0.7473416, 0.1970092, 0.15043125, 1)
+
+[node name="Foxy i6nis" parent="." unique_id=1185061823 instance=ExtResource("2_qhy32")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Color Check" type="Node3D" parent="." unique_id=268845291 groups=["FNAF1_FOXY"]]
+script = ExtResource("4_hrgso")
+check_siblings = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=339525734]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=13025137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.1062, 0)
+shape = SubResource("CylinderShape3D_l6iry")

@@ -4,12 +4,9 @@
 [ext_resource type="ArrayOccluder3D" uid="uid://cna4pjucrmwis" path="res://Mods/True FNaF/Mod Directory/Maps/Candy's/Candys.occ" id="2_n5i0v"]
 [ext_resource type="PackedScene" uid="uid://bo1o3yv66bsbp" path="res://Mods/Source Archival/Custom Assets/Models/Maps/Freddy Fazbear's Pizza.glb" id="3_60grn"]
 [ext_resource type="LightmapGIData" uid="uid://dwavngbbnhrgx" path="res://Mods/Source Archival/Mod Directory/Maps/FFP/Freddys.lmbake" id="3_83tne"]
-[ext_resource type="PackedScene" uid="uid://dkly4d68vjcyh" path="res://Mods/Faz Anim 1/Mod Directory/Animatables/Bonnie.tscn" id="4_60grn"]
-[ext_resource type="PackedScene" uid="uid://clgjgcycemmrk" path="res://Mods/Faz Anim 1/Mod Directory/Animatables/Chica.tscn" id="5_83tne"]
-[ext_resource type="PackedScene" uid="uid://bmhcm3nggtnr6" path="res://Mods/Faz Anim 1/Mod Directory/Animatables/Freddy.tscn" id="6_878e6"]
 [ext_resource type="PackedScene" uid="uid://dbeqaqskfdgtu" path="res://Mods/Source Archival/Custom Assets/Props/Wood Chair.tscn" id="6_s857y"]
 [ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Animatables/GL_Spotlight.gd" id="9_878e6"]
-[ext_resource type="PackedScene" uid="uid://c0rwi10ama3i0" path="res://Mods/Faz Anim 1/Mod Directory/Animatables/Foxy.tscn" id="10_jrmqj"]
+[ext_resource type="PackedScene" uid="uid://ckfiht1b6c35y" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy i6nis.tscn" id="11_fgage"]
 
 [sub_resource type="Environment" id="Environment_dsuk6"]
 background_mode = 1
@@ -737,17 +734,8 @@ canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
 
-[node name="Bonnie" parent="Map/Animatables" unique_id=233530727 instance=ExtResource("4_60grn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.193632, 1.4238398, -6.282754)
-
-[node name="Chica" parent="Map/Animatables" unique_id=85305051 instance=ExtResource("5_83tne")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4828486, 1.4238398, -6.282754)
-
-[node name="Freddy" parent="Map/Animatables" unique_id=1960251285 instance=ExtResource("6_878e6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03355372, 1.4238398, -6.282754)
-
-[node name="Foxy" parent="Map/Animatables" unique_id=1804971921 instance=ExtResource("10_jrmqj")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.019514, 0.05224135, 16.004204)
+[node name="Foxy i6nis" parent="Map/Animatables" unique_id=135942225 instance=ExtResource("11_fgage")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08428383, 1.4571913, -6.4353476)
 
 [node name="Map Lights" type="Node" parent="Map" unique_id=651683685]
 

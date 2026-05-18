@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://rwfu1qclt5me"]
+
+[ext_resource type="Texture2D" uid="uid://btyslde3502n1" path="res://Mods/Source Archival/Custom Assets/Textures/goldfoxyskeleton.webp" id="1_4jd2s"]
+
+[resource]
+albedo_texture = ExtResource("1_4jd2s")
+roughness = 0.5
+normal_enabled = true
