@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b77l55vvsny0l"]
+
+[ext_resource type="Texture2D" uid="uid://bmi1ep1mvacqx" path="res://Mods/Source Archival/Custom Assets/Textures/BlueRed Tile.webp" id="1_8lqku"]
+[ext_resource type="Texture2D" uid="uid://bkyumkr0yeerv" path="res://Mods/True FNaF/Custom Assets/Textures/Candys/candytile.webp" id="2_lkuyu"]
+
+[resource]
+albedo_texture = ExtResource("1_8lqku")
+metallic = 0.59
+roughness = 0.0
+normal_enabled = true
+normal_scale = -0.5
+normal_texture = ExtResource("2_lkuyu")
+texture_filter = 0

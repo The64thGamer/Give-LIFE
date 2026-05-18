@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://8pgclfhgc2v5"]
+
+[ext_resource type="Texture2D" uid="uid://b4yh2fc7bto0" path="res://Mods/Source Archival/Custom Assets/Textures/wood_table_worn_diff_2k.jpg" id="1_jqnb5"]
+[ext_resource type="Texture2D" uid="uid://dqiug7r2uycvs" path="res://Mods/Source Archival/Custom Assets/Textures/wood_table_worn_nor_gl_2k.jpg" id="2_2kfpo"]
+[ext_resource type="Texture2D" uid="uid://cdm1pxn42502b" path="res://Mods/Source Archival/Custom Assets/Textures/wood_table_worn_rough_2k.jpg" id="3_2kfpo"]
+
+[resource]
+albedo_texture = ExtResource("1_jqnb5")
+roughness = 0.53
+roughness_texture = ExtResource("3_2kfpo")
+normal_enabled = true
+normal_texture = ExtResource("2_2kfpo")

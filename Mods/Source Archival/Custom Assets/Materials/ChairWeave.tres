@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bh63matnrvusl"]
+
+[ext_resource type="Texture2D" uid="uid://cjvyff07abqrf" path="res://Mods/Source Archival/Custom Assets/Textures/thatchdiffuse.webp" id="1_e5dkc"]
+[ext_resource type="Texture2D" uid="uid://dn7l33qxo1l0a" path="res://Mods/Source Archival/Custom Assets/Textures/thatchnormalCombine.webp" id="2_4ptdu"]
+[ext_resource type="Texture2D" uid="uid://bs5ioupleuymm" path="res://Mods/Source Archival/Custom Assets/Textures/thatchrough.webp" id="3_fgjso"]
+
+[resource]
+albedo_texture = ExtResource("1_e5dkc")
+roughness_texture = ExtResource("3_fgjso")
+normal_enabled = true
+normal_scale = 0.53
+normal_texture = ExtResource("2_4ptdu")
+texture_filter = 5

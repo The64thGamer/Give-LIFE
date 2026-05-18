@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dbeqaqskfdgtu"]
+
+[ext_resource type="PackedScene" uid="uid://cw47b75vu5cdu" path="res://Mods/Source Archival/Custom Assets/Models/Props/Chair.glb" id="1_qlt08"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_perbc"]
+size = Vector3(1.048584, 1.0246582, 1.1592407)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eu76s"]
+size = Vector3(0.091537476, 1.7770691, 1.1592407)
+
+[node name="WoodChair" type="Node3D" unique_id=164970021]
+
+[node name="Chair" parent="." unique_id=1538828707 instance=ExtResource("1_qlt08")]
+transform = Transform3D(0.428, 0, 0, 0, 0.428, 0, 0, 0, 0.428, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=971024071]
+transform = Transform3D(0.93, 0, 0, 0, 0.93, 0, 0, 0, 0.93, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=309089774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09729004, 0.5135498, 0.0034484863)
+shape = SubResource("BoxShape3D_perbc")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=941351791]
+transform = Transform3D(0.9914448, -0.13052619, 0, 0.13052619, 0.9914448, 0, 0, 0, 1, -0.4992249, 1.8207066, 0.0034484863)
+shape = SubResource("BoxShape3D_eu76s")

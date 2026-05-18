@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://sygmf36qkuxp" path="res://Mods/Faz Anim 2/Custom Assets/Models/Props/Cigarette Single Half Smoked.fbx" id="17_sfydg"]
 [ext_resource type="PackedScene" uid="uid://5krm78ic745i" path="res://Mods/Faz Anim 2/Custom Assets/Props/Breaker Panel.tscn" id="18_rim2d"]
 [ext_resource type="PackedScene" uid="uid://cdw2knk7uhepm" path="res://Mods/Faz Anim 2/Custom Assets/Models/Props/Cigarette Single.fbx" id="18_sbq6g"]
+[ext_resource type="PackedScene" uid="uid://dbeqaqskfdgtu" path="res://Mods/Source Archival/Custom Assets/Props/Wood Chair.tscn" id="19_31rhu"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_mfnkb"]
 lightmap_size_hint = Vector2i(12, 12)
@@ -274,3 +275,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.213982, 3.0561802, 3.0934
 
 [node name="Breaker Panel3" parent="." unique_id=1088241576 groups=["Breaker Magic Room"] instance=ExtResource("18_rim2d")]
 transform = Transform3D(-0.4035453, 0, -0.9149596, 0, 1, 0, 0.9149596, 0, -0.4035453, -6.6262407, 3.0561798, -9.57739)
+
+[node name="WoodChair" parent="." unique_id=164970021 instance=ExtResource("19_31rhu")]
+transform = Transform3D(0.0048345895, 0, -0.9999883, 0, 1, 0, 0.9999883, 0, 0.0048345895, -27.018232, 0.12601252, -16.794811)
+
+[node name="WoodChair2" parent="." unique_id=788827059 instance=ExtResource("19_31rhu")]
+transform = Transform3D(0.999777, 0, 0.021116953, 0, 1, 0, -0.021116953, 0, 0.999777, -11.286734, 0.12601157, -8.780132)
