@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b4ng2q7pg11vd"]
+
+[ext_resource type="Texture2D" uid="uid://ddjjb2fhdc5e1" path="res://Mods/Source Archival/Custom Assets/Textures/white_sandstone_bricks_diff_2k.jpg" id="1_7ebo4"]
+[ext_resource type="Texture2D" uid="uid://rd8n7jifmbtn" path="res://Mods/Source Archival/Custom Assets/Textures/white_sandstone_bricks_nor_gl_2k.jpg" id="2_a2fud"]
+
+[resource]
+albedo_texture = ExtResource("1_7ebo4")
+normal_enabled = true
+normal_scale = 4.28
+normal_texture = ExtResource("2_a2fud")

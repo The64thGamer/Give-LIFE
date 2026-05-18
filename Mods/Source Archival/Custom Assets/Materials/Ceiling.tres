@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://8i6mhw3wvhej"]
+
+[ext_resource type="Texture2D" uid="uid://cd3m8d15f08bg" path="res://Mods/Source Archival/Custom Assets/Textures/OfficeCeiling001_2K-JPG_Color.jpg" id="1_xf6g3"]
+[ext_resource type="Texture2D" uid="uid://c4ufcn8ag0sh8" path="res://Mods/Source Archival/Custom Assets/Textures/OfficeCeiling001_2K-JPG_NormalGL.jpg" id="2_jjpkp"]
+[ext_resource type="Texture2D" uid="uid://5rt4d01bq1jd" path="res://Mods/Source Archival/Custom Assets/Textures/OfficeCeiling001_2K-JPG_Roughness.jpg" id="3_gr3ug"]
+
+[resource]
+albedo_texture = ExtResource("1_xf6g3")
+roughness_texture = ExtResource("3_gr3ug")
+normal_enabled = true
+normal_texture = ExtResource("2_jjpkp")

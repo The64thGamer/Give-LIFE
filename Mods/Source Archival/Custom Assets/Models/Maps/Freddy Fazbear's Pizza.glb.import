@@ -39,6 +39,16 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
+"BRICK/BRICKWALL019A": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/StageBricks.tres",
+"use_external/path": "uid://b4ng2q7pg11vd"
+},
+"CS_HAVANA/WOODM": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/StageWood.tres",
+"use_external/path": "uid://de2sibh3vb6vw"
+},
 "FREDDYS/BLACKTILE": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/FNaF3/White Tile.tres",
@@ -53,6 +63,11 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/tile blueblack.tres",
 "use_external/path": "uid://cge23osrqmefc"
+},
+"TILE/CEILINGTILEA": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/Ceiling.tres",
+"use_external/path": "uid://8i6mhw3wvhej"
 }
 },
 "nodes": {

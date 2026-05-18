@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://de2sibh3vb6vw"]
+
+[ext_resource type="Texture2D" uid="uid://dodyriwkmpyjh" path="res://Mods/Source Archival/Custom Assets/Textures/kitchen_wood_diff_2k.jpg" id="1_5cipb"]
+[ext_resource type="Texture2D" uid="uid://nbeg04qhphce" path="res://Mods/Source Archival/Custom Assets/Textures/kitchen_wood_nor_gl_2k.jpg" id="2_27his"]
+[ext_resource type="Texture2D" uid="uid://60gvf5eeh1pr" path="res://Mods/Source Archival/Custom Assets/Textures/kitchen_wood_rough_2k.jpg" id="3_rgoh3"]
+
+[resource]
+albedo_texture = ExtResource("1_5cipb")
+roughness_texture = ExtResource("3_rgoh3")
+normal_enabled = true
+normal_texture = ExtResource("2_27his")
