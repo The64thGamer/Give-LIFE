@@ -1,7 +1,7 @@
 {
 "SOTM_HIPPO|Jaw": {
 	"animation": "Jaw",
-	"in_speed": 2,
+	"in_speed": 3,
 	"out_speed": 5,
 	"type": "standard"
   },
