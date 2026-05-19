@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b55jfb2o2oajq"]
+
+[ext_resource type="Texture2D" uid="uid://b8ab72fjmh6po" path="res://Mods/Source Archival/Custom Assets/Textures/splinks/eye.webp" id="1_4a6kk"]
+
+[resource]
+albedo_texture = ExtResource("1_4a6kk")
+metallic_texture_channel = 4
+roughness = 0.3

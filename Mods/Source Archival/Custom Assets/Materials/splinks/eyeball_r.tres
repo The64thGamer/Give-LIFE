@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+
+[resource]
+metallic = 0.4000
+roughness = 0.8
+diffuse_mode = 3

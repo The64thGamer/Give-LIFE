@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Mods/Source Archival/Custom Assets/Textures/splinks/foxy_head.webp" id=1] ; Albedo
+[ext_resource type="Texture2D" path="res://Mods/Source Archival/Custom Assets/Textures/splinks/foxy_head_norm.webp" id=2] ; Normal
+
+[resource]
+albedo_texture = ExtResource(1)
+normal_enabled = true
+normal_texture = ExtResource(2)
+metallic = 0.0
+roughness = 0.9500
+diffuse_mode = 3

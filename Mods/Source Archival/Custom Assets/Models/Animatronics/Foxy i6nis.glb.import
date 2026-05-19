@@ -41,28 +41,28 @@ _subresources={
 "materials": {
 "EyeGlow": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/Glow.tres",
-"use_external/path": "uid://jjagepx3q4d3"
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/eyeglow.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/eyeglow.tres"
 },
 "FOXYBODY": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/Foxy Body.tres",
-"use_external/path": "uid://d2gja3hsbadmd"
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/foxybody.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/foxybody.tres"
 },
 "FoxyHead": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/Foxy Head.tres",
-"use_external/path": "uid://djd7un5pitler"
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/foxyhead.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/foxyhead.tres"
 },
 "FoxyParts": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/Foxy Parts.tres",
-"use_external/path": "uid://dbn4rtrpy0jsu"
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/foxyparts.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/foxyparts.tres"
 },
 "Foxy_Skeleton": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/GoldenFoxySkeleton.tres",
-"use_external/path": "uid://rwfu1qclt5me"
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/foxy_skeleton.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/foxy_skeleton.tres"
 }
 }
 }

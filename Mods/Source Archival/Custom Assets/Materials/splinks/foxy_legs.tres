@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c38yg801bluo8"]
+
+[ext_resource type="Texture2D" uid="uid://bgh162boiupbn" path="res://Mods/Source Archival/Custom Assets/Textures/splinks/foxy_parts.webp" id="1"]
+[ext_resource type="Texture2D" uid="uid://bv6qp1ny2aef" path="res://Mods/Source Archival/Custom Assets/Textures/splinks/parts_norm.webp" id="2"]
+
+[resource]
+albedo_texture = ExtResource("1")
+roughness = 0.5
+emission_enabled = true
+emission_energy_multiplier = 0.225
+normal_enabled = true
+normal_texture = ExtResource("2")
+backlight_enabled = true

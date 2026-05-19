@@ -37,6 +37,49 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"EyeGlow": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/eyeglow.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/eyeglow.tres"
+},
+"Foxy_Body": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/foxy_body.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/foxy_body.tres"
+},
+"Foxy_Parts": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/foxy_parts.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/foxy_parts.tres"
+},
+"Foxy_Skeleton": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/foxy_skeleton.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/foxy_skeleton.tres"
+},
+"eye": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/eye green.tres",
+"use_external/path": "uid://b55jfb2o2oajq"
+},
+"eyeball_l": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/eyeball_l.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/eyeball_l.tres"
+},
+"eyeball_r": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/eyeball_r_toon.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/eyeball_r_toon.tres"
+},
+"foxy_head": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/foxy_head.tres",
+"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/splinks/foxy_head.tres"
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=0

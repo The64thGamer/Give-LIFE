@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dr2n8vg70cirr"]
+
+[ext_resource type="Texture2D" uid="uid://d3ra347bxjuxx" path="res://Mods/Source Archival/Custom Assets/Textures/splinks/foxy_skeleton.webp" id="1"]
+[ext_resource type="Texture2D" uid="uid://cmgxsu2ufha83" path="res://Mods/Source Archival/Custom Assets/Textures/splinks/flat_normal2.webp" id="2"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1")
+metallic = 0.4
+roughness = 0.5
+emission_energy_multiplier = 0.03
+normal_enabled = true
+normal_texture = ExtResource("2")

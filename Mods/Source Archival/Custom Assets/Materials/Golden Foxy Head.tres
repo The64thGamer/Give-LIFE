@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://d21h06bth3rsd"]
-
-[ext_resource type="Texture2D" uid="uid://dy6puru47ko4s" path="res://Mods/Source Archival/Custom Assets/Textures/goldfoxyhead.webp" id="1_rytet"]
-[ext_resource type="Texture2D" uid="uid://bjkt1gm4c6pqc" path="res://Mods/Source Archival/Custom Assets/Textures/foxy_head_norm.webp" id="2_hde0o"]
-
-[resource]
-albedo_texture = ExtResource("1_rytet")
-normal_enabled = true
-normal_texture = ExtResource("2_hde0o")

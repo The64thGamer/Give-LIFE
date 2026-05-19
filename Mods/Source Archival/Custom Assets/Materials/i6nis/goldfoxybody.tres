@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://Mods/Source Archival/Custom Assets/Textures/i6nis/goldfoxybody.webp" id=1] ; Albedo
+[ext_resource type="Texture2D" path="res://Mods/Source Archival/Custom Assets/Textures/i6nis/foxy_body_norm.webp" id=2] ; Normal
+
+[resource]
+albedo_texture = ExtResource(1)
+normal_enabled = true
+normal_texture = ExtResource(2)
+metallic = 0.0
+roughness = 0.8000
