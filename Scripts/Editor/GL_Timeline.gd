@@ -223,11 +223,12 @@ func _input(event: InputEvent) -> void:
 			var type: String = GL_ChannelData.TYPE_BOOL
 			var pipe = channel_id.find("|")
 			var group = channel_id.left(pipe) if pipe != -1 else ""
-			var sg_entry = master.scene_groups.get(group, {}).get(channel_id, {})
-			if sg_entry.has("type"):
-				type = sg_entry["type"]
-			elif master.currentlyLoadedFile["channels"].has(channel_id):
+			if master.currentlyLoadedFile["channels"].has(channel_id):
 				type = GL_ChannelData.get_type(master.currentlyLoadedFile["channels"][channel_id])
+			else:
+				var sg_entry = master.scene_groups.get(group, {}).get(channel_id, {})
+				if sg_entry.has("type"):
+					type = sg_entry["type"]
 
 			if event.pressed and not event.echo:
 				master.ensure_channel_exists(channel_id)
@@ -250,11 +251,11 @@ func _input(event: InputEvent) -> void:
 func _resolve_channel_type(channel_id: String) -> String:
 	var pipe = channel_id.find("|")
 	var group = channel_id.left(pipe) if pipe != -1 else ""
+	if master.currentlyLoadedFile["channels"].has(channel_id):
+		return GL_ChannelData.get_type(master.currentlyLoadedFile["channels"][channel_id])
 	var sg_entry = master.scene_groups.get(group, {}).get(channel_id, {})
 	if sg_entry.has("type"):
 		return sg_entry["type"]
-	if master.currentlyLoadedFile["channels"].has(channel_id):
-		return GL_ChannelData.get_type(master.currentlyLoadedFile["channels"][channel_id])
 	return GL_ChannelData.TYPE_BOOL
 
 func _commit_edit(channel_id: String) -> void:
@@ -568,12 +569,11 @@ func _get_axis_value(bind: Dictionary) -> float:
 func convert_channel_type(channel_id: String, to_type: String) -> void:
 	if not master.currentlyLoadedFile["channels"].has(channel_id):
 		return
-	var ch = master.currentlyLoadedFile["channels"][channel_id]
-	var current_type = GL_ChannelData.get_type(ch)
+	var current_type = GL_ChannelData.get_type(master.currentlyLoadedFile["channels"][channel_id])
 	if current_type == to_type:
 		return
-	ch["type"] = to_type
-	ch["data"] = []
+	master.currentlyLoadedFile["channels"][channel_id]["type"] = to_type
+	master.currentlyLoadedFile["channels"][channel_id]["data"] = []
 	activeEdit.erase(channel_id)
 	_invalidate_playback_cache(channel_id)
 	_mark_dirty()
@@ -624,11 +624,6 @@ func _poll_controller_binds(delta: float) -> void:
 				master.ensure_channel_exists(channel_id)
 				var ch = master.currentlyLoadedFile["channels"][channel_id]
 				var data: Array = ch.get("data", [])
-				# Before recording the new value, anchor the previous value one tick
-				# behind the current time. Without this, the interpolation would
-				# gradually slide from the last recorded point toward the new value
-				# across however long the input was held steady, instead of holding
-				# the old value right up until the moment it changed.
 				if last != -INF:
 					var anchor_int = time_to_int(timeCurrent) - 1
 					var current_int = time_to_int(timeCurrent)

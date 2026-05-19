@@ -33,7 +33,7 @@ adjustment_saturation = 1.3
 [sub_resource type="BoxShape3D" id="BoxShape3D_60grn"]
 size = Vector3(16.664429, 2.1306152, 25.809998)
 
-[node name="Freddys" type="Node3D" unique_id=2086066372]
+[node name="Freddy Fazbear\'s Pizza" type="Node3D" unique_id=2086066372]
 
 [node name="Player" parent="." unique_id=912065313 instance=ExtResource("1_mc0wj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.449, 0)
@@ -622,7 +622,7 @@ transform = Transform3D(0.9948593, 0.025854122, -0.09791176, -0.0034687403, 0.97
 light_color = Color(0.87058824, 0.87058824, 0.87058824, 1)
 light_energy = 0.0
 light_size = 0.124
-spot_range = 8.0
+spot_range = 10.0
 spot_attenuation = 2.0
 spot_angle = 11.54
 spot_angle_attenuation = 0.329877
@@ -652,7 +652,7 @@ transform = Transform3D(0.9860311, -0.038416103, 0.16207086, 0.00044945162, 0.97
 light_color = Color(0.87058824, 0.87058824, 0.87058824, 1)
 light_energy = 0.0
 light_size = 0.124
-spot_range = 8.0
+spot_range = 10.0
 spot_attenuation = 2.0
 spot_angle = 11.54
 spot_angle_attenuation = 0.329877
@@ -682,7 +682,7 @@ transform = Transform3D(0.9630057, -0.039956223, 0.26650235, -0.014733765, 0.979
 light_color = Color(0.87058824, 0.87058824, 0.87058824, 1)
 light_energy = 0.0
 light_size = 0.124
-spot_range = 8.0
+spot_range = 10.0
 spot_attenuation = 2.0
 spot_angle = 11.54
 spot_angle_attenuation = 0.329877
@@ -719,8 +719,6 @@ spot_angle_attenuation = 0.329877
 
 [node name="Node" type="Node3D" parent="Map/Animatables/Foxy Spot" unique_id=827075650 groups=["FA_SPOT_FOXY"]]
 script = ExtResource("9_878e6")
-canChangeColor = true
-canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
 
@@ -736,15 +734,13 @@ spot_angle_attenuation = 0.329877
 
 [node name="Node" type="Node3D" parent="Map/Animatables/Foxy Light 1" unique_id=1351401021 groups=["FA_FOXY_RED"]]
 script = ExtResource("9_878e6")
-canChangeColor = true
-canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
 
 [node name="Foxy Splinks" parent="Map/Animatables" unique_id=233530727 instance=ExtResource("8_83tne")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0628145, 1.4571928, -6.436456)
 
-[node name="Foxy i6nis" parent="Map/Animatables" unique_id=598352634 instance=ExtResource("11_fgage")]
+[node name="Foxy i6nis" parent="Map/Animatables" unique_id=1331889453 instance=ExtResource("11_fgage")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08428383, 1.4571913, -6.4353476)
 
 [node name="Map Lights" type="Node" parent="Map" unique_id=651683685]

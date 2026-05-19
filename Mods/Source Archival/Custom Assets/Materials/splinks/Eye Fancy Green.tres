@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bv6fuwgio6p4s"]
+
+[ext_resource type="Texture2D" uid="uid://bqqvlan2aba1q" path="res://Mods/Source Archival/Custom Assets/Textures/splinks/eyefoxy.png" id="1_wgetw"]
+
+[resource]
+albedo_texture = ExtResource("1_wgetw")
+metallic_texture_channel = 4
+roughness = 0.2

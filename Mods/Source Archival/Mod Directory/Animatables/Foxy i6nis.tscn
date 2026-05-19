@@ -15,7 +15,7 @@ animatableName = "Foxy"
 animatableAuthors = "i6nis"
 animatableColor = Color(0.7473416, 0.1970092, 0.15043125, 1)
 
-[node name="Foxy i6nis" parent="." unique_id=1185061823 instance=ExtResource("2_qhy32")]
+[node name="Foxy i6nis" parent="." unique_id=617820487 instance=ExtResource("2_qhy32")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="Color Check" type="Node3D" parent="." unique_id=268845291 groups=["FNAF1_FOXY"]]

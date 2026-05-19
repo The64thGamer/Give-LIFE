@@ -200,7 +200,6 @@ func _render_float() -> void:
 	_hide_preview_panel()
 
 	var ch_data = _channel_data()
-	# CHANGE: Access the live array directly
 	var entries: Array = ch_data.get("data", [])
 	
 	var width: float = bitHolder.size.x
@@ -276,7 +275,6 @@ func _render_events() -> void:
 		var bar = Panel.new()
 		bar.set_script(GL_EventBar)
 		bar.channel = self
-		# ... (rest of your styling code)
 		bitHolder.add_child(bar)
 		_event_bars.append(bar)
 
