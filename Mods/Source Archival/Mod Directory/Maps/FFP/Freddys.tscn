@@ -5,8 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bo1o3yv66bsbp" path="res://Mods/Source Archival/Custom Assets/Models/Maps/Freddy Fazbear's Pizza.glb" id="3_60grn"]
 [ext_resource type="LightmapGIData" uid="uid://dwavngbbnhrgx" path="res://Mods/Source Archival/Mod Directory/Maps/FFP/Freddys.lmbake" id="3_83tne"]
 [ext_resource type="PackedScene" uid="uid://dbeqaqskfdgtu" path="res://Mods/Source Archival/Custom Assets/Props/Wood Chair.tscn" id="6_s857y"]
-[ext_resource type="PackedScene" uid="uid://buigfkbk68rer" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy i6nis Playermodel.tscn" id="7_878e6"]
-[ext_resource type="PackedScene" uid="uid://dso52h18upxn5" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy Splinks.tscn" id="8_83tne"]
+[ext_resource type="Script" uid="uid://7y57po7qd5in" path="res://Scripts/Maps/Light Flicker.gd" id="8_83tne"]
 [ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Animatables/GL_Spotlight.gd" id="9_878e6"]
 [ext_resource type="PackedScene" uid="uid://ckfiht1b6c35y" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy i6nis.tscn" id="11_fgage"]
 
@@ -753,14 +752,8 @@ energyMultiplier = 100.0
 lerp_speed = 15.0
 animatableName = "Light Purple"
 
-[node name="Foxy Splinks" parent="Map/Animatables" unique_id=1609837441 instance=ExtResource("8_83tne")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0628145, 1.4571928, -6.436456)
-
-[node name="Foxy i6nis2" parent="Map/Animatables" unique_id=233530727 instance=ExtResource("7_878e6")]
-transform = Transform3D(1, -2.9802322e-08, -2.2351742e-08, 0, 1.0000002, -1.8626451e-08, 2.9802322e-08, -1.1175871e-08, 1, 2.5676656, 1.4570999, -6.3887253)
-
 [node name="Foxy i6nis" parent="Map/Animatables" unique_id=1331889453 instance=ExtResource("11_fgage")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08428383, 1.4571913, -6.4353476)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.326473, 0.08159742, 15.885038)
 
 [node name="Map Lights" type="Node" parent="Map" unique_id=651683685]
 
@@ -1014,9 +1007,13 @@ spot_angle = 31.96
 [node name="RoomLight24" type="SpotLight3D" parent="Map/Map Lights" unique_id=673903470]
 transform = Transform3D(-0.5225408, -0.3936965, -0.7562764, 0.0654356, -0.90291065, 0.4248182, -0.8500995, 0.17249742, 0.49756938, 10.029323, 4.694236, 42.01673)
 light_color = Color(0.75686276, 0.14901961, 0, 1)
-light_bake_mode = 1
-spot_range = 9.045
+light_energy = 4.0
+spot_range = 22.464
 spot_angle = 31.96
+script = ExtResource("8_83tne")
+lerp_speed = 30.0
+polarization = 10.0
+min_energy = 0.0
 
 [node name="RoomLight10" type="OmniLight3D" parent="Map/Map Lights" unique_id=1342087828]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1349, 5.254267, 0.8754993)

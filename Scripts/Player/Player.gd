@@ -76,6 +76,8 @@ var is_crouched: bool = false
 var air_move_angle: float = 0.0
 var air_horiz_speed: float = 0.0
 var is_airborne: bool = false
+signal construction_toggled(is_active: bool)
+var construction_mode: bool = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -91,10 +93,6 @@ func _ready():
 
 	rotation_x = camera.rotation.x
 	rotation_y = camera.rotation.y
-
-signal construction_toggled(is_active: bool)
-
-var construction_mode: bool = false
 
 func _input(event):
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:

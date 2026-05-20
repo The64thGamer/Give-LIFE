@@ -133,7 +133,7 @@
 	"type": "standard"
   },
   "FNAF1_FOXY|Head Down": {
-	"animation": "Head Down",
+	"animation": "Head Down-foxy_ARM_001",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"

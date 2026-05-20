@@ -51,7 +51,7 @@ func _notification(what: int) -> void:
 	if what == NOTIFICATION_PREDELETE:
 		if _playback:
 			_playback.refresh_animatables()
-	
+
 func on_construction_toggled(is_active: bool) -> void:
 	if _bbox_visual: _bbox_visual.visible = is_active
 	if _construction_area:
@@ -59,6 +59,12 @@ func on_construction_toggled(is_active: bool) -> void:
 		_construction_area.input_ray_pickable = is_active
 	if not is_active and _interact_state != InteractState.NONE:
 		_close_interaction()
+
+func _get_player_construction_mode() -> bool:
+	var players := get_tree().get_nodes_in_group("Player")
+	if players.is_empty():
+		return false
+	return players[0].construction_mode
 
 func interacted() -> void:
 	match _interact_state:
@@ -158,11 +164,12 @@ func _input(event: InputEvent) -> void:
 	if _interact_state == InteractState.NONE:
 		return
 
+	if not _get_player_construction_mode():
+		_close_interaction()
+		return
+
 	match _interact_state:
 		InteractState.MENU:
-			if event.is_action_pressed("Toggle Construction"):
-				_close_interaction()
-				return
 			if event.is_action_pressed("Interact"):
 				_confirm_menu_selection()
 				return
@@ -182,9 +189,6 @@ func _input(event: InputEvent) -> void:
 					_move_distance = clamp(_move_distance + 0.5, MOVE_DIST_MIN, MOVE_DIST_MAX)
 			if event.is_action_pressed("Interact"):
 				_return_to_menu()
-			elif event.is_action_pressed("Toggle Construction"):
-				_return_to_menu()
-				_close_interaction()
 
 		InteractState.ROTATING:
 			if event is InputEventMouseButton and event.pressed:
@@ -194,9 +198,6 @@ func _input(event: InputEvent) -> void:
 					rotation_degrees.y -= ROTATE_STEP_DEG
 			if event.is_action_pressed("Interact"):
 				_return_to_menu()
-			elif event.is_action_pressed("Toggle Construction"):
-				_return_to_menu()
-				_close_interaction()
 
 		InteractState.SCALING:
 			if event is InputEventMouseButton and event.pressed:
@@ -206,15 +207,10 @@ func _input(event: InputEvent) -> void:
 					scale = (scale - Vector3.ONE * SCALE_STEP).clamp(Vector3.ONE * SCALE_MIN, Vector3.ONE * SCALE_MAX)
 			if event.is_action_pressed("Interact"):
 				_return_to_menu()
-			elif event.is_action_pressed("Toggle Construction"):
-				_return_to_menu()
-				_close_interaction()
 
 func _process(_delta: float) -> void:
 	if _interact_state == InteractState.MOVING:
 		_process_moving()
-
-# ── Bbox ──────────────────────────────────────────────────────────────────────
 
 func _build_bbox() -> void:
 	var collision_shapes := _get_all_children(self).filter(func(n): return n is CollisionShape3D)
