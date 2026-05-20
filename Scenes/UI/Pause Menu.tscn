@@ -38,7 +38,7 @@
 [ext_resource type="AudioStream" uid="uid://d32r2h55ktsse" path="res://Mods/Faz Anim 2/Custom Assets/Sounds/Trashed.wav" id="32_2uws7"]
 [ext_resource type="Script" uid="uid://t56kwrd7w4b7" path="res://Scripts/Editor/GL_Wiki.gd" id="32_8dgrc"]
 [ext_resource type="FontFile" uid="uid://k0v7y7qxnu2g" path="res://UI/Fonts/Amarna-Medium.ttf" id="33_lrdyb"]
-[ext_resource type="Script" uid="uid://b38xb3any5ay" path="res://Scripts/Editor/GL_SkinChanger.gd" id="38_c6h6d"]
+[ext_resource type="Script" uid="uid://b38xb3any5ay" path="res://Scripts/Animatables/GL_SkinChanger.gd" id="38_c6h6d"]
 [ext_resource type="Texture2D" uid="uid://mikgrvtytpiy" path="res://UI/Question.png" id="39_fygpv"]
 
 [sub_resource type="Theme" id="Theme_6gw5s"]

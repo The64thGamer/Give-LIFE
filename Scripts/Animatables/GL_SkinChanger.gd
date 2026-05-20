@@ -117,9 +117,9 @@ func start_editing(target: Node3D) -> void:
 
 	var found_skin = ""
 	if found_group != "" and skin_db.has(found_group):
-		var target_icon = target.get("skinIcon") if "skinIcon" in target else null
+		var target_path = editing_target.scene_file_path
 		for s_name in skin_db[found_group].keys():
-			if skin_db[found_group][s_name].icon == target_icon:
+			if skin_db[found_group][s_name]["path"] == target_path:
 				found_skin = s_name
 				break
 		if found_skin == "" and skin_db[found_group].size() > 0:
@@ -261,6 +261,9 @@ func _swap_scene() -> void:
 		return
 	var data = _current_skin_data()
 	if not data:
+		return
+	if editing_target.scene_file_path == data["path"]:
+		_reapply_custom_colors()
 		return
 	var packed = load(data["path"])
 	if not packed:
