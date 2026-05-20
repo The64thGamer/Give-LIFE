@@ -11,7 +11,7 @@ radius = 4.5527344
 [node name="Foxy Splinks" type="Node3D" unique_id=233530727 groups=["FNAF1_FOXY"]]
 script = ExtResource("1_i236b")
 animParametersFileName = "Foxy splinks"
-animatableName = "Foxy (Splinks Edit)"
+animatableName = "Foxy Splinks"
 animatableAuthors = "Splinks & i6nis"
 animatableColor = Color(0.7473416, 0.1970092, 0.15043125, 1)
 

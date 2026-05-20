@@ -9,8 +9,8 @@ var animParameters: Dictionary
 var initialPos: Vector3
 var initialRot: Vector3
 var initialScale: Vector3
-var animCache: Dictionary   # raw anim name → animParameters key
-var displayCache: Dictionary  # stripped display name → animParameters key
+var animCache: Dictionary
+var displayCache: Dictionary
 
 func _ready():
 	super()
@@ -141,6 +141,11 @@ func _load_anim_parameters(file_name: String) -> void:
 									if dict_data.get("type", "") == "inverted_standard":
 										dict_data["value"] = 1
 										dict_data["signal_value"] = 0
+									elif dict_data.get("type", "") == "play":
+										dict_data["value"] = 0
+										dict_data["signal_value"] = 0
+										dict_data["playing"] = false
+										dict_data["play_speed"] = 0.0
 									else:
 										dict_data["value"] = 0
 										dict_data["signal_value"] = 0
@@ -179,6 +184,21 @@ func _process(delta):
 				var speed = float(params["signal_value"])
 				if speed > 0.0:
 					params["value"] = fmod(float(params["value"]) + (delta * params["out_speed"] * speed), 1.0)
+			"play":
+				var signal_val = float(params["signal_value"])
+				if signal_val > 0.0:
+					params["play_speed"] = signal_val
+					if not params.get("playing", false):
+						params["playing"] = true
+						params["value"] = 0.0
+				if params.get("playing", false):
+					var speed = float(params.get("play_speed", 1.0))
+					params["value"] = float(params["value"]) + (delta * params["out_speed"] * speed)
+					if float(params["value"]) >= 1.0:
+						params["value"] = 1.0
+						params["playing"] = false
+						params["play_speed"] = 0.0
+
 		var anim_length = anim_player.get_animation(raw_anim).length
 		var raw_value = float(params.get("value", 0))
 		var time_value: float

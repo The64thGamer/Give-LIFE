@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bx7ckllddjwyg"]
+
+[ext_resource type="Texture2D" uid="uid://burh7nmnfnb76" path="res://Mods/Source Archival/Custom Assets/Textures/crowbar_01_diff_2k.jpg" id="1_i616j"]
+[ext_resource type="Texture2D" uid="uid://dlsq50jtlftrb" path="res://Mods/Source Archival/Custom Assets/Textures/crowbar_01_nor_gl_2k.jpg" id="2_emstm"]
+[ext_resource type="Texture2D" uid="uid://drhcbr77akb6w" path="res://Mods/Source Archival/Custom Assets/Textures/crowbar_01_arm_2k.jpg" id="2_x8c7n"]
+
+[resource]
+albedo_texture = ExtResource("1_i616j")
+metallic = 1.0
+metallic_texture = ExtResource("2_x8c7n")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_x8c7n")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_emstm")

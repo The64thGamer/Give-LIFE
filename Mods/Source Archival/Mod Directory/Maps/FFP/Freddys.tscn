@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bo1o3yv66bsbp" path="res://Mods/Source Archival/Custom Assets/Models/Maps/Freddy Fazbear's Pizza.glb" id="3_60grn"]
 [ext_resource type="LightmapGIData" uid="uid://dwavngbbnhrgx" path="res://Mods/Source Archival/Mod Directory/Maps/FFP/Freddys.lmbake" id="3_83tne"]
 [ext_resource type="PackedScene" uid="uid://dbeqaqskfdgtu" path="res://Mods/Source Archival/Custom Assets/Props/Wood Chair.tscn" id="6_s857y"]
+[ext_resource type="PackedScene" uid="uid://buigfkbk68rer" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy i6nis Playermodel.tscn" id="7_878e6"]
 [ext_resource type="PackedScene" uid="uid://dso52h18upxn5" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy Splinks.tscn" id="8_83tne"]
 [ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Animatables/GL_Spotlight.gd" id="9_878e6"]
 [ext_resource type="PackedScene" uid="uid://ckfiht1b6c35y" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy i6nis.tscn" id="11_fgage"]
@@ -631,6 +632,8 @@ spot_angle_attenuation = 0.329877
 script = ExtResource("9_878e6")
 energyMultiplier = 250.0
 lerp_speed = 15.0
+animatableName = "Chica Spot"
+animatableColor = Color(0.87058824, 0.87058824, 0.87058824, 1)
 
 [node name="Chica Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=1990063253]
 transform = Transform3D(0.97813326, 0.011839397, 0.2076413, -0.08259123, 0.93839276, 0.3355557, -0.19087632, -0.34536767, 0.9188511, 5.413401, 5.55335, -1.1427372)
@@ -646,6 +649,8 @@ spot_angle_attenuation = 0.329877
 script = ExtResource("9_878e6")
 energyMultiplier = 100.0
 lerp_speed = 15.0
+animatableName = "Light Yellow"
+animatableColor = Color(1, 1, 0, 1)
 
 [node name="Freddy Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=644990138]
 transform = Transform3D(0.9860311, -0.038416103, 0.16207086, 0.00044945162, 0.9736488, 0.22805226, -0.166561, -0.22479373, 0.9600653, 1.0400048, 5.245892, 1.0758059)
@@ -661,6 +666,8 @@ spot_angle_attenuation = 0.329877
 script = ExtResource("9_878e6")
 energyMultiplier = 250.0
 lerp_speed = 15.0
+animatableName = "Freddy Spot"
+animatableColor = Color(0.89, 0.89, 0.89, 1)
 
 [node name="Freddy Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=1169953270]
 transform = Transform3D(0.99967164, 0.014866864, 0.020870022, -0.020898582, 0.94432706, 0.3283435, -0.014826685, -0.32867184, 0.9443277, 0.010384858, 5.554899, -1.2740965)
@@ -676,6 +683,8 @@ spot_angle_attenuation = 0.329877
 script = ExtResource("9_878e6")
 energyMultiplier = 100.0
 lerp_speed = 15.0
+animatableName = "Magenta Spot"
+animatableColor = Color(1, 0, 0.5019608, 1)
 
 [node name="Bonnie Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=208031540]
 transform = Transform3D(0.9630057, -0.039956223, 0.26650235, -0.014733765, 0.97966087, 0.20011918, -0.26907796, -0.19664249, 0.9428302, -3.4944792, 5.2431774, 1.1587882)
@@ -691,6 +700,8 @@ spot_angle_attenuation = 0.329877
 script = ExtResource("9_878e6")
 energyMultiplier = 250.0
 lerp_speed = 15.0
+animatableName = "Bonnie Spot"
+animatableColor = Color(1, 1, 1, 1)
 
 [node name="Bonnie Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=799810956]
 transform = Transform3D(0.95447886, 0.12639204, -0.27017605, -0.032150563, 0.9441019, 0.3280821, 0.29654074, -0.3044612, 0.9051889, -6.5405602, 5.532474, -1.2924643)
@@ -706,6 +717,8 @@ spot_angle_attenuation = 0.329877
 script = ExtResource("9_878e6")
 energyMultiplier = 100.0
 lerp_speed = 15.0
+animatableName = "Light Blue"
+animatableColor = Color(0, 0.14901961, 1, 1)
 
 [node name="Foxy Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=146955238]
 transform = Transform3D(-0.022813385, -0.45128015, 0.89209074, -0.03723816, 0.89208746, 0.45032614, -0.9990461, -0.022946348, -0.03715637, -14.977708, 5.6538982, 15.588198)
@@ -721,6 +734,8 @@ spot_angle_attenuation = 0.329877
 script = ExtResource("9_878e6")
 energyMultiplier = 100.0
 lerp_speed = 15.0
+animatableName = "Foxy Spot"
+animatableColor = Color(0.89, 0.89, 0.89, 1)
 
 [node name="Foxy Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=52722776]
 transform = Transform3D(0.15537822, -0.4015467, 0.90256196, -0.0104159275, 0.91294146, 0.40795764, -0.9878002, -0.07278874, 0.13766871, -15.658477, 5.491513, 16.723312)
@@ -736,9 +751,13 @@ spot_angle_attenuation = 0.329877
 script = ExtResource("9_878e6")
 energyMultiplier = 100.0
 lerp_speed = 15.0
+animatableName = "Light Purple"
 
-[node name="Foxy Splinks" parent="Map/Animatables" unique_id=233530727 instance=ExtResource("8_83tne")]
+[node name="Foxy Splinks" parent="Map/Animatables" unique_id=1609837441 instance=ExtResource("8_83tne")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0628145, 1.4571928, -6.436456)
+
+[node name="Foxy i6nis2" parent="Map/Animatables" unique_id=233530727 instance=ExtResource("7_878e6")]
+transform = Transform3D(1, -2.9802322e-08, -2.2351742e-08, 0, 1.0000002, -1.8626451e-08, 2.9802322e-08, -1.1175871e-08, 1, 2.5676656, 1.4570999, -6.3887253)
 
 [node name="Foxy i6nis" parent="Map/Animatables" unique_id=1331889453 instance=ExtResource("11_fgage")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08428383, 1.4571913, -6.4353476)

@@ -1,0 +1,189 @@
+{
+  "FNAF1_FOXY|Arm L": {
+	"animation": "Arm L-foxy_ARM",
+	"in_speed": 3.0,
+	"out_speed": 2.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Arm R": {
+	"animation": "Arm R",
+	"in_speed": 3.0,
+	"out_speed": 2.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Body L": {
+	"animation": "Body L",
+	"in_speed": 2.5,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Body Lean": {
+	"animation": "Body Lean",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Body R": {
+	"animation": "Body R",
+	"in_speed": 2.5,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Body Tilt L": {
+	"animation": "Body Tilt L",
+	"in_speed": 2.5,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Body Tilt R": {
+	"animation": "Body Tilt R",
+	"in_speed": 2.5,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Ear L Down": {
+	"animation": "Ear L Down",
+	"in_speed": 3.0,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Ear L Up": {
+	"animation": "Ear L Up",
+	"in_speed": 3.0,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Ear R Down": {
+	"animation": "Ear R Down",
+	"in_speed": 3.0,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Ear R Up": {
+	"animation": "Ear R Up",
+	"in_speed": 3.0,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+
+  "FNAF1_FOXY|Eye L": {
+	"animation": "Eye L",
+	"in_speed": 6.0,
+	"out_speed": 7.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Eye R": {
+	"animation": "Eye R",
+	"in_speed": 6.0,
+	"out_speed": 7.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Eyelid Down": {
+	"animation": "Eyelid Down",
+	"in_speed": 5.0,
+	"out_speed": 8.0,
+	"type": "move_to"
+  },
+  "FNAF1_FOXY|Eyelid Up": {
+	"animation": "Eyelid Up",
+	"in_speed": 5.0,
+	"out_speed": 8.0,
+	"type": "move_to"
+  },
+  "FNAF1_FOXY|Eyelids Anger": {
+	"animation": "Eyelids Anger",
+	"in_speed": 4.0,
+	"out_speed": 4.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Eyelids Sad": {
+	"animation": "Eyelids Sad",
+	"in_speed": 4.0,
+	"out_speed": 4.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Eyepatch": {
+	"animation": "Eyepatch",
+	"in_speed": 3.0,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Forearm L": {
+	"animation": "Forearm L-foxy_ARM_001",
+	"in_speed": 3.5,
+	"out_speed": 2.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Forearm R": {
+	"animation": "Forearm R",
+	"in_speed": 3.5,
+	"out_speed": 2.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Hand Bend L": {
+	"animation": "Hand Bend L-foxy_ARM",
+	"in_speed": 3.0,
+	"out_speed": 4.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Hand Twist L": {
+	"animation": "Hand Twist L",
+	"in_speed": 3.0,
+	"out_speed": 4.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Head Down": {
+	"animation": "Head Down",
+	"in_speed": 4.0,
+	"out_speed": 5.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Head L": {
+	"animation": "Head L",
+	"in_speed": 5.0,
+	"out_speed": 5.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Head R": {
+	"animation": "Head R",
+	"in_speed": 5.0,
+	"out_speed": 5.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Head Tilt L": {
+	"animation": "Head Tilt L",
+	"in_speed": 4.0,
+	"out_speed": 4.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Head Tilt R": {
+	"animation": "Head Tilt R",
+	"in_speed": 4.0,
+	"out_speed": 4.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Head Up": {
+	"animation": "Head Up",
+	"in_speed": 4.0,
+	"out_speed": 5.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Jaw": {
+	"animation": "Jaw-foxy_ARM",
+	"in_speed": 5.5,
+	"out_speed": 6.5,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Shoulder L": {
+	"animation": "Shoulder L-foxy_ARM",
+	"in_speed": 3.0,
+	"out_speed": 2.0,
+	"type": "standard"
+  },
+  "FNAF1_FOXY|Shoulder R": {
+	"animation": "Crowbar",
+	"in_speed": 4.0,
+	"out_speed": 4.0,
+	"type": "play"
+  }
+}
