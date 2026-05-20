@@ -1,9 +1,5 @@
-[gd_resource type="StandardMaterial3D" format=3]
-
-[ext_resource type="Texture2D" path="res://Mods/Source Archival/Custom Assets/Textures/i6nis/eyeglow.webp" id=1] ; Albedo
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfgl1yfg0bh3m"]
 
 [resource]
-albedo_texture = ExtResource(1)
-metallic = 0.0
-roughness = 0.8
 shading_mode = 0
+albedo_color = Color(1, 1, 0.80784315, 1)

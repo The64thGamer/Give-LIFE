@@ -2,6 +2,7 @@ extends GL_Animatable
 class_name GL_Animatronic
 
 var anim_tree: AnimationTree
+var anim_player: AnimationPlayer
 var blend_tree: AnimationNodeBlendTree
 var animParameters: Dictionary
 @export var animParametersFileName: String
@@ -11,6 +12,9 @@ var initialRot: Vector3
 var initialScale: Vector3
 var animCache: Dictionary
 var displayCache: Dictionary
+var lastTickTime : float
+var lastdelta : float
+var forceAnimUpdate = false
 
 func _ready():
 	super()
@@ -18,8 +22,10 @@ func _ready():
 	initialPos = position
 	initialRot = rotation
 	initialScale = scale
+	_build_animTree()
 	
-	var anim_player: AnimationPlayer
+func _build_animTree() -> void:
+	
 	for child in get_children():
 		if child is AnimationPlayer:
 			anim_player = child
@@ -28,6 +34,9 @@ func _ready():
 		if anim_player:
 			break
 			
+	if anim_player == null:
+		return
+	
 	anim_tree = AnimationTree.new()
 	add_child(anim_tree)
 	anim_tree.anim_player = anim_player.get_path()
@@ -149,41 +158,50 @@ func _load_anim_parameters(file_name: String) -> void:
 									else:
 										dict_data["value"] = 0
 										dict_data["signal_value"] = 0
+									dict_data["old_value"] = dict_data["value"]
 									animParameters[key] = dict_data
 				return
 		mod_name = mods_dir.get_next()
 
-func _process(delta):
-	super(delta)
-	if not anim_tree:
-		return
-	var anim_player = get_child(0).get_node("AnimationPlayer") as AnimationPlayer
+func _physics_process(delta: float) -> void:
+	forceAnimUpdate = true
+
+func update_anim_positions() -> void:
+	lastdelta = (Time.get_ticks_msec() - lastTickTime) / 1000.0
+	lastTickTime = Time.get_ticks_msec()
+	
+	if lastdelta == 0:
+		print("?")
+	
+	if not anim_tree or not anim_player:
+			print("Tree didn't build.")
+			_build_animTree()
+			return
 	for raw_anim in anim_player.get_animation_list():
 		var key = animCache.get(raw_anim, raw_anim)
 		if not animParameters.has(key):
 			continue
 		var params = animParameters[key]
-		var anim_path = "parameters/Seek_" + raw_anim + "/seek_request"
-
+		params["old_value"] = params["value"]
 		match(params["type"]):
 			"standard":
 				var signal_val = float(params["signal_value"])
 				if signal_val > 0.5:
-					params["value"] = clamp(float(params["value"]) + (delta * params["out_speed"] * signal_val), 0, 1)
+					params["value"] = clamp(float(params["value"]) + (lastdelta * params["out_speed"] * signal_val), 0, 1)
 				elif signal_val < 0.5:
-					params["value"] = clamp(float(params["value"]) - (delta * params["in_speed"] * (1.0 - signal_val)), 0, 1)
+					params["value"] = clamp(float(params["value"]) - (lastdelta * params["in_speed"] * (1.0 - signal_val)), 0, 1)
 			"inverted_standard":
 				var signal_val = float(params["signal_value"])
 				if signal_val > 0.5:
-					params["value"] = clamp(float(params["value"]) - (delta * params["out_speed"] * signal_val), 0, 1)
+					params["value"] = clamp(float(params["value"]) - (lastdelta * params["out_speed"] * signal_val), 0, 1)
 				elif signal_val < 0.5:
-					params["value"] = clamp(float(params["value"]) + (delta * params["in_speed"] * (1.0 - signal_val)), 0, 1)
+					params["value"] = clamp(float(params["value"]) + (lastdelta * params["in_speed"] * (1.0 - signal_val)), 0, 1)
 			"move_to":
-				params["value"] = lerp(float(params["value"]), float(params["signal_value"]), delta * params["out_speed"])
+				params["value"] = lerp(float(params["value"]), float(params["signal_value"]), lastdelta * params["out_speed"])
 			"loop":
 				var speed = float(params["signal_value"])
 				if speed > 0.0:
-					params["value"] = fmod(float(params["value"]) + (delta * params["out_speed"] * speed), 1.0)
+					params["value"] = fmod(float(params["value"]) + (lastdelta * params["out_speed"] * speed), 1.0)
 			"play":
 				var signal_val = float(params["signal_value"])
 				if signal_val > 0.0:
@@ -193,27 +211,50 @@ func _process(delta):
 						params["value"] = 0.0
 				if params.get("playing", false):
 					var speed = float(params.get("play_speed", 1.0))
-					params["value"] = float(params["value"]) + (delta * params["out_speed"] * speed)
+					params["value"] = float(params["value"]) + (lastdelta * params["out_speed"] * speed)
 					if float(params["value"]) >= 1.0:
 						params["value"] = 1.0
 						params["playing"] = false
 						params["play_speed"] = 0.0
-
+		
+func _process(delta):
+	super(delta)
+	if not anim_tree or not anim_player:
+		print("Tree didn't build.")
+		_build_animTree()
+		return
+		
+	if forceAnimUpdate:
+		forceAnimUpdate = false
+		update_anim_positions()
+		
+	for raw_anim in anim_player.get_animation_list():
+		var key = animCache.get(raw_anim, raw_anim)
+		if not animParameters.has(key):
+			continue
+		var params = animParameters[key]
+		var anim_path = "parameters/Seek_" + raw_anim + "/seek_request"
 		var anim_length = anim_player.get_animation(raw_anim).length
+		var old_value = float(params.get("old_value", 0))
 		var raw_value = float(params.get("value", 0))
 		var time_value: float
 		if params["type"] == "loop":
+			#time_value = fmod(lerp(old_value, raw_value, 1.0 + min(float(Time.get_ticks_msec() - lastTickTime) / max(float(lastdelta), 1.0), 1.0)), 1.0) * anim_length
 			time_value = fmod(raw_value, 1.0) * anim_length
 		else:
-			time_value = clamp(raw_value, 0.0, 1.0) * anim_length
+			#time_value = clamp(raw_value, 0.0, 1.0) * anim_length
+			time_value = clamp(lerp(old_value, raw_value, min(float(Time.get_ticks_msec() - lastTickTime) / 1000.0 / lastdelta, 1.0)), 0.0, 1.0) * anim_length
 		anim_tree.set(anim_path, time_value)
-
+		
 func _sent_signals(anim_name: String, value):
 	anim_name = anim_name.split("|", true, 1)[-1]
-
 	var key = displayCache.get(anim_name, anim_name)
 	if animParameters.has(key):
-		animParameters[key]["signal_value"] = clamp(float(value), 0, 1)
+		var newValue = clamp(float(value), 0, 1)
+		if newValue == animParameters[key]["signal_value"]:
+			return
+		animParameters[key]["signal_value"] = newValue
+		forceAnimUpdate = true
 		return
 
 	# Non-animations

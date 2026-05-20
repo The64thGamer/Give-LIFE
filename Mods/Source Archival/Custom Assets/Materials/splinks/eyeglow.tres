@@ -1,9 +1,4 @@
-[gd_resource type="StandardMaterial3D" format=3]
-
-[ext_resource type="Texture2D" path="res://Mods/Source Archival/Custom Assets/Textures/splinks/Freddy_skeleton.webp" id=1] ; Albedo
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dyd2uuactxcjx"]
 
 [resource]
-albedo_texture = ExtResource(1)
-metallic = 1.0000
-roughness = 0.0500
 shading_mode = 0

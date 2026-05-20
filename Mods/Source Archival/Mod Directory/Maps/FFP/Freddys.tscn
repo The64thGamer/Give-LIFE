@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dbeqaqskfdgtu" path="res://Mods/Source Archival/Custom Assets/Props/Wood Chair.tscn" id="6_s857y"]
 [ext_resource type="Script" uid="uid://7y57po7qd5in" path="res://Scripts/Maps/Light Flicker.gd" id="8_83tne"]
 [ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Animatables/GL_Spotlight.gd" id="9_878e6"]
+[ext_resource type="PackedScene" uid="uid://dkvtxw1ust0j0" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy Splinks Black Eyes.tscn" id="10_fgage"]
+[ext_resource type="PackedScene" uid="uid://dua73jnph47j7" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy Splinks Glow Eyes.tscn" id="11_cboc2"]
 [ext_resource type="PackedScene" uid="uid://ckfiht1b6c35y" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy i6nis.tscn" id="11_fgage"]
 
 [sub_resource type="Environment" id="Environment_dsuk6"]
@@ -751,6 +753,12 @@ script = ExtResource("9_878e6")
 energyMultiplier = 100.0
 lerp_speed = 15.0
 animatableName = "Light Purple"
+
+[node name="Foxy Splinks2" parent="Map/Animatables" unique_id=233530727 instance=ExtResource("11_cboc2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6976457, 1.4571929, -3.3163185)
+
+[node name="Foxy Splinks" parent="Map/Animatables" unique_id=237489462 instance=ExtResource("10_fgage")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.048873186, 1.4571929, -3.3163185)
 
 [node name="Foxy i6nis" parent="Map/Animatables" unique_id=1331889453 instance=ExtResource("11_fgage")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.326473, 0.08159742, 15.885038)

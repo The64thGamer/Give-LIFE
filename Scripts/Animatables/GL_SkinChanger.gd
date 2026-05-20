@@ -272,7 +272,8 @@ func _swap_scene() -> void:
 	if not is_instance_valid(parent):
 		return
 	var tform = editing_target.global_transform
-	editing_target.queue_free()
+	editing_target.free()
+	editing_target = null
 	var instance = packed.instantiate()
 	parent.add_child(instance)
 	if instance is Node3D:
