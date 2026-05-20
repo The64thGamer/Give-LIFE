@@ -239,10 +239,8 @@ func _process(delta):
 		var raw_value = float(params.get("value", 0))
 		var time_value: float
 		if params["type"] == "loop":
-			#time_value = fmod(lerp(old_value, raw_value, 1.0 + min(float(Time.get_ticks_msec() - lastTickTime) / max(float(lastdelta), 1.0), 1.0)), 1.0) * anim_length
-			time_value = fmod(raw_value, 1.0) * anim_length
+			time_value = fmod(lerp(old_value, raw_value, min(float(Time.get_ticks_msec() - lastTickTime) / 1000.0 / lastdelta, 1.0)), 1.0) * anim_length	
 		else:
-			#time_value = clamp(raw_value, 0.0, 1.0) * anim_length
 			time_value = clamp(lerp(old_value, raw_value, min(float(Time.get_ticks_msec() - lastTickTime) / 1000.0 / lastdelta, 1.0)), 0.0, 1.0) * anim_length
 		anim_tree.set(anim_path, time_value)
 		
