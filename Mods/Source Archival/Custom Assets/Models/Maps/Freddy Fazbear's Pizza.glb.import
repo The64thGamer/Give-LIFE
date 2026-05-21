@@ -69,6 +69,11 @@ _subresources={
 "use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/tile blueblack.tres",
 "use_external/path": "uid://cge23osrqmefc"
 },
+"FREDDYS/FREDDYWALL": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/WallChecker.tres",
+"use_external/path": "uid://dp18lgd5d43xh"
+},
 "STONE/MARBLEFLOOR001B": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/Marble Black.tres",
@@ -91,7 +96,7 @@ _subresources={
 }
 },
 "nodes": {
-"PATH:world_geometry_002": {
+"PATH:world_geometry_003": {
 "generate/physics": true
 }
 }

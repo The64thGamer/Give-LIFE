@@ -7,8 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dbeqaqskfdgtu" path="res://Mods/Source Archival/Custom Assets/Props/Wood Chair.tscn" id="6_s857y"]
 [ext_resource type="Script" uid="uid://7y57po7qd5in" path="res://Scripts/Maps/Light Flicker.gd" id="8_83tne"]
 [ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Animatables/GL_Spotlight.gd" id="9_878e6"]
-[ext_resource type="PackedScene" uid="uid://dkvtxw1ust0j0" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy Splinks Black Eyes.tscn" id="10_fgage"]
-[ext_resource type="PackedScene" uid="uid://dua73jnph47j7" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy Splinks Glow Eyes.tscn" id="11_cboc2"]
+[ext_resource type="PackedScene" uid="uid://drivus6l2qa7o" path="res://Mods/Source Archival/Custom Assets/Props/Foxy Curtain.tscn" id="9_jrmqj"]
 [ext_resource type="PackedScene" uid="uid://ckfiht1b6c35y" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy i6nis.tscn" id="11_fgage"]
 
 [sub_resource type="Environment" id="Environment_dsuk6"]
@@ -53,7 +52,7 @@ bake_simplification_distance = 0.25
 
 [node name="LightmapGI" type="LightmapGI" parent="Map" unique_id=179490062]
 supersampling = true
-bounces = 2
+bounces = 6
 directional = true
 interior = true
 bias = 0.03414
@@ -372,12 +371,15 @@ shape = SubResource("BoxShape3D_60grn")
 
 [node name="Map Mesh & Collision" type="Node" parent="Map" unique_id=807558692]
 
-[node name="Freddy Fazbear\'s Pizza" parent="Map/Map Mesh & Collision" unique_id=1503921304 instance=ExtResource("3_60grn")]
+[node name="Freddy Fazbear\'s Pizza" parent="Map/Map Mesh & Collision" unique_id=1008810937 instance=ExtResource("3_60grn")]
 transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 0.08136177, -2.6576948, 0.606452)
+
+[node name="Foxy Curtain" parent="Map/Map Mesh & Collision" unique_id=164970021 instance=ExtResource("9_jrmqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.16777, 0.05401337, 16.001295)
 
 [node name="Map Props" type="Node" parent="Map" unique_id=890356910]
 
-[node name="WoodChair" parent="Map/Map Props" unique_id=164970021 instance=ExtResource("6_s857y")]
+[node name="WoodChair" parent="Map/Map Props" unique_id=667871160 instance=ExtResource("6_s857y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9965005, -0.008012891, 2.4434526)
 
 [node name="WoodChair2" parent="Map/Map Props" unique_id=1953587451 instance=ExtResource("6_s857y")]
@@ -728,7 +730,7 @@ animatableColor = Color(0, 0.14901961, 1, 1)
 delete_parent_instead = true
 
 [node name="Foxy Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=146955238]
-transform = Transform3D(-0.022813385, -0.45128015, 0.89209074, -0.03723816, 0.89208746, 0.45032614, -0.9990461, -0.022946348, -0.03715637, -14.977708, 5.6538982, 15.588198)
+transform = Transform3D(-0.030777868, -0.23364645, 0.9718344, -0.030981503, 0.97205085, 0.23271737, -0.99904597, -0.022946356, -0.037156373, -14.977708, 5.6538982, 15.588198)
 light_color = Color(0.87058824, 0.87058824, 0.87058824, 1)
 light_energy = 0.0
 light_size = 0.124
@@ -746,13 +748,13 @@ animatableColor = Color(0.89, 0.89, 0.89, 1)
 delete_parent_instead = true
 
 [node name="Foxy Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=52722776]
-transform = Transform3D(0.15537822, -0.4015467, 0.90256196, -0.0104159275, 0.91294146, 0.40795764, -0.9878002, -0.07278874, 0.13766871, -15.658477, 5.491513, 16.723312)
+transform = Transform3D(0.08459885, -0.4057125, 0.91007715, -0.010415921, 0.91294146, 0.40795764, -0.99636066, -0.04399204, 0.07300793, -14.507192, 5.7482157, 16.334003)
 light_color = Color(0.92, 0.49679998, 0.8988401, 1)
 light_energy = 0.0
 light_size = 0.124
 spot_range = 25.0
 spot_attenuation = 2.0
-spot_angle = 28.87
+spot_angle = 31.41
 spot_angle_attenuation = 0.329877
 
 [node name="Node" type="Node3D" parent="Map/Animatables/Foxy Light 1" unique_id=1351401021 groups=["FA_FOXY_RED"]]
@@ -762,14 +764,8 @@ lerp_speed = 15.0
 animatableName = "Light Purple"
 delete_parent_instead = true
 
-[node name="Foxy Splinks2" parent="Map/Animatables" unique_id=233530727 instance=ExtResource("11_cboc2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6976457, 1.4571929, -3.3163185)
-
-[node name="Foxy Splinks" parent="Map/Animatables" unique_id=237489462 instance=ExtResource("10_fgage")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.048873186, 1.4571929, -3.3163185)
-
 [node name="Foxy i6nis" parent="Map/Animatables" unique_id=1331889453 instance=ExtResource("11_fgage")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.326473, 0.08159742, 15.885038)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -19.136723, 1.1817727, 15.885038)
 
 [node name="Map Lights" type="Node" parent="Map" unique_id=651683685]
 
@@ -795,7 +791,84 @@ omni_range = 10.311
 [node name="RoomLight" type="OmniLight3D" parent="Map/Map Lights" unique_id=124407112]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.410886, 5.254267, 0.8754993)
 light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
+light_energy = 0.3
+light_bake_mode = 1
+omni_range = 10.311
+
+[node name="RoomLight2" type="OmniLight3D" parent="Map/Map Lights" unique_id=733024002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.97719, 5.254267, 0.8754993)
+light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
+light_energy = 0.3
+light_bake_mode = 1
+omni_range = 10.311
+
+[node name="RoomLight3" type="OmniLight3D" parent="Map/Map Lights" unique_id=1866854472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.410886, 5.254267, 8.205642)
+light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
+light_energy = 0.3
+light_bake_mode = 1
+omni_range = 10.311
+
+[node name="RoomLight4" type="OmniLight3D" parent="Map/Map Lights" unique_id=2088490582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.97719, 5.254267, 8.205642)
+light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
+light_energy = 0.3
+light_bake_mode = 1
+omni_range = 10.311
+
+[node name="RoomLight5" type="OmniLight3D" parent="Map/Map Lights" unique_id=1977349491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.410886, 5.254267, 16.160278)
+light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
+light_energy = 0.3
+light_bake_mode = 1
+omni_range = 10.311
+
+[node name="RoomLight7" type="OmniLight3D" parent="Map/Map Lights" unique_id=1687016868]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.006875, 5.254267, 0.8754993)
+light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
+light_energy = 0.3
+light_bake_mode = 1
+omni_range = 10.311
+
+[node name="RoomLight8" type="OmniLight3D" parent="Map/Map Lights" unique_id=967596206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.006875, 5.254267, 8.205642)
+light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
+light_energy = 0.3
+light_bake_mode = 1
+omni_range = 10.311
+
+[node name="RoomLight9" type="OmniLight3D" parent="Map/Map Lights" unique_id=1960279582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.006875, 5.254267, 16.160278)
+light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
+light_energy = 0.3
+light_bake_mode = 1
+omni_range = 10.311
+
+[node name="RoomLight10" type="OmniLight3D" parent="Map/Map Lights" unique_id=1342087828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1349, 5.254267, 0.8754993)
+light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
+light_energy = 0.3
+light_bake_mode = 1
+omni_range = 10.311
+
+[node name="RoomLight11" type="OmniLight3D" parent="Map/Map Lights" unique_id=136546825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1349, 5.254267, 8.205642)
+light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
+light_energy = 0.3
+light_bake_mode = 1
+omni_range = 10.311
+
+[node name="RoomLight12" type="OmniLight3D" parent="Map/Map Lights" unique_id=267625134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1349, 5.254267, 16.160278)
+light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
+light_energy = 0.3
+light_bake_mode = 1
+omni_range = 10.311
+
+[node name="RoomLight6" type="OmniLight3D" parent="Map/Map Lights" unique_id=1805954061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.97719, 5.254267, 16.160278)
+light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
+light_energy = 0.3
 light_bake_mode = 1
 omni_range = 10.311
 
@@ -897,55 +970,6 @@ light_energy = 0.1
 light_bake_mode = 1
 omni_range = 10.311
 
-[node name="RoomLight2" type="OmniLight3D" parent="Map/Map Lights" unique_id=733024002]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.97719, 5.254267, 0.8754993)
-light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
-light_bake_mode = 1
-omni_range = 10.311
-
-[node name="RoomLight3" type="OmniLight3D" parent="Map/Map Lights" unique_id=1866854472]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.410886, 5.254267, 8.205642)
-light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
-light_bake_mode = 1
-omni_range = 10.311
-
-[node name="RoomLight4" type="OmniLight3D" parent="Map/Map Lights" unique_id=2088490582]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.97719, 5.254267, 8.205642)
-light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
-light_bake_mode = 1
-omni_range = 10.311
-
-[node name="RoomLight5" type="OmniLight3D" parent="Map/Map Lights" unique_id=1977349491]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.410886, 5.254267, 16.160278)
-light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
-light_bake_mode = 1
-omni_range = 10.311
-
-[node name="RoomLight7" type="OmniLight3D" parent="Map/Map Lights" unique_id=1687016868]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.006875, 5.254267, 0.8754993)
-light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
-light_bake_mode = 1
-omni_range = 10.311
-
-[node name="RoomLight8" type="OmniLight3D" parent="Map/Map Lights" unique_id=967596206]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.006875, 5.254267, 8.205642)
-light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
-light_bake_mode = 1
-omni_range = 10.311
-
-[node name="RoomLight9" type="OmniLight3D" parent="Map/Map Lights" unique_id=1960279582]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.006875, 5.254267, 16.160278)
-light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
-light_bake_mode = 1
-omni_range = 10.311
-
 [node name="RoomLight16" type="OmniLight3D" parent="Map/Map Lights" unique_id=1775719333]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26207113, 2.6006703, 52.598194)
 light_color = Color(0.77254903, 0.7764706, 0.6666667, 1)
@@ -1024,40 +1048,13 @@ spot_angle = 31.96
 transform = Transform3D(-0.5225408, -0.3936965, -0.7562764, 0.0654356, -0.90291065, 0.4248182, -0.8500995, 0.17249742, 0.49756938, 10.029323, 4.694236, 42.01673)
 light_color = Color(0.75686276, 0.14901961, 0, 1)
 light_energy = 4.0
+light_bake_mode = 0
 spot_range = 22.464
 spot_angle = 31.96
 script = ExtResource("8_83tne")
 lerp_speed = 30.0
 polarization = 10.0
 min_energy = 0.0
-
-[node name="RoomLight10" type="OmniLight3D" parent="Map/Map Lights" unique_id=1342087828]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1349, 5.254267, 0.8754993)
-light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
-light_bake_mode = 1
-omni_range = 10.311
-
-[node name="RoomLight11" type="OmniLight3D" parent="Map/Map Lights" unique_id=136546825]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1349, 5.254267, 8.205642)
-light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
-light_bake_mode = 1
-omni_range = 10.311
-
-[node name="RoomLight12" type="OmniLight3D" parent="Map/Map Lights" unique_id=267625134]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1349, 5.254267, 16.160278)
-light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
-light_bake_mode = 1
-omni_range = 10.311
-
-[node name="RoomLight6" type="OmniLight3D" parent="Map/Map Lights" unique_id=1805954061]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.97719, 5.254267, 16.160278)
-light_color = Color(0.80784315, 0.79607844, 0.6666667, 1)
-light_energy = 0.1
-light_bake_mode = 1
-omni_range = 10.311
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map/Map Lights" unique_id=59418933]
 transform = Transform3D(0.69172734, 0.5106434, -0.5106434, 0, 0.7071068, 0.7071068, 0.72215885, -0.48912507, 0.48912507, 0, 6.4243507, -27.450554)
