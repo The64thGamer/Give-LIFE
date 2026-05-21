@@ -18,14 +18,12 @@ var forceAnimUpdate = false
 
 func _ready():
 	super()
-	print(name + " Animatable Loaded " + str(position))
 	initialPos = position
 	initialRot = rotation
 	initialScale = scale
 	_build_animTree()
 	
 func _build_animTree() -> void:
-	
 	for child in get_children():
 		if child is AnimationPlayer:
 			anim_player = child

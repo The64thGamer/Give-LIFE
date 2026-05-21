@@ -37,15 +37,14 @@ func _ready():
 	var old_bbox = get_node_or_null("_bbox_debug")
 	if old_bbox:
 		old_bbox.free()
-		var old_area = get_node_or_null("_construction_area")
-		if old_area:
-			old_area.free()
-		on_construction_toggled(true)
-		
-	_build_bbox()
+	var old_area = get_node_or_null("_construction_area")
+	if old_area:
+		old_area.free()
+	_build_bbox() 
 	_playback = get_tree().get_first_node_in_group("GL_Playback")
 	if _playback:
 		_playback.refresh_animatables()
+	on_construction_toggled(_get_player_construction_mode())
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_PREDELETE:

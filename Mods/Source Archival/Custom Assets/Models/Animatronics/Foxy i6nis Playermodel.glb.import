@@ -42,7 +42,7 @@ _subresources={
 "EyeGlow": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/eyeglow.tres",
-"use_external/path": "res://Mods/Source Archival/Custom Assets/Materials/i6nis/eyeglow.tres"
+"use_external/path": "uid://dfgl1yfg0bh3m"
 },
 "FOXYBODY": {
 "use_external/enabled": true,
