@@ -154,11 +154,14 @@ func _do_delete() -> void:
 	target.tree_exited.connect(func(): tree.get_first_node_in_group("AnimatableImporter").refresh())
 	target.queue_free()
 
+func _get_target() -> Node3D:
+	return get_parent() if delete_parent_instead else self
+
 func _process_moving() -> void:
 	var player := get_tree().get_nodes_in_group("Player Raycast").front() as Node3D
 	if not player: return
-	global_position = player.global_position + (-player.global_transform.basis.z) * _move_distance + Vector3(0, MOVE_Y_OFFSET, 0)
-
+	_get_target().global_position = player.global_position + (-player.global_transform.basis.z) * _move_distance + Vector3(0, MOVE_Y_OFFSET, 0)
+	
 func _input(event: InputEvent) -> void:
 	if _interact_state == InteractState.NONE:
 		return
@@ -192,18 +195,18 @@ func _input(event: InputEvent) -> void:
 		InteractState.ROTATING:
 			if event is InputEventMouseButton and event.pressed:
 				if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-					rotation_degrees.y += ROTATE_STEP_DEG
+					_get_target().rotation_degrees.y += ROTATE_STEP_DEG
 				elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-					rotation_degrees.y -= ROTATE_STEP_DEG
+					_get_target().rotation_degrees.y -= ROTATE_STEP_DEG
 			if event.is_action_pressed("Interact"):
 				_return_to_menu()
 
 		InteractState.SCALING:
 			if event is InputEventMouseButton and event.pressed:
 				if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-					scale = (scale + Vector3.ONE * SCALE_STEP).clamp(Vector3.ONE * SCALE_MIN, Vector3.ONE * SCALE_MAX)
+					_get_target().scale = (_get_target().scale + Vector3.ONE * SCALE_STEP).clamp(Vector3.ONE * SCALE_MIN, Vector3.ONE * SCALE_MAX)
 				elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-					scale = (scale - Vector3.ONE * SCALE_STEP).clamp(Vector3.ONE * SCALE_MIN, Vector3.ONE * SCALE_MAX)
+					_get_target().scale = (_get_target().scale - Vector3.ONE * SCALE_STEP).clamp(Vector3.ONE * SCALE_MIN, Vector3.ONE * SCALE_MAX)
 			if event.is_action_pressed("Interact"):
 				_return_to_menu()
 
@@ -215,14 +218,19 @@ func _build_bbox() -> void:
 	var collision_shapes := _get_all_children(self).filter(func(n): return n is CollisionShape3D)
 	var combined := AABB()
 	var has_any := false
+
 	for cs in collision_shapes:
 		if not cs.shape: continue
+		var debug_mesh = cs.shape.get_debug_mesh()
+		if not debug_mesh: continue  # guard against null debug mesh
 		var local_xform: Transform3D = global_transform.inverse() * cs.global_transform
-		var world_aabb: AABB = local_xform * cs.shape.get_debug_mesh().get_aabb()
+		var world_aabb: AABB = local_xform * debug_mesh.get_aabb()
 		combined = world_aabb if not has_any else combined.merge(world_aabb)
 		has_any = true
+
 	if not has_any:
-		combined = AABB(Vector3(-0.25, -0.25, -0.25), Vector3(0.5, 0.5, 0.5))
+		combined = AABB(Vector3(-0.5, -0.5, -0.5), Vector3(1.0, 1.0, 1.0))  # centred default
+
 	_build_line_mesh(combined)
 	_build_construction_area(combined)
 

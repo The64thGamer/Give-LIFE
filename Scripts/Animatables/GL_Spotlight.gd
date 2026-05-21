@@ -29,14 +29,12 @@ func _process(delta: float) -> void:
 	super(delta)
 	if spotLight != null:
 		spotLight.light_energy = lerp(spotLight.light_energy, target_energy, delta * lerp_speed)
-		spotLight.visible = spotLight.light_energy > 0.001 
 		
 		if canChangeColor:
 			spotLight.light_color = spotLight.light_color.lerp(target_color, delta * color_lerp_speed)
 			
 	elif omniLight != null:
 		omniLight.light_energy = lerp(omniLight.light_energy, target_energy, delta * lerp_speed)
-		omniLight.visible = omniLight.light_energy > 0.001
 		
 		if canChangeColor:
 			omniLight.light_color = omniLight.light_color.lerp(target_color, delta * color_lerp_speed)

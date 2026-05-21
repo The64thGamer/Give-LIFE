@@ -103,6 +103,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 3.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="Lamp Bedroom2" type="SpotLight3D" parent="Map/Animatables" unique_id=1363457524]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 3.1600237, 3.3535135, -2.402554)
@@ -119,6 +120,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 3.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="Lamp Bedroom3" type="SpotLight3D" parent="Map/Animatables" unique_id=1604483092]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.588233, 2.6872513, 11.250679)
@@ -136,6 +138,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 3.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="Lamp Bedroom4" type="SpotLight3D" parent="Map/Animatables" unique_id=30732576]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1.588233, 2.3305073, 11.250679)
@@ -152,6 +155,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 3.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="Lamp Bedroom5" type="SpotLight3D" parent="Map/Animatables" unique_id=344975507]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -7.970268, 2.673155, -5.7399597)
@@ -169,6 +173,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 3.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="Lamp Bedroom6" type="SpotLight3D" parent="Map/Animatables" unique_id=2068958739]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -7.970268, 2.5806725, -5.7399597)
@@ -185,6 +190,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 3.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="Lamp Bedroom7" type="SpotLight3D" parent="Map/Animatables" unique_id=1180257400]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 7.5380664, 2.8199255, -13.916176)
@@ -202,6 +208,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 3.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="Lamp Bedroom8" type="SpotLight3D" parent="Map/Animatables" unique_id=983793203]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 7.5380664, 2.580672, -13.916176)
@@ -218,6 +225,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 3.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="UpperLight" type="OmniLight3D" parent="Map/Animatables" unique_id=1950159548]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.17005287, 4.7105355, -1.122833)
@@ -232,6 +240,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 2.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="UpperLight2" type="OmniLight3D" parent="Map/Animatables" unique_id=962779671]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.2416534, 4.608688, -4.603212)
@@ -246,6 +255,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 2.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="UpperLight3" type="OmniLight3D" parent="Map/Animatables" unique_id=880995927]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.2416534, 4.608688, -9.678828)
@@ -260,6 +270,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 2.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="UpperLight4" type="OmniLight3D" parent="Map/Animatables" unique_id=350510855]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.965375, 4.608688, -4.911122)
@@ -274,6 +285,7 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 2.0
 lerp_speed = 20.0
+delete_parent_instead = true
 
 [node name="UpperLight5" type="OmniLight3D" parent="Map/Animatables" unique_id=1256721231]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.965375, 4.608688, -9.678828)
@@ -288,3 +300,4 @@ script = ExtResource("8_xo3k6")
 canChangeColor = true
 energyMultiplier = 2.0
 lerp_speed = 20.0
+delete_parent_instead = true

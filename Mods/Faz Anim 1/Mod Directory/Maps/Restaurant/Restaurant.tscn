@@ -1442,6 +1442,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 125.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Chica Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=274073957]
 transform = Transform3D(-0.012033883, 0.33574253, -0.9418769, -0.08259124, 0.9383928, 0.3355558, 0.9965109, 0.08182883, 0.016436888, 35.776802, 4.725695, -46.43148)
@@ -1460,6 +1461,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 250.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Freddy Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=21909970]
 transform = Transform3D(0.009166081, 0.29237965, -0.9562584, -0.010784545, 0.9562718, 0.29228038, 0.9998999, 0.0076337475, 0.011918446, 35.77706, 4.725695, -48.40314)
@@ -1478,6 +1480,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 125.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Freddy Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=1260758631]
 transform = Transform3D(0.079793975, 0.32894304, -0.9409727, -0.020898586, 0.94432724, 0.32834354, 0.9965924, -0.006534837, 0.08222606, 35.776646, 4.725695, -47.746586)
@@ -1496,6 +1499,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 250.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Bonnie Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=8002537]
 transform = Transform3D(-0.101665355, 0.22831675, -0.9682642, -0.023801593, 0.97247034, 0.2318077, 0.99453384, 0.046613038, -0.09343225, 35.776936, 4.725715, -50.37656)
@@ -1514,6 +1518,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 125.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Mood Light Main 1" type="SpotLight3D" parent="Map/Animatables" unique_id=1536176542]
 transform = Transform3D(0.9190253, 1.2274882e-07, 0.3941986, 0.3941986, -1.7230965e-08, -0.9190253, -1.0601685e-07, 1, -6.42231e-08, 43.23258, 2.4819498, -54.173973)
@@ -1531,6 +1536,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 10.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Mood Light Main 2" type="SpotLight3D" parent="Map/Animatables" unique_id=629930383]
 transform = Transform3D(0.9190253, 1.7230967e-08, 0.39419857, 0.39419857, -4.0171873e-08, -0.9190253, 0, 1, -4.3711392e-08, 43.23258, 2.4819498, -42.691025)
@@ -1548,6 +1554,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 10.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Mood Light Side 1" type="SpotLight3D" parent="Map/Animatables" unique_id=582911854]
 transform = Transform3D(-4.371139e-08, -1, 0, -0.26555616, 1.16078285e-08, -0.9640954, 0.9640954, -4.214195e-08, -0.26555616, 37.991096, 2.6299572, -61.014526)
@@ -1565,6 +1572,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 10.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Mood Light Side 2" type="SpotLight3D" parent="Map/Animatables" unique_id=471117567]
 transform = Transform3D(-4.371139e-08, -1, 0, -0.26555616, 1.16078285e-08, -0.9640954, 0.9640954, -4.214195e-08, -0.26555616, 28.516226, 2.6299572, -61.014526)
@@ -1582,6 +1590,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 10.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Foxy Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=1312089822]
 transform = Transform3D(0.98094577, -0.015061397, 0.1936974, -0.03097292, 0.9721161, 0.23244599, -0.19179729, -0.23401621, 0.95312667, 34.473503, 4.8880806, -51.945313)
@@ -1600,6 +1609,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 125.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Bonnie Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=194052567]
 transform = Transform3D(-0.011201609, 0.32789087, -0.9446493, -0.032150563, 0.9441019, 0.32808217, 0.99942046, 0.034046054, -3.3587217e-05, 35.77647, 4.725695, -49.79496)
@@ -1618,6 +1628,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 250.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Foxy Light 1" type="SpotLight3D" parent="Map/Animatables" unique_id=1900346500]
 transform = Transform3D(0.9986395, 0.043826807, -0.028255546, -0.035033964, 0.9652485, 0.25897455, 0.038623653, -0.2576323, 0.9654708, 33.149937, 4.725695, -51.9554)
@@ -1636,6 +1647,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Foxy Light 2" type="SpotLight3D" parent="Map/Animatables" unique_id=216839859]
 transform = Transform3D(0.98296803, 0.08005943, -0.16542162, -0.035033967, 0.9652486, 0.25897455, 0.18040632, -0.2487683, 0.95161337, 31.691912, 4.725695, -51.9554)
@@ -1654,6 +1666,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Foxy Light 3" type="SpotLight3D" parent="Map/Animatables" unique_id=1261774533]
 transform = Transform3D(0.99349934, 0.06172259, -0.09565199, -0.035033964, 0.9652486, 0.25897455, 0.10831253, -0.25394, 0.9611364, 32.453697, 4.725695, -51.9554)
@@ -1672,6 +1685,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Foxy Upper" type="OmniLight3D" parent="Map/Animatables" unique_id=1896494326]
 transform = Transform3D(0.9986395, 0.043826826, -0.028255546, 0.019073393, 0.19730835, 0.98015594, 0.048532173, -0.9793614, 0.19620398, 33.149937, 4.684247, -58.139236)
@@ -1687,6 +1701,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 3.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Parrot Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=1612173973]
 transform = Transform3D(0.9698967, 0.19406986, -0.14709641, -0.0049960488, 0.61978126, 0.7847587, 0.24346557, -0.76039994, 0.6020933, 34.362442, 4.6598063, -58.45623)
@@ -1705,6 +1720,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 30.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Red 1" type="OmniLight3D" parent="Map/Animatables" unique_id=1688608551]
 transform = Transform3D(-0.16817988, -0.8431807, -0.5106484, -7.8219905e-08, -0.518027, 0.85536426, -0.98575634, 0.1438551, 0.08712165, 40.442223, 4.8553305, -48.084583)
@@ -1720,6 +1736,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Yellow 1" type="OmniLight3D" parent="Map/Animatables" unique_id=1791354737]
 transform = Transform3D(-0.57263243, -0.7012381, -0.4246849, -7.8219905e-08, -0.518027, 0.85536426, -0.81981224, 0.48980933, 0.296639, 40.59143, 4.8553305, -47.37232)
@@ -1735,6 +1752,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Green 1" type="OmniLight3D" parent="Map/Animatables" unique_id=1165663771]
 transform = Transform3D(-0.8771294, -0.4107922, -0.24878468, -7.8219905e-08, -0.518027, 0.85536426, -0.48025414, 0.7502651, 0.45437667, 40.98274, 4.8553305, -46.737385)
@@ -1750,6 +1768,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Blue 1" type="OmniLight3D" parent="Map/Animatables" unique_id=241076198]
 transform = Transform3D(-0.97838295, -0.15493469, 0.13697447, 0.19570597, -0.47963646, 0.85536426, -0.066827655, 0.86368054, 0.4995898, 41.56567, 4.8553305, -46.218506)
@@ -1765,6 +1784,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Red 2" type="OmniLight3D" parent="Map/Animatables" unique_id=971962086]
 transform = Transform3D(0.98028946, -0.16770603, 0.10443738, -0.17456767, -0.4877275, 0.85536426, -0.09251277, -0.856736, -0.5073902, 41.5861, 4.8553305, -50.586956)
@@ -1780,6 +1800,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Yellow 2" type="OmniLight3D" parent="Map/Animatables" unique_id=1767243062]
 transform = Transform3D(0.9020963, -0.36911952, -0.22354664, -7.8219905e-08, -0.518027, 0.85536426, -0.43153483, -0.7716209, -0.46731025, 40.97777, 4.8553305, -50.112804)
@@ -1795,6 +1816,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Green 2" type="OmniLight3D" parent="Map/Animatables" unique_id=484276350]
 transform = Transform3D(0.66465676, -0.63908446, -0.38704324, -7.8219905e-08, -0.518027, 0.85536426, -0.7471488, -0.56852365, -0.34431022, 40.602283, 4.8553305, -49.443176)
@@ -1810,6 +1832,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Blue 2" type="OmniLight3D" parent="Map/Animatables" unique_id=34613149]
 transform = Transform3D(0.3131473, -0.81234336, -0.4919726, -7.8219905e-08, -0.518027, 0.85536426, -0.9497046, -0.26785496, -0.16221882, 40.409355, 4.8553305, -48.75413)
@@ -1825,6 +1848,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Speaker Red 1" type="OmniLight3D" parent="Map/Animatables" unique_id=957307995]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 42.624195, 1.2351339, -46.135742)
@@ -1841,6 +1865,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Curtain Blue 1" type="OmniLight3D" parent="Map/Animatables" unique_id=2041428442]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 42.53761, 1.2351339, -45.757137)
@@ -1857,6 +1882,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Speaker Red 2" type="OmniLight3D" parent="Map/Animatables" unique_id=1543303054]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 42.555473, 1.235134, -50.535656)
@@ -1873,6 +1899,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Curtain Blue 2" type="OmniLight3D" parent="Map/Animatables" unique_id=1887861546]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 42.50943, 1.235134, -50.911263)
@@ -1889,6 +1916,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 1.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Deck Day 1" type="SpotLight3D" parent="Map/Animatables" unique_id=815149240]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 31.000265, 1.235134, -60.932526)
@@ -1904,6 +1932,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 50.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Deck Day 2" type="SpotLight3D" parent="Map/Animatables" unique_id=1033648454]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 32.186554, 1.235134, -60.932526)
@@ -1919,6 +1948,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 50.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Deck Day 3" type="SpotLight3D" parent="Map/Animatables" unique_id=1234021277]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 31.057625, 1.235134, -60.032948)
@@ -1934,6 +1964,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 50.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Deck Day 4" type="SpotLight3D" parent="Map/Animatables" unique_id=1059800250]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 32.227177, 1.235134, -60.31527)
@@ -1949,6 +1980,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 50.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Deck Sunset 1" type="SpotLight3D" parent="Map/Animatables" unique_id=1101253172]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 31.269682, 1.235134, -60.932526)
@@ -1964,6 +1996,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 50.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Deck Sunset 2" type="SpotLight3D" parent="Map/Animatables" unique_id=922189542]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 32.45597, 1.235134, -60.932526)
@@ -1979,6 +2012,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 50.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Spot Sun" type="SpotLight3D" parent="Map/Animatables" unique_id=1202014103]
 transform = Transform3D(0.240972, -0.09505441, -0.965866, 0.3398661, -0.92391235, 0.17571817, -0.90907854, -0.37060833, -0.19033127, 40.343876, 4.8190846, -48.298515)
@@ -1997,6 +2031,7 @@ canChangeColor = true
 canChangeSize = true
 energyMultiplier = 100.0
 lerp_speed = 15.0
+delete_parent_instead = true
 
 [node name="Bonnie" parent="Map/Animatables" unique_id=1706571886 instance=ExtResource("10_4tduh")]
 transform = Transform3D(0.17364822, 0, -0.9848077, 0, 1, 0, 0.9848077, 0, 0.17364822, 41.62821, 0.87827206, -49.82713)
