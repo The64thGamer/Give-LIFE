@@ -44,6 +44,11 @@ _subresources={
 "use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/StageBricks.tres",
 "use_external/path": "uid://b4ng2q7pg11vd"
 },
+"CARPET/OFFFLRB": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/Carpet Teal.tres",
+"use_external/path": "uid://beu5pt1an68h1"
+},
 "CS_HAVANA/WOODM": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/StageWood.tres",
@@ -63,6 +68,11 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/tile blueblack.tres",
 "use_external/path": "uid://cge23osrqmefc"
+},
+"STONE/MARBLEFLOOR001B": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/Marble Black.tres",
+"use_external/path": "uid://bghdu4jkbyjur"
 },
 "TILE/CEILINGTILEA": {
 "use_external/enabled": true,

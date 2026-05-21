@@ -140,10 +140,11 @@ func _confirm_menu_selection() -> void:
 			_close_interaction()
 
 func _do_duplicate() -> void:
-	var dup = duplicate()
-	get_parent().add_child(dup)
+	var target = _get_target()
+	var dup = target.duplicate()
+	target.get_parent().add_child(dup)
 	var dir := Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)).normalized()
-	dup.global_position = global_position + Vector3(dir.x, 0.0, dir.y) * 2.0
+	dup.global_position = target.global_position + Vector3(dir.x, 0.0, dir.y) * 2.0
 	_close_interaction()
 	get_tree().get_first_node_in_group("AnimatableImporter").refresh()
 

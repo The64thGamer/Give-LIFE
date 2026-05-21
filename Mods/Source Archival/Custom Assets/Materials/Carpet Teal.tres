@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://beu5pt1an68h1"]
+
+[ext_resource type="Texture2D" uid="uid://drptyi1n8c1ye" path="res://Mods/Faz Anim 2/Custom Assets/Textures/dirty_carpet_diffuse_4k.jpg" id="1_s0nht"]
+[ext_resource type="Texture2D" uid="uid://dmopl5o13wt07" path="res://Mods/Faz Anim 2/Custom Assets/Textures/dirty_carpet_nor_gl_4k.jpg" id="2_kdaas"]
+[ext_resource type="Texture2D" uid="uid://bn1umb3njvyku" path="res://Mods/Faz Anim 2/Custom Assets/Textures/dirty_carpet_rough_4k.jpg" id="3_2i1r1"]
+
+[resource]
+albedo_color = Color(0.43674085, 0.5931069, 0.61852825, 1)
+albedo_texture = ExtResource("1_s0nht")
+roughness_texture = ExtResource("3_2i1r1")
+normal_enabled = true
+normal_texture = ExtResource("2_kdaas")
+rim_tint = 1.0
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.36
+backlight = Color(1, 1, 1, 1)

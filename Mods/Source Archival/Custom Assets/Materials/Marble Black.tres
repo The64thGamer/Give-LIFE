@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bghdu4jkbyjur"]
+
+[ext_resource type="Texture2D" uid="uid://du5uon8bcnagh" path="res://Mods/Source Archival/Custom Assets/Textures/concrete_floor_painted_diff_2k.jpg" id="1_8bp57"]
+[ext_resource type="Texture2D" uid="uid://gxgct7vjo50s" path="res://Mods/Source Archival/Custom Assets/Textures/concrete_floor_painted_nor_gl_2k.jpg" id="2_epjw5"]
+[ext_resource type="Texture2D" uid="uid://c8fjhx61l4oil" path="res://Mods/Source Archival/Custom Assets/Textures/concrete_floor_painted_rough_2k.jpg" id="3_6lvx6"]
+
+[resource]
+albedo_texture = ExtResource("1_8bp57")
+roughness = 0.9
+roughness_texture = ExtResource("3_6lvx6")
+normal_enabled = true
+normal_texture = ExtResource("2_epjw5")

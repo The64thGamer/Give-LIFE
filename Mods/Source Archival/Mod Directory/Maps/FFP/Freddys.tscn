@@ -372,7 +372,7 @@ shape = SubResource("BoxShape3D_60grn")
 
 [node name="Map Mesh & Collision" type="Node" parent="Map" unique_id=807558692]
 
-[node name="Freddy Fazbear\'s Pizza" parent="Map/Map Mesh & Collision" unique_id=1790957557 instance=ExtResource("3_60grn")]
+[node name="Freddy Fazbear\'s Pizza" parent="Map/Map Mesh & Collision" unique_id=1503921304 instance=ExtResource("3_60grn")]
 transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 0.08136177, -2.6576948, 0.606452)
 
 [node name="Map Props" type="Node" parent="Map" unique_id=890356910]
