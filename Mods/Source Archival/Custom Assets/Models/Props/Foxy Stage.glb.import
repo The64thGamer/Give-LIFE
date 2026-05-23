@@ -39,10 +39,25 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
+"Black": {
+"use_external/enabled": false,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/Black Shiny.tres",
+"use_external/path": "uid://cy782doec1m17"
+},
 "Curtains": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/Curtain.tres",
 "use_external/path": "uid://elvlbxogy42b"
+},
+"STONE/MARBLEFLOOR001B": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/Black Shiny.tres",
+"use_external/path": "uid://cy782doec1m17"
+},
+"Sorry": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Source Archival/Custom Assets/Materials/OutOfOrder.tres",
+"use_external/path": "uid://cbegv4raid2ex"
 }
 },
 "meshes": {

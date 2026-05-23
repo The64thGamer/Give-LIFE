@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbegv4raid2ex"]
+
+[ext_resource type="Texture2D" uid="uid://sy4melnjskdj" path="res://Mods/Source Archival/Custom Assets/Textures/OutOfOrder.webp" id="1_sb24r"]
+
+[resource]
+albedo_texture = ExtResource("1_sb24r")
+roughness = 0.39
+roughness_texture = ExtResource("1_sb24r")
+normal_enabled = true
+normal_scale = 0.1

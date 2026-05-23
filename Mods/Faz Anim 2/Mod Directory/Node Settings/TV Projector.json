@@ -1,8 +1,0 @@
-{
-  "TV_PROJECTOR": {
-	"Video": "res://Mods/Standard Nodes/Custom Assets/Node Scripts/GL_VideoType.gd",
-	"Current Time": 0.0,
-	"color": [1, 1, 1, 1],
-	"intensity": 0.0,
-  }
-}
