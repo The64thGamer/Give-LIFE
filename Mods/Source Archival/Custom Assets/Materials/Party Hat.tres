@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c2pbhqlhrpopf"]
+
+[ext_resource type="Texture2D" uid="uid://3tcnpl2c2jk6" path="res://Mods/Source Archival/Custom Assets/Textures/PartyHat.webp" id="1_f0k7u"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_f0k7u")
+roughness = 0.3
+normal_enabled = true
+normal_scale = -0.5
+texture_filter = 0

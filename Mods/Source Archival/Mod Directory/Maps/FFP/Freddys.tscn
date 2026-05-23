@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dbeqaqskfdgtu" path="res://Mods/Source Archival/Custom Assets/Props/Wood Chair.tscn" id="6_s857y"]
 [ext_resource type="PackedScene" uid="uid://untn4gnmiduo" path="res://Mods/Source Archival/Custom Assets/Props/Party Table.tscn" id="7_jrmqj"]
 [ext_resource type="Script" uid="uid://7y57po7qd5in" path="res://Scripts/Maps/Light Flicker.gd" id="8_83tne"]
+[ext_resource type="PackedScene" uid="uid://cpfl8ov82xl5k" path="res://Mods/Source Archival/Custom Assets/Props/Party Hat.tscn" id="8_fgage"]
 [ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Animatables/GL_Spotlight.gd" id="9_878e6"]
 [ext_resource type="PackedScene" uid="uid://drivus6l2qa7o" path="res://Mods/Source Archival/Custom Assets/Props/Foxy Curtain.tscn" id="9_jrmqj"]
 [ext_resource type="PackedScene" uid="uid://ckfiht1b6c35y" path="res://Mods/Source Archival/Mod Directory/Animatables/Foxy i6nis.tscn" id="11_fgage"]
@@ -372,7 +373,7 @@ shape = SubResource("BoxShape3D_60grn")
 
 [node name="Map Mesh & Collision" type="Node" parent="Map" unique_id=807558692]
 
-[node name="Freddy Fazbear\'s Pizza" parent="Map/Map Mesh & Collision" unique_id=1322520378 instance=ExtResource("3_60grn")]
+[node name="Freddy Fazbear\'s Pizza" parent="Map/Map Mesh & Collision" unique_id=1099420521 instance=ExtResource("3_60grn")]
 transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 0.08136177, -2.6576948, 0.606452)
 
 [node name="Foxy Curtain" parent="Map/Map Mesh & Collision" unique_id=164970021 instance=ExtResource("9_jrmqj")]
@@ -649,6 +650,156 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1023273, 0.085511446, 14.10
 
 [node name="Party Table10" parent="Map/Map Props" unique_id=179449817 instance=ExtResource("7_jrmqj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.307154, 0.085511446, 13.908098)
+
+[node name="Party Hat" parent="Map/Map Props" unique_id=1674362338 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.9467111, 0, -0.32208395, 0, 1, 0, 0.32208395, 0, 0.9467111, -9.060761, 1.3791837, 7.728968)
+
+[node name="Party Hat2" parent="Map/Map Props" unique_id=2129836459 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.84298795, 0, 0.5379324, 0, 1, 0, -0.5379324, 0, 0.84298795, -9.060761, 1.3791837, 1.9087405)
+
+[node name="Party Hat3" parent="Map/Map Props" unique_id=1964237317 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.36053407, 0, -0.93274605, 0, 1, 0, 0.93274605, 0, 0.36053407, -9.060761, 1.3791837, 3.3022776)
+
+[node name="Party Hat4" parent="Map/Map Props" unique_id=210877709 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.5028088, 0, 0.86439764, 0, 1, 0, -0.86439764, 0, -0.5028088, -9.060761, 1.3791837, 6.083217)
+
+[node name="Party Hat5" parent="Map/Map Props" unique_id=265652931 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.98758435, 0, 0.15708952, 0, 1, 0, -0.15708952, 0, -0.98758435, -9.060761, 1.3791837, 4.8071904)
+
+[node name="Party Hat6" parent="Map/Map Props" unique_id=1186072150 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.9500865, 0, 0.3119867, 0, 1, 0, -0.3119867, 0, -0.9500865, -9.092305, 1.3791837, 11.1635895)
+
+[node name="Party Hat7" parent="Map/Map Props" unique_id=125814379 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.8372131, 0, -0.5468765, 0, 1, 0, 0.5468765, 0, -0.8372131, -9.030341, 1.3791837, 16.983486)
+
+[node name="Party Hat8" parent="Map/Map Props" unique_id=1865776221 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.3704439, 0, 0.9288548, 0, 1, 0, -0.9288548, 0, -0.3704439, -9.045177, 1.3791837, 15.590029)
+
+[node name="Party Hat9" parent="Map/Map Props" unique_id=1261559920 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.511983, 0, -0.8589956, 0, 1, 0, 0.8589956, 0, 0.511983, -9.074784, 1.3791837, 12.809246)
+
+[node name="Party Hat10" parent="Map/Map Props" unique_id=916570586 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.9892009, 0, -0.14656651, 0, 1, 0, 0.14656651, 0, 0.9892009, -9.061199, 1.3791837, 14.085201)
+
+[node name="Party Hat11" parent="Map/Map Props" unique_id=1578991497 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.9467111, 0, -0.32208395, 0, 1, 0, 0.32208395, 0, 0.9467111, -4.131312, 1.3791837, 7.728968)
+
+[node name="Party Hat12" parent="Map/Map Props" unique_id=138420540 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.84298795, 0, 0.5379324, 0, 1, 0, -0.5379324, 0, 0.84298795, -4.131312, 1.3791837, 1.9087405)
+
+[node name="Party Hat13" parent="Map/Map Props" unique_id=274714243 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.36053407, 0, -0.93274605, 0, 1, 0, 0.93274605, 0, 0.36053407, -4.131312, 1.3791837, 3.3022776)
+
+[node name="Party Hat14" parent="Map/Map Props" unique_id=1667716248 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.5028088, 0, 0.86439764, 0, 1, 0, -0.86439764, 0, -0.5028088, -4.131312, 1.3791837, 6.083217)
+
+[node name="Party Hat15" parent="Map/Map Props" unique_id=1710583100 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.98758435, 0, 0.15708952, 0, 1, 0, -0.15708952, 0, -0.98758435, -4.131312, 1.3791837, 4.8071904)
+
+[node name="Party Hat16" parent="Map/Map Props" unique_id=1254642152 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.9500865, 0, 0.3119867, 0, 1, 0, -0.3119867, 0, -0.9500865, -4.1628556, 1.3791837, 11.1635895)
+
+[node name="Party Hat17" parent="Map/Map Props" unique_id=1604113213 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.8372131, 0, -0.5468765, 0, 1, 0, 0.5468765, 0, -0.8372131, -4.1008916, 1.3791837, 16.983486)
+
+[node name="Party Hat18" parent="Map/Map Props" unique_id=85521114 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.3704439, 0, 0.9288548, 0, 1, 0, -0.9288548, 0, -0.3704439, -4.115728, 1.3791837, 15.590029)
+
+[node name="Party Hat19" parent="Map/Map Props" unique_id=187168829 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.511983, 0, -0.8589956, 0, 1, 0, 0.8589956, 0, 0.511983, -4.1453347, 1.3791837, 12.809246)
+
+[node name="Party Hat20" parent="Map/Map Props" unique_id=1426495247 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.9892009, 0, -0.14656651, 0, 1, 0, 0.14656651, 0, 0.9892009, -4.1317496, 1.3791837, 14.085201)
+
+[node name="Party Hat21" parent="Map/Map Props" unique_id=974223234 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.9467111, 0, -0.32208395, 0, 1, 0, 0.32208395, 0, 0.9467111, 1.6290741, 1.3791837, 7.728968)
+
+[node name="Party Hat22" parent="Map/Map Props" unique_id=631098279 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.84298795, 0, 0.5379324, 0, 1, 0, -0.5379324, 0, 0.84298795, 1.6290741, 1.3791837, 1.9087405)
+
+[node name="Party Hat23" parent="Map/Map Props" unique_id=1058264255 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.36053407, 0, -0.93274605, 0, 1, 0, 0.93274605, 0, 0.36053407, 1.6290741, 1.3791837, 3.3022776)
+
+[node name="Party Hat24" parent="Map/Map Props" unique_id=36111302 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.5028088, 0, 0.86439764, 0, 1, 0, -0.86439764, 0, -0.5028088, 1.6290741, 1.3791837, 6.083217)
+
+[node name="Party Hat25" parent="Map/Map Props" unique_id=1731601421 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.98758435, 0, 0.15708952, 0, 1, 0, -0.15708952, 0, -0.98758435, 1.6290741, 1.3791837, 4.8071904)
+
+[node name="Party Hat26" parent="Map/Map Props" unique_id=1848667545 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.9500865, 0, 0.3119867, 0, 1, 0, -0.3119867, 0, -0.9500865, 1.5975304, 1.3791837, 11.1635895)
+
+[node name="Party Hat27" parent="Map/Map Props" unique_id=70827020 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.8372131, 0, -0.5468765, 0, 1, 0, 0.5468765, 0, -0.8372131, 1.6594944, 1.3791837, 16.983486)
+
+[node name="Party Hat28" parent="Map/Map Props" unique_id=898202699 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.3704439, 0, 0.9288548, 0, 1, 0, -0.9288548, 0, -0.3704439, 1.6446581, 1.3791837, 15.590029)
+
+[node name="Party Hat29" parent="Map/Map Props" unique_id=592207087 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.511983, 0, -0.8589956, 0, 1, 0, 0.8589956, 0, 0.511983, 1.6150513, 1.3791837, 12.809246)
+
+[node name="Party Hat30" parent="Map/Map Props" unique_id=773247455 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.9892009, 0, -0.14656651, 0, 1, 0, 0.14656651, 0, 0.9892009, 1.6286364, 1.3791837, 14.085201)
+
+[node name="Party Hat31" parent="Map/Map Props" unique_id=948478782 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.9467111, 0, -0.32208395, 0, 1, 0, 0.32208395, 0, 0.9467111, 7.125696, 1.3791837, 7.728968)
+
+[node name="Party Hat32" parent="Map/Map Props" unique_id=511482818 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.84298795, 0, 0.5379324, 0, 1, 0, -0.5379324, 0, 0.84298795, 7.125696, 1.3791837, 1.9087405)
+
+[node name="Party Hat33" parent="Map/Map Props" unique_id=1337278271 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.36053407, 0, -0.93274605, 0, 1, 0, 0.93274605, 0, 0.36053407, 7.125696, 1.3791837, 3.3022776)
+
+[node name="Party Hat34" parent="Map/Map Props" unique_id=473517058 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.5028088, 0, 0.86439764, 0, 1, 0, -0.86439764, 0, -0.5028088, 7.125696, 1.3791837, 6.083217)
+
+[node name="Party Hat35" parent="Map/Map Props" unique_id=432846952 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.98758435, 0, 0.15708952, 0, 1, 0, -0.15708952, 0, -0.98758435, 7.125696, 1.3791837, 4.8071904)
+
+[node name="Party Hat36" parent="Map/Map Props" unique_id=659954911 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.9500865, 0, 0.3119867, 0, 1, 0, -0.3119867, 0, -0.9500865, 7.0941525, 1.3791837, 11.1635895)
+
+[node name="Party Hat37" parent="Map/Map Props" unique_id=1365079315 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.8372131, 0, -0.5468765, 0, 1, 0, 0.5468765, 0, -0.8372131, 7.1561165, 1.3791837, 16.983486)
+
+[node name="Party Hat38" parent="Map/Map Props" unique_id=1998498374 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.3704439, 0, 0.9288548, 0, 1, 0, -0.9288548, 0, -0.3704439, 7.14128, 1.3791837, 15.590029)
+
+[node name="Party Hat39" parent="Map/Map Props" unique_id=1648839744 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.511983, 0, -0.8589956, 0, 1, 0, 0.8589956, 0, 0.511983, 7.1116734, 1.3791837, 12.809246)
+
+[node name="Party Hat40" parent="Map/Map Props" unique_id=2005094925 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.9892009, 0, -0.14656651, 0, 1, 0, 0.14656651, 0, 0.9892009, 7.1252584, 1.3791837, 14.085201)
+
+[node name="Party Hat41" parent="Map/Map Props" unique_id=1364898250 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.9467111, 0, -0.32208395, 0, 1, 0, 0.32208395, 0, 0.9467111, 13.403058, 1.3791837, 7.728968)
+
+[node name="Party Hat42" parent="Map/Map Props" unique_id=1665096232 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.84298795, 0, 0.5379324, 0, 1, 0, -0.5379324, 0, 0.84298795, 13.403058, 1.3791837, 1.9087405)
+
+[node name="Party Hat43" parent="Map/Map Props" unique_id=1248534802 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.36053407, 0, -0.93274605, 0, 1, 0, 0.93274605, 0, 0.36053407, 13.403058, 1.3791837, 3.3022776)
+
+[node name="Party Hat44" parent="Map/Map Props" unique_id=1085872677 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.5028088, 0, 0.86439764, 0, 1, 0, -0.86439764, 0, -0.5028088, 13.403058, 1.3791837, 6.083217)
+
+[node name="Party Hat45" parent="Map/Map Props" unique_id=1685992459 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.98758435, 0, 0.15708952, 0, 1, 0, -0.15708952, 0, -0.98758435, 13.403058, 1.3791837, 4.8071904)
+
+[node name="Party Hat46" parent="Map/Map Props" unique_id=1634251932 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.9500865, 0, 0.3119867, 0, 1, 0, -0.3119867, 0, -0.9500865, 13.371514, 1.3791837, 11.1635895)
+
+[node name="Party Hat47" parent="Map/Map Props" unique_id=1524330574 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.8372131, 0, -0.5468765, 0, 1, 0, 0.5468765, 0, -0.8372131, 13.433478, 1.3791837, 16.983486)
+
+[node name="Party Hat48" parent="Map/Map Props" unique_id=6915405 instance=ExtResource("8_fgage")]
+transform = Transform3D(-0.3704439, 0, 0.9288548, 0, 1, 0, -0.9288548, 0, -0.3704439, 13.418642, 1.3791837, 15.590029)
+
+[node name="Party Hat49" parent="Map/Map Props" unique_id=1876890905 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.511983, 0, -0.8589956, 0, 1, 0, 0.8589956, 0, 0.511983, 13.389035, 1.3791837, 12.809246)
+
+[node name="Party Hat50" parent="Map/Map Props" unique_id=1975204715 instance=ExtResource("8_fgage")]
+transform = Transform3D(0.9892009, 0, -0.14656651, 0, 1, 0, 0.14656651, 0, 0.9892009, 13.40262, 1.3791837, 14.085201)
 
 [node name="Animatables" type="Node" parent="Map" unique_id=1193136051]
 

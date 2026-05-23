@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cpfl8ov82xl5k"]
+
+[ext_resource type="PackedScene" uid="uid://cwkxxv40r8072" path="res://Mods/Source Archival/Custom Assets/Models/Props/Party Hat.glb" id="1_osr0t"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_y3shy"]
+height = 0.5037842
+radius = 0.12158203
+
+[node name="Party Hat" type="Node3D" unique_id=164970021]
+
+[node name="Party Hat" parent="." unique_id=353672434 instance=ExtResource("1_osr0t")]
+transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 0, 0, 0)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=356478244]
+transform = Transform3D(0.93, 0, 0, 0, 0.93, 0, 0, 0, 0.93, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=2012226529]
+transform = Transform3D(0.9999987, 0, 0, 0, 0.9999987, 0, 0, 0, 0.9999987, -0.0040437942, 0.25756797, -0.0003280178)
+shape = SubResource("CylinderShape3D_y3shy")
