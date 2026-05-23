@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://untn4gnmiduo"]
+
+[ext_resource type="PackedScene" uid="uid://db8bd37eqv0u5" path="res://Mods/Source Archival/Custom Assets/Models/Props/Party Table.glb" id="1_khin5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_perbc"]
+size = Vector3(2.153473, 1.3790283, 7.8459625)
+
+[node name="Party Table" type="Node3D" unique_id=164970021]
+
+[node name="Party Table" parent="." unique_id=2048730602 instance=ExtResource("1_khin5")]
+transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=971024071]
+transform = Transform3D(0.93, 0, 0, 0, 0.93, 0, 0, 0, 0.93, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=309089774]
+transform = Transform3D(0.9999987, 0, 0, 0, 0.9999987, 0, 0, 0, 0.9999987, -0.0040437942, 0.690734, -0.0003280178)
+shape = SubResource("BoxShape3D_perbc")

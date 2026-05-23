@@ -1,29 +1,29 @@
 {
-  "FNAF4_BUG|Tail": {
+  "Tail": {
 	"animation": "Bug Tail",
 	"in_speed": 3,
 	"out_speed": 3,
 	"type": "standard"
   },
-"FNAF4_BUG|Body": {
+"Body": {
 	"animation": "Bug Body",
 	"in_speed": 1.9,
 	"out_speed": 2.25,
 	"type": "standard"
   },
-"FNAF4_BUG|Head": {
+"Head": {
 	"animation": "Bug Head",
 	"in_speed": 1.9,
 	"out_speed": 2.25,
 	"type": "standard"
   },
-"FNAF4_BUG|Eyes L": {
+"Eyes L": {
 	"animation": "Bug Eyes L",
 	"in_speed": 3,
 	"out_speed": 3,
 	"type": "standard"
   },
-"FNAF4_BUG|Eyes R": {
+"Eyes R": {
 	"animation": "Bug Eyes R",
 	"in_speed": 3,
 	"out_speed": 3,

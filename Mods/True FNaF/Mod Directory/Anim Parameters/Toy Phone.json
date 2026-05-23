@@ -1,29 +1,29 @@
 {
-  "FNAF4_PHONE|Blink": {
+  "Blink": {
 	"animation": "Phone Blink",
 	"in_speed": 4,
 	"out_speed": 5,
 	"type": "standard"
   },
-"FNAF4_PHONE|Dial": {
+"Dial": {
 	"animation": "Phone Dial",
 	"in_speed": 3,
 	"out_speed": 3,
 	"type": "loop"
   },
-"FNAF4_PHONE|Mouth": {
+"Mouth": {
 	"animation": "Phone Talk",
 	"in_speed": 4.5,
 	"out_speed": 5,
 	"type": "standard"
   },
-"FNAF4_PHONE|Eyes L": {
+"Eyes L": {
 	"animation": "Phone Eyes L",
 	"in_speed": 3,
 	"out_speed": 3,
 	"type": "standard"
   },
-"FNAF4_PHONE|Eyes R": {
+"Eyes R": {
 	"animation": "Phone Eyes R",
 	"in_speed": 3,
 	"out_speed": 3,

@@ -1,5 +1,5 @@
 {
-  "AA_HVAC|Jaw": {
+  "Jaw": {
 	"animation": "HVACJaw",
 	"in_speed": 2.5,
 	"out_speed": 3,

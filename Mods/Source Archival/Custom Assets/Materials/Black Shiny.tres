@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cy782doec1m17"]
+
+[ext_resource type="Texture2D" uid="uid://du5uon8bcnagh" path="res://Mods/Source Archival/Custom Assets/Textures/concrete_floor_painted_diff_2k.jpg" id="1_08ruq"]
+[ext_resource type="Texture2D" uid="uid://cme407y5ws51w" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_Plaster_N.webp" id="2_8sfvr"]
+[ext_resource type="Texture2D" uid="uid://c8fjhx61l4oil" path="res://Mods/Source Archival/Custom Assets/Textures/concrete_floor_painted_rough_2k.jpg" id="3_yfxi2"]
+
+[resource]
+albedo_texture = ExtResource("1_08ruq")
+roughness = 0.39
+roughness_texture = ExtResource("3_yfxi2")
+normal_enabled = true
+normal_scale = 0.1
+normal_texture = ExtResource("2_8sfvr")

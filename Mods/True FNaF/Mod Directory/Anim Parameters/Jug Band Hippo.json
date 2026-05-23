@@ -1,47 +1,47 @@
 {
-"SOTM_HIPPO|Jaw": {
+"Jaw": {
 	"animation": "Jaw",
 	"in_speed": 3,
 	"out_speed": 5,
 	"type": "standard"
   },
-"SOTM_HIPPO|Arm R": {
+"Arm R": {
 	"animation": "Arm R",
 	"in_speed": 3,
 	"out_speed": 3,
 	"type": "standard"
   },
-"SOTM_HIPPO|Body L": {
+"Body L": {
 	"animation": "Body L",
 	"in_speed": 2,
 	"out_speed": 2,
 	"type": "standard"
   },
-"SOTM_HIPPO|Body R": {
+"Body R": {
 	"animation": "Body R",
 	"in_speed": 2,
 	"out_speed": 2,
 	"type": "standard"
   },
-"SOTM_HIPPO|Head R": {
+"Head R": {
 	"animation": "Head R",
 	"in_speed": 2,
 	"out_speed": 2,
 	"type": "standard"
   },
-"SOTM_HIPPO|Head Tilt R": {
+"Head Tilt R": {
 	"animation": "Head Tilt R",
 	"in_speed": 3,
 	"out_speed": 3,
 	"type": "standard"
   },
-"SOTM_HIPPO|Head Tilt L": {
+"Head Tilt L": {
 	"animation": "Head Tilt L",
 	"in_speed": 3,
 	"out_speed": 3,
 	"type": "standard"
   },
-"SOTM_HIPPO|Tail": {
+"Tail": {
 	"animation": "Tail",
 	"in_speed": 3,
 	"out_speed": 3,

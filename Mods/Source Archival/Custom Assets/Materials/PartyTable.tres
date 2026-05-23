@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dxxespfpicdpc"]
+
+[ext_resource type="Texture2D" uid="uid://bey8ww1mei4r0" path="res://Mods/Source Archival/Custom Assets/Textures/PartyTable.png" id="1_yrk8o"]
+[ext_resource type="Texture2D" uid="uid://c3y7fch4kmsqg" path="res://Mods/Source Archival/Custom Assets/Textures/PartyTableRough.png" id="2_pj8oi"]
+[ext_resource type="Texture2D" uid="uid://nbeg04qhphce" path="res://Mods/Source Archival/Custom Assets/Textures/kitchen_wood_nor_gl_2k.jpg" id="3_ahfgq"]
+
+[resource]
+albedo_texture = ExtResource("1_yrk8o")
+metallic = 1.0
+metallic_texture = ExtResource("2_pj8oi")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("1_yrk8o")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("3_ahfgq")

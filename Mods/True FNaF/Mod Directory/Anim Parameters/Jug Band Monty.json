@@ -1,41 +1,41 @@
 {
-"SOTM_MONTY|Jaw": {
+"Jaw": {
 	"animation": "Jaw",
 	"in_speed": 3,
 	"out_speed": 5,
 	"type": "standard"
   },
-"SOTM_MONTY|Arm L": {
+"Arm L": {
 	"animation": "Arm L",
 	"in_speed": 3,
 	"out_speed": 3,
 	"type": "standard"
   },
-"SOTM_MONTY|Body L": {
+"Body L": {
 	"animation": "Body L",
 	"in_speed": 2,
 	"out_speed": 2,
 	"type": "standard"
   },
-"SOTM_MONTY|Body R": {
+"Body R": {
 	"animation": "Body R",
 	"in_speed": 2,
 	"out_speed": 2,
 	"type": "standard"
   },
-"SOTM_MONTY|Head R": {
+"Head R": {
 	"animation": "Head R",
 	"in_speed": 2,
 	"out_speed": 2,
 	"type": "standard"
   },
-"SOTM_MONTY|Banjo Strum": {
+"Banjo Strum": {
 	"animation": "Banjo Strum",
 	"in_speed": 3,
 	"out_speed": 3,
 	"type": "standard"
   },
-"SOTM_MONTY|Tail": {
+"Tail": {
 	"animation": "Tail",
 	"in_speed": 3,
 	"out_speed": 3,

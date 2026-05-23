@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bo1o3yv66bsbp" path="res://Mods/Source Archival/Custom Assets/Models/Maps/Freddy Fazbear's Pizza.glb" id="3_60grn"]
 [ext_resource type="LightmapGIData" uid="uid://dwavngbbnhrgx" path="res://Mods/Source Archival/Mod Directory/Maps/FFP/Freddys.lmbake" id="3_83tne"]
 [ext_resource type="PackedScene" uid="uid://dbeqaqskfdgtu" path="res://Mods/Source Archival/Custom Assets/Props/Wood Chair.tscn" id="6_s857y"]
+[ext_resource type="PackedScene" uid="uid://untn4gnmiduo" path="res://Mods/Source Archival/Custom Assets/Props/Party Table.tscn" id="7_jrmqj"]
 [ext_resource type="Script" uid="uid://7y57po7qd5in" path="res://Scripts/Maps/Light Flicker.gd" id="8_83tne"]
 [ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Animatables/GL_Spotlight.gd" id="9_878e6"]
 [ext_resource type="PackedScene" uid="uid://drivus6l2qa7o" path="res://Mods/Source Archival/Custom Assets/Props/Foxy Curtain.tscn" id="9_jrmqj"]
@@ -371,7 +372,7 @@ shape = SubResource("BoxShape3D_60grn")
 
 [node name="Map Mesh & Collision" type="Node" parent="Map" unique_id=807558692]
 
-[node name="Freddy Fazbear\'s Pizza" parent="Map/Map Mesh & Collision" unique_id=1008810937 instance=ExtResource("3_60grn")]
+[node name="Freddy Fazbear\'s Pizza" parent="Map/Map Mesh & Collision" unique_id=1322520378 instance=ExtResource("3_60grn")]
 transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 0.08136177, -2.6576948, 0.606452)
 
 [node name="Foxy Curtain" parent="Map/Map Mesh & Collision" unique_id=164970021 instance=ExtResource("9_jrmqj")]
@@ -618,6 +619,36 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.2
 
 [node name="WoodChair80" parent="Map/Map Props" unique_id=1802224889 instance=ExtResource("6_s857y")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.248291, -0.008012891, 16.836039)
+
+[node name="Party Table" parent="Map/Map Props" unique_id=212121285 instance=ExtResource("7_jrmqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.282274, 0.085511446, 5.176637)
+
+[node name="Party Table2" parent="Map/Map Props" unique_id=318919614 instance=ExtResource("7_jrmqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.134301, 0.085511446, 5.0109854)
+
+[node name="Party Table3" parent="Map/Map Props" unique_id=372882234 instance=ExtResource("7_jrmqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6082978, 0.085511446, 5.0109854)
+
+[node name="Party Table4" parent="Map/Map Props" unique_id=1207910538 instance=ExtResource("7_jrmqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.12772, 0.085511446, 4.9139376)
+
+[node name="Party Table5" parent="Map/Map Props" unique_id=1594808150 instance=ExtResource("7_jrmqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.060402, 0.085511446, 4.9139376)
+
+[node name="Party Table6" parent="Map/Map Props" unique_id=509512176 instance=ExtResource("7_jrmqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.060402, 0.085511446, 14.131531)
+
+[node name="Party Table7" parent="Map/Map Props" unique_id=1261402382 instance=ExtResource("7_jrmqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.094473, 0.085511446, 14.208301)
+
+[node name="Party Table8" parent="Map/Map Props" unique_id=2022543503 instance=ExtResource("7_jrmqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5625858, 0.085511446, 14.208301)
+
+[node name="Party Table9" parent="Map/Map Props" unique_id=856838785 instance=ExtResource("7_jrmqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1023273, 0.085511446, 14.102558)
+
+[node name="Party Table10" parent="Map/Map Props" unique_id=179449817 instance=ExtResource("7_jrmqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.307154, 0.085511446, 13.908098)
 
 [node name="Animatables" type="Node" parent="Map" unique_id=1193136051]
 

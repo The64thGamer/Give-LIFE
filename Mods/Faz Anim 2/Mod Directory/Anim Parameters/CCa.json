@@ -1,186 +1,186 @@
 {
-  "AA_CCA|Arm L Bend": {
+  "Arm L Bend": {
 	"animation": "Arm L Bend",
 	"in_speed": 2.0,
 	"out_speed": 3.0,
 	"type": "standard"
   },
-  "AA_CCA|Arm L Turn": {
+  "Arm L Turn": {
 	"animation": "Arm L Turn",
 	"in_speed": 2.7,
 	"out_speed": 3.0,
 	"type": "standard"
   },
-  "AA_CCA|Arm R Bend": {
+  "Arm R Bend": {
 	"animation": "Arm R Bend",
 	"in_speed": 3.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "AA_CCA|Arm R Out": {
+  "Arm R Out": {
 	"animation": "Arm R Out",
 	"in_speed": 2.5,
 	"out_speed": 1.0,
 	"type": "standard"
   },
-  "AA_CCA|Body Lean": {
+  "Body Lean": {
 	"animation": "Body Lean",
 	"in_speed": 2.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "AA_CCA|Body Turn L": {
+  "Body Turn L": {
 	"animation": "Body Turn L",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "AA_CCA|Body Turn R": {
+  "Body Turn R": {
 	"animation": "Body Turn R",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "AA_CCA|Cupcake Candle": {
+  "Cupcake Candle": {
 	"animation": "Cupcake Candle",
 	"in_speed": 1.0,
 	"out_speed": 1.0,
 	"type": "loop"
   },
-  "AA_CCA|Cupcake Mouth": {
+  "Cupcake Mouth": {
 	"animation": "Cupcake Mouth",
 	"in_speed": 5.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "AA_CCA|Eyebrow L Down": {
+  "Eyebrow L Down": {
 	"animation": "Eyebrow L Down",
 	"in_speed": 7.0,
 	"out_speed": 9.0,
 	"type": "standard"
   },
-  "AA_CCA|Eyebrow L Up": {
+  "Eyebrow L Up": {
 	"animation": "Eyebrow L Up",
 	"in_speed": 7.0,
 	"out_speed": 9.0,
 	"type": "standard"
   },
-  "AA_CCA|Eyebrow R Down": {
+  "Eyebrow R Down": {
 	"animation": "Eyebrow R Down",
 	"in_speed": 7.0,
 	"out_speed": 9.0,
 	"type": "standard"
   },
-  "AA_CCA|Eyebrow R Up": {
+  "Eyebrow R Up": {
 	"animation": "Eyebrow R Up",
 	"in_speed": 7.0,
 	"out_speed": 9.0,
 	"type": "standard"
   },
-  "AA_CCA|Eyelid L": {
+  "Eyelid L": {
 	"animation": "Eyelid L",
 	"in_speed": 5.0,
 	"out_speed": 10.0,
 	"type": "move_to"
   },
-  "AA_CCA|Eyelid R": {
+  "Eyelid R": {
 	"animation": "Eyelid R",
 	"in_speed": 5.0,
 	"out_speed": 10.0,
 	"type": "move_to"
   },
-  "AA_CCA|Eyes Down": {
+  "Eyes Down": {
 	"animation": "Eyes Down",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "AA_CCA|Eyes Left": {
+  "Eyes Left": {
 	"animation": "Eyes Left",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "AA_CCA|Eyes Right": {
+  "Eyes Right": {
 	"animation": "Eyes Right",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "AA_CCA|Eyes Up": {
+  "Eyes Up": {
 	"animation": "Eyes Up",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "AA_CCA|Hand R Bend": {
+  "Hand R Bend": {
 	"animation": "Hand R Bend",
 	"in_speed": 3.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "AA_CCA|Head L": {
+  "Head L": {
 	"animation": "Head L",
 	"in_speed": 5.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "AA_CCA|Head R": {
+  "Head R": {
 	"animation": "Head R",
 	"in_speed": 5.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "AA_CCA|Head Tilt Down L": {
+  "Head Tilt Down L": {
 	"animation": "Head Tilt Down L",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "AA_CCA|Head Tilt Down R": {
+  "Head Tilt Down R": {
 	"animation": "Head Tilt Down R",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "AA_CCA|Head Tilt Up L": {
+  "Head Tilt Up L": {
 	"animation": "Head Tilt Up L",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "AA_CCA|Head Tilt Up R": {
+  "Head Tilt Up R": {
 	"animation": "Head Tilt Up R",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "AA_CCA|Jaw": {
+  "Jaw": {
 	"animation": "Jaw",
 	"in_speed": 5.5,
 	"out_speed": 6.5,
 	"type": "standard"
   },
-  "AA_CCA|Shoulder L": {
+  "Shoulder L": {
 	"animation": "Shoulder L",
 	"in_speed": 2.5,
 	"out_speed": 1.5,
 	"type": "standard"
   },
-  "AA_CCA|Shoulder R": {
+  "Shoulder R": {
 	"animation": "Shoulder R",
 	"in_speed": 2.5,
 	"out_speed": 1.5,
 	"type": "standard"
   },
-  "AA_CCA|Underlid L": {
+  "Underlid L": {
 	"animation": "Underlid L",
 	"in_speed": 5.0,
 	"out_speed": 10.0,
 	"type": "move_to",
 	"value": 5.70421e-21
   },
-  "AA_CCA|Underlid R": {
+  "Underlid R": {
 	"animation": "Underlid R",
 	"in_speed": 5.0,
 	"out_speed": 10.0,

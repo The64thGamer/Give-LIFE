@@ -93,7 +93,7 @@ var _cached_meta: Dictionary = {}
 
 func _collect_animatronic(node: GL_Animatronic, group: String, color: String, channels: Dictionary) -> void:
 	for param_key in node.animParameters:
-		var channel_id = param_key
+		var channel_id = group + "|" + param_key
 		if channels.has(channel_id):
 			continue 
 		var entry = node.animParameters[param_key]

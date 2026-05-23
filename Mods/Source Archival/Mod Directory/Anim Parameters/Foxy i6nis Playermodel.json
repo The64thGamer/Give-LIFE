@@ -1,186 +1,186 @@
 {
-  "FNAF1_FOXY|Arm L": {
+  "Arm L": {
 	"animation": "Arm L Playermodel",
 	"in_speed": 3.0,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Arm R": {
+  "Arm R": {
 	"animation": "Arm R Playermodel",
 	"in_speed": 3.0,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Body L": {
+  "Body L": {
 	"animation": "Body L",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Body Lean": {
+  "Body Lean": {
 	"animation": "Body Lean",
 	"in_speed": 2.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Body R": {
+  "Body R": {
 	"animation": "Body R",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Body Tilt L": {
+  "Body Tilt L": {
 	"animation": "Body Tilt L",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Body Tilt R": {
+  "Body Tilt R": {
 	"animation": "Body Tilt R",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Ear L Down": {
+  "Ear L Down": {
 	"animation": "Ear L Down",
 	"in_speed": 3.0,
 	"out_speed": 3.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Ear L Up": {
+  "Ear L Up": {
 	"animation": "Ear L Up",
 	"in_speed": 3.0,
 	"out_speed": 3.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Ear R Down": {
+  "Ear R Down": {
 	"animation": "Ear R Down",
 	"in_speed": 3.0,
 	"out_speed": 3.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Ear R Up": {
+  "Ear R Up": {
 	"animation": "Ear R Up",
 	"in_speed": 3.0,
 	"out_speed": 3.0,
 	"type": "standard"
   },
 
-  "FNAF1_FOXY|Eye L": {
+  "Eye L": {
 	"animation": "Eye L",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Eye R": {
+  "Eye R": {
 	"animation": "Eye R",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Eyelid Down": {
+  "Eyelid Down": {
 	"animation": "Eyelid Down",
 	"in_speed": 5.0,
 	"out_speed": 8.0,
 	"type": "move_to"
   },
-  "FNAF1_FOXY|Eyelid Up": {
+  "Eyelid Up": {
 	"animation": "Eyelid Up",
 	"in_speed": 5.0,
 	"out_speed": 8.0,
 	"type": "move_to"
   },
-  "FNAF1_FOXY|Eyelids Anger": {
+  "Eyelids Anger": {
 	"animation": "Eyelids Anger",
 	"in_speed": 4.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Eyelids Sad": {
+  "Eyelids Sad": {
 	"animation": "Eyelids Sad",
 	"in_speed": 4.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Eyepatch": {
+  "Eyepatch": {
 	"animation": "Eyepatch",
 	"in_speed": 3.0,
 	"out_speed": 3.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Forearm L": {
+  "Forearm L": {
 	"animation": "Forearm L Playermodel",
 	"in_speed": 3.5,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Forearm R": {
+  "Forearm R": {
 	"animation": "Forearm R Playermodel",
 	"in_speed": 3.5,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Hand Bend L": {
+  "Hand Bend L": {
 	"animation": "Hand Bend L-foxy_ARM",
 	"in_speed": 3.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Hand Twist L": {
+  "Hand Twist L": {
 	"animation": "Hand Twist L Playermodel",
 	"in_speed": 3.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Head Down": {
+  "Head Down": {
 	"animation": "Head Down",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Head L": {
+  "Head L": {
 	"animation": "Head L",
 	"in_speed": 5.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Head R": {
+  "Head R": {
 	"animation": "Head R",
 	"in_speed": 5.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Head Tilt L": {
+  "Head Tilt L": {
 	"animation": "Head Tilt L",
 	"in_speed": 4.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Head Tilt R": {
+  "Head Tilt R": {
 	"animation": "Head Tilt R",
 	"in_speed": 4.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Head Up": {
+  "Head Up": {
 	"animation": "Head Up",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Jaw": {
+  "Jaw": {
 	"animation": "Jaw-foxy_ARM",
 	"in_speed": 5.5,
 	"out_speed": 6.5,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Shoulder L": {
+  "Shoulder L": {
 	"animation": "Shoulder L Playermodel",
 	"in_speed": 3.0,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FNAF1_FOXY|Shoulder R": {
+  "Shoulder R": {
 	"animation": "Crowbar",
 	"in_speed": 2.0,
 	"out_speed": 2.0,

@@ -1,7 +1,9 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dp18lgd5d43xh"]
 
 [ext_resource type="Texture2D" uid="uid://27oxk8q8gig7" path="res://Mods/Source Archival/Custom Assets/Textures/FreddyWall.webp" id="1_v8d0f"]
+[ext_resource type="Texture2D" uid="uid://cme407y5ws51w" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_Plaster_N.webp" id="2_i2m7k"]
 
 [resource]
 albedo_texture = ExtResource("1_v8d0f")
 normal_enabled = true
+normal_texture = ExtResource("2_i2m7k")

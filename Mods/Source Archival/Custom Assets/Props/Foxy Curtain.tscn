@@ -2,24 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://cela1f4oqx1k3" path="res://Mods/Source Archival/Custom Assets/Models/Props/Foxy Stage.glb" id="1_hnd1y"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_perbc"]
-size = Vector3(1.048584, 1.0246582, 1.1592407)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_eu76s"]
-size = Vector3(0.091537476, 1.7770691, 1.1592407)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8q3tg"]
+height = 1.2021484
+radius = 3.37
 
 [node name="Foxy Curtain" type="Node3D" unique_id=164970021]
 
-[node name="Foxy Stage" parent="." unique_id=1901819547 instance=ExtResource("1_hnd1y")]
+[node name="Foxy Stage" parent="." unique_id=1496460469 instance=ExtResource("1_hnd1y")]
 transform = Transform3D(2.3, 0, 0, 0, 2.3, 0, 0, 0, 2.3, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=971024071]
 transform = Transform3D(0.93, 0, 0, 0, 0.93, 0, 0, 0, 0.93, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=309089774]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09729004, 0.5135498, 0.0034484863)
-shape = SubResource("BoxShape3D_perbc")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=941351791]
-transform = Transform3D(0.9914448, -0.13052619, 0, 0.13052619, 0.9914448, 0, 0, 0, 1, -0.4992249, 1.8207066, 0.0034484863)
-shape = SubResource("BoxShape3D_eu76s")
+transform = Transform3D(0.9999987, 0, 0, 0, 0.9999987, 0, 0, 0, 0.9999987, 0.020450553, 0.61462384, 0.0034484863)
+shape = SubResource("CylinderShape3D_8q3tg")
