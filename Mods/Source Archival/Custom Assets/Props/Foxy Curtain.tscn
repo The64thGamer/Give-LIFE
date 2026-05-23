@@ -6,6 +6,12 @@
 height = 1.2021484
 radius = 3.37
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8q3tg"]
+size = Vector3(0.04107666, 0.7718506, 1.1948242)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hnd1y"]
+size = Vector3(0.10443878, 2.2052612, 0.15332031)
+
 [node name="Foxy Curtain" type="Node3D" unique_id=164970021]
 
 [node name="Foxy Stage" parent="." unique_id=1496460469 instance=ExtResource("1_hnd1y")]
@@ -17,3 +23,11 @@ transform = Transform3D(0.93, 0, 0, 0, 0.93, 0, 0, 0, 0.93, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=309089774]
 transform = Transform3D(0.9999987, 0, 0, 0, 0.9999987, 0, 0, 0, 0.9999987, 0.020450553, 0.61462384, 0.0034484863)
 shape = SubResource("CylinderShape3D_8q3tg")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=559660605]
+transform = Transform3D(0.9999987, 0, 0, 0, 0.9999987, 0, 0, 0, 0.9999987, 3.0948133, 3.0364358, -0.056396402)
+shape = SubResource("BoxShape3D_8q3tg")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1485820340]
+transform = Transform3D(0.9999987, 0, 0, 0, 0.9999987, 0, 0, 0, 0.9999987, 3.0156822, 2.3197293, -0.056877844)
+shape = SubResource("BoxShape3D_hnd1y")
