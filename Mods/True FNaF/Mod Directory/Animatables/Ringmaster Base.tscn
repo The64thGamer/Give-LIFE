@@ -11,7 +11,7 @@ radius = 0.703125
 
 [node name="Ringmaster Base" type="Node3D" unique_id=233530727 groups=["SOTM_MRHELPFUL"]]
 script = ExtResource("1_p1afe")
-animParametersFileName = "Mr Helpful"
+animParametersFileName = "Helpfuls"
 animatableIcon = ExtResource("2_sbtkl")
 animatableName = "Ringmaster Base"
 animatableAuthors = "Steel Wool"

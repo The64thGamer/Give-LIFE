@@ -11,7 +11,7 @@ radius = 0.18066406
 
 [node name="Mr Helpful Alt" type="Node3D" unique_id=233530727 groups=["SOTM_MRHELPFUL_ALT"]]
 script = ExtResource("1_yugrg")
-animParametersFileName = "Mr Helpful Alt"
+animParametersFileName = "Helpfuls"
 animatableIcon = ExtResource("2_8xckk")
 animatableName = "Mr. Helpful"
 animatableAuthors = "Steel Wool"

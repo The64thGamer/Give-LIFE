@@ -11,7 +11,7 @@ radius = 0.18066406
 
 [node name="Mrs Helpful Alt" type="Node3D" unique_id=233530727 groups=["SOTM_MRSHELPFUL_ALT"]]
 script = ExtResource("1_5g2cr")
-animParametersFileName = "Mrs Helpful Alt"
+animParametersFileName = "Helpfuls"
 animatableIcon = ExtResource("2_v0bji")
 animatableName = "Mrs. Helpful"
 animatableAuthors = "Steel Wool"

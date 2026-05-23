@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dr0u4jnkpnliv"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_j4e0e"]
+[ext_resource type="Texture2D" uid="uid://dub3hbyhyttpa" path="res://Mods/True FNaF/Custom Assets/UI/HelpfulEndo.png" id="2_ipp34"]
+[ext_resource type="PackedScene" uid="uid://70y5mlo5v0pj" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Helpful Endo.glb" id="3_go1sl"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7mxrl"]
+height = 0.62086487
+radius = 0.18066406
+
+[node name="Mrs Helpful" type="Node3D" unique_id=233530727 groups=["SOTM_MRSHELPFUL_ALT"]]
+script = ExtResource("1_j4e0e")
+animParametersFileName = "Helpfuls"
+animatableIcon = ExtResource("2_ipp34")
+animatableName = "Mrs. Helpful Endo"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.57254905, 0.38431373, 0.6313726, 1)
+
+[node name="Helpful Endo2" parent="." unique_id=1481182052 instance=ExtResource("3_go1sl")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0062969923, 0.73480797, -0.00343889)
+shape = SubResource("CylinderShape3D_7mxrl")
