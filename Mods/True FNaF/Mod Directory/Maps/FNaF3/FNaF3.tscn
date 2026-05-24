@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6ppkfq6mfblm" path="res://Mods/True FNaF/Custom Assets/Props/Vent Large.tscn" id="7_u6exr"]
 [ext_resource type="PackedScene" uid="uid://cercgp5jlv3a8" path="res://Mods/True FNaF/Custom Assets/Props/Vent Medium.tscn" id="8_sbsv7"]
 [ext_resource type="PackedScene" uid="uid://ulv78l02p0lr" path="res://Mods/True FNaF/Custom Assets/Props/Tube Big.tscn" id="10_qx2ia"]
+[ext_resource type="Script" uid="uid://7y57po7qd5in" path="res://Scripts/Maps/Light Flicker.gd" id="11_cs3rg"]
 [ext_resource type="PackedScene" uid="uid://cetwr43y1kjiv" path="res://Mods/True FNaF/Custom Assets/Props/Trash Can.tscn" id="11_qrd33"]
 
 [sub_resource type="Environment" id="Environment_dsuk6"]
@@ -250,6 +251,11 @@ light_color = Color(0.84313726, 0.9490196, 1, 1)
 light_energy = 0.13
 shadow_enabled = true
 omni_range = 5.875
+script = ExtResource("11_cs3rg")
+lerp_speed = 40.0
+change_rate = 0.01
+polarization = 3.0
+min_energy = 0.0
 
 [node name="OmniLight3D21" type="OmniLight3D" parent="Map/Map Lights" unique_id=1517830441]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.181949, 3.8281608, -15.992927)
@@ -328,6 +334,11 @@ light_color = Color(0.89411765, 1, 0.89411765, 1)
 light_energy = 0.13
 shadow_enabled = true
 omni_range = 5.875
+script = ExtResource("11_cs3rg")
+lerp_speed = 40.0
+change_rate = 0.05
+polarization = 3.0
+min_energy = 0.0
 
 [node name="OmniLight3D25" type="OmniLight3D" parent="Map/Map Lights" unique_id=338848183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4948492, 0.28443208, -33.552162)
@@ -335,6 +346,23 @@ light_color = Color(1, 0.9254902, 0.62352943, 1)
 light_energy = 0.915
 shadow_enabled = true
 omni_range = 5.875
+script = ExtResource("11_cs3rg")
+lerp_speed = 40.0
+change_rate = 0.05
+polarization = 3.0
+min_energy = 0.0
+
+[node name="OmniLight3D36" type="OmniLight3D" parent="Map/Map Lights" unique_id=1629773778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.868869, 2.8543246, -22.987858)
+light_color = Color(1, 0.938, 0.69, 1)
+light_energy = 0.915
+shadow_enabled = true
+omni_range = 5.875
+script = ExtResource("11_cs3rg")
+lerp_speed = 40.0
+change_rate = 0.2
+polarization = 10.0
+min_energy = 0.0
 
 [node name="OmniLight3D13" type="SpotLight3D" parent="Map/Map Lights" unique_id=1419116053]
 transform = Transform3D(1, 0, 0, 0, -0.60777783, 0.7941071, 0, -0.7941071, -0.60777783, 16.783136, 4.473138, -14.685077)
