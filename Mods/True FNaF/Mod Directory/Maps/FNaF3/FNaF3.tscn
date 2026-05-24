@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6ppkfq6mfblm" path="res://Mods/True FNaF/Custom Assets/Props/Vent Large.tscn" id="7_u6exr"]
 [ext_resource type="PackedScene" uid="uid://cercgp5jlv3a8" path="res://Mods/True FNaF/Custom Assets/Props/Vent Medium.tscn" id="8_sbsv7"]
 [ext_resource type="PackedScene" uid="uid://ulv78l02p0lr" path="res://Mods/True FNaF/Custom Assets/Props/Tube Big.tscn" id="10_qx2ia"]
+[ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Animatables/GL_Spotlight.gd" id="11_33pra"]
 [ext_resource type="Script" uid="uid://7y57po7qd5in" path="res://Scripts/Maps/Light Flicker.gd" id="11_cs3rg"]
 [ext_resource type="PackedScene" uid="uid://cetwr43y1kjiv" path="res://Mods/True FNaF/Custom Assets/Props/Trash Can.tscn" id="11_qrd33"]
 
@@ -176,6 +177,41 @@ transform = Transform3D(-4.371139e-08, -0.9238795, -0.38268343, 0, 0.38268343, -
 
 [node name="Toy Robot" parent="Map/Animatables" unique_id=233530727 instance=ExtResource("4_vepnj")]
 transform = Transform3D(-0.7134461, 0, -0.7007101, 0, 1, 0, 0.7007101, 0, -0.7134461, 3.564148, -0.27489522, 2.0162315)
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Map/Animatables" unique_id=1352617940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7654202, 3.179985, -2.1030226)
+light_color = Color(1, 0, 0, 1)
+light_energy = 0.0
+shadow_enabled = true
+omni_range = 5.195
+omni_attenuation = 0.655
+
+[node name="Node" type="Node3D" parent="Map/Animatables/OmniLight3D8" unique_id=1669927384 groups=["FNAF3_OFFICE_ALARM"]]
+script = ExtResource("11_33pra")
+energyMultiplier = 1.0
+lerp_speed = 40.0
+color_lerp_speed = 40.0
+animatableName = "Office Alarm"
+animatableColor = Color(0.87, 0, 0, 1)
+delete_parent_instead = true
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Map/Animatables" unique_id=1111089140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9322457, 3.179985, 0.31088305)
+light_color = Color(1, 0, 0, 1)
+light_energy = 0.0
+shadow_enabled = true
+omni_range = 5.195
+omni_attenuation = 0.655
+
+[node name="Node" type="Node3D" parent="Map/Animatables/OmniLight3D7" unique_id=1061305440 groups=["FNAF3_OFFICE_ALARM"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.697666, 0, -2.4139056)
+script = ExtResource("11_33pra")
+energyMultiplier = 1.0
+lerp_speed = 40.0
+color_lerp_speed = 40.0
+animatableName = "Office Alarm"
+animatableColor = Color(0.87, 0, 0, 1)
+delete_parent_instead = true
 
 [node name="Map Lights" type="Node" parent="Map" unique_id=82908035]
 

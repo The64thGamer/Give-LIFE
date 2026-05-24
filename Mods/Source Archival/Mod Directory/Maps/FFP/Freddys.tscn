@@ -803,6 +803,39 @@ transform = Transform3D(0.9892009, 0, -0.14656651, 0, 1, 0, 0.14656651, 0, 0.989
 
 [node name="Animatables" type="Node" parent="Map" unique_id=1193136051]
 
+[node name="RoomLight21" type="SpotLight3D" parent="Map/Animatables" unique_id=494070110]
+transform = Transform3D(-0.77252096, 0.13883045, -0.61962694, -0.1270642, -0.98986834, -0.06336736, -0.6221464, 0.029779796, 0.7823344, 1.2689676, 1.5923436, 54.28235)
+light_color = Color(0.5019608, 0.5019608, 1, 1)
+light_energy = 0.0
+spot_range = 15.0
+spot_angle = 31.96
+
+[node name="Node" type="Node3D" parent="Map/Animatables/RoomLight21" unique_id=50493507 groups=["FNAF1_HALL_R"]]
+transform = Transform3D(0.23741427, 0.1592336, -0.95826876, 0.035745606, 0.9843734, 0.17242746, 0.9707506, -0.07519065, 0.22801238, 0, 0, 0)
+script = ExtResource("9_878e6")
+energyMultiplier = 5.0
+lerp_speed = 100.0
+color_lerp_speed = 100.0
+animatableName = "Hall Light R"
+animatableColor = Color(0.2088, 0.23083997, 0.87, 1)
+delete_parent_instead = true
+
+[node name="RoomLight20" type="SpotLight3D" parent="Map/Animatables" unique_id=1713706340]
+transform = Transform3D(-0.7799482, 0.06023988, 0.6229383, -0.12706421, -0.9898683, -0.06336736, 0.6128096, -0.12857641, 0.77970034, -8.07071, 1.5923436, 54.28235)
+light_color = Color(0.5019608, 0.5019608, 1, 1)
+light_energy = 0.0
+spot_range = 15.0
+spot_angle = 31.96
+
+[node name="Node" type="Node3D" parent="Map/Animatables/RoomLight20" unique_id=1099335687 groups=["FNAF1_HALL_L"]]
+script = ExtResource("9_878e6")
+energyMultiplier = 5.0
+lerp_speed = 100.0
+color_lerp_speed = 100.0
+animatableName = "Hall Light L"
+animatableColor = Color(0.2088, 0.23083997, 0.87, 1)
+delete_parent_instead = true
+
 [node name="Chica Spot" type="SpotLight3D" parent="Map/Animatables" unique_id=406976406]
 transform = Transform3D(0.9948593, 0.025854122, -0.09791176, -0.0034687403, 0.9749934, 0.22220714, 0.10120827, -0.22072516, 0.97007096, 3.7833376, 5.2357726, 1.3729843)
 light_color = Color(0.87058824, 0.87058824, 0.87058824, 1)
@@ -1208,20 +1241,6 @@ spot_angle = 31.96
 
 [node name="RoomLight19" type="SpotLight3D" parent="Map/Map Lights" unique_id=1490992956]
 transform = Transform3D(0.48741323, 0.57039106, 0.66112214, -0.044334553, -0.74000734, 0.6711361, 0.8720452, -0.3564311, -0.33540136, -8.07071, 4.5028167, 54.832417)
-light_bake_mode = 1
-spot_range = 15.0
-spot_angle = 31.96
-
-[node name="RoomLight20" type="SpotLight3D" parent="Map/Map Lights" unique_id=1713706340]
-transform = Transform3D(-0.7799482, 0.06023987, 0.6229383, -0.12706421, -0.9898684, -0.06336736, 0.6128096, -0.12857641, 0.77970034, -8.07071, 1.5923436, 54.28235)
-light_color = Color(0.5019608, 0.5019608, 1, 1)
-light_bake_mode = 1
-spot_range = 15.0
-spot_angle = 31.96
-
-[node name="RoomLight21" type="SpotLight3D" parent="Map/Map Lights" unique_id=494070110]
-transform = Transform3D(-0.7725209, 0.13883044, -0.6196269, -0.12706418, -0.9898682, -0.06336734, -0.62214637, 0.02977979, 0.7823343, 1.2689676, 1.5923436, 54.28235)
-light_color = Color(0.5019608, 0.5019608, 1, 1)
 light_bake_mode = 1
 spot_range = 15.0
 spot_angle = 31.96
