@@ -1,41 +1,41 @@
 {
-  "FA_PARROT|Jaw": {
+  "Jaw": {
 	"animation": "Armature|Jaw",
 	"in_speed": 5.5,
 	"out_speed": 6.5,
 	"type": "standard"
   },
-  "FA_PARROT|Cage": {
+  "Cage": {
 	"animation": "Armature|Cage",
 	"in_speed": 0.5,
 	"out_speed": 0.5,
 	"type": "standard"
   },
-  "FA_PARROT|Body Lean Forward": {
+  "Body Lean Forward": {
 	"animation": "Armature|Body Lean F",
 	"in_speed": 2.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_PARROT|Body Lean Back": {
+  "Body Lean Back": {
 	"animation": "Armature|Body Lean B",
 	"in_speed": 2.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_PARROT|Arms": {
+  "Arms": {
 	"animation": "Armature|Arms",
 	"in_speed": 3.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_PARROT|Head Tip Forward": {
+  "Head Tip Forward": {
 	"animation": "Armature|Head F",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FA_PARROT|Head Tip Back": {
+  "Head Tip Back": {
 	"animation": "Armature|Head B",
 	"in_speed": 4.0,
 	"out_speed": 5.0,

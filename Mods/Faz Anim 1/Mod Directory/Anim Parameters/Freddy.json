@@ -1,143 +1,143 @@
 {
-  "FA_FREDDY|Jaw": {
+  "Jaw": {
 	"animation": "Armature|FNAFJaw",
 	"in_speed": 5.5,
 	"out_speed": 6.5,
 	"type": "standard"
   },
-  "FA_FREDDY|Head Up": {
+  "Head Up": {
 	"animation": "Armature|FNAFHeadUp",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FA_FREDDY|Eyes Right": {
+  "Eyes Right": {
 	"animation": "Armature|FNAFEyesRight",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "FA_FREDDY|Eyes Left": {
+  "Eyes Left": {
 	"animation": "Armature|FNAFEyesLeft",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "FA_FREDDY|Eyelids Right": {
+  "Eyelids Right": {
 	"animation": "Armature|FNAFEyelidR",
 	"in_speed": 5.0,
 	"out_speed": 10.0,
 	"type": "move_to"
   },
-  "FA_FREDDY|Eyelids Left": {
+  "Eyelids Left": {
 	"animation": "Armature|FNAFEyelidL",
 	"in_speed": 5.0,
 	"out_speed": 10.0,
 	"type": "move_to"
   },
-  "FA_FREDDY|Shoulder Twist Right": {
+  "Shoulder Twist Right": {
 	"animation": "Armature|FNAFArmTwistR",
 	"in_speed": 3.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_FREDDY|Shoulder Twist Left": {
+  "Shoulder Twist Left": {
 	"animation": "Armature|FNAFArmTwistL",
 	"in_speed": 3.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_FREDDY|Shoulder Up Right": {
+  "Shoulder Up Right": {
 	"animation": "Armature|FNAFArmUpR",
 	"in_speed": 2.5,
 	"out_speed": 1.0,
 	"type": "standard"
   },
-  "FA_FREDDY|Shoulder Up Left": {
+  "Shoulder Up Left": {
 	"animation": "Armature|FNAFArmUpL",
 	"in_speed": 2.5,
 	"out_speed": 1.0,
 	"type": "standard"
   },
-  "FA_FREDDY|Arm Twist Right": {
+  "Arm Twist Right": {
 	"animation": "Armature|FNAFForearmTwis",
 	"in_speed": 2.0,
 	"out_speed": 1.5,
 	"type": "standard"
   },
-  "FA_FREDDY|Arm Twist Left": {
+  "Arm Twist Left": {
 	"animation": "Armature|FNAFForearmTwi",
 	"in_speed": 2.0,
 	"out_speed": 1.5,
 	"type": "standard"
   },
-  "FA_FREDDY|Arm Bend Right": {
+  "Arm Bend Right": {
 	"animation": "Armature|FNAFForearmBend_001",
 	"in_speed": 1.0,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FA_FREDDY|Arm Bend Left": {
+  "Arm Bend Left": {
 	"animation": "Armature|FNAFForearmBend",
 	"in_speed": 1.0,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FA_FREDDY|Wrist Twist Right": {
+  "Wrist Twist Right": {
 	"animation": "Armature|FNAFWristTwistR",
 	"in_speed": 3.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_FREDDY|Wrist Twist Left": {
+  "Wrist Twist Left": {
 	"animation": "Armature|FNAFWristTwistL",
 	"in_speed": 3.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_FREDDY|Wrist Out Right": {
+  "Wrist Out Right": {
 	"animation": "Armature|FNAFWristBendR",
 	"in_speed": 3.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FA_FREDDY|Wrist Out Left": {
+  "Wrist Out Left": {
 	"animation": "Armature|FNAFWristBendL",
 	"in_speed": 3.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FA_FREDDY|Head Turn Right": {
+  "Head Turn Right": {
 	"animation": "Armature|FNAFHeadTurnR",
 	"in_speed": 2.0,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FA_FREDDY|Head Turn Left": {
+  "Head Turn Left": {
 	"animation": "Armature|FNAFHeadTurnL",
 	"in_speed": 2.0,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FA_FREDDY|Body Turn Ri": {
+  "Body Turn Ri": {
 	"animation": "Armature|FNaFBodyTurnRight",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_FREDDY|Body Turn Lef": {
+  "Body Turn Lef": {
 	"animation": "Armature|FNaFBodyTurnLeft",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_FREDDY|Body Lean": {
+  "Body Lean": {
 	"animation": "Armature|FNaFBodyLean",
 	"in_speed": 2.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_FREDDY|Foot Tap": {
+  "Foot Tap": {
 	"animation": "Armature|FNAFFootTap",
 	"in_speed": 4.0,
 	"out_speed": 4.0,

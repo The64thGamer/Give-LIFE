@@ -1,125 +1,125 @@
 {
-  "FA_BONNIE|Eyelids Left": {
+  "Eyelids Left": {
 	"animation": "Armature|FNAFEyelidL",
 	"in_speed": 5.0,
 	"out_speed": 10.0,
 	"type": "move_to"
   },
-  "FA_BONNIE|Eyelids Right": {
+  "Eyelids Right": {
 	"animation": "Armature|FNAFEyelidR",
 	"in_speed": 5.0,
 	"out_speed": 10.0,
 	"type": "move_to"
   },
-  "FA_BONNIE|Eyes Left": {
+  "Eyes Left": {
 	"animation": "Armature|FNAFEyesLeft",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "FA_BONNIE|Eyes Right": {
+  "Eyes Right": {
 	"animation": "Armature|FNAFEyesRight",
 	"in_speed": 6.0,
 	"out_speed": 7.0,
 	"type": "standard"
   },
-  "FA_BONNIE|Jaw": {
+  "Jaw": {
 	"animation": "Armature|FNAFJaw",
 	"in_speed": 5.5,
 	"out_speed": 6.5,
 	"type": "standard"
   },
-  "FA_BONNIE|Head Up": {
+  "Head Up": {
 	"animation": "Armature|FNAFHeadUp",
 	"in_speed": 4.0,
 	"out_speed": 5.0,
 	"type": "standard"
   },
-  "FA_BONNIE|Head Turn Left": {
+  "Head Turn Left": {
 	"animation": "Armature|FNAFHeadTurnL",
 	"in_speed": 2.0,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FA_BONNIE|Head Turn Right": {
+  "Head Turn Right": {
 	"animation": "Armature|FNAFHeadTurnR",
 	"in_speed": 2.0,
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "FA_BONNIE|Ear Left": {
+  "Ear Left": {
 	"animation": "Armature|EarL",
 	"in_speed": 3.0,
 	"out_speed": 3.0,
 	"type": "standard"
   },
-  "FA_BONNIE|Ear Right": {
+  "Ear Right": {
 	"animation": "Armature|EarR",
 	"in_speed": 3.0,
 	"out_speed": 3.0,
 	"type": "standard"
   },
-  "FA_BONNIE|Shoulder Twist Left": {
+  "Shoulder Twist Left": {
 	"animation": "Armature|FNAFArmTwistL",
 	"in_speed": 3.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_BONNIE|Shoulder Twist Right": {
+  "Shoulder Twist Right": {
 	"animation": "Armature|FNAFArmTwistR",
 	"in_speed": 3.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_BONNIE|Shoulder Up Right": {
+  "Shoulder Up Right": {
 	"animation": "Armature|FNAFArmUpR",
 	"in_speed": 2.5,
 	"out_speed": 1.0,
 	"type": "standard"
   },
-  "FA_BONNIE|Arm Bend Left": {
+  "Arm Bend Left": {
 	"animation": "Armature|FNAFForearmBendL",
 	"in_speed": 3.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FA_BONNIE|Wrist Twist Left": {
+  "Wrist Twist Left": {
 	"animation": "Armature|FNAFWristTwistL",
 	"in_speed": 3.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_BONNIE|Wrist Twist Right": {
+  "Wrist Twist Right": {
 	"animation": "Armature|FNAFWristTwistR",
 	"in_speed": 3.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_BONNIE|Wrist Out Right": {
+  "Wrist Out Right": {
 	"animation": "Armature|FNAFWristBendR",
 	"in_speed": 3.0,
 	"out_speed": 4.0,
 	"type": "standard"
   },
-  "FA_BONNIE|Body Lean": {
+  "Body Lean": {
 	"animation": "Armature|FNaFBodyLean",
 	"in_speed": 2.0,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_BONNIE|Body Turn Left": {
+  "Body Turn Left": {
 	"animation": "Armature|FNaFBodyTurnLeft",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_BONNIE|Body Turn Right": {
+  "Body Turn Right": {
 	"animation": "Armature|FNaFBodyTurnRight",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "FA_BONNIE|Foot Tap": {
+  "Foot Tap": {
 	"animation": "Armature|FNAFFootTap",
 	"in_speed": 4.0,
 	"out_speed": 4.0,
