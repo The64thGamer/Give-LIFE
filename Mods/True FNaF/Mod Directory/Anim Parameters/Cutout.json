@@ -1,0 +1,260 @@
+{
+  "Baby Bird L": {
+	"animation": "Baby Bird L",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Baby Bird R": {
+	"animation": "Baby Bird R",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Ballora": {
+	"animation": "Ballora",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Bee": {
+	"animation": "Bee",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Blue Balloon": {
+	"animation": "Blue Balloon",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Blue Balloon_001": {
+	"animation": "Blue Balloon_001",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Chest": {
+	"animation": "Chest",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Clam": {
+	"animation": "Clam",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Cloud L": {
+	"animation": "Cloud L",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Cloud R": {
+	"animation": "Cloud R",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Comedy": {
+	"animation": "Comedy",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Coral": {
+	"animation": "Coral",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Cotton Candy": {
+	"animation": "Cotton Candy",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "David": {
+	"animation": "David",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Dragonfly": {
+	"animation": "Dragonfly",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Elizabeth": {
+	"animation": "Elizabeth",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Fish": {
+	"animation": "Fish",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Frog Cutout": {
+	"animation": "Frog Cutout",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Hanging Cloud": {
+	"animation": "Hanging Cloud",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "King Frog": {
+	"animation": "King Frog",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Lion": {
+	"animation": "Lion",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Mice": {
+	"animation": "Mice",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Michael": {
+	"animation": "Michael",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Moon L": {
+	"animation": "Moon L",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Moon R": {
+	"animation": "Moon R",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Mother Bird": {
+	"animation": "Mother Bird",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Palm Tree": {
+	"animation": "Palm Tree",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Popcorn": {
+	"animation": "Popcorn",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Seal Tail": {
+	"animation": "Seal Tail",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Shark": {
+	"animation": "Shark",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Snail": {
+	"animation": "Snail",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Snake": {
+	"animation": "Snake",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Squirrel": {
+	"animation": "Squirrel",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Star 1 L": {
+	"animation": "Star 1 L",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Star 1 R": {
+	"animation": "Star 1 R",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Star 2 L": {
+	"animation": "Star 2 L",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Star 2 R": {
+	"animation": "Star 2 R",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Star 3 R": {
+	"animation": "Star 3 R",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Starfish": {
+	"animation": "Starfish",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "Sun": {
+	"animation": "Sun",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Tragedy": {
+	"animation": "Tragedy",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Turtle": {
+	"animation": "Turtle",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  },
+  "William": {
+	"animation": "William",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "move_to"
+  }
+}

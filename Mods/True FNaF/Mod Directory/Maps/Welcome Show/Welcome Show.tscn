@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dyhynoyx5qmvk" path="res://Mods/True FNaF/Mod Directory/Animatables/Mrs Helpful.tscn" id="11_7ks7s"]
 [ext_resource type="PackedScene" uid="uid://cjrr3dhrx7gkm" path="res://Mods/True FNaF/Mod Directory/Animatables/Mrs Helpful Alt.tscn" id="11_xrl45"]
 [ext_resource type="PackedScene" uid="uid://bsqeb3pvpmgic" path="res://Mods/True FNaF/Mod Directory/Animatables/Jug Band Hippo.tscn" id="13_mvm2o"]
+[ext_resource type="PackedScene" uid="uid://jbfk3c7p72t" path="res://Mods/True FNaF/Mod Directory/Animatables/Seal Bucket.tscn" id="14_k3tak"]
 
 [sub_resource type="Environment" id="Environment_groir"]
 background_mode = 2
@@ -386,6 +387,9 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 lerp_speed = 20.0
 delete_parent_instead = true
+
+[node name="Seal Bucket" parent="Map/Animatables" unique_id=200504758 instance=ExtResource("14_k3tak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2365103, 1.8965254, -8.819147)
 
 [node name="Map Mesh & Collision" type="Node" parent="Map" unique_id=807558692]
 

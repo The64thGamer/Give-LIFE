@@ -1,0 +1,60 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://85pgi765a378"
+path="res://.godot/imported/Hanging Cloud.glb-fce4e443d2557ba998d0c54059d71de3.scn"
+
+[deps]
+
+source_file="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Hanging Cloud.glb"
+dest_files=["res://.godot/imported/Hanging Cloud.glb-fce4e443d2557ba998d0c54059d71de3.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"MI_ForestTreeBack.mat_4e0f13fc": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/ForestTreeBack.tres",
+"use_external/path": "uid://dck472cq5ob1s"
+},
+"MI_TheatreAttachments.mat_6671c3b3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/TheatreAttatchments.tres",
+"use_external/path": "uid://dmp4pcywclvls"
+},
+"MI_WS_OceanVignetteCutouts.mat_3e7cc39c": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/OceanVignette.tres",
+"use_external/path": "uid://bpvg01exvfbk2"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=0
