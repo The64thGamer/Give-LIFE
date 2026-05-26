@@ -261,7 +261,7 @@ spot_angle_attenuation = 0.59460473
 [node name="Node" type="Node3D" parent="Map/Animatables/Light Sun" unique_id=480170920 groups=["L_SUN_SPOT"]]
 script = ExtResource("4_prrm5")
 canChangeColor = true
-energyMultiplier = 450.0
+energyMultiplier = 100.0
 lerp_speed = 20.0
 animatableName = "Sun Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)

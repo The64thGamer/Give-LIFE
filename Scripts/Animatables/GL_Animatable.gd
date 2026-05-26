@@ -246,12 +246,11 @@ func _build_line_mesh(combined: AABB) -> void:
 		Vector3(a.x,b.y,a.z), Vector3(b.x,b.y,a.z),
 		Vector3(b.x,b.y,b.z), Vector3(a.x,b.y,b.z),
 	]
-	var color := Color(0.0, 1.0, 0.2)
 	for edge in [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]]:
-		st.set_color(color); st.add_vertex(corners[edge[0]])
-		st.set_color(color); st.add_vertex(corners[edge[1]])
+		st.set_color(animatableColor); st.add_vertex(corners[edge[0]])
+		st.set_color(animatableColor); st.add_vertex(corners[edge[1]])
 	var mat := StandardMaterial3D.new()
-	mat.albedo_color = color
+	mat.albedo_color = animatableColor
 	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	mat.vertex_color_use_as_albedo = true
 	mat.no_depth_test = true
