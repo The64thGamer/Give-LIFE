@@ -1,8 +1,8 @@
 {
   "Turtle": {
 	"animation": "Turtle",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 0.4,
+	"out_speed": 0.4,
 	"type": "loop"
   }
 }

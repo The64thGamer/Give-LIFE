@@ -1,8 +1,8 @@
 {
   "Shark": {
 	"animation": "Shark",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 1.5,
+	"out_speed": 1,
 	"type": "standard"
   }
 }

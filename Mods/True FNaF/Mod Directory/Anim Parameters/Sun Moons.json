@@ -1,62 +1,62 @@
 {
   "Moon L": {
 	"animation": "Moon L",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 0.3,
+	"out_speed": 0.5,
 	"type": "standard"
   },
   "Moon R": {
 	"animation": "Moon R",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 0.3,
+	"out_speed": 0.5,
 	"type": "standard"
   },
   "Star 1 L": {
 	"animation": "Star 1 L",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 1,
+	"out_speed": 1,
 	"type": "standard"
   },
   "Star 1 R": {
 	"animation": "Star 1 R",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 1,
+	"out_speed": 1,
 	"type": "standard"
   },
   "Star 2 L": {
 	"animation": "Star 2 L",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 1,
+	"out_speed": 1,
 	"type": "standard"
   },
   "Star 2 R": {
 	"animation": "Star 2 R",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 1,
+	"out_speed": 1,
 	"type": "standard"
   },
   "Star 3 R": {
 	"animation": "Star 3 R",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 1,
+	"out_speed": 1,
 	"type": "standard"
   },
   "Sun": {
 	"animation": "Sun",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 0.8,
+	"out_speed": 0.5,
 	"type": "standard"
   },
   "Cloud L": {
 	"animation": "Cloud L",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 1,
+	"out_speed": 1,
 	"type": "standard"
   },
   "Cloud R": {
 	"animation": "Cloud R",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 1,
+	"out_speed": 1,
 	"type": "standard"
   },
 }

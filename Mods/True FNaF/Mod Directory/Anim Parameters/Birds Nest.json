@@ -13,8 +13,8 @@
   },
   "Mother Bird": {
 	"animation": "Mother Bird",
-	"in_speed": 5,
-	"out_speed": 5,
+	"in_speed": 0.2,
+	"out_speed": 0.2,
 	"type": "loop"
   }
 }

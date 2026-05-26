@@ -428,7 +428,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2365103, 1.8965254, -8.8191
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.530601, 8.029026, -5.741308)
 
 [node name="Birds Nest" parent="Map/Animatables" unique_id=426851615 instance=ExtResource("16_cb76s")]
-transform = Transform3D(0.8616291, 0, 0.5075384, 0, 1, 0, -0.5075384, 0, 0.8616291, -8.431619, 7.592108, -8.831612)
+transform = Transform3D(0.8616291, 0, 0.5075384, 0, 1, 0, -0.5075384, 0, 0.8616291, -8.43742, 7.592108, -8.8322315)
 
 [node name="Bee" parent="Map/Animatables" unique_id=743868454 instance=ExtResource("16_bckie")]
 transform = Transform3D(0.8616291, 0, 0.5075384, 0, 1, 0, -0.5075384, 0, 0.8616291, -5.405502, 5.4404216, -10.089978)
