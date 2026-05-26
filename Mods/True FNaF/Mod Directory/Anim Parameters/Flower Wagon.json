@@ -1,29 +1,29 @@
 {
-  "Ballora": {
+  "Blue Flower": {
 	"animation": "Ballora",
 	"in_speed": 5,
 	"out_speed": 5,
 	"type": "loop"
   },
-  "David": {
+  "Red Flower": {
 	"animation": "David",
 	"in_speed": 5,
 	"out_speed": 5,
 	"type": "loop"
   },
-  "Elizabeth": {
+  "Pink Flower": {
 	"animation": "Elizabeth",
 	"in_speed": 5,
 	"out_speed": 5,
 	"type": "loop"
   },
-  "Michael": {
+  "White Flower": {
 	"animation": "Michael",
 	"in_speed": 5,
 	"out_speed": 5,
 	"type": "loop"
   },
-  "William": {
+  "Orange Flower": {
 	"animation": "William",
 	"in_speed": 5,
 	"out_speed": 5,

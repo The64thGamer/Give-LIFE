@@ -1,6 +1,6 @@
 {
-  "Blue Balloon": {
-	"animation": "Blue Balloon",
+  "Orange Balloon Dog": {
+	"animation": "Blue Balloon_001",
 	"in_speed": 5,
 	"out_speed": 5,
 	"type": "loop"
