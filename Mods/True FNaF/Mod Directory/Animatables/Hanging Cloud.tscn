@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dosox4sx5nucf"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://85pgi765a378" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Hanging Cloud.glb" id="16_8txf6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(3.630005, 2.255371, 0.109375)
+
+[node name="Hanging Cloud" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Hanging Cloud"
+animatableName = "Hanging Cloud"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.84, 0.84, 0.84, 1)
+
+[node name="Hanging Cloud" parent="." unique_id=1005315479 instance=ExtResource("16_8txf6")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 7.955568)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04827881, 1.1660333, 0.06738281)
+shape = SubResource("BoxShape3D_um21q")

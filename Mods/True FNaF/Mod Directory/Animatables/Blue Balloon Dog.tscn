@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bap1mbpwk7nwr"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://cwlq6qs1ai0xd" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Blue Balloon Dog.glb" id="5_6y4fa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(0.7841797, 0.80859375, 0.03466797)
+
+[node name="Blue Balloon Dog" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Blue Balloon Dog"
+animatableName = "Blue Balloon Dog"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.058800004, 0.19698009, 0.98, 1)
+
+[node name="Blue Balloon Dog" parent="." unique_id=1989381634 instance=ExtResource("5_6y4fa")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0034179688, 0.40797657, -0.013916016)
+shape = SubResource("BoxShape3D_um21q")

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b3jy5n2h2nlpd"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://cmuu0g3loqmnp" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Shark.glb" id="26_x3tml"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(1.3491211, 2.8590088, 0.064208984)
+
+[node name="Shark" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Shark"
+animatableName = "Pirate Shark"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.87, 0.51765, 0.08700002, 1)
+
+[node name="Shark" parent="." unique_id=1951876312 instance=ExtResource("26_x3tml")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.059326172, 1.5865045, 0.00036621094)
+shape = SubResource("BoxShape3D_um21q")

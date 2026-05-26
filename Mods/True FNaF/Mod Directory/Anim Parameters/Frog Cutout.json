@@ -1,0 +1,8 @@
+{
+  "Frog Cutout": {
+	"animation": "Frog Cutout",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "loop"
+  }
+}

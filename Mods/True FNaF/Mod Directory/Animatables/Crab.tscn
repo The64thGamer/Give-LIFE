@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bpbgjt0nbvjuf"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://duad0d8cwmaef" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Crab.glb" id="10_sbod5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(1.4648438, 1.359314, 0.030273438)
+
+[node name="Crab" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Crab"
+animatableName = "Treasure Crab"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.9999997, 0.2944924, 0.96986943, 1)
+
+[node name="Crab" parent="." unique_id=412812980 instance=ExtResource("10_sbod5")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23242188, 0.81315845, 0.0073242188)
+shape = SubResource("BoxShape3D_um21q")

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cy13jhhcmj3q8"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://rqdakrccrtd3" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Fish.glb" id="12_3kwhr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(0.74121094, 0.60253906, 0.054748535)
+
+[node name="Fish" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Fish"
+animatableName = "Fish"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.85834265, 0.7875345, 0.14567998, 1)
+
+[node name="Fish" parent="." unique_id=1206451646 instance=ExtResource("12_3kwhr")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04248047, 0.39010555, -0.025299072)
+shape = SubResource("BoxShape3D_um21q")

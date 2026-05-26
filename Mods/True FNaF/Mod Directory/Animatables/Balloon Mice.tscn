@@ -1,142 +1,30 @@
-[gd_scene format=3 uid="uid://djrr7nqqbbsjo"]
+[gd_scene format=3 uid="uid://np0t77x5cpdp"]
 
-[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_pvi1f"]
-[ext_resource type="PackedScene" uid="uid://enis8dysfd0x" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Balloon Mice.glb" id="3_s5klw"]
-[ext_resource type="PackedScene" uid="uid://dwjfvxuxowt2v" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Bee.glb" id="4_txwc2"]
-[ext_resource type="PackedScene" uid="uid://c8sg3dt7ohu12" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Birds Nest.glb" id="5_mg6uo"]
-[ext_resource type="PackedScene" uid="uid://cwlq6qs1ai0xd" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Blue Balloon Dog.glb" id="6_g2wym"]
-[ext_resource type="PackedScene" uid="uid://dbfow6mxifn2a" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Clam.glb" id="7_eqe71"]
-[ext_resource type="PackedScene" uid="uid://bpftnouq2e6ih" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Comedy.glb" id="8_y6bws"]
-[ext_resource type="PackedScene" uid="uid://6r2q2sdik63e" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Coral.glb" id="9_bmj6e"]
-[ext_resource type="PackedScene" uid="uid://ryqt3aepyr2t" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Cotton Candy Sheep.glb" id="10_2edba"]
-[ext_resource type="PackedScene" uid="uid://duad0d8cwmaef" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Crab.glb" id="11_agjya"]
-[ext_resource type="PackedScene" uid="uid://diqo3fl4lbhsl" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Dragonfly.glb" id="12_ibfnq"]
-[ext_resource type="PackedScene" uid="uid://rqdakrccrtd3" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Fish.glb" id="13_nbe58"]
-[ext_resource type="PackedScene" uid="uid://ml8l20q0gvwn" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Flower Wagon.glb" id="14_3wn5y"]
-[ext_resource type="PackedScene" uid="uid://tvnpno5hkerb" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Frog Cutout.glb" id="15_ksask"]
-[ext_resource type="PackedScene" uid="uid://dbuq2lgv50d4i" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Green Balloon Dog.glb" id="16_n5hrj"]
-[ext_resource type="PackedScene" uid="uid://85pgi765a378" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Hanging Cloud.glb" id="17_338qx"]
-[ext_resource type="PackedScene" uid="uid://dpvphhouv82qd" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/King Frog.glb" id="18_nkep8"]
-[ext_resource type="PackedScene" uid="uid://dcauws2cb3jdq" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Lion.glb" id="19_vyxr1"]
-[ext_resource type="PackedScene" uid="uid://bvekpddq23nxr" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Orange Balloon Dog.glb" id="20_tq1mh"]
-[ext_resource type="PackedScene" uid="uid://26ymq1ucwftd" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Palm Tree.glb" id="21_nn2d1"]
-[ext_resource type="PackedScene" uid="uid://6ymt2pa8bnuj" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Popcorn Sheep.glb" id="22_6k04r"]
-[ext_resource type="PackedScene" uid="uid://di7xnv4bssli2" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Present Cutout.glb" id="23_x8g82"]
-[ext_resource type="PackedScene" uid="uid://k3h4xip8hvvq" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Purple Snake.glb" id="24_12too"]
-[ext_resource type="PackedScene" uid="uid://c1wq87e7qb5uk" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Red Balloon Dog.glb" id="25_cqtpd"]
-[ext_resource type="PackedScene" uid="uid://dh7yr2r467fml" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Seal Bucket.glb" id="26_8tkq2"]
-[ext_resource type="PackedScene" uid="uid://cmuu0g3loqmnp" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Shark.glb" id="27_5wlgt"]
-[ext_resource type="PackedScene" uid="uid://bo3hj15o2qne4" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Snail.glb" id="28_bm1sw"]
-[ext_resource type="PackedScene" uid="uid://ba7r6rlua0gqk" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Squirrel.glb" id="29_rpua4"]
-[ext_resource type="PackedScene" uid="uid://coqbbqywtnrd5" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Starfish.glb" id="30_8jwly"]
-[ext_resource type="PackedScene" uid="uid://ci1dy0bofqgfx" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Sun Moons.glb" id="31_cw86o"]
-[ext_resource type="PackedScene" uid="uid://bn5fcn44uiq36" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Tragedy.glb" id="32_dw5h2"]
-[ext_resource type="PackedScene" uid="uid://ucm1q0q75uyy" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Turtle.glb" id="33_sb5bv"]
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://enis8dysfd0x" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Balloon Mice.glb" id="2_16vi6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(1.2758179, 5.367264, 0.115478516)
 
-[node name="Cutout" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
-script = ExtResource("1_pvi1f")
-animParametersFileName = "Cutout"
-animatableName = "Test"
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxext"]
+size = Vector3(1.6075287, 0.84614944, 0.475708)
+
+[node name="Balloon Mice" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Balloon Mice"
+animatableName = "Balloon Mice"
 animatableAuthors = "Steel Wool"
-animatableColor = Color(0.84, 0.77783996, 0.52919996, 1)
+animatableColor = Color(0.65042746, 0.80746794, 0.84202933, 1)
+
+[node name="Balloon Mice" parent="." unique_id=2097541763 instance=ExtResource("2_16vi6")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.657, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018218994, 2.6854348, -0.28015137)
 shape = SubResource("BoxShape3D_um21q")
 
-[node name="Balloon Mice" parent="." unique_id=2097541763 instance=ExtResource("3_s5klw")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Bee" parent="." unique_id=1271298448 instance=ExtResource("4_txwc2")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Birds Nest" parent="." unique_id=684823392 instance=ExtResource("5_mg6uo")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Blue Balloon Dog" parent="." unique_id=1989381634 instance=ExtResource("6_g2wym")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Clam" parent="." unique_id=1033346580 instance=ExtResource("7_eqe71")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Comedy" parent="." unique_id=668859392 instance=ExtResource("8_y6bws")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Coral" parent="." unique_id=361447905 instance=ExtResource("9_bmj6e")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Cotton Candy Sheep" parent="." unique_id=601647247 instance=ExtResource("10_2edba")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Crab" parent="." unique_id=412812980 instance=ExtResource("11_agjya")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Dragonfly" parent="." unique_id=677735405 instance=ExtResource("12_ibfnq")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Fish" parent="." unique_id=1206451646 instance=ExtResource("13_nbe58")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Flower Wagon" parent="." unique_id=1978746464 instance=ExtResource("14_3wn5y")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Frog Cutout" parent="." unique_id=2029489819 instance=ExtResource("15_ksask")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Green Balloon Dog" parent="." unique_id=570406771 instance=ExtResource("16_n5hrj")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Hanging Cloud" parent="." unique_id=1005315479 instance=ExtResource("17_338qx")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 5.091789)
-
-[node name="King Frog" parent="." unique_id=1847724025 instance=ExtResource("18_nkep8")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Lion" parent="." unique_id=618719627 instance=ExtResource("19_vyxr1")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Orange Balloon Dog" parent="." unique_id=562610590 instance=ExtResource("20_tq1mh")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Palm Tree" parent="." unique_id=1893487090 instance=ExtResource("21_nn2d1")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Popcorn Sheep" parent="." unique_id=1559600278 instance=ExtResource("22_6k04r")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Present Cutout" parent="." unique_id=1762721753 instance=ExtResource("23_x8g82")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Purple Snake" parent="." unique_id=1293350097 instance=ExtResource("24_12too")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Red Balloon Dog" parent="." unique_id=394677273 instance=ExtResource("25_cqtpd")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Seal Bucket" parent="." unique_id=2121053374 instance=ExtResource("26_8tkq2")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Shark" parent="." unique_id=1951876312 instance=ExtResource("27_5wlgt")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Snail" parent="." unique_id=55332085 instance=ExtResource("28_bm1sw")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Squirrel" parent="." unique_id=1492402616 instance=ExtResource("29_rpua4")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 2.4228125)
-
-[node name="Starfish" parent="." unique_id=150745140 instance=ExtResource("30_8jwly")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Sun Moons" parent="." unique_id=769518557 instance=ExtResource("31_cw86o")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Tragedy" parent="." unique_id=406641356 instance=ExtResource("32_dw5h2")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
-
-[node name="Turtle" parent="." unique_id=420254731 instance=ExtResource("33_sb5bv")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=671820730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01688385, 5.765412, -0.25421143)
+shape = SubResource("BoxShape3D_pxext")

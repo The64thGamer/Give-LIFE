@@ -1,0 +1,8 @@
+{
+  "Mice": {
+	"animation": "Mice",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  }
+}

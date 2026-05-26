@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cyaslnjr3digf"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://ci1dy0bofqgfx" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Sun Moons.glb" id="30_16jev"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(5.742523, 3.2878113, 0.83618164)
+
+[node name="Sun Moons" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Sun Moons"
+animatableName = "Sun and Moons"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.88003415, 0.7777094, 0.15655148, 1)
+
+[node name="Sun Moons" parent="." unique_id=769518557 instance=ExtResource("30_16jev")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08973694, 2.8338342, 0.17150879)
+shape = SubResource("BoxShape3D_um21q")

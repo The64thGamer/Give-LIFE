@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://xmbfov1xj758"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://coqbbqywtnrd5" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Starfish.glb" id="29_bhcai"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(0.68359375, 0.9753418, 0.0546875)
+
+[node name="Starfish" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Starfish"
+animatableName = "Starfish"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.72182333, 0.44819996, 0.83, 1)
+
+[node name="Starfish" parent="." unique_id=150745140 instance=ExtResource("29_bhcai")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0087890625, 0.5155205, -0.009765625)
+shape = SubResource("BoxShape3D_um21q")

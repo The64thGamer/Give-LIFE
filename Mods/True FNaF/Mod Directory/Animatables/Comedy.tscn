@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cjxdk0bhc1uxm"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://bpftnouq2e6ih" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Comedy.glb" id="7_psibx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(0.92474365, 1.5869141, 0.22949219)
+
+[node name="Comedy" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Comedy"
+animatableName = "Comedy Mask"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.84, 0.72072, 0.24360001, 1)
+
+[node name="Comedy" parent="." unique_id=668859392 instance=ExtResource("7_psibx")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42422485, 0.8000664, 0.06689453)
+shape = SubResource("BoxShape3D_um21q")

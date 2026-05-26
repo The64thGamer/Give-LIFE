@@ -1,0 +1,32 @@
+{
+  "Ballora": {
+	"animation": "Ballora",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "loop"
+  },
+  "David": {
+	"animation": "David",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "loop"
+  },
+  "Elizabeth": {
+	"animation": "Elizabeth",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "loop"
+  },
+  "Michael": {
+	"animation": "Michael",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "loop"
+  },
+  "William": {
+	"animation": "William",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "loop"
+  }
+}

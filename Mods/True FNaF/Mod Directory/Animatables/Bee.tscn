@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bqsi4xl15ok14"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://dwjfvxuxowt2v" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Bee.glb" id="3_xy5cs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(1, 2.1524353, 0.06585693)
+
+[node name="Bee" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Bee"
+animatableName = "Honey Bee"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.9, 0.783, 0.19800001, 1)
+
+[node name="Bee" parent="." unique_id=1271298448 instance=ExtResource("3_xy5cs")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0954614, -0.012298584)
+shape = SubResource("BoxShape3D_um21q")

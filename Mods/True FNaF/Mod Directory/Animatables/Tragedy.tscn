@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cnlohng7qk1fn"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://bn5fcn44uiq36" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Tragedy.glb" id="31_t462s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(0.7459717, 1.5158691, 0.23590088)
+
+[node name="Tragedy" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Tragedy"
+animatableName = "Tragedy Mask"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.84, 0.72408, 0.2604, 1)
+
+[node name="Tragedy" parent="." unique_id=406641356 instance=ExtResource("31_t462s")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4487915, 0.75795215, 0.07064819)
+shape = SubResource("BoxShape3D_um21q")

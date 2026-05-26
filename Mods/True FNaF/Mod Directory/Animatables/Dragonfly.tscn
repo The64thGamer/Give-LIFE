@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cqefqicfyo54j"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://diqo3fl4lbhsl" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Dragonfly.glb" id="11_8uu0p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(0.8630371, 0.7590332, 0.03564453)
+
+[node name="Dragonfly" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Dragonfly"
+animatableName = "Dragonfly"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.6071546, 0.86738026, 0.28907484, 1)
+
+[node name="Dragonfly" parent="." unique_id=677735405 instance=ExtResource("11_8uu0p")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014282227, 0.41664356, -0.041748047)
+shape = SubResource("BoxShape3D_um21q")

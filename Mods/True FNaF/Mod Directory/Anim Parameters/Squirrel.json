@@ -1,0 +1,8 @@
+{
+  "Squirrel": {
+	"animation": "Squirrel",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "loop"
+  }
+}

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://jbfk3c7p72t"]
+[gd_scene format=3 uid="uid://2d461ea5f311"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_lj04s"]
 [ext_resource type="PackedScene" uid="uid://dh7yr2r467fml" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Seal Bucket.glb" id="25_qn17g"]

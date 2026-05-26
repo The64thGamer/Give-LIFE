@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://xi7n4c6mqwgo"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://dbfow6mxifn2a" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Clam.glb" id="6_ie35s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(0.59033203, 0.5164795, 0.041748047)
+
+[node name="Clam" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Clam"
+animatableName = "Clam"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.25274578, 0.4770612, 0.26037696, 1)
+
+[node name="Clam" parent="." unique_id=1033346580 instance=ExtResource("6_ie35s")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11458039, 0.26597428, -0.032348633)
+shape = SubResource("BoxShape3D_um21q")

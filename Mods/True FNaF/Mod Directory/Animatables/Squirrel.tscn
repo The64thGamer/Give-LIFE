@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bxj26k8t2r2bg"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://ba7r6rlua0gqk" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Squirrel.glb" id="28_g4pxg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(1.1635742, 0.7260742, 0.074279785)
+
+[node name="Squirrel" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Squirrel"
+animatableName = "Squirrel"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.84, 0.50203997, 0.24360001, 1)
+
+[node name="Squirrel" parent="." unique_id=1492402616 instance=ExtResource("28_g4pxg")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 3.5908318)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111572266, 0.36818165, 0.023284912)
+shape = SubResource("BoxShape3D_um21q")

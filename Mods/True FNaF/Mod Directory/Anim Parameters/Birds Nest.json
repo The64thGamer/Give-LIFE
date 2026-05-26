@@ -1,0 +1,20 @@
+{
+  "Baby Bird L": {
+	"animation": "Baby Bird L",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Baby Bird R": {
+	"animation": "Baby Bird R",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Mother Bird": {
+	"animation": "Mother Bird",
+	"in_speed": 5,
+	"out_speed": 5,
+	"type": "loop"
+  }
+}

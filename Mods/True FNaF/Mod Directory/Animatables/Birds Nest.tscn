@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://52t62ac46js"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="PackedScene" uid="uid://c8sg3dt7ohu12" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Birds Nest.glb" id="4_ma05q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(1.1991577, 0.9852905, 0.09838867)
+
+[node name="Birds Nest" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
+script = ExtResource("1_bejbi")
+animParametersFileName = "Birds Nest"
+animatableName = "Bird Nest"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.7983715, 0.23298368, 0.6184724, 1)
+
+[node name="Birds Nest" parent="." unique_id=684823392 instance=ExtResource("4_ma05q")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04598999, 0.5460686, -0.03137207)
+shape = SubResource("BoxShape3D_um21q")
