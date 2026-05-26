@@ -187,6 +187,8 @@ canChangeColor = true
 energyMultiplier = 1.0
 lerp_speed = 10.0
 color_lerp_speed = 2.0
+animatableName = "Mood Light"
+animatableColor = Color(0.1691, 0.89, 0.18111497, 1)
 delete_parent_instead = true
 
 [node name="Light Duck" type="SpotLight3D" parent="Map/Animatables" unique_id=1578231398]
@@ -204,6 +206,8 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 150.0
 lerp_speed = 20.0
+animatableName = "Duck Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
 [node name="Light Puppy" type="SpotLight3D" parent="Map/Animatables" unique_id=426942985]
@@ -221,6 +225,8 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 250.0
 lerp_speed = 20.0
+animatableName = "Puppy Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
 [node name="Light Helpful" type="SpotLight3D" parent="Map/Animatables" unique_id=526652825]
@@ -238,6 +244,27 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 450.0
 lerp_speed = 20.0
+animatableName = "Main Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
+delete_parent_instead = true
+
+[node name="Light Sun" type="SpotLight3D" parent="Map/Animatables" unique_id=1595848616]
+transform = Transform3D(-0.9983418, 0.057564046, 2.4239202e-09, -0.054308716, -0.9418842, 0.331519, 0.019083576, 0.33096927, 0.94344854, -0.604, 12.456, -5.212332)
+light_color = Color(0.9019608, 0.8901961, 0.972549, 1)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 30.0
+spot_attenuation = 2.0
+spot_angle = 30.9
+spot_angle_attenuation = 0.59460473
+
+[node name="Node" type="Node3D" parent="Map/Animatables/Light Sun" unique_id=480170920 groups=["L_SUN_SPOT"]]
+script = ExtResource("4_prrm5")
+canChangeColor = true
+energyMultiplier = 450.0
+lerp_speed = 20.0
+animatableName = "Sun Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
 [node name="Light Seal" type="SpotLight3D" parent="Map/Animatables" unique_id=1694673797]
@@ -254,6 +281,8 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 500.0
 lerp_speed = 20.0
+animatableName = "Seal Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
 [node name="Light Cake" type="SpotLight3D" parent="Map/Animatables" unique_id=284919284]
@@ -270,6 +299,8 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 450.0
 lerp_speed = 20.0
+animatableName = "Cake Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
 [node name="Light Flowers" type="SpotLight3D" parent="Map/Animatables" unique_id=1930173376]
@@ -286,6 +317,8 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 250.0
 lerp_speed = 20.0
+animatableName = "Flower Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
 [node name="Light MrsHelpful" type="SpotLight3D" parent="Map/Animatables" unique_id=22378040]
@@ -303,6 +336,8 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 500.0
 lerp_speed = 20.0
+animatableName = "Tree Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
 [node name="Light Puppy2" type="SpotLight3D" parent="Map/Animatables" unique_id=1645117922]
@@ -319,6 +354,7 @@ spot_angle_attenuation = 2.2973971
 script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 320.0
+animatableName = "Purple Light"
 delete_parent_instead = true
 
 [node name="Light Puppy3" type="SpotLight3D" parent="Map/Animatables" unique_id=1055210541]
@@ -335,6 +371,8 @@ spot_angle_attenuation = 2.1435475
 script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 320.0
+animatableName = "Blue Light"
+animatableColor = Color(0, 0.86533356, 0.88, 1)
 delete_parent_instead = true
 
 [node name="Light Lion" type="SpotLight3D" parent="Map/Animatables" unique_id=1856052350]
@@ -352,6 +390,8 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 150.0
 lerp_speed = 20.0
+animatableName = "Lion Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
 [node name="Light Jugband" type="SpotLight3D" parent="Map/Animatables" unique_id=775458259]
@@ -369,6 +409,8 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 150.0
 lerp_speed = 20.0
+animatableName = "Jugband Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
 [node name="Light Jugband2" type="SpotLight3D" parent="Map/Animatables" unique_id=320633492]
@@ -386,9 +428,11 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 200.0
 lerp_speed = 20.0
+animatableName = "Aqua Light"
+animatableColor = Color(0.1691, 0.86597, 0.89, 1)
 delete_parent_instead = true
 
-[node name="Light Lion2" type="SpotLight3D" parent="Map/Animatables" unique_id=1072464972]
+[node name="Light Mice" type="SpotLight3D" parent="Map/Animatables" unique_id=1072464972]
 transform = Transform3D(0.34871724, -0.63245136, -0.69166565, 0.90087724, 0.022652242, 0.43348247, -0.25848883, -0.77426887, 0.5776603, 4.2292924, 12.45596, -1.3114839)
 light_color = Color(0.9019608, 0.8901961, 0.972549, 1)
 light_energy = 0.0
@@ -398,11 +442,13 @@ spot_attenuation = 2.0
 spot_angle = 15.21
 spot_angle_attenuation = 2.2973971
 
-[node name="Node" type="Node3D" parent="Map/Animatables/Light Lion2" unique_id=45459872 groups=["L_CART"]]
+[node name="Node" type="Node3D" parent="Map/Animatables/Light Mice" unique_id=45459872 groups=["L_CART"]]
 script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 150.0
 lerp_speed = 20.0
+animatableName = "Mice Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
 [node name="Light Cart" type="SpotLight3D" parent="Map/Animatables" unique_id=1457343098]
@@ -419,6 +465,8 @@ spot_angle_attenuation = 2.2973971
 script = ExtResource("4_prrm5")
 canChangeColor = true
 lerp_speed = 20.0
+animatableName = "Sheep Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
 [node name="Seal Bucket" parent="Map/Animatables" unique_id=200504758 instance=ExtResource("14_k3tak")]
