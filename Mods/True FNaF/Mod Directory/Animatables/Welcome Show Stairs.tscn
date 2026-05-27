@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dc0ym80nk4i0a"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_8c4if"]
+[ext_resource type="PackedScene" uid="uid://d1xjc18rs2sww" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Welcome Show Stairs.glb" id="2_8c4if"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8c4if"]
+size = Vector3(4.192154, 1.6962891, 1.281311)
+
+[node name="Welcome Show Stairs" type="Node3D" unique_id=233530727 groups=["SOTM_STAIRS"]]
+script = ExtResource("1_8c4if")
+animParametersFileName = "Welcome Show Stairs"
+animatableName = "Welcome Show Stairs"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.54, 0.11880002, 0.11880002, 1)
+
+[node name="Welcome Show Stairs" parent="." unique_id=1321573402 instance=ExtResource("2_8c4if")]
+transform = Transform3D(-6.9938224e-08, 0, -1.6, 0, 1.6, 0, 1.6, 0, -6.9938224e-08, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1819341596]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=582182004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00022125244, 0.84814453, -0.31533813)
+shape = SubResource("BoxShape3D_8c4if")

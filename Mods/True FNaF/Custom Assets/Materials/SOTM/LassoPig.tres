@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://brebxq1hqcjvi"]
+
+[ext_resource type="Texture2D" uid="uid://cqc6ch6dtprm3" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_LassoPig_D.webp" id="1_ncj6l"]
+[ext_resource type="Texture2D" uid="uid://d2j1eip3brabk" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_LassoPig_ORM.webp" id="2_vc6fa"]
+[ext_resource type="Texture2D" uid="uid://c7bis0lq7ra5x" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_LassoPig_N.webp" id="3_a08pj"]
+
+[resource]
+albedo_texture = ExtResource("1_ncj6l")
+metallic = 1.0
+metallic_texture = ExtResource("2_vc6fa")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_vc6fa")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_a08pj")

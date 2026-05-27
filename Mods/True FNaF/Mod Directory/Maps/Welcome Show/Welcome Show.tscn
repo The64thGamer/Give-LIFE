@@ -45,6 +45,8 @@
 [ext_resource type="PackedScene" uid="uid://cyaslnjr3digf" path="res://Mods/True FNaF/Mod Directory/Animatables/Sun Moons.tscn" id="42_6gfa3"]
 [ext_resource type="PackedScene" uid="uid://cnlohng7qk1fn" path="res://Mods/True FNaF/Mod Directory/Animatables/Tragedy.tscn" id="43_wquxw"]
 [ext_resource type="PackedScene" uid="uid://dkweily3px0i8" path="res://Mods/True FNaF/Mod Directory/Animatables/Turtle.tscn" id="44_xp1mc"]
+[ext_resource type="PackedScene" uid="uid://dc0ym80nk4i0a" path="res://Mods/True FNaF/Mod Directory/Animatables/Welcome Show Stairs.tscn" id="46_k1822"]
+[ext_resource type="PackedScene" uid="uid://dsi0hdxulkfoj" path="res://Mods/True FNaF/Mod Directory/Animatables/Lasso Pig.tscn" id="47_i6pjh"]
 
 [sub_resource type="Environment" id="Environment_groir"]
 background_mode = 2
@@ -598,7 +600,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.
 [node name="King Frog" parent="Map/Animatables" unique_id=1351748165 instance=ExtResource("30_vcxxe")]
 transform = Transform3D(-0.4433216, 0, -0.89636266, 0, 1, 0, 0.89636266, 0, -0.4433216, 3.4027288, 1.8965253, 5.5999007)
 
-[node name="Lion" parent="Map/Animatables" unique_id=2140212750 instance=ExtResource("31_exxue")]
+[node name="Lion" parent="Map/Animatables" unique_id=126651183 instance=ExtResource("31_exxue")]
 transform = Transform3D(0.5608413, 0, -0.82792336, 0, 1, 0, 0.82792336, 0, 0.5608413, 6.702077, 1.8965244, -3.205337)
 
 [node name="Orange Balloon Dog" parent="Map/Animatables" unique_id=474000080 instance=ExtResource("32_524yl")]
@@ -625,6 +627,9 @@ transform = Transform3D(0.028375238, 0, 0.9995974, 0, 1, 0, -0.9995974, 0, 0.028
 [node name="Snail" parent="Map/Animatables" unique_id=1515491360 instance=ExtResource("39_aier8")]
 transform = Transform3D(0.672496, 0, 0.74010074, 0, 1, 0, -0.74010074, 0, 0.672496, -8.436211, 1.8965251, -8.432391)
 
+[node name="Lasso Pig" parent="Map/Animatables" unique_id=308862614 instance=ExtResource("47_i6pjh")]
+transform = Transform3D(0.8658421, 0, -0.5003174, 0, 1, 0, 0.5003174, 0, 0.8658421, 4.4904537, 1.9083796, -8.7339325)
+
 [node name="Squirrel" parent="Map/Animatables" unique_id=624762389 instance=ExtResource("40_7q6x5")]
 transform = Transform3D(0.8018175, 0, 0.5975692, 0, 1, 0, -0.5975692, 0, 0.8018175, -6.1570373, 7.818859, -10.543493)
 
@@ -639,6 +644,9 @@ transform = Transform3D(0.88007987, 0, -0.47482568, 0, 1, 0, 0.47482568, 0, 0.88
 
 [node name="Turtle" parent="Map/Animatables" unique_id=2130453129 instance=ExtResource("44_xp1mc")]
 transform = Transform3D(0.08552127, 0, 0.9963364, 0, 1, 0, -0.9963364, 0, 0.08552127, -9.774228, 4.3502774, -0.89165264)
+
+[node name="Welcome Show Stairs" parent="Map/Animatables" unique_id=1603449091 groups=["SOTM_CUTOUT"] instance=ExtResource("46_k1822")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47723877, -0.003006637, -8.356054)
 
 [node name="Map Mesh & Collision" type="Node" parent="Map" unique_id=807558692]
 

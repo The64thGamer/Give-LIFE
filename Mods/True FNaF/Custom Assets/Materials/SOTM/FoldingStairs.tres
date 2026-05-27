@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://crtyhomhgtjhy"]
+
+[ext_resource type="Texture2D" uid="uid://dvkm7ajnfbe85" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_FoldingStair_BaseColor.webp" id="1_fdago"]
+[ext_resource type="Texture2D" uid="uid://cnxu2p6we2w2t" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_FoldingStair_OcclusionRoughnessMetallic.webp" id="2_7gyk6"]
+
+[resource]
+albedo_texture = ExtResource("1_fdago")
+metallic = 1.0
+metallic_texture = ExtResource("2_7gyk6")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_7gyk6")
+roughness_texture_channel = 1
+normal_enabled = true

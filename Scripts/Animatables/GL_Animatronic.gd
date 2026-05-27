@@ -59,7 +59,7 @@ func _build_animTree() -> void:
 	_build_caches()
 	
 	if animations.size() == 1:
-		printerr("STILL NEED TO FIX THIS AHEM" + name)
+		printerr("STILL NEED TO FIX THIS AHEM: " + name)
 		return
 
 	var prev_name = "Anim_" + animations[0]

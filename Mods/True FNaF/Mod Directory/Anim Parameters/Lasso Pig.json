@@ -1,0 +1,38 @@
+{
+  "Leg R": {
+	"animation": "Leg R",
+	"in_speed": 4.5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Arm R": {
+	"animation": "Arm R",
+	"in_speed": 4.5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Arm L": {
+	"animation": "Arm L",
+	"in_speed": 4.5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Head Tilt R": {
+	"animation": "Head Tilt R",
+	"in_speed": 4.5,
+	"out_speed": 5,
+	"type": "standard"
+  },
+  "Body L": {
+	"animation": "Body L",
+	"in_speed": 2,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "Lasso": {
+	"animation": "Lasso",
+	"in_speed": 1,
+	"out_speed": 1,
+	"type": "loop"
+  },
+}

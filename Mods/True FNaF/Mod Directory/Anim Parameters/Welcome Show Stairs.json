@@ -1,0 +1,8 @@
+{
+  "Stairs": {
+	"animation": "Stairs",
+	"in_speed": 2.5,
+	"out_speed": 3,
+	"type": "inverted_standard"
+  }
+}
