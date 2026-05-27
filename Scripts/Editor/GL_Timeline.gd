@@ -39,6 +39,11 @@ const AXIS_COMPONENT_ANGLE = "angle"
 const AXIS_ANGLE_DEADZONE_MAG  = 0.5
 const AXIS_ANGLE_DEAD_DEG_LOW  = 10.0
 const AXIS_ANGLE_DEAD_DEG_HIGH = 10.0
+const MMB_ZOOM_SPEED = 0.01
+const MMB_VELOCITY_SMOOTH = 0.15
+
+var _mmb_held: bool = false
+var _mmb_velocity: Vector2 = Vector2.ZERO
 
 const CONTROLLER_BUTTONS = [
 	JOY_BUTTON_A, JOY_BUTTON_B, JOY_BUTTON_X, JOY_BUTTON_Y,
@@ -176,9 +181,48 @@ func _input(event: InputEvent) -> void:
 					pan(false)
 				else:
 					scroll(true)
+
+		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_MIDDLE:
+			_mmb_held = event.pressed
+			if not event.pressed:
+				_mmb_velocity = Vector2.ZERO
+
+		if event is InputEventMouseMotion and _mmb_held:
+			_mmb_velocity = _mmb_velocity.lerp(event.relative, MMB_VELOCITY_SMOOTH)
+			var vel_norm = _mmb_velocity.normalized()
+			var vertical_weight = clamp(abs(vel_norm.y) - abs(vel_norm.x), 0.0, 1.0)
+			vertical_weight = pow(vertical_weight, 2.0)
+			var pan_weight = 1.0 - vertical_weight
+
+			var vp_size = get_viewport().get_visible_rect().size
+			var t_range = timeEnd - timeStart
+
+			if pan_weight > 0.0:
+				var pan_offset = -(event.relative.x / vp_size.x) * t_range * pan_weight
+				timeStart += pan_offset
+				timeEnd += pan_offset
+				if timeStart < 0.0:
+					timeEnd += -timeStart
+					timeStart = 0.0
+
+			if vertical_weight > 0.0:
+				var zoom_factor = 1.0 + event.relative.y * MMB_ZOOM_SPEED * vertical_weight
+				zoom_factor = clamp(zoom_factor, 0.5, 2.0)
+				var mid = (timeStart + timeEnd) / 2.0
+				var new_dist = clamp(t_range * zoom_factor, zoomMin, zoomMax)
+				timeStart = mid - new_dist / 2.0
+				timeEnd = mid + new_dist / 2.0
+				if timeStart < 0.0:
+					timeEnd += -timeStart
+					timeStart = 0.0
+
+			_last_start_text = ""
+			_last_end_text = ""
+			_mark_dirty()
+
 	if event.is_action_pressed("Toggle Play"):
 		togglePlayback()
-		
+
 	if event is InputEventJoypadButton:
 		for channel_id in channelControllerBinds:
 			var bind = channelControllerBinds[channel_id]
