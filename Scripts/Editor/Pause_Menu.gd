@@ -323,46 +323,31 @@ func load_maps():
 	availableMaps.clear()
 	for child in mapListContainer.get_children():
 		child.queue_free()
-
-	print("Loading maps...")
-
 	var mods_dir := DirAccess.open("res://Mods")
 	if mods_dir == null:
 		push_error("Mods directory not found!")
 		return
 
+	var collected_maps: Array = []
+
 	mods_dir.list_dir_begin()
 	var mod_name = mods_dir.get_next()
 	while mod_name != "":
 		if mods_dir.current_is_dir() and mod_name != "." and mod_name != "..":
-			print("Checking mod folder:", mod_name)
 			var map_dir_path = "res://Mods/%s/Mod Directory/Maps" % mod_name
-			print("Looking for maps in:", map_dir_path)
-
 			if DirAccess.dir_exists_absolute(map_dir_path):
 				var maps_dir := DirAccess.open(map_dir_path)
 				if maps_dir:
-					print("Opened maps directory:", map_dir_path)
 					maps_dir.list_dir_begin()
 					var map_folder = maps_dir.get_next()
 					while map_folder != "":
 						if maps_dir.current_is_dir() and map_folder != "." and map_folder != "..":
-							print("Checking map folder:", map_folder)
 							var full_map_path = "%s/%s" % [map_dir_path, map_folder]
-							print("Map path:", full_map_path)
-
 							var map_info_path = full_map_path + "/Map Info.cfg"
 							var icon_path = full_map_path + "/Map Icon.png"
-
 							var config := ConfigFile.new()
-							var result := config.load(map_info_path)
-							print("Tried loading Map Info:", map_info_path, "Result:", result)
-
-							if result == OK:
+							if config.load(map_info_path) == OK:
 								var map_name = config.get_value("map", "maptitle", map_folder)
-								print("Loaded map info:", map_name)
-
-								# Search for first .tscn or .tscn.remap file
 								var scene_path := ""
 								var inner_dir := DirAccess.open(full_map_path)
 								if inner_dir:
@@ -370,40 +355,31 @@ func load_maps():
 									var f = inner_dir.get_next()
 									while f != "":
 										var filename = f
-										# If file ends with .remap, strip it
 										if filename.ends_with(".remap"):
 											filename = filename.substr(0, filename.length() - 6)
 										if filename.to_lower().ends_with(".tscn"):
 											scene_path = "%s/%s" % [full_map_path, filename]
-											print("Found scene file (handling remap):", scene_path)
 											break
 										f = inner_dir.get_next()
-
 								if scene_path != "":
-									availableMaps[map_name] = scene_path
-									print("Added map:", map_name, "→", scene_path)
-
-									var entry = mapEntryScene.instantiate()
-									entry.get_node("PanelContainer/HBoxContainer/Name").text = map_name
-									entry.get_node("PanelContainer/HBoxContainer/PanelContainer/Icon").texture = load(icon_path)
-
-									var load_button = entry.get_node("PanelContainer/Button")
-									load_button.pressed.connect(load_map_scene.bind(map_name))
-
-									mapListContainer.add_child(entry)
+									collected_maps.append({ "name": map_name, "scene": scene_path, "icon": icon_path })
 								else:
 									push_warning("No .tscn file found in: " + full_map_path)
 							else:
 								push_warning("Map Info failed to load: " + map_info_path)
 						map_folder = maps_dir.get_next()
-				else:
-					print("Failed to open maps directory:", map_dir_path)
-			else:
-				print("Map directory does not exist:", map_dir_path)
 		mod_name = mods_dir.get_next()
 
-	print("Map loading complete.")
+	collected_maps.sort_custom(func(a, b): return a["name"].to_lower() < b["name"].to_lower())
 
+	for map in collected_maps:
+		availableMaps[map["name"]] = map["scene"]
+		var entry = mapEntryScene.instantiate()
+		entry.get_node("PanelContainer/HBoxContainer/Name").text = map["name"]
+		entry.get_node("PanelContainer/HBoxContainer/PanelContainer/Icon").texture = load(map["icon"])
+		entry.get_node("PanelContainer/Backdrop").texture = load(map["icon"])
+		entry.get_node("PanelContainer/Button").pressed.connect(load_map_scene.bind(map["name"]))
+		mapListContainer.add_child(entry)
 
 func load_map_scene(map_name: String):
 	if availableMaps.has(map_name):

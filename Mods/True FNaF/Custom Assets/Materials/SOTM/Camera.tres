@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://b72ocjk237qd6" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_WS_Camera_N.webp" id="3_yondh"]
 
 [resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_6h087")
 metallic = 1.0
 metallic_texture = ExtResource("2_axstl")

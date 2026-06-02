@@ -76,7 +76,12 @@ func find_skeleton(node: Node) -> Skeleton3D:
 func apply_physics_bone_to(bone_name: String, preset: BonePreset) -> void:
 	var bone_index = skeleton.find_bone(bone_name)
 	if bone_index == -1:
-		push_warning("Bone not found: %s" % bone_name)
+		printerr(name + " bone not found: %s" % bone_name)
+		printerr(name + "'s list of bones: %s" % str(skeleton.get_bone_count()))
+		var bone_list = []
+		for i in skeleton.get_bone_count():
+			bone_list.append(skeleton.get_bone_name(i))
+		printerr("Available bones: %s" % str(bone_list))
 		return
 
 	var bone_physics = DMWBWiggleRotationModifier3D.new()

@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jvta6ck053j2"]
+
+[ext_resource type="Texture2D" uid="uid://bvbjo1dtofi2q" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_WelcomeShow_Drums_D.webp" id="1_nw63r"]
+[ext_resource type="Texture2D" uid="uid://bjjhn6cqikjn3" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_WelcomeShow_Drums_ORM.webp" id="2_lbkl2"]
+[ext_resource type="Texture2D" uid="uid://cdxnyyvc3wnlk" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_WelcomeShow_Drums_N.webp" id="3_luorr"]
+
+[resource]
+albedo_texture = ExtResource("1_nw63r")
+metallic = 1.0
+metallic_texture = ExtResource("2_lbkl2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_lbkl2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_luorr")

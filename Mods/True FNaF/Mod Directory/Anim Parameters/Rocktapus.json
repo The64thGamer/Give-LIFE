@@ -1,0 +1,128 @@
+{
+  "ArmA1": {
+	"animation": "ArmA1",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "ArmA2": {
+	"animation": "ArmA2",
+	"in_speed": 2.5,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+  "ArmA3": {
+	"animation": "ArmA3",
+	"in_speed": 4.5,
+	"out_speed": 5.0,
+	"type": "standard"
+  },
+  "ArmB1": {
+	"animation": "ArmB1",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "ArmB2": {
+	"animation": "ArmB2",
+	"in_speed": 2.5,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+  "ArmC1": {
+	"animation": "ArmC1",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "ArmC2": {
+	"animation": "ArmC2",
+	"in_speed": 2.5,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+  "ArmD1": {
+	"animation": "ArmD1",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "ArmE1": {
+	"animation": "ArmE1",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "ArmE2": {
+	"animation": "ArmE2",
+	"in_speed": 2.5,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+  "ArmF1": {
+	"animation": "ArmF1",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "ArmF2": {
+	"animation": "ArmF2",
+	"in_speed": 2.5,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+  "ArmG1": {
+	"animation": "ArmG1",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "ArmG2": {
+	"animation": "ArmG2",
+	"in_speed": 2.5,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+  "ArmG3": {
+	"animation": "ArmG3",
+	"in_speed": 4.5,
+	"out_speed": 5.0,
+	"type": "standard"
+  },
+  "ArmH1": {
+	"animation": "ArmH1",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "ArmH2": {
+	"animation": "ArmH2",
+	"in_speed": 2.5,
+	"out_speed": 3.0,
+	"type": "standard"
+  },
+  "ArmH3": {
+	"animation": "ArmH3",
+	"in_speed": 4.5,
+	"out_speed": 5.0,
+	"type": "standard"
+  },
+  "Head L": {
+	"animation": "Head L",
+	"in_speed": 0.3,
+	"out_speed": 0.3,
+	"type": "standard"
+  },
+  "Head R": {
+	"animation": "Head R",
+	"in_speed": 0.3,
+	"out_speed": 0.3,
+	"type": "standard"
+  },
+  "Out": {
+	"animation": "Out",
+	"in_speed": 0.25,
+	"out_speed": 0.25,
+	"type": "inverted_standard"
+  }
+}

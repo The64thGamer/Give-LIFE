@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvkxd21bha5mt"]
+
+[ext_resource type="Texture2D" uid="uid://dmufwrnhxjud0" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_WelcomeShowOctopus_D.webp" id="1_ospgg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jx72w"]
+load_path = "res://.godot/imported/T_WelcomeShowOctopus_N.webp-98e8b034655b3640ce8dddb512523dd1.s3tc.ctex"
+
+[resource]
+albedo_texture = ExtResource("1_ospgg")
+metallic_texture_channel = 2
+roughness = 0.3
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_jx72w")

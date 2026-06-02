@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://clofrntnpec5f"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_qa4wu"]
+[ext_resource type="PackedScene" uid="uid://crwwbctcuactb" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Rocktapus.glb" id="2_qa4wu"]
+[ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_msm48"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(0.97180176, 1.7816162, 0.05859375)
+
+[node name="Rocktapus" type="Node3D" unique_id=233530727 groups=["SOTM_ROCKTAPUS"]]
+script = ExtResource("1_qa4wu")
+animParametersFileName = "Rocktapus"
+animatableName = "Mr. Rocktapus"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.8190937, 0.6332961, 3.85046e-07, 1)
+
+[node name="Rocktapus" parent="." unique_id=860197467 instance=ExtResource("2_qa4wu")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+script = ExtResource("3_msm48")
+boneConfigFileName = "Rocktapus"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.159729, 0.9047417, -0.040039063)
+shape = SubResource("BoxShape3D_um21q")
