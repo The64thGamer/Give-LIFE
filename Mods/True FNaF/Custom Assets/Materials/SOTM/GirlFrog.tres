@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://xffngr485sim"]
+
+[ext_resource type="Texture2D" uid="uid://bossyif4xl22b" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_GirlFrog_D.webp" id="1_1h2ke"]
+[ext_resource type="Texture2D" uid="uid://cg3rgobl74mp0" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_GirlFrog_ORM.webp" id="2_kkj6k"]
+[ext_resource type="Texture2D" uid="uid://boshlcic21b8m" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_GirlFrog_N.webp" id="3_f8eb4"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_1h2ke")
+metallic = 1.0
+metallic_texture = ExtResource("2_kkj6k")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_kkj6k")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_f8eb4")

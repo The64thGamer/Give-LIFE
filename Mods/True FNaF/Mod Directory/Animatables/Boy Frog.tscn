@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b5dk0jygxtoe3"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_hdgyc"]
+[ext_resource type="PackedScene" uid="uid://ckktwbj7h3moo" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Frog And Snake.glb" id="2_78dnw"]
+[ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_5ijkr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(0.7646675, 1.0126076, 0.89320374)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_80pdj"]
+size = Vector3(2.2526293, 1.3016303, 0.5590973)
+
+[node name="Boy Frog" type="Node3D" unique_id=233530727 groups=["SOTM_BOYFROG"]]
+script = ExtResource("1_hdgyc")
+animParametersFileName = "Boy Frog"
+animatableName = "Boy Frog"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.21170563, 0.789559, 0.26615688, 1)
+
+[node name="Frog And Snake" parent="." unique_id=921970385 instance=ExtResource("2_78dnw")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0.026798248, 0)
+script = ExtResource("3_5ijkr")
+boneConfigFileName = "Boy Frog"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.038389206, 0.5200925, 0.025550842)
+shape = SubResource("BoxShape3D_um21q")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1435985553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.076328754, -0.2620772, 0.71834564)
+shape = SubResource("BoxShape3D_80pdj")
