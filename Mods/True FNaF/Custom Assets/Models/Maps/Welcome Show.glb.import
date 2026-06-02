@@ -44,16 +44,6 @@ _subresources={
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/AdjustPower.tres",
 "use_external/path": "uid://bu0e8618gsyv8"
 },
-"MI_BalloonMiceCutouts.mat_18cc3038": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/MiceBalloonCutout.tres",
-"use_external/path": "uid://dhjkseko2jhwc"
-},
-"MI_Bird_Nest_Cutout.mat_3a472c82": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/BirdNestCutout.tres",
-"use_external/path": "uid://hoxytd6bvnrt"
-},
 "MI_BirthdayVignette.mat_37c87f8f": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/BirthdayVignette.tres",
@@ -199,11 +189,6 @@ _subresources={
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/DeskFan.tres",
 "use_external/path": "uid://c4mg25pspltkb"
 },
-"MI_DivingSeal.mat_01bb7023": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/DivingSeal.tres",
-"use_external/path": "uid://bjd02swgsdsb1"
-},
 "MI_Door1.mat_2aade34f": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/Door1.tres",
@@ -229,11 +214,6 @@ _subresources={
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/FactoryCoords.tres",
 "use_external/path": "uid://cuboq5jcp4u4u"
 },
-"MI_Flower_Wagon_Cutouts.mat_2869fc86": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/FlowerWagon.tres",
-"use_external/path": "uid://cexr8lgcc5g6k"
-},
 "MI_ForestTreeBack.mat_4e0f13fc": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/ForestTreeBack.tres",
@@ -248,11 +228,6 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/GenericMetal.tres",
 "use_external/path": "uid://drnrgfd3d2yhl"
-},
-"MI_GreenCreatureCutouts.mat_65ce8b69": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/GreenCreatureCutouts.tres",
-"use_external/path": "uid://chri84rvbufnb"
 },
 "MI_HangingWires.mat_5479f1b9": {
 "use_external/enabled": true,
@@ -284,15 +259,15 @@ _subresources={
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/Lift.tres",
 "use_external/path": "uid://btlxschq7agye"
 },
+"MI_LightBulbFresnel.mat_63415351": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/StripLight.tres",
+"use_external/path": "uid://dmvjlrpd6dsgo"
+},
 "MI_LightBulbStrip.mat_4abae349": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/LightbulbStrip.tres",
 "use_external/path": "uid://dd70p6ybl4yhk"
-},
-"MI_LionSheepCutouts.mat_47f6f536": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/LionSheepCutouts.tres",
-"use_external/path": "uid://csy3svma8prgw"
 },
 "MI_LowChain.mat_489c966c": {
 "use_external/enabled": true,
@@ -308,11 +283,6 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/StageVingette.tres",
 "use_external/path": "uid://4liyh2fm47df"
-},
-"MI_MainStage_SunMoonCutout.mat_0b3a5aa9": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/SunFloor.tres",
-"use_external/path": "uid://dvbflbcxgbtq3"
 },
 "MI_Metal_Beams.mat_43736194": {
 "use_external/enabled": true,
@@ -484,16 +454,6 @@ _subresources={
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/TreeStump.tres",
 "use_external/path": "uid://bnqst104bh7ch"
 },
-"MI_Tree_1_Cutouts.mat_48f0453e": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/TreeCutouts.tres",
-"use_external/path": "uid://jgq80vne4ovp"
-},
-"MI_Tree_2_Cutouts.mat_6c1f686b": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/TreeCutouts2.tres",
-"use_external/path": "uid://6khf41g7kxs8"
-},
 "MI_UtilityPipes.mat_0d917924": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/UtilityPipes.tres",
@@ -504,11 +464,6 @@ _subresources={
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/VerticalWood.tres",
 "use_external/path": "uid://c0ei0uvqqamk2"
 },
-"MI_WS_BirthdayCutouts.mat_37d0bda1": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/BirthdayCutouts.tres",
-"use_external/path": "uid://qwxjpebnw5ao"
-},
 "MI_WS_Camera.mat_4b77368b": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/Camera.tres",
@@ -518,11 +473,6 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/ElevatorPlatform.tres",
 "use_external/path": "uid://bc3ujh11wtect"
-},
-"MI_WS_OceanCutouts.mat_18b5d7e6": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/OceanCutouts.tres",
-"use_external/path": "uid://k0k3siq6t0f"
 },
 "MI_WS_OceanVignetteCutouts.mat_3e7cc39c": {
 "use_external/enabled": true,

@@ -48,6 +48,7 @@
 [ext_resource type="PackedScene" uid="uid://dc0ym80nk4i0a" path="res://Mods/True FNaF/Mod Directory/Animatables/Welcome Show Stairs.tscn" id="46_k1822"]
 [ext_resource type="PackedScene" uid="uid://clofrntnpec5f" path="res://Mods/True FNaF/Mod Directory/Animatables/Rocktapus.tscn" id="46_u1qki"]
 [ext_resource type="PackedScene" uid="uid://dsi0hdxulkfoj" path="res://Mods/True FNaF/Mod Directory/Animatables/Lasso Pig.tscn" id="47_i6pjh"]
+[ext_resource type="PackedScene" uid="uid://b5dxk7fyqfyh6" path="res://Mods/True FNaF/Mod Directory/Animatables/Swing Bee.tscn" id="48_848g7"]
 
 [sub_resource type="Environment" id="Environment_groir"]
 background_mode = 2
@@ -638,24 +639,21 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.6
 [node name="Welcome Show Stairs" parent="Map/Animatables" unique_id=1603449091 groups=["SOTM_CUTOUT"] instance=ExtResource("46_k1822")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47723877, -0.003006637, -8.356054)
 
+[node name="Swing Bee" parent="Map/Animatables" unique_id=1871752093 instance=ExtResource("48_848g7")]
+transform = Transform3D(0.5194296, 0, 0.8545132, 0, 1, 0, -0.8545132, 0, 0.5194296, -9.72145, 7.6537447, -7.6563325)
+
 [node name="Map Mesh & Collision" type="Node" parent="Map" unique_id=807558692]
 
 [node name="Welcome Show" parent="Map/Map Mesh & Collision" unique_id=572133774 instance=ExtResource("3_k1maa")]
 transform = Transform3D(-6.9938224e-08, 0, -1.6, 0, 1.6, 0, 1.6, 0, -6.9938224e-08, -93.76305, 0.24, -123.42261)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Map/Map Mesh & Collision" unique_id=658965715]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.767138, -3.147664)
-light_color = Color(0.972549, 1, 0.92156863, 1)
-light_energy = 0.3
+[node name="OmniLight3D" type="SpotLight3D" parent="Map/Map Mesh & Collision" unique_id=1336680671]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.54033697, 6.9149017, 5.474177)
+light_color = Color(0.78039217, 0.72156864, 1, 1)
+light_energy = 4.396
 shadow_enabled = true
-omni_range = 40.0
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="Map/Map Mesh & Collision" unique_id=1333379803]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.094921, -14.731867)
-light_color = Color(0.972549, 1, 0.92156863, 1)
-light_energy = 0.5
-shadow_enabled = true
-omni_range = 40.0
+spot_range = 8.515
+spot_angle = 31.26
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/Map Mesh & Collision" unique_id=749743399]
 

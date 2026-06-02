@@ -1,0 +1,14 @@
+{
+  "Swing": {
+	"animation": "Swing",
+	"in_speed": 0.4,
+	"out_speed": 0.4,
+	"type": "play"
+  },
+  "Leg Bend": {
+	"animation": "Leg Bend",
+	"in_speed": 1.0,
+	"out_speed": 1.5,
+	"type": "standard"
+  }
+}

@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://cvxfjgr4tid1c" path="res://Mods/True FNaF/Custom Assets/Textures/SOTM/T_SwingBee_N.webp" id="3_yae0s"]
 
 [resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_viqob")
 metallic = 1.0
 metallic_texture = ExtResource("2_foxed")
