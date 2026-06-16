@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://coucprn4cpo4c"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_3m5u0"]
+[ext_resource type="PackedScene" uid="uid://w11t8ljku1g" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Girl Frog.glb" id="2_euvy2"]
+[ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_ual75"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
+size = Vector3(0.7502489, 1.072588, 1.3212452)
+
+[node name="Girl Frog" type="Node3D" unique_id=233530727 groups=["SOTM_GIRLFROG"]]
+script = ExtResource("1_3m5u0")
+animParametersFileName = "Girl Frog"
+animatableName = "Girl Frog"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.49, 0.044099987, 0.07382663, 1)
+
+[node name="Girl Frog" parent="." unique_id=995387662 instance=ExtResource("2_euvy2")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+script = ExtResource("3_ual75")
+boneConfigFileName = "Girl Frog"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=723801955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1095323835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007384777, 0.5500827, 0.42991352)
+shape = SubResource("BoxShape3D_um21q")

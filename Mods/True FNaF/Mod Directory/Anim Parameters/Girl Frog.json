@@ -1,0 +1,56 @@
+{
+  "Body Up": {
+	"animation": "Body Up",
+	"in_speed": 5.5,
+	"out_speed": 5.5,
+	"type": "standard"
+  },
+  "Crouch": {
+	"animation": "Crouch",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "Head Tilt": {
+	"animation": "Head Tilt",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "Jaw": {
+	"animation": "Jaw",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "Head Turn": {
+	"animation": "Head Turn",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+  "Head Up": {
+	"animation": "Head Up",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  },
+"Strum Down": {
+	"animation": "Strum Down",
+	"in_speed": 3.0,
+	"out_speed": 3.5,
+	"type": "standard"
+  },
+"Strum Up": {
+	"animation": "Strum Up",
+	"in_speed": 3.0,
+	"out_speed": 3.5,
+	"type": "standard"
+  },
+"Washboard": {
+	"animation": "Washboard",
+	"in_speed": 2.0,
+	"out_speed": 2.5,
+	"type": "standard"
+  }
+}

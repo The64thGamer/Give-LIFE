@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://dsi0hdxulkfoj" path="res://Mods/True FNaF/Mod Directory/Animatables/Lasso Pig.tscn" id="47_i6pjh"]
 [ext_resource type="PackedScene" uid="uid://b5dxk7fyqfyh6" path="res://Mods/True FNaF/Mod Directory/Animatables/Swing Bee.tscn" id="48_848g7"]
 [ext_resource type="PackedScene" uid="uid://b5dk0jygxtoe3" path="res://Mods/True FNaF/Mod Directory/Animatables/Boy Frog.tscn" id="50_q3irn"]
+[ext_resource type="PackedScene" uid="uid://coucprn4cpo4c" path="res://Mods/True FNaF/Mod Directory/Animatables/Girl Frog.tscn" id="51_g4dm4"]
 
 [sub_resource type="Environment" id="Environment_groir"]
 background_mode = 2
@@ -641,7 +642,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47723877, -0.003006637, -8.356054)
 
 [node name="Boy Frog" parent="Map/Animatables" unique_id=519964351 instance=ExtResource("50_q3irn")]
-transform = Transform3D(-0.8560506, 0, -0.516892, 0, 1, 0, 0.516892, 0, -0.8560506, 5.066243, 1.8777223, 4.378569)
+transform = Transform3D(-0.91145355, 0, -0.41140306, 0, 1, 0, 0.41140306, 0, -0.91145355, 4.8818827, 1.8777223, 4.518209)
 
 [node name="Swing Bee" parent="Map/Animatables" unique_id=1871752093 instance=ExtResource("48_848g7")]
 transform = Transform3D(0.5194296, 0, 0.8545132, 0, 1, 0, -0.8545132, 0, 0.5194296, -9.72145, 7.6537447, -7.6563325)
@@ -948,3 +949,6 @@ shape = SubResource("BoxShape3D_jcnbp")
 [node name="CollisionShape3D67" type="CollisionShape3D" parent="Map/Map Mesh & Collision/StaticBody3D" unique_id=620291177]
 transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, -8.326536, 16.032206, -8.1858635)
 shape = SubResource("BoxShape3D_jcnbp")
+
+[node name="Girl Frog" parent="." unique_id=820039860 instance=ExtResource("51_g4dm4")]
+transform = Transform3D(-0.010175096, 0, -0.9999482, 0, 1, 0, 0.9999482, 0, -0.010175096, 6.576925, 2.5350242, 3.971581)
