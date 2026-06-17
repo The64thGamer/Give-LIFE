@@ -21,7 +21,7 @@ nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
-meshes/ensure_tangents=true
+meshes/ensure_tangents=false
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
 meshes/light_baking=1
@@ -39,6 +39,11 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
+"MI_CurtainRed.mat_3dc4c3e4.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/CurtainRed.tres",
+"use_external/path": "uid://bnsc82d7y4uy3"
+},
 "MI_DivingSeal.mat_01bb7023": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Mods/True FNaF/Custom Assets/Materials/SOTM/DivingSeal.tres",

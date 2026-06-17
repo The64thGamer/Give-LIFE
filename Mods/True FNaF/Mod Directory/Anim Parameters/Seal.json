@@ -43,8 +43,8 @@
 	  },
 	"Out": {
 		"animation": "Retract",
-		"in_speed": 0.8,
-		"out_speed": 0.8,
+		"in_speed": 0.55,
+		"out_speed": 0.55,
 		"type": "inverted_standard"
 	  },
 	"Tail L": {
