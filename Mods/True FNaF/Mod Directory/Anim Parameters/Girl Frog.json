@@ -1,8 +1,8 @@
 {
   "Body Up": {
 	"animation": "Body Up",
-	"in_speed": 5.5,
-	"out_speed": 5.5,
+	"in_speed": 3.5,
+	"out_speed": 3.5,
 	"type": "standard"
   },
   "Crouch": {
@@ -19,8 +19,8 @@
   },
   "Jaw": {
 	"animation": "Jaw",
-	"in_speed": 2.0,
-	"out_speed": 2.5,
+	"in_speed": 3.0,
+	"out_speed": 3.5,
 	"type": "standard"
   },
   "Head Turn": {

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_cplxp"]
 [ext_resource type="PackedScene" uid="uid://cidcuvfhsuwou" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Lasso Pig.glb" id="2_cplxp"]
+[ext_resource type="Texture2D" uid="uid://bnbvow5uhsxem" path="res://Mods/True FNaF/Custom Assets/UI/LassoPig.png" id="2_fyf6p"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_bx02h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -10,6 +11,7 @@ size = Vector3(1.1311035, 2.5251694, 0.9253464)
 [node name="Lasso Pig" type="Node3D" unique_id=233530727 groups=["SOTM_PIG"]]
 script = ExtResource("1_cplxp")
 animParametersFileName = "Lasso Pig"
+animatableIcon = ExtResource("2_fyf6p")
 animatableName = "Lasso Pig"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.998208, 0.6304023, 0.67486554, 1)

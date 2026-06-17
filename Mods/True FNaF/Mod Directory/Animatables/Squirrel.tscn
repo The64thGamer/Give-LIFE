@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxj26k8t2r2bg"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://ddxcl58ova5ay" path="res://Mods/True FNaF/Custom Assets/UI/CutoutSquirrel.png" id="2_jbmfg"]
 [ext_resource type="PackedScene" uid="uid://ba7r6rlua0gqk" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Squirrel.glb" id="28_g4pxg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(1.1635742, 0.7260742, 0.074279785)
 [node name="Squirrel" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Squirrel"
+animatableIcon = ExtResource("2_jbmfg")
 animatableName = "Squirrel"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.84, 0.50203997, 0.24360001, 1)

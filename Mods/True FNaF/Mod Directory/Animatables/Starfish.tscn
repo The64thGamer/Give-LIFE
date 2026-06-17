@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://xmbfov1xj758"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://cf3rtmi7ow3wx" path="res://Mods/True FNaF/Custom Assets/UI/CutoutStarfish.png" id="2_7wwbh"]
 [ext_resource type="PackedScene" uid="uid://coqbbqywtnrd5" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Starfish.glb" id="29_bhcai"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(0.68359375, 0.9753418, 0.0546875)
 [node name="Starfish" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Starfish"
+animatableIcon = ExtResource("2_7wwbh")
 animatableName = "Starfish"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.72182333, 0.44819996, 0.83, 1)

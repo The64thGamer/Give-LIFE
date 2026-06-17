@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxmko4v0fdwxq"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://dd0xu8d3evsr2" path="res://Mods/True FNaF/Custom Assets/UI/CutoutFrog.png" id="2_6c41g"]
 [ext_resource type="PackedScene" uid="uid://tvnpno5hkerb" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Frog Cutout.glb" id="14_xvdqn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(0.89038086, 0.8391113, 0.07421875)
 [node name="Frog Cutout" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Frog Cutout"
+animatableIcon = ExtResource("2_6c41g")
 animatableName = "Bowtie Frog"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.34444737, 0.5173161, 0.18098724, 1)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bhx4vgyc0ju4h"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://888wa2ks1rmn" path="res://Mods/True FNaF/Custom Assets/UI/CutoutKingFrog.png" id="2_xne4k"]
 [ext_resource type="PackedScene" uid="uid://dpvphhouv82qd" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/King Frog.glb" id="17_dh4w2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(0.7040405, 0.8010559, 0.025512695)
 [node name="King Frog" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "King Frog"
+animatableIcon = ExtResource("2_xne4k")
 animatableName = "King Frog"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.64384437, 0.85716647, 0.30814156, 1)

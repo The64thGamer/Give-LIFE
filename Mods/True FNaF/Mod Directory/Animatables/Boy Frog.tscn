@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_hdgyc"]
 [ext_resource type="PackedScene" uid="uid://ckktwbj7h3moo" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Frog And Snake.glb" id="2_78dnw"]
+[ext_resource type="Texture2D" uid="uid://cb76jw1hme1sj" path="res://Mods/True FNaF/Custom Assets/UI/BoyFrog.png" id="2_po7wt"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_5ijkr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -13,6 +14,7 @@ size = Vector3(2.2526293, 1.3016303, 0.5590973)
 [node name="Boy Frog" type="Node3D" unique_id=233530727 groups=["SOTM_BOYFROG"]]
 script = ExtResource("1_hdgyc")
 animParametersFileName = "Boy Frog"
+animatableIcon = ExtResource("2_po7wt")
 animatableName = "Boy Frog"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.21170563, 0.789559, 0.26615688, 1)

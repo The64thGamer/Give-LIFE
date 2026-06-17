@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dosox4sx5nucf"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://cv45m6ksbsmdq" path="res://Mods/True FNaF/Custom Assets/UI/CutoutCloud.png" id="2_iy6jg"]
 [ext_resource type="PackedScene" uid="uid://85pgi765a378" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Hanging Cloud.glb" id="16_8txf6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(3.630005, 2.255371, 0.109375)
 [node name="Hanging Cloud" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Hanging Cloud"
+animatableIcon = ExtResource("2_iy6jg")
 animatableName = "Hanging Cloud"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.84, 0.84, 0.84, 1)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bqsi4xl15ok14"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://dtproyu85v4pb" path="res://Mods/True FNaF/Custom Assets/UI/CutoutBee.png" id="2_m4vkh"]
 [ext_resource type="PackedScene" uid="uid://dwjfvxuxowt2v" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Bee.glb" id="3_xy5cs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(1, 2.1524353, 0.06585693)
 [node name="Bee" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Bee"
+animatableIcon = ExtResource("2_m4vkh")
 animatableName = "Honey Bee"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.9, 0.783, 0.19800001, 1)

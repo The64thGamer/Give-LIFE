@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://coucprn4cpo4c"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_3m5u0"]
+[ext_resource type="Texture2D" uid="uid://jctgha1lbi22" path="res://Mods/True FNaF/Custom Assets/UI/Girl Frog.png" id="2_bejmm"]
 [ext_resource type="PackedScene" uid="uid://w11t8ljku1g" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Girl Frog.glb" id="2_euvy2"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_ual75"]
 
@@ -10,6 +11,7 @@ size = Vector3(0.7502489, 1.072588, 1.3212452)
 [node name="Girl Frog" type="Node3D" unique_id=233530727 groups=["SOTM_GIRLFROG"]]
 script = ExtResource("1_3m5u0")
 animParametersFileName = "Girl Frog"
+animatableIcon = ExtResource("2_bejmm")
 animatableName = "Girl Frog"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.49, 0.044099987, 0.07382663, 1)

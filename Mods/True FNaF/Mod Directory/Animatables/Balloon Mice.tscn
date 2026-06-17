@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
 [ext_resource type="PackedScene" uid="uid://enis8dysfd0x" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Balloon Mice.glb" id="2_16vi6"]
+[ext_resource type="Texture2D" uid="uid://km4x1ulhifpp" path="res://Mods/True FNaF/Custom Assets/UI/CutoutMiceBalloon.png" id="2_ixpjp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
 size = Vector3(1.2758179, 5.367264, 0.115478516)
@@ -12,6 +13,7 @@ size = Vector3(1.6075287, 0.84614944, 0.475708)
 [node name="Balloon Mice" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Balloon Mice"
+animatableIcon = ExtResource("2_ixpjp")
 animatableName = "Balloon Mice"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.65042746, 0.80746794, 0.84202933, 1)

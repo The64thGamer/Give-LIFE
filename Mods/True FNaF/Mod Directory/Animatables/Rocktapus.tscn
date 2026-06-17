@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://clofrntnpec5f"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_qa4wu"]
+[ext_resource type="Texture2D" uid="uid://cegqio2gjyuyv" path="res://Mods/True FNaF/Custom Assets/UI/Rocktapus.png" id="2_3qmwm"]
 [ext_resource type="PackedScene" uid="uid://crwwbctcuactb" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Rocktapus.glb" id="2_qa4wu"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_msm48"]
 
@@ -13,6 +14,7 @@ size = Vector3(4.256157, 0.42851257, 0.68065643)
 [node name="Rocktapus" type="Node3D" unique_id=233530727 groups=["SOTM_ROCKTAPUS"]]
 script = ExtResource("1_qa4wu")
 animParametersFileName = "Rocktapus"
+animatableIcon = ExtResource("2_3qmwm")
 animatableName = "Mr. Rocktapus"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.8190937, 0.6332961, 3.85046e-07, 1)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cy13jhhcmj3q8"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://bjj4l141d128" path="res://Mods/True FNaF/Custom Assets/UI/CutoutFish.png" id="2_wekyk"]
 [ext_resource type="PackedScene" uid="uid://rqdakrccrtd3" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Fish.glb" id="12_3kwhr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(0.74121094, 0.60253906, 0.054748535)
 [node name="Fish" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Fish"
+animatableIcon = ExtResource("2_wekyk")
 animatableName = "Fish"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.85834265, 0.7875345, 0.14567998, 1)

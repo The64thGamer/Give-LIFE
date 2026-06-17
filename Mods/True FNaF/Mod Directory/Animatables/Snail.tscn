@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://rma838f10gew"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://dli1iym31squ4" path="res://Mods/True FNaF/Custom Assets/UI/CutoutSnail.png" id="2_7kptq"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_vfi4u"]
 [ext_resource type="PackedScene" uid="uid://bo3hj15o2qne4" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Snail.glb" id="27_1n5g7"]
 
@@ -10,6 +11,7 @@ size = Vector3(1.1572715, 1.0498047, 0.033)
 [node name="Snail" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Snail"
+animatableIcon = ExtResource("2_7kptq")
 animatableName = "Snail"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.59, 0.24229331, 0.18879999, 1)

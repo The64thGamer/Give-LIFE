@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5uoi6dwe2t3p"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://b1hwvofl5s1e" path="res://Mods/True FNaF/Custom Assets/UI/CutoutPresent.png" id="2_aqrt1"]
 [ext_resource type="PackedScene" uid="uid://di7xnv4bssli2" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Present Cutout.glb" id="22_0id5i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(0.79437256, 0.9641113, 0.041748047)
 [node name="Present Cutout" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Present Cutout"
+animatableIcon = ExtResource("2_aqrt1")
 animatableName = "Present"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.22128808, 0.7198828, 0.8253763, 1)

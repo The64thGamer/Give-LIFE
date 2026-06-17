@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://nrt21knyl1yp"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://dqlitgpkidgij" path="res://Mods/True FNaF/Custom Assets/UI/CutoutCottonCandySheep.png" id="2_qterl"]
 [ext_resource type="PackedScene" uid="uid://ryqt3aepyr2t" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Cotton Candy Sheep.glb" id="9_kgkwl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(0.97180176, 1.7816162, 0.05859375)
 [node name="Cotton Candy Sheep" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Cotton Candy Sheep"
+animatableIcon = ExtResource("2_qterl")
 animatableName = "Cotton Candy Sheep"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(1, 0.36056826, 0.9045081, 1)

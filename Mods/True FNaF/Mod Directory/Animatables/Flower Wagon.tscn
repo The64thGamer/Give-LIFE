@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dc5lwjmk3s5ju"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://bdjv6mx4auy8q" path="res://Mods/True FNaF/Custom Assets/UI/CutoutFlowerCart.png" id="2_xwdxq"]
 [ext_resource type="PackedScene" uid="uid://ml8l20q0gvwn" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Flower Wagon.glb" id="13_bey7n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(3.0458984, 2.3708496, 0.25683594)
 [node name="Flower Wagon" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Flower Wagon"
+animatableIcon = ExtResource("2_xwdxq")
 animatableName = "Flower Cart"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.6529473, 0.35626462, 0.20823717, 1)

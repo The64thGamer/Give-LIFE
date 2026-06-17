@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://rffxqu73hxe7"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://b6q5yh4qmui7i" path="res://Mods/True FNaF/Custom Assets/UI/CutoutLion.png" id="2_kgbwp"]
 [ext_resource type="PackedScene" uid="uid://dcauws2cb3jdq" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Lion.glb" id="18_ftmmi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(2.7265625, 1.27771, 0.104003906)
 [node name="Lion" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Lion"
+animatableIcon = ExtResource("2_kgbwp")
 animatableName = "Circus Lion"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.84, 0.5901, 0.12599997, 1)

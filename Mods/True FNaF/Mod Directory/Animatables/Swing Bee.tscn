@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_80pdj"]
 [ext_resource type="PackedScene" uid="uid://s14syxwkvgbc" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Swing Bee.glb" id="2_80pdj"]
+[ext_resource type="Texture2D" uid="uid://c4k0r68o850ld" path="res://Mods/True FNaF/Custom Assets/UI/SwingBee.png" id="2_lm6bk"]
 [ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="3_1ctsr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -13,6 +14,7 @@ size = Vector3(0.4690132, 1.5818558, 0.34820557)
 [node name="Swing Bee" type="Node3D" unique_id=233530727 groups=["SOTM_SWINGBEE"]]
 script = ExtResource("1_80pdj")
 animParametersFileName = "Swing Bee"
+animatableIcon = ExtResource("2_lm6bk")
 animatableName = "Swing Bee"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.78694284, 0.64537346, 0.17490047, 1)

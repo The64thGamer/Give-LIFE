@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpbgjt0nbvjuf"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://dcpl27cfidml3" path="res://Mods/True FNaF/Custom Assets/UI/CutoutCrab.png" id="2_v6ngh"]
 [ext_resource type="PackedScene" uid="uid://duad0d8cwmaef" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Crab.glb" id="10_sbod5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(1.4648438, 1.359314, 0.030273438)
 [node name="Crab" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Crab"
+animatableIcon = ExtResource("2_v6ngh")
 animatableName = "Treasure Crab"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.9999997, 0.2944924, 0.96986943, 1)

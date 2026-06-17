@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cjfnwerbfv4sk"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://bqaeii27tslvi" path="res://Mods/True FNaF/Custom Assets/UI/CutoutSnake.png" id="2_fpvi6"]
 [ext_resource type="PackedScene" uid="uid://k3h4xip8hvvq" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Purple Snake.glb" id="23_47taq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(1.0412598, 1.3305054, 0.056640625)
 [node name="Purple Snake" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Purple Snake"
+animatableIcon = ExtResource("2_fpvi6")
 animatableName = "Purple Snake"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.563751, 0.31922016, 1, 1)

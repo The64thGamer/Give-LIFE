@@ -14,11 +14,16 @@
 [ext_resource type="PackedScene" uid="uid://dyhynoyx5qmvk" path="res://Mods/True FNaF/Mod Directory/Animatables/Mrs Helpful.tscn" id="11_7ks7s"]
 [ext_resource type="PackedScene" uid="uid://cjrr3dhrx7gkm" path="res://Mods/True FNaF/Mod Directory/Animatables/Mrs Helpful Alt.tscn" id="11_xrl45"]
 [ext_resource type="PackedScene" uid="uid://bsqeb3pvpmgic" path="res://Mods/True FNaF/Mod Directory/Animatables/Jug Band Hippo.tscn" id="13_mvm2o"]
+[ext_resource type="Texture2D" uid="uid://dml8pwra008ff" path="res://UI/SpotDeepGreen.png" id="14_8n47d"]
 [ext_resource type="PackedScene" uid="uid://2d461ea5f311" path="res://Mods/True FNaF/Mod Directory/Animatables/Seal Bucket.tscn" id="14_k3tak"]
+[ext_resource type="Texture2D" uid="uid://bkwp1c8v6dch7" path="res://UI/SpotTan.png" id="15_24o3w"]
 [ext_resource type="PackedScene" uid="uid://np0t77x5cpdp" path="res://Mods/True FNaF/Mod Directory/Animatables/Balloon Mice.tscn" id="15_rbfby"]
 [ext_resource type="PackedScene" uid="uid://bqsi4xl15ok14" path="res://Mods/True FNaF/Mod Directory/Animatables/Bee.tscn" id="16_bckie"]
 [ext_resource type="PackedScene" uid="uid://52t62ac46js" path="res://Mods/True FNaF/Mod Directory/Animatables/Birds Nest.tscn" id="16_cb76s"]
+[ext_resource type="Texture2D" uid="uid://b78q5wlod5b1j" path="res://UI/SpotRed.png" id="16_jhmpf"]
+[ext_resource type="Texture2D" uid="uid://cyejjgqimakwt" path="res://UI/SpotPurple.png" id="17_e18ba"]
 [ext_resource type="PackedScene" uid="uid://bap1mbpwk7nwr" path="res://Mods/True FNaF/Mod Directory/Animatables/Blue Balloon Dog.tscn" id="18_gt5wa"]
+[ext_resource type="Texture2D" uid="uid://dtkmxholirbad" path="res://UI/SpotSkyBlue.png" id="18_s8leu"]
 [ext_resource type="PackedScene" uid="uid://xi7n4c6mqwgo" path="res://Mods/True FNaF/Mod Directory/Animatables/Clam.tscn" id="19_drm30"]
 [ext_resource type="PackedScene" uid="uid://cjxdk0bhc1uxm" path="res://Mods/True FNaF/Mod Directory/Animatables/Comedy.tscn" id="20_k8n6e"]
 [ext_resource type="PackedScene" uid="uid://0swyj6c3ki8e" path="res://Mods/True FNaF/Mod Directory/Animatables/Coral.tscn" id="21_h53ma"]
@@ -271,6 +276,7 @@ canChangeColor = true
 energyMultiplier = 1.0
 lerp_speed = 10.0
 color_lerp_speed = 2.0
+animatableIcon = ExtResource("14_8n47d")
 animatableName = "Mood Light"
 animatableColor = Color(0.1691, 0.89, 0.18111497, 1)
 delete_parent_instead = true
@@ -289,6 +295,7 @@ spot_angle_attenuation = 2.2973971
 script = ExtResource("4_prrm5")
 energyMultiplier = 150.0
 lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
 animatableName = "Duck Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
@@ -307,6 +314,7 @@ spot_angle_attenuation = 2.2973971
 script = ExtResource("4_prrm5")
 energyMultiplier = 250.0
 lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
 animatableName = "Puppy Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
@@ -325,6 +333,7 @@ spot_angle_attenuation = 0.59460473
 script = ExtResource("4_prrm5")
 energyMultiplier = 8.0
 lerp_speed = 10.0
+animatableIcon = ExtResource("16_jhmpf")
 animatableName = "Stage Spot"
 animatableColor = Color(0.89, 0.30259997, 0.30259997, 1)
 delete_parent_instead = true
@@ -343,6 +352,7 @@ spot_angle_attenuation = 0.59460473
 script = ExtResource("4_prrm5")
 energyMultiplier = 100.0
 lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
 animatableName = "Sun Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
@@ -360,6 +370,7 @@ spot_angle = 13.7
 script = ExtResource("4_prrm5")
 energyMultiplier = 500.0
 lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
 animatableName = "Seal Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
@@ -377,6 +388,7 @@ spot_angle = 13.7
 script = ExtResource("4_prrm5")
 energyMultiplier = 450.0
 lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
 animatableName = "Cake Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
@@ -394,6 +406,7 @@ spot_angle = 11.15
 script = ExtResource("4_prrm5")
 energyMultiplier = 250.0
 lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
 animatableName = "Flower Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
@@ -413,6 +426,7 @@ script = ExtResource("4_prrm5")
 canChangeColor = true
 energyMultiplier = 35.0
 lerp_speed = 10.0
+animatableIcon = ExtResource("16_jhmpf")
 animatableName = "Tree Spot"
 animatableColor = Color(0.89, 0.24919997, 0.24919997, 1)
 delete_parent_instead = true
@@ -430,6 +444,7 @@ spot_angle_attenuation = 2.2973971
 [node name="Node" type="Node3D" parent="Map/Animatables/Light Puppy2" unique_id=403304687 groups=["L_PUPPY_CLR_B"]]
 script = ExtResource("4_prrm5")
 energyMultiplier = 320.0
+animatableIcon = ExtResource("17_e18ba")
 animatableName = "Purple Light"
 delete_parent_instead = true
 
@@ -446,6 +461,7 @@ spot_angle_attenuation = 2.1435475
 [node name="Node" type="Node3D" parent="Map/Animatables/Light Puppy3" unique_id=2040878018 groups=["L_PUPPY_CLR_A"]]
 script = ExtResource("4_prrm5")
 energyMultiplier = 320.0
+animatableIcon = ExtResource("18_s8leu")
 animatableName = "Blue Light"
 animatableColor = Color(0, 0.86533356, 0.88, 1)
 delete_parent_instead = true
@@ -464,6 +480,7 @@ spot_angle_attenuation = 2.2973971
 script = ExtResource("4_prrm5")
 energyMultiplier = 150.0
 lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
 animatableName = "Lion Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
@@ -482,6 +499,7 @@ spot_angle_attenuation = 0.75785816
 script = ExtResource("4_prrm5")
 energyMultiplier = 150.0
 lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
 animatableName = "Jugband Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
@@ -500,6 +518,7 @@ spot_angle_attenuation = 4.0884957
 script = ExtResource("4_prrm5")
 energyMultiplier = 200.0
 lerp_speed = 20.0
+animatableIcon = ExtResource("18_s8leu")
 animatableName = "Aqua Light"
 animatableColor = Color(0.1691, 0.86597, 0.89, 1)
 delete_parent_instead = true
@@ -518,6 +537,7 @@ spot_angle_attenuation = 2.2973971
 script = ExtResource("4_prrm5")
 energyMultiplier = 150.0
 lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
 animatableName = "Mice Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
@@ -535,6 +555,7 @@ spot_angle_attenuation = 2.2973971
 [node name="Node" type="Node3D" parent="Map/Animatables/Light Cart" unique_id=706429363 groups=["L_MICE"]]
 script = ExtResource("4_prrm5")
 lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
 animatableName = "Sheep Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cyaslnjr3digf"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://db0edhsoq6dit" path="res://Mods/True FNaF/Custom Assets/UI/CutoutSunMoon.png" id="2_4sxn8"]
 [ext_resource type="PackedScene" uid="uid://ci1dy0bofqgfx" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Sun Moons.glb" id="30_16jev"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(5.742523, 3.2878113, 0.83618164)
 [node name="Sun Moons" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Sun Moons"
+animatableIcon = ExtResource("2_4sxn8")
 animatableName = "Sun and Moons"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.88003415, 0.7777094, 0.15655148, 1)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_8c4if"]
 [ext_resource type="PackedScene" uid="uid://d1xjc18rs2sww" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Welcome Show Stairs.glb" id="2_8c4if"]
+[ext_resource type="Texture2D" uid="uid://dfj1ohmmwvu7w" path="res://Mods/True FNaF/Custom Assets/UI/WelcomeStairs.png" id="2_upt5u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8c4if"]
 size = Vector3(4.192154, 1.6962891, 1.281311)
@@ -9,6 +10,7 @@ size = Vector3(4.192154, 1.6962891, 1.281311)
 [node name="Welcome Show Stairs" type="Node3D" unique_id=233530727 groups=["SOTM_STAIRS"]]
 script = ExtResource("1_8c4if")
 animParametersFileName = "Welcome Show Stairs"
+animatableIcon = ExtResource("2_upt5u")
 animatableName = "Welcome Show Stairs"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.54, 0.11880002, 0.11880002, 1)

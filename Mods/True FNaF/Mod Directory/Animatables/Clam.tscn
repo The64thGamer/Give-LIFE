@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://xi7n4c6mqwgo"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://bfwsnqm6u1l4h" path="res://Mods/True FNaF/Custom Assets/UI/CutoutClam.png" id="2_jk03g"]
 [ext_resource type="PackedScene" uid="uid://dbfow6mxifn2a" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Clam.glb" id="6_ie35s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(0.59033203, 0.5164795, 0.041748047)
 [node name="Clam" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Clam"
+animatableIcon = ExtResource("2_jk03g")
 animatableName = "Clam"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.25274578, 0.4770612, 0.26037696, 1)

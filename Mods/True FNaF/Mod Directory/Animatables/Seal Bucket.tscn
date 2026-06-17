@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://2d461ea5f311"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_lj04s"]
+[ext_resource type="Texture2D" uid="uid://c7br777troskd" path="res://Mods/True FNaF/Custom Assets/UI/SealTail.png" id="2_1i28q"]
 [ext_resource type="PackedScene" uid="uid://dh7yr2r467fml" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Seal Bucket.glb" id="25_qn17g"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_64swh"]
@@ -10,6 +11,7 @@ radius = 0.39160156
 [node name="Seal Bucket" type="Node3D" unique_id=233530727 groups=["SOTM_SEAL"]]
 script = ExtResource("1_lj04s")
 animParametersFileName = "Seal"
+animatableIcon = ExtResource("2_1i28q")
 animatableName = "Seal in Bucket"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.18400002, 0.38933346, 0.8, 1)

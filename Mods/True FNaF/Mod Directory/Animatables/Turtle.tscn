@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dkweily3px0i8"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://b5s1hsla56asv" path="res://Mods/True FNaF/Custom Assets/UI/CutoutTurtle.png" id="2_ea7lr"]
 [ext_resource type="PackedScene" uid="uid://ucm1q0q75uyy" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Turtle.glb" id="32_po32m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(1.2041626, 1.2080688, 0.052246094)
 [node name="Turtle" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Turtle"
+animatableIcon = ExtResource("2_ea7lr")
 animatableName = "Turtle"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.7439226, 0.8283654, 0.26372734, 1)

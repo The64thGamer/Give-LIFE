@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b3jy5n2h2nlpd"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://l8mhnrxrw8xh" path="res://Mods/True FNaF/Custom Assets/UI/CutoutShark.png" id="2_hmq17"]
 [ext_resource type="PackedScene" uid="uid://cmuu0g3loqmnp" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Shark.glb" id="26_x3tml"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(1.3491211, 2.8590088, 0.064208984)
 [node name="Shark" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Shark"
+animatableIcon = ExtResource("2_hmq17")
 animatableName = "Pirate Shark"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.87, 0.51765, 0.08700002, 1)

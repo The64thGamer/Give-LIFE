@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dbwjcdj3ilavm"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://cmxp0x6f1eo6i" path="res://Mods/True FNaF/Custom Assets/UI/CutoutPalmTree.png" id="2_pqprm"]
 [ext_resource type="PackedScene" uid="uid://26ymq1ucwftd" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Palm Tree.glb" id="20_ltcau"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -12,6 +13,7 @@ size = Vector3(5.099701, 4.828064, 0.2854004)
 [node name="Palm Tree" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Palm Tree"
+animatableIcon = ExtResource("2_pqprm")
 animatableName = "Palm Tree"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.32491386, 0.91330767, 0.36590028, 1)

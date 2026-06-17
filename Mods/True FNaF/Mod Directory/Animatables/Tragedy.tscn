@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cnlohng7qk1fn"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://cqg2u4mn6bnkl" path="res://Mods/True FNaF/Custom Assets/UI/ComedyMasks.png" id="2_g2j6g"]
 [ext_resource type="PackedScene" uid="uid://bn5fcn44uiq36" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Tragedy.glb" id="31_t462s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(0.7459717, 1.5158691, 0.23590088)
 [node name="Tragedy" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Tragedy"
+animatableIcon = ExtResource("2_g2j6g")
 animatableName = "Tragedy Mask"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.84, 0.72408, 0.2604, 1)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://betgpvyp1cf08"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://7o3g3xukj5t4" path="res://Mods/True FNaF/Custom Assets/UI/CutoutBalloonDogGreen.webp" id="2_h83wr"]
 [ext_resource type="PackedScene" uid="uid://dbuq2lgv50d4i" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Green Balloon Dog.glb" id="15_s1kyp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(0.77770996, 0.744751, 0.041259766)
 [node name="Green Balloon Dog" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Green Balloon Dog"
+animatableIcon = ExtResource("2_h83wr")
 animatableName = "Green Balloon Dog"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.03969473, 0.937037, 0, 1)

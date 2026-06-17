@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dhtifwc1hgo8q"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://btythdpo8yl17" path="res://Mods/True FNaF/Custom Assets/UI/CutoutBalloonDogOrange.webp" id="2_enygr"]
 [ext_resource type="PackedScene" uid="uid://bvekpddq23nxr" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Orange Balloon Dog.glb" id="19_73dlw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(0.8741455, 0.7408447, 0.039001465)
 [node name="Orange Balloon Dog" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Orange Balloon Dog"
+animatableIcon = ExtResource("2_enygr")
 animatableName = "Orange Balloon Dog"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.97, 0.42033336, 0, 1)

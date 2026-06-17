@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://0swyj6c3ki8e"]
 
 [ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_bejbi"]
+[ext_resource type="Texture2D" uid="uid://bi0kugklvlqyp" path="res://Mods/True FNaF/Custom Assets/UI/CutoutCoral.png" id="2_f3wft"]
 [ext_resource type="PackedScene" uid="uid://6r2q2sdik63e" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Coral.glb" id="8_cisid"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_um21q"]
@@ -9,6 +10,7 @@ size = Vector3(1.4400635, 0.85388184, 0.107788086)
 [node name="Coral" type="Node3D" unique_id=233530727 groups=["SOTM_CUTOUT"]]
 script = ExtResource("1_bejbi")
 animParametersFileName = "Coral"
+animatableIcon = ExtResource("2_f3wft")
 animatableName = "Coral"
 animatableAuthors = "Steel Wool"
 animatableColor = Color(0.80102336, 0.15471074, 0.22755003, 1)
