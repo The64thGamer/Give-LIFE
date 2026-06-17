@@ -4,12 +4,16 @@
 [ext_resource type="ArrayOccluder3D" uid="uid://4hq3d0uduvha" path="res://Mods/True FNaF/Mod Directory/Maps/FNaF4/FNaF4.occ" id="2_w1hhd"]
 [ext_resource type="PackedScene" uid="uid://bmu3qsgm8a4c5" path="res://Mods/True FNaF/Custom Assets/Models/Maps/FNaF 4.glb" id="3_4jki3"]
 [ext_resource type="PackedScene" uid="uid://dxgjifdd0grx6" path="res://Mods/True FNaF/Mod Directory/Animatables/Toy Fan.tscn" id="3_g1oww"]
+[ext_resource type="PackedScene" uid="uid://bpjr0h2ex8xqe" path="res://Mods/True FNaF/Mod Directory/Animatables/Lamp Blue Yellow Alt.tscn" id="4_cypne"]
+[ext_resource type="PackedScene" uid="uid://b21pwls2g0yb5" path="res://Mods/True FNaF/Mod Directory/Animatables/Bedroom Light.tscn" id="4_kv4y1"]
 [ext_resource type="PackedScene" uid="uid://b8eq4v5tgat4r" path="res://Mods/True FNaF/Mod Directory/Animatables/Toy Phone.tscn" id="5_4jki3"]
-[ext_resource type="PackedScene" uid="uid://dta3hmjxbgujk" path="res://Mods/True FNaF/Custom Assets/Props/Lamp Orange-Tan.tscn" id="5_irpk6"]
+[ext_resource type="PackedScene" uid="uid://mot4ujx5vqwe" path="res://Mods/True FNaF/Mod Directory/Animatables/Lamp Blue Yellow.tscn" id="5_30ysm"]
+[ext_resource type="PackedScene" uid="uid://dik1odyqh70pq" path="res://Mods/True FNaF/Mod Directory/Animatables/Hall Light.tscn" id="5_66q0x"]
+[ext_resource type="PackedScene" uid="uid://t5kxja3mmyvf" path="res://Mods/True FNaF/Mod Directory/Animatables/Hall Light Alt.tscn" id="6_idgta"]
+[ext_resource type="PackedScene" uid="uid://2mxl27au3qqo" path="res://Mods/True FNaF/Mod Directory/Animatables/Lamp Orange Tan Alt.tscn" id="6_kv4y1"]
 [ext_resource type="PackedScene" uid="uid://cyv0l6ob3f1o5" path="res://Mods/True FNaF/Mod Directory/Animatables/Toy Robot.tscn" id="6_qdiuh"]
 [ext_resource type="PackedScene" uid="uid://c656we5o62ly4" path="res://Mods/True FNaF/Mod Directory/Animatables/Toy Bug.tscn" id="7_4qql3"]
-[ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Animatables/GL_Spotlight.gd" id="8_xo3k6"]
-[ext_resource type="PackedScene" uid="uid://dlcecdi1enfo" path="res://Mods/True FNaF/Custom Assets/Props/Lamp Blue-Yellow.tscn" id="9_ttsyn"]
+[ext_resource type="PackedScene" uid="uid://dt30ua2opb8la" path="res://Mods/True FNaF/Mod Directory/Animatables/Lamp Orange Tan.tscn" id="7_66q0x"]
 
 [sub_resource type="Environment" id="Environment_dsuk6"]
 background_mode = 1
@@ -61,19 +65,34 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10.297226, -0.03827715, -5.3
 
 [node name="Map Props" type="Node" parent="Map" unique_id=890356910]
 
-[node name="LampBlueYellow" parent="Map/Map Props" unique_id=1311252977 instance=ExtResource("9_ttsyn")]
+[node name="Animatables" type="Node" parent="Map" unique_id=1193136051]
+
+[node name="Bedroom Light" parent="Map/Animatables" unique_id=213815730 instance=ExtResource("4_kv4y1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17237519, 5.0954633, -1.1323782)
+
+[node name="Hall Light" parent="Map/Animatables" unique_id=662325174 instance=ExtResource("5_66q0x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2461057, 5.0106726, -4.5935225)
+
+[node name="Hall Light2" parent="Map/Animatables" unique_id=1913787621 instance=ExtResource("6_idgta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9657097, 5.0106726, -4.9123945)
+
+[node name="Hall Light3" parent="Map/Animatables" unique_id=1223938346 instance=ExtResource("5_66q0x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2461057, 5.0106726, -9.6779995)
+
+[node name="Hall Light4" parent="Map/Animatables" unique_id=894240349 instance=ExtResource("6_idgta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9657097, 5.0106726, -9.640673)
+
+[node name="LampBlueYellow Alt2" parent="Map/Animatables" unique_id=1413129417 instance=ExtResource("4_cypne")]
+transform = Transform3D(-0.18592396, 0, -0.9825643, 0, 1, 0, 0.9825643, 0, -0.18592396, 1.5878377, 1.0849118, 11.262152)
+
+[node name="LampBlueYellow2" parent="Map/Animatables" unique_id=1164657257 instance=ExtResource("5_30ysm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1594062, 2.0073583, -2.4146836)
 
-[node name="LampBlueYellow2" parent="Map/Map Props" unique_id=1505868887 instance=ExtResource("9_ttsyn")]
-transform = Transform3D(-0.1859239, 0, -0.9825643, 0, 1, 0, 0.9825643, 0, -0.1859239, 1.5878377, 1.0849118, 11.262152)
+[node name="LampOrangeTan Alt2" parent="Map/Animatables" unique_id=500723751 instance=ExtResource("6_kv4y1")]
+transform = Transform3D(0.9987657, 0, -0.04966897, 0, 1, 0, 0.04966897, 0, 0.9987657, -7.9684844, 1.2599595, -5.7530465)
 
-[node name="LampOrangeTan" parent="Map/Map Props" unique_id=623583200 instance=ExtResource("5_irpk6")]
+[node name="LampOrangeTan2" parent="Map/Animatables" unique_id=137881033 instance=ExtResource("7_66q0x")]
 transform = Transform3D(-0.8046452, 0, -0.593756, 0, 1, 0, 0.593756, 0, -0.8046452, 7.539531, 1.3508667, -13.912464)
-
-[node name="LampOrangeTan2" parent="Map/Map Props" unique_id=153623830 instance=ExtResource("5_irpk6")]
-transform = Transform3D(0.99876577, 0, -0.049668968, 0, 1, 0, 0.049668968, 0, 0.99876577, -7.9684844, 1.2599595, -5.7530465)
-
-[node name="Animatables" type="Node" parent="Map" unique_id=1193136051]
 
 [node name="Toy Phone" parent="Map/Animatables" unique_id=233530727 instance=ExtResource("5_4jki3")]
 transform = Transform3D(0.7489557, 0, 0.66262007, 0, 1, 0, -0.66262007, 0, 0.7489557, -1.0786167, -0.040825468, -1.5017343)
@@ -86,218 +105,3 @@ transform = Transform3D(0.85172695, 0, 0.5239859, 0, 1, 0, -0.5239859, 0, 0.8517
 
 [node name="Toy Bug" parent="Map/Animatables" unique_id=1218947138 instance=ExtResource("7_4qql3")]
 transform = Transform3D(0.98162705, 0, -0.19080897, 0, 1, 0, 0.19080897, 0, 0.98162705, -2.505495, -0.043172467, -1.8619606)
-
-[node name="Lamp Bedroom" type="SpotLight3D" parent="Map/Animatables" unique_id=1936951527]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.1600237, 3.642777, -2.402554)
-light_color = Color(0.9868669, 0.8286037, 0.61669636, 1)
-light_energy = 0.0
-shadow_enabled = true
-shadow_blur = 0.0
-spot_range = 10.0
-spot_attenuation = 2.0
-spot_angle = 29.41
-spot_angle_attenuation = 0.329877
-
-[node name="Node" type="Node3D" parent="Map/Animatables/Lamp Bedroom" unique_id=972979048 groups=["L_LAMP_DOOR"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 3.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="Lamp Bedroom2" type="SpotLight3D" parent="Map/Animatables" unique_id=1363457524]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 3.1600237, 3.3535135, -2.402554)
-light_color = Color(0.9868669, 0.8286037, 0.61669636, 1)
-light_energy = 0.0
-shadow_blur = 0.0
-spot_range = 10.0
-spot_attenuation = 2.0
-spot_angle = 68.55
-spot_angle_attenuation = 0.0011613312
-
-[node name="Node" type="Node3D" parent="Map/Animatables/Lamp Bedroom2" unique_id=699730472 groups=["L_LAMP_DOOR"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 3.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="Lamp Bedroom3" type="SpotLight3D" parent="Map/Animatables" unique_id=1604483092]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.588233, 2.6872513, 11.250679)
-light_color = Color(0.9868669, 0.8286037, 0.61669636, 1)
-light_energy = 0.0
-shadow_enabled = true
-shadow_blur = 0.0
-spot_range = 10.0
-spot_attenuation = 2.0
-spot_angle = 28.27
-spot_angle_attenuation = 0.329877
-
-[node name="Node" type="Node3D" parent="Map/Animatables/Lamp Bedroom3" unique_id=1889173524 groups=["L_LAMP_BED"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 3.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="Lamp Bedroom4" type="SpotLight3D" parent="Map/Animatables" unique_id=30732576]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1.588233, 2.3305073, 11.250679)
-light_color = Color(0.9868669, 0.8286037, 0.61669636, 1)
-light_energy = 0.0
-shadow_blur = 0.0
-spot_range = 10.0
-spot_attenuation = 2.0
-spot_angle = 68.55
-spot_angle_attenuation = 0.0011613312
-
-[node name="Node" type="Node3D" parent="Map/Animatables/Lamp Bedroom4" unique_id=1711804932 groups=["L_LAMP_BED"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 3.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="Lamp Bedroom5" type="SpotLight3D" parent="Map/Animatables" unique_id=344975507]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -7.970268, 2.673155, -5.7399597)
-light_color = Color(0.9868669, 0.8286037, 0.61669636, 1)
-light_energy = 0.0
-shadow_enabled = true
-shadow_blur = 0.0
-spot_range = 10.0
-spot_attenuation = 2.0
-spot_angle = 34.63
-spot_angle_attenuation = 0.329877
-
-[node name="Node" type="Node3D" parent="Map/Animatables/Lamp Bedroom5" unique_id=293885754 groups=["L_LAMP_HALL_L"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 3.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="Lamp Bedroom6" type="SpotLight3D" parent="Map/Animatables" unique_id=2068958739]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -7.970268, 2.5806725, -5.7399597)
-light_color = Color(0.9868669, 0.8286037, 0.61669636, 1)
-light_energy = 0.0
-shadow_blur = 0.0
-spot_range = 10.0
-spot_attenuation = 2.0
-spot_angle = 68.55
-spot_angle_attenuation = 0.0011613312
-
-[node name="Node" type="Node3D" parent="Map/Animatables/Lamp Bedroom6" unique_id=693077862 groups=["L_LAMP_HALL_L"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 3.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="Lamp Bedroom7" type="SpotLight3D" parent="Map/Animatables" unique_id=1180257400]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 7.5380664, 2.8199255, -13.916176)
-light_color = Color(0.9868669, 0.8286037, 0.61669636, 1)
-light_energy = 0.0
-shadow_enabled = true
-shadow_blur = 0.0
-spot_range = 10.0
-spot_attenuation = 2.0
-spot_angle = 32.91
-spot_angle_attenuation = 0.329877
-
-[node name="Node" type="Node3D" parent="Map/Animatables/Lamp Bedroom7" unique_id=1483314424 groups=["L_LAMP_HALL_R"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 3.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="Lamp Bedroom8" type="SpotLight3D" parent="Map/Animatables" unique_id=983793203]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 7.5380664, 2.580672, -13.916176)
-light_color = Color(0.9868669, 0.8286037, 0.61669636, 1)
-light_energy = 0.0
-shadow_blur = 0.0
-spot_range = 10.0
-spot_attenuation = 2.0
-spot_angle = 68.55
-spot_angle_attenuation = 0.0011613312
-
-[node name="Node" type="Node3D" parent="Map/Animatables/Lamp Bedroom8" unique_id=1513915688 groups=["L_LAMP_HALL_R"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 3.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="UpperLight" type="OmniLight3D" parent="Map/Animatables" unique_id=1950159548]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.17005287, 4.7105355, -1.122833)
-light_color = Color(0.95882386, 0.829677, 0.7342244, 1)
-light_energy = 0.0
-shadow_enabled = true
-shadow_blur = 0.0
-omni_range = 30.0
-
-[node name="Node" type="Node3D" parent="Map/Animatables/UpperLight" unique_id=216818982 groups=["L_BEDROOM"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 2.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="UpperLight2" type="OmniLight3D" parent="Map/Animatables" unique_id=962779671]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.2416534, 4.608688, -4.603212)
-light_color = Color(0.95882386, 0.829677, 0.7342244, 1)
-light_energy = 0.0
-shadow_enabled = true
-shadow_blur = 0.0
-omni_range = 15.0
-
-[node name="Node" type="Node3D" parent="Map/Animatables/UpperLight2" unique_id=1908937380 groups=["L_HALL_L"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 2.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="UpperLight3" type="OmniLight3D" parent="Map/Animatables" unique_id=880995927]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.2416534, 4.608688, -9.678828)
-light_color = Color(0.95882386, 0.829677, 0.7342244, 1)
-light_energy = 0.0
-shadow_enabled = true
-shadow_blur = 0.0
-omni_range = 15.0
-
-[node name="Node" type="Node3D" parent="Map/Animatables/UpperLight3" unique_id=155042872 groups=["L_HALL_L"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 2.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="UpperLight4" type="OmniLight3D" parent="Map/Animatables" unique_id=350510855]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.965375, 4.608688, -4.911122)
-light_color = Color(0.95882386, 0.829677, 0.7342244, 1)
-light_energy = 0.0
-shadow_enabled = true
-shadow_blur = 0.0
-omni_range = 15.0
-
-[node name="Node" type="Node3D" parent="Map/Animatables/UpperLight4" unique_id=2114578329 groups=["L_HALL_R"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 2.0
-lerp_speed = 20.0
-delete_parent_instead = true
-
-[node name="UpperLight5" type="OmniLight3D" parent="Map/Animatables" unique_id=1256721231]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.965375, 4.608688, -9.678828)
-light_color = Color(0.95882386, 0.829677, 0.7342244, 1)
-light_energy = 0.0
-shadow_enabled = true
-shadow_blur = 0.0
-omni_range = 15.0
-
-[node name="Node" type="Node3D" parent="Map/Animatables/UpperLight5" unique_id=2120462153 groups=["L_HALL_R"]]
-script = ExtResource("8_xo3k6")
-canChangeColor = true
-energyMultiplier = 2.0
-lerp_speed = 20.0
-delete_parent_instead = true

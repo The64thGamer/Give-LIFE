@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://c5uawj66escut" path="res://Scripts/Animatables/GL_Spotlight.gd" id="11_33pra"]
 [ext_resource type="Script" uid="uid://7y57po7qd5in" path="res://Scripts/Maps/Light Flicker.gd" id="11_cs3rg"]
 [ext_resource type="PackedScene" uid="uid://cetwr43y1kjiv" path="res://Mods/True FNaF/Custom Assets/Props/Trash Can.tscn" id="11_qrd33"]
+[ext_resource type="Texture2D" uid="uid://b78q5wlod5b1j" path="res://UI/SpotRed.png" id="12_n47cr"]
 
 [sub_resource type="Environment" id="Environment_dsuk6"]
 background_mode = 1
@@ -191,6 +192,7 @@ script = ExtResource("11_33pra")
 energyMultiplier = 1.0
 lerp_speed = 40.0
 color_lerp_speed = 40.0
+animatableIcon = ExtResource("12_n47cr")
 animatableName = "Office Alarm"
 animatableColor = Color(0.87, 0, 0, 1)
 delete_parent_instead = true
@@ -209,6 +211,7 @@ script = ExtResource("11_33pra")
 energyMultiplier = 1.0
 lerp_speed = 40.0
 color_lerp_speed = 40.0
+animatableIcon = ExtResource("12_n47cr")
 animatableName = "Office Alarm"
 animatableColor = Color(0.87, 0, 0, 1)
 delete_parent_instead = true

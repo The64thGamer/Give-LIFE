@@ -54,6 +54,8 @@ func _compile_groups() -> void:
 			_collect_chase_light(node, object_group, channel_color, grp["channels"])
 		elif node is GL_Spotlight:
 			_collect_spotlight(node, object_group, channel_color, grp["channels"])
+		elif node is GL_Lights:
+			_collect_lights(node, object_group, channel_color, grp["channels"])
 		elif node is GL_LightProjector:
 			_collect_projector(node, object_group, channel_color, grp["channels"])
 
@@ -107,6 +109,13 @@ func _collect_animatronic(node: GL_Animatronic, group: String, color: String, ch
 		channels[channel_id] = { "type": channel_type, "color": color }
 
 func _collect_spotlight(node: GL_Spotlight, group: String, color: String, channels: Dictionary) -> void:
+	_add_channel(channels, group, "intensity", GL_ChannelData.TYPE_BOOL, color)
+	if node.canChangeColor:
+		_add_channel(channels, group, "color", GL_ChannelData.TYPE_COLOR, color)
+	if node.canChangeSize and node.spotLight != null:
+		_add_channel(channels, group, "size", GL_ChannelData.TYPE_FLOAT, color)
+
+func _collect_lights(node: GL_Lights, group: String, color: String, channels: Dictionary) -> void:
 	_add_channel(channels, group, "intensity", GL_ChannelData.TYPE_BOOL, color)
 	if node.canChangeColor:
 		_add_channel(channels, group, "color", GL_ChannelData.TYPE_COLOR, color)

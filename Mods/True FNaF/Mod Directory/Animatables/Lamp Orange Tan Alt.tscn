@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://2mxl27au3qqo"]
+
+[ext_resource type="PackedScene" uid="uid://ddbfkhm0uy7in" path="res://Mods/True FNaF/Custom Assets/Models/Props/Lamp OrangeTan.glb" id="1_1s16h"]
+[ext_resource type="Script" uid="uid://bxoluhix7ikna" path="res://Scripts/Animatables/GL_Lights.gd" id="1_16gur"]
+[ext_resource type="Texture2D" uid="uid://7l13s3dyiu17" path="res://Mods/True FNaF/Custom Assets/UI/LampOrange.webp" id="3_juldw"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cypne"]
+height = 0.7640381
+radius = 0.36523438
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_30ysm"]
+height = 0.77182007
+radius = 0.4609375
+
+[node name="LampOrangeTan Alt" type="Node3D" unique_id=500723751 groups=["FNAF4_LAMP_TAN"]]
+script = ExtResource("1_16gur")
+canChangeColor = true
+energyMultiplier = 3.0
+lerp_speed = 20.0
+animatableIcon = ExtResource("3_juldw")
+animatableName = "Lamp Orange Tan Alt"
+animatableAuthors = "sudo trans --pony"
+animatableColor = Color(0.8901961, 0.84705883, 0.5686275, 1)
+
+[node name="Lamp OrangeTan" parent="." unique_id=71027906 instance=ExtResource("1_1s16h")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=94363771]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1329033966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38226318, 0)
+shape = SubResource("CylinderShape3D_cypne")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=167657191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0837555, 0)
+shape = SubResource("CylinderShape3D_30ysm")
+
+[node name="Lamp Bedroom5" type="SpotLight3D" parent="." unique_id=1714822485]
+transform = Transform3D(0.99876565, -0.04966896, -2.1710993e-09, 0, -4.371139e-08, 1, -0.04966896, -0.99876565, -4.3657433e-08, -0.0011310577, 1.4131956, 0.013159752)
+light_color = Color(0.9868669, 0.8286037, 0.61669636, 1)
+light_energy = 0.0
+shadow_enabled = true
+shadow_blur = 0.0
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 34.63
+spot_angle_attenuation = 0.329877
+
+[node name="Lamp Bedroom6" type="SpotLight3D" parent="." unique_id=902107268]
+transform = Transform3D(0.99876565, 0.04966896, -2.1710993e-09, 0, -4.371139e-08, -1, -0.04966896, 0.99876565, -4.3657433e-08, -0.0011310577, 1.320713, 0.013159752)
+light_color = Color(0.9868669, 0.8286037, 0.61669636, 1)
+light_energy = 0.0
+shadow_blur = 0.0
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 68.55
+spot_angle_attenuation = 0.0011613312
