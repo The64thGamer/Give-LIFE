@@ -10,7 +10,7 @@ radius = 0.39160156
 
 [node name="Seal Bucket" type="Node3D" unique_id=233530727 groups=["SOTM_SEAL"]]
 script = ExtResource("1_lj04s")
-animParametersFileName = "Seal"
+animParametersFileName = "Seal Tail"
 animatableIcon = ExtResource("2_1i28q")
 animatableName = "Seal in Bucket"
 animatableAuthors = "Steel Wool"

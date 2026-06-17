@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c6f775qvpey1n"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_hrhph"]
+[ext_resource type="Texture2D" uid="uid://gp3mr64pro1m" path="res://Mods/True FNaF/Custom Assets/UI/SealDiving.webp" id="2_7xgp5"]
+[ext_resource type="PackedScene" uid="uid://lk02cx18ro6u" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Seal.glb" id="2_hrhph"]
+[ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="4_hrhph"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ih3pj"]
+height = 19.40394
+radius = 5.8828125
+
+[node name="Seal" type="Node3D" unique_id=233530727 groups=["SOTM_SEAL"]]
+script = ExtResource("1_hrhph")
+animParametersFileName = "Seal"
+animatableIcon = ExtResource("2_7xgp5")
+animatableName = "Seal"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.18431373, 0.3882353, 0.8, 1)
+
+[node name="Seal" parent="." unique_id=1587019411 instance=ExtResource("2_hrhph")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+script = ExtResource("4_hrhph")
+boneConfigFileName = "Seal"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=184460475]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1893282418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.703828, 2.5594542)
+shape = SubResource("CylinderShape3D_ih3pj")

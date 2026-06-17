@@ -1,8 +1,74 @@
 {
-  "Seal Tail": {
-	"animation": "Seal Tail",
-	"in_speed": 2,
-	"out_speed": 3,
-	"type": "standard"
-  }
+	"Arm R": {
+		"animation": "Arm R",
+		"in_speed": 3,
+		"out_speed": 3.5,
+		"type": "standard"
+	  },
+	"Arm L": {
+		"animation": "Arm L",
+		"in_speed": 3,
+		"out_speed": 3.5,
+		"type": "standard"
+	  },
+	"Dive": {
+		"animation": "Dive",
+		"in_speed": 2,
+		"out_speed": 3,
+		"type": "standard"
+	  },
+	"Head L": {
+		"animation": "Head L",
+		"in_speed": 2,
+		"out_speed": 2.5,
+		"type": "standard"
+	  },
+	"Head R": {
+		"animation": "Head R",
+		"in_speed": 2,
+		"out_speed": 2.5,
+		"type": "standard"
+	  },
+	"Pole L": {
+		"animation": "Pole L",
+		"in_speed": 2,
+		"out_speed": 3,
+		"type": "standard"
+	  },
+	"Pole R": {
+		"animation": "Pole R",
+		"in_speed": 2,
+		"out_speed": 3,
+		"type": "standard"
+	  },
+	"Out": {
+		"animation": "Retract",
+		"in_speed": 0.8,
+		"out_speed": 0.8,
+		"type": "inverted_standard"
+	  },
+	"Tail L": {
+		"animation": "Tail L",
+		"in_speed": 1.5,
+		"out_speed": 2,
+		"type": "standard"
+	  },
+	"Tail R": {
+		"animation": "Tail R",
+		"in_speed": 1.5,
+		"out_speed": 2,
+		"type": "standard"
+	  },
+	"Tilt L": {
+		"animation": "Tilt L",
+		"in_speed": 1.5,
+		"out_speed": 2,
+		"type": "standard"
+	  },
+	"Tilt R": {
+		"animation": "Tilt R",
+		"in_speed": 1.5,
+		"out_speed": 2,
+		"type": "standard"
+	  },
 }

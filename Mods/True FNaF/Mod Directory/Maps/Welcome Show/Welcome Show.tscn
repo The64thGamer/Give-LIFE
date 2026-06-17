@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cawd52mwjiyof" path="res://Mods/True FNaF/Mod Directory/Animatables/Jug Band Monty.tscn" id="5_0fwej"]
 [ext_resource type="PackedScene" uid="uid://derp5d4vnpqqy" path="res://Mods/True FNaF/Mod Directory/Animatables/Birthday Puppy.tscn" id="5_ou855"]
 [ext_resource type="PackedScene" uid="uid://bc8jbkccmt3mk" path="res://Mods/True FNaF/Mod Directory/Animatables/Ringmaster Base.tscn" id="6_6f5je"]
+[ext_resource type="PackedScene" uid="uid://c6f775qvpey1n" path="res://Mods/True FNaF/Mod Directory/Animatables/Seal.tscn" id="7_24o3w"]
 [ext_resource type="PackedScene" uid="uid://budn8j6njgqgq" path="res://Mods/True FNaF/Mod Directory/Animatables/Mr Helpful.tscn" id="7_qdg1u"]
 [ext_resource type="PackedScene" uid="uid://bn1b0mbbj71vn" path="res://Mods/True FNaF/Mod Directory/Animatables/Mr Helpful Alt.tscn" id="8_1v7pc"]
 [ext_resource type="PackedScene" uid="uid://cngsa0r1unggw" path="res://Mods/True FNaF/Mod Directory/Animatables/Ringmaster Base Alt.tscn" id="8_7ks7s"]
@@ -243,6 +244,9 @@ transform = Transform3D(-0.662803, 5.4508128e-08, -0.7487938, 2.9802322e-08, 1, 
 
 [node name="Birthday Puppy" parent="Map/Animatables" unique_id=839363954 instance=ExtResource("5_ou855")]
 transform = Transform3D(-0.6089553, 0, 0.79320455, 0, 1, 0, -0.79320455, 0, -0.6089553, -7.1620235, 1.9158788, 4.607229)
+
+[node name="Seal" parent="Map/Animatables" unique_id=1172113007 instance=ExtResource("7_24o3w")]
+transform = Transform3D(0.80385685, 0, -0.59482276, 0, 1, 0, 0.5948228, 0, 0.8038568, 4.396201, 7.0089445, -7.845801)
 
 [node name="Mr Helpful" parent="Map/Animatables" unique_id=1054742576 instance=ExtResource("7_qdg1u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66971225, 1.8965249, -10.723003)

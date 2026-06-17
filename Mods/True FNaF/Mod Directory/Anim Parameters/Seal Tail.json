@@ -1,0 +1,8 @@
+{
+  "Seal Tail": {
+	"animation": "Seal Tail",
+	"in_speed": 2,
+	"out_speed": 3,
+	"type": "standard"
+  }
+}
