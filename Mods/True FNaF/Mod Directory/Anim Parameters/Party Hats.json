@@ -1,0 +1,8 @@
+{
+  "Spin": {
+	"animation": "Spin",
+	"in_speed": 0.25,
+	"out_speed": 0.25,
+	"type": "loop"
+  }
+}

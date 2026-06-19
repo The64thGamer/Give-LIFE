@@ -57,6 +57,7 @@
 [ext_resource type="PackedScene" uid="uid://b5dxk7fyqfyh6" path="res://Mods/True FNaF/Mod Directory/Animatables/Swing Bee.tscn" id="48_848g7"]
 [ext_resource type="PackedScene" uid="uid://b5dk0jygxtoe3" path="res://Mods/True FNaF/Mod Directory/Animatables/Boy Frog.tscn" id="50_q3irn"]
 [ext_resource type="PackedScene" uid="uid://coucprn4cpo4c" path="res://Mods/True FNaF/Mod Directory/Animatables/Girl Frog.tscn" id="51_g4dm4"]
+[ext_resource type="PackedScene" uid="uid://d0aookwcus8y" path="res://Mods/True FNaF/Mod Directory/Animatables/Party Hats.tscn" id="58_jhmpf"]
 
 [sub_resource type="Environment" id="Environment_groir"]
 background_mode = 2
@@ -665,6 +666,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.6
 
 [node name="Welcome Show Stairs" parent="Map/Animatables" unique_id=1603449091 groups=["SOTM_CUTOUT"] instance=ExtResource("46_k1822")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47723877, -0.003006637, -8.356054)
+
+[node name="Party Hats" parent="Map/Animatables" unique_id=1978621837 instance=ExtResource("58_jhmpf")]
+transform = Transform3D(-0.6511319, 0, 0.75896454, 0, 1, 0, -0.75896454, 0, -0.6511319, -8.062748, 1.8965077, 5.1610155)
+
+[node name="Party Hats2" parent="Map/Animatables" unique_id=592088048 instance=ExtResource("58_jhmpf")]
+transform = Transform3D(0.6507743, 0, -0.75927114, 0, 1, 0, 0.75927114, 0, 0.6507743, -8.062748, 1.8965077, 5.1610155)
 
 [node name="Boy Frog" parent="Map/Animatables" unique_id=519964351 instance=ExtResource("50_q3irn")]
 transform = Transform3D(-0.91145355, 0, -0.41140306, 0, 1, 0, 0.41140306, 0, -0.91145355, 4.8818827, 1.8777223, 4.518209)

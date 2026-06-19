@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d0aookwcus8y"]
+
+[ext_resource type="Script" uid="uid://iqrmm33dxvui" path="res://Scripts/Animatables/GL_Animatronic.gd" id="1_8vvck"]
+[ext_resource type="Texture2D" uid="uid://c6wtel2n45g3" path="res://Mods/True FNaF/Custom Assets/UI/Party Hats.webp" id="2_8vvck"]
+[ext_resource type="PackedScene" uid="uid://d3ytqw0egnen" path="res://Mods/True FNaF/Custom Assets/Models/Animatronics/Party Hats.glb" id="3_a34b2"]
+[ext_resource type="Script" uid="uid://60lyan8oproc" path="res://Scripts/Animatables/Physics_Bones.gd" id="4_tn0yo"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ih3pj"]
+height = 9.885087
+radius = 29.422363
+
+[node name="Party Hats" type="Node3D" unique_id=233530727 groups=["SOTM_PARTY_HATS"]]
+script = ExtResource("1_8vvck")
+animParametersFileName = "Party Hats"
+animatableIcon = ExtResource("2_8vvck")
+animatableName = "Party Hats"
+animatableAuthors = "Steel Wool"
+animatableColor = Color(0.7416371, 0.3274994, 0.3435821, 1)
+
+[node name="Party Hats" parent="." unique_id=2036073305 instance=ExtResource("3_a34b2")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+script = ExtResource("4_tn0yo")
+boneConfigFileName = "Party Hats"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=184460475]
+transform = Transform3D(0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1893282418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 31.28391, 2.5594542)
+shape = SubResource("CylinderShape3D_ih3pj")
