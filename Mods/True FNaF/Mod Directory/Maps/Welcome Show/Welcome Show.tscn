@@ -24,10 +24,14 @@
 [ext_resource type="Texture2D" uid="uid://b78q5wlod5b1j" path="res://UI/SpotRed.png" id="16_jhmpf"]
 [ext_resource type="Texture2D" uid="uid://cyejjgqimakwt" path="res://UI/SpotPurple.png" id="17_e18ba"]
 [ext_resource type="PackedScene" uid="uid://bap1mbpwk7nwr" path="res://Mods/True FNaF/Mod Directory/Animatables/Blue Balloon Dog.tscn" id="18_gt5wa"]
+[ext_resource type="Texture2D" uid="uid://pvnmpdv1rlgq" path="res://UI/SpotGreen.png" id="18_hlfwi"]
 [ext_resource type="Texture2D" uid="uid://dtkmxholirbad" path="res://UI/SpotSkyBlue.png" id="18_s8leu"]
+[ext_resource type="Texture2D" uid="uid://bt3neeiaobcqb" path="res://UI/SpotOrange.png" id="18_x374d"]
 [ext_resource type="PackedScene" uid="uid://xi7n4c6mqwgo" path="res://Mods/True FNaF/Mod Directory/Animatables/Clam.tscn" id="19_drm30"]
+[ext_resource type="Script" uid="uid://bxoluhix7ikna" path="res://Scripts/Animatables/GL_Lights.gd" id="20_e18ba"]
 [ext_resource type="PackedScene" uid="uid://cjxdk0bhc1uxm" path="res://Mods/True FNaF/Mod Directory/Animatables/Comedy.tscn" id="20_k8n6e"]
 [ext_resource type="PackedScene" uid="uid://0swyj6c3ki8e" path="res://Mods/True FNaF/Mod Directory/Animatables/Coral.tscn" id="21_h53ma"]
+[ext_resource type="Texture2D" uid="uid://bds4gv2if6amk" path="res://UI/SpotWhite.png" id="21_s8leu"]
 [ext_resource type="PackedScene" uid="uid://nrt21knyl1yp" path="res://Mods/True FNaF/Mod Directory/Animatables/Cotton Candy Sheep.tscn" id="22_tghgq"]
 [ext_resource type="PackedScene" uid="uid://bpbgjt0nbvjuf" path="res://Mods/True FNaF/Mod Directory/Animatables/Crab.tscn" id="23_a188d"]
 [ext_resource type="PackedScene" uid="uid://cqefqicfyo54j" path="res://Mods/True FNaF/Mod Directory/Animatables/Dragonfly.tscn" id="24_ugnft"]
@@ -286,6 +290,26 @@ animatableName = "Mood Light"
 animatableColor = Color(0.1691, 0.89, 0.18111497, 1)
 delete_parent_instead = true
 
+[node name="Tree Mood" type="OmniLight3D" parent="Map/Animatables" unique_id=1921181449]
+transform = Transform3D(0.8537498, -0.24125114, -0.4614209, 0.51820177, 0.30726722, 0.79815656, -0.050776653, -0.9205351, 0.3873461, -6.065866, 9.751597, -7.7324166)
+light_color = Color(0.36666667, 1, 0, 1)
+light_energy = 0.0
+shadow_enabled = true
+omni_range = 5.036
+omni_attenuation = 1.87
+
+[node name="Node" type="Node3D" parent="Map/Animatables/Tree Mood" unique_id=180814285 groups=["L_MOOD_TREE"]]
+transform = Transform3D(1, 4.0978193e-08, 2.0489097e-08, 7.450581e-09, 1, 5.9604645e-08, -3.7252903e-09, 2.9802322e-08, 1, -2.870522, 0.27061033, 0.2668209)
+script = ExtResource("4_prrm5")
+canChangeColor = true
+energyMultiplier = 0.8
+lerp_speed = 10.0
+color_lerp_speed = 2.0
+animatableIcon = ExtResource("14_8n47d")
+animatableName = "Tree Mood"
+animatableColor = Color(0.1691, 0.89, 0.18111497, 1)
+delete_parent_instead = true
+
 [node name="Light Duck" type="SpotLight3D" parent="Map/Animatables" unique_id=1578231398]
 transform = Transform3D(0.8537498, -0.24125111, -0.46142086, 0.51820177, 0.30726722, 0.79815656, -0.050776653, -0.9205351, 0.38734606, 2.106216, 12.45596, -1.3114839)
 light_color = Color(0.9019608, 0.8901961, 0.972549, 1)
@@ -380,22 +404,115 @@ animatableName = "Seal Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
 
-[node name="Light Cake" type="SpotLight3D" parent="Map/Animatables" unique_id=284919284]
-transform = Transform3D(0.5619717, 0.32783008, 0.75941765, 0.15916058, -0.94380677, 0.28964898, 0.81169933, -0.041905187, -0.58257043, -0.604, 12.456, -0.5952163)
+[node name="Light Pig" type="SpotLight3D" parent="Map/Animatables" unique_id=1898143309]
+transform = Transform3D(-0.70120406, 0.33718815, -0.6281858, -0.70496076, -0.45952916, 0.5402439, -0.10650569, 0.8216675, 0.559928, -4.3940334, 11.221946, -0.1896329)
 light_color = Color(0.9019608, 0.8901961, 0.972549, 1)
 light_energy = 0.0
 shadow_enabled = true
 spot_range = 30.0
 spot_attenuation = 2.0
-spot_angle = 13.7
+spot_angle = 8.8
 
-[node name="Node" type="Node3D" parent="Map/Animatables/Light Cake" unique_id=316862027 groups=["L_CAKE_SPOT"]]
+[node name="Node" type="Node3D" parent="Map/Animatables/Light Pig" unique_id=2041285086 groups=["L_PIG_SPOT"]]
+script = ExtResource("4_prrm5")
+energyMultiplier = 500.0
+lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
+animatableName = "Pig Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
+delete_parent_instead = true
+
+[node name="Light Rocktapus" type="SpotLight3D" parent="Map/Animatables" unique_id=908088710]
+transform = Transform3D(0.6272005, 0.39167798, 0.6732071, -0.55400735, -0.3831821, 0.7390854, 0.54744446, -0.8365165, -0.023339583, 1.3547745, 13.470353, -3.5258656)
+light_color = Color(0.9019608, 0.8901961, 0.972549, 1)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 27.48515
+spot_attenuation = 2.0
+spot_angle = 15.743884
+
+[node name="Node" type="Node3D" parent="Map/Animatables/Light Rocktapus" unique_id=1801996271 groups=["L_ROCKTAPUS_SPOT"]]
 script = ExtResource("4_prrm5")
 energyMultiplier = 450.0
 lerp_speed = 20.0
 animatableIcon = ExtResource("15_24o3w")
-animatableName = "Cake Spot"
+animatableName = "Rocktapus Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
+delete_parent_instead = true
+
+[node name="Light Bee" type="SpotLight3D" parent="Map/Animatables" unique_id=363966436]
+transform = Transform3D(-0.25253037, 0.6261172, 0.7377029, -0.6940608, -0.6484306, 0.31275746, 0.6741719, -0.43303, 0.5983118, -4.2448077, 11.221946, -3.2869399)
+light_color = Color(0.9019608, 0.8901961, 0.972549, 1)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 30.0
+spot_attenuation = 2.0
+spot_angle = 13.66
+spot_angle_attenuation = 3.0314324
+
+[node name="Node" type="Node3D" parent="Map/Animatables/Light Bee" unique_id=687740244 groups=["L_SWING_SPOT"]]
+script = ExtResource("4_prrm5")
+lerp_speed = 20.0
+animatableIcon = ExtResource("15_24o3w")
+animatableName = "Swing Bee Spot"
+animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
+delete_parent_instead = true
+
+[node name="Light Nest" type="SpotLight3D" parent="Map/Animatables" unique_id=584999734]
+transform = Transform3D(-0.25055152, 0.673035, 0.69587916, -0.67841744, -0.634852, 0.36974674, 0.69063276, -0.37945595, 0.6156619, -2.673603, 11.221946, -3.7606337)
+light_color = Color(0.6862745, 0.85882354, 0.43137255, 1)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 30.0
+spot_attenuation = 2.0
+spot_angle = 3.91
+spot_angle_attenuation = 3.0314324
+
+[node name="Node" type="Node3D" parent="Map/Animatables/Light Nest" unique_id=1834787256 groups=["L_NEST_SPOT"]]
+script = ExtResource("4_prrm5")
+energyMultiplier = 150.0
+lerp_speed = 20.0
+animatableIcon = ExtResource("18_hlfwi")
+animatableName = "Nest Spot"
+animatableColor = Color(0.7686834, 0.85, 0.15300001, 1)
+delete_parent_instead = true
+
+[node name="Light Honey" type="SpotLight3D" parent="Map/Animatables" unique_id=495250273]
+transform = Transform3D(-0.55839753, 0.7591248, 0.334547, -0.5015464, -0.63015455, 0.5927533, 0.6607901, 0.16320103, 0.732613, -2.673603, 11.221946, -3.7606337)
+light_color = Color(0.63296, 0.86, 0.29239997, 1)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 30.0
+spot_attenuation = 2.0
+spot_angle = 3.91
+spot_angle_attenuation = 3.0314324
+
+[node name="Node" type="Node3D" parent="Map/Animatables/Light Honey" unique_id=812791039 groups=["L_HONEY_SPOT"]]
+script = ExtResource("4_prrm5")
+energyMultiplier = 150.0
+lerp_speed = 20.0
+animatableIcon = ExtResource("18_hlfwi")
+animatableName = "Honey Spot"
+animatableColor = Color(0.76862746, 0.8509804, 0.15294118, 1)
+delete_parent_instead = true
+
+[node name="Mood Bee" type="SpotLight3D" parent="Map/Animatables" unique_id=1447224811]
+transform = Transform3D(-0.6459218, -0.41756713, 0.6390795, -0.46809718, -0.44466504, -0.76364785, 0.60305053, -0.79240817, 0.09175691, -4.7823343, 2.10484, -6.8586984)
+light_color = Color(0.99999994, 0.8829308, 0.7160219, 1)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 10.562147
+spot_attenuation = 2.0
+spot_angle = 6.1102777
+spot_angle_attenuation = 3.0314324
+
+[node name="Node" type="Node3D" parent="Map/Animatables/Mood Bee" unique_id=653651137 groups=["L_MOOD_BEE"]]
+script = ExtResource("4_prrm5")
+energyMultiplier = 500.0
+lerp_speed = 20.0
+animatableIcon = ExtResource("18_x374d")
+animatableName = "Swing Bee Mood"
+animatableColor = Color(0.89, 0.44351667, 0.26700002, 1)
 delete_parent_instead = true
 
 [node name="Light Flowers" type="SpotLight3D" parent="Map/Animatables" unique_id=1930173376]
@@ -489,6 +606,50 @@ animatableIcon = ExtResource("15_24o3w")
 animatableName = "Lion Spot"
 animatableColor = Color(0.8901961, 0.7921569, 0.6666667, 1)
 delete_parent_instead = true
+
+[node name="Main Spotlight" type="Node3D" parent="Map/Animatables" unique_id=1026248951 groups=["L_MOVE_SPOT_A"]]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, -0.34111387, 12.196595, -2.0095062)
+script = ExtResource("20_e18ba")
+canRotateX = true
+canRotateY = true
+energyMultiplier = 500.0
+max_angle_x = 180.0
+max_angle_y = 360.0
+animatableIcon = ExtResource("21_s8leu")
+animatableName = "Movable Spotlight A"
+animatableColor = Color(0.81960785, 0.7882353, 0.654902, 1)
+
+[node name="Spot" type="SpotLight3D" parent="Map/Animatables/Main Spotlight" unique_id=2134614129]
+transform = Transform3D(-1, 8.667487e-08, 1.14109655e-08, 0, -0.13052623, 0.991445, 8.742278e-08, 0.991445, 0.13052623, 0, 0, 0)
+light_color = Color(0.9019608, 0.8901961, 0.972549, 1)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 30.0
+spot_attenuation = 2.0
+spot_angle = 11.5872555
+spot_angle_attenuation = 2.2973971
+
+[node name="Main Spotlight2" type="Node3D" parent="Map/Animatables" unique_id=471250080 groups=["L_MOVE_SPOT_B"]]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, -0.34111387, 11.865134, -2.0095062)
+script = ExtResource("20_e18ba")
+canRotateX = true
+canRotateY = true
+energyMultiplier = 500.0
+max_angle_x = 180.0
+max_angle_y = 360.0
+animatableIcon = ExtResource("21_s8leu")
+animatableName = "Movable Spotlight B"
+animatableColor = Color(0.82, 0.7899333, 0.656, 1)
+
+[node name="Spot" type="SpotLight3D" parent="Map/Animatables/Main Spotlight2" unique_id=1645478527]
+transform = Transform3D(-1, 8.667487e-08, 1.14109655e-08, 0, -0.13052623, 0.991445, 8.742278e-08, 0.991445, 0.13052623, 0, 0, 0)
+light_color = Color(0.9019608, 0.8901961, 0.972549, 1)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 30.0
+spot_attenuation = 2.0
+spot_angle = 11.5872555
+spot_angle_attenuation = 2.2973971
 
 [node name="Light Jugband" type="SpotLight3D" parent="Map/Animatables" unique_id=775458259]
 transform = Transform3D(-0.22341283, 0.8008236, -0.55566895, 0.49546963, 0.5842378, 0.6427875, 0.83940226, -0.13171017, -0.5273101, -0.5579281, 12.45596, -1.3114839)
@@ -668,10 +829,10 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47723877, -0.003006637, -8.356054)
 
 [node name="Party Hats" parent="Map/Animatables" unique_id=1978621837 instance=ExtResource("58_jhmpf")]
-transform = Transform3D(-0.6511319, 0, 0.75896454, 0, 1, 0, -0.75896454, 0, -0.6511319, -8.062748, 1.8965077, 5.1610155)
+transform = Transform3D(-0.8803864, 0, 0.47425726, 0, 1, 0, -0.47425726, 0, -0.8803864, -8.062748, 1.8965077, 5.1610155)
 
 [node name="Party Hats2" parent="Map/Animatables" unique_id=592088048 instance=ExtResource("58_jhmpf")]
-transform = Transform3D(0.6507743, 0, -0.75927114, 0, 1, 0, 0.75927114, 0, 0.6507743, -8.062748, 1.8965077, 5.1610155)
+transform = Transform3D(0.8801627, 0, -0.47467187, 0, 1, 0, 0.47467187, 0, 0.8801627, -8.062748, 1.8965077, 5.1610155)
 
 [node name="Boy Frog" parent="Map/Animatables" unique_id=519964351 instance=ExtResource("50_q3irn")]
 transform = Transform3D(-0.91145355, 0, -0.41140306, 0, 1, 0, 0.41140306, 0, -0.91145355, 4.8818827, 1.8777223, 4.518209)
