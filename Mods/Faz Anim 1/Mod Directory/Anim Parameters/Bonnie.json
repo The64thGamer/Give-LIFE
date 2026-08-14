@@ -120,9 +120,9 @@
 	"type": "standard"
   },
   "Foot Tap": {
-	"animation": "Armature|FNAFFootTap",
-	"in_speed": 4.0,
-	"out_speed": 4.0,
+	"animation": "Armature|FNaFFootTap",
+	"in_speed": 5.0,
+	"out_speed": 6.0,
 	"type": "standard"
   }
 }

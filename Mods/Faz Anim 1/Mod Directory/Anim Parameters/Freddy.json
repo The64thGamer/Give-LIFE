@@ -119,14 +119,14 @@
 	"out_speed": 2.0,
 	"type": "standard"
   },
-  "Body Turn Ri": {
-	"animation": "Armature|FNaFBodyTurnRight",
+  "Body Turn Right": {
+	"animation": "Armature|FNaFBodyTurnRi",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
   },
-  "Body Turn Lef": {
-	"animation": "Armature|FNaFBodyTurnLeft",
+  "Body Turn Left": {
+	"animation": "Armature|FNaFBodyTurnLef",
 	"in_speed": 2.5,
 	"out_speed": 2.5,
 	"type": "standard"
@@ -138,7 +138,7 @@
 	"type": "standard"
   },
   "Foot Tap": {
-	"animation": "Armature|FNAFFootTap",
+	"animation": "Armature|FNaFFootTap",
 	"in_speed": 4.0,
 	"out_speed": 4.0,
 	"type": "standard"
