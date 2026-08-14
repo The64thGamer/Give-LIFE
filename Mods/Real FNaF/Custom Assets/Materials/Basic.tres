@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbdja8i43bu22"]
+
+[ext_resource type="Texture2D" uid="uid://dxudq88ypef8h" path="res://Mods/Faz Anim 2/Custom Assets/Textures/painted_plaster_wall_diff_4k.jpg" id="1_7y8c6"]
+[ext_resource type="Texture2D" uid="uid://6ind3itsmu4g" path="res://Mods/Faz Anim 2/Custom Assets/Textures/painted_plaster_wall_rough_4k.jpg" id="2_g53js"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_7y8c6")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_g53js")
+roughness_texture_channel = 1
+normal_enabled = true

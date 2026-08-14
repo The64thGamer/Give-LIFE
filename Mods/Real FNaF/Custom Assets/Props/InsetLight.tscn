@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://xh02lg6ligs4"]
+
+[ext_resource type="PackedScene" uid="uid://cp7tcse3puns0" path="res://Mods/Real FNaF/Custom Assets/Models/Props/InsetLight.glb" id="1_javqr"]
+
+[node name="InsetLight" type="Node3D" unique_id=1251876253]
+
+[node name="SpotLight3D27" type="SpotLight3D" parent="." unique_id=1458508932]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.10098609, 0)
+light_energy = 4.5
+light_bake_mode = 1
+spot_range = 20.0
+spot_attenuation = 2.0
+
+[node name="InsetLight" parent="." unique_id=825294239 instance=ExtResource("1_javqr")]

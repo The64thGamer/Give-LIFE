@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b6tfyw8k5gyhv"]
+
+[ext_resource type="PackedScene" uid="uid://bfbv7lb2timfr" path="res://Mods/Real FNaF/Custom Assets/Models/Props/ConstructionLight.glb" id="1_wkhyl"]
+
+[node name="Construction Light" type="Node3D" unique_id=1251876253]
+
+[node name="SpotLight3D27" type="SpotLight3D" parent="." unique_id=1458508932]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.041680187, 0)
+light_energy = 50.0
+shadow_enabled = true
+spot_range = 20.0
+spot_attenuation = 2.0
+spot_angle = 80.4
+
+[node name="ConstructionLight" parent="." unique_id=1487339726 instance=ExtResource("1_wkhyl")]

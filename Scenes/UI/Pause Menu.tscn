@@ -920,7 +920,7 @@ custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/PanelContainer/Map Menu/Mods" unique_id=849879837]
-custom_minimum_size = Vector2(500, 0)
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3

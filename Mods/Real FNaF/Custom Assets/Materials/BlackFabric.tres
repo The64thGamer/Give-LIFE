@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ck6g3elv1uyeu"]
+
+[ext_resource type="Texture2D" uid="uid://cuox21dae8m6n" path="res://Mods/Real FNaF/Custom Assets/Textures/denim_fabric_05_diff_2k.jpg" id="1_4p0ur"]
+[ext_resource type="Texture2D" uid="uid://uty3ocrx4mte" path="res://Mods/Real FNaF/Custom Assets/Textures/denim_fabric_05_nor_gl_2k.jpg" id="2_r76u8"]
+
+[resource]
+albedo_color = Color(0.18717614, 0.18717614, 0.18717614, 1)
+albedo_texture = ExtResource("1_4p0ur")
+metallic_texture_channel = 2
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_r76u8")

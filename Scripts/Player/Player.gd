@@ -31,11 +31,10 @@ const AIR_ANGLE_TOLERANCE: float = 55.0
 const AIR_DRAG_OUT_OF_WINDOW: float = 4
 const AIR_KEY_BIAS: float = 1
 
-const STAND_HEIGHT: float = 3.0
+const PLAYER_HEIGHT: float = 3.0
 const CROUCH_HEIGHT: float = 1.2
+const CAM_OFFSET: float = -0.1
 const CROUCH_LERP: float = 10.0
-const STAND_EYE_HEIGHT: float = 1.4
-const CROUCH_EYE_HEIGHT: float = 0.6
 
 @onready var camera = $Camera3D
 @onready var foot_probe: Node3D = $FootProbe
@@ -78,17 +77,18 @@ var air_horiz_speed: float = 0.0
 var is_airborne: bool = false
 signal construction_toggled(is_active: bool)
 var construction_mode: bool = false
+var _spawn_grace_frames: int = 10
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	camera.physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_OFF
 
 	if collision_shape.shape is CapsuleShape3D:
-		collision_shape.shape.height = STAND_HEIGHT
-		collision_shape.position.y = 0.0
+		collision_shape.shape.height = PLAYER_HEIGHT
+		collision_shape.position.y = _capsule_offset_y()
 
-	var t = (collision_shape.shape.height - CROUCH_HEIGHT) / (STAND_HEIGHT - CROUCH_HEIGHT)
-	var target_cam_y = lerp(CROUCH_EYE_HEIGHT, STAND_EYE_HEIGHT, t)
+	var t = (collision_shape.shape.height - CROUCH_HEIGHT) / (PLAYER_HEIGHT - CROUCH_HEIGHT)
+	var target_cam_y = lerp(CROUCH_HEIGHT + CAM_OFFSET, PLAYER_HEIGHT + CAM_OFFSET, t)
 	camera.position.y = target_cam_y
 
 	rotation_x = camera.rotation.x
@@ -193,12 +193,14 @@ func _process(delta: float) -> void:
 	else:
 		camera.rotation = Vector3(rotation_x, rotation_y, rotation_z)
 
-	var t = (collision_shape.shape.height - CROUCH_HEIGHT) / (STAND_HEIGHT - CROUCH_HEIGHT)
-	var target_cam_y = lerp(CROUCH_EYE_HEIGHT, STAND_EYE_HEIGHT, t)
+	var t = (collision_shape.shape.height - CROUCH_HEIGHT) / (PLAYER_HEIGHT - CROUCH_HEIGHT)
+	var target_cam_y = lerp(CROUCH_HEIGHT + CAM_OFFSET, PLAYER_HEIGHT + CAM_OFFSET, t)
 	var cam_pos = camera.position
 	cam_pos.y = lerp(cam_pos.y, target_cam_y, delta * CROUCH_LERP)
 	camera.position = cam_pos
 
+func _capsule_offset_y() -> float:
+	return collision_shape.shape.height / 2.0
 
 func _wants_crouch() -> bool:
 	if fly_mode:
@@ -216,9 +218,9 @@ func _can_stand_up() -> bool:
 	if space_state == null:
 		return false
 
-	var feet_y = global_transform.origin.y - (CROUCH_HEIGHT * 0.5)
+	var feet_y = global_transform.origin.y
 	var ray_start = Vector3(global_transform.origin.x, feet_y + 0.1, global_transform.origin.z)
-	var ray_end = Vector3(global_transform.origin.x, feet_y + STAND_HEIGHT, global_transform.origin.z)
+	var ray_end = Vector3(global_transform.origin.x, feet_y + PLAYER_HEIGHT, global_transform.origin.z)
 
 	var query = PhysicsRayQueryParameters3D.create(ray_start, ray_end, collision_mask)
 	query.exclude = [self]
@@ -238,6 +240,11 @@ func _process_scroll(direction: int):
 
 
 func _physics_process(delta: float) -> void:
+	if _spawn_grace_frames > 0:
+		_spawn_grace_frames -= 1
+		velocity = Vector3.ZERO
+		return
+		
 	if not is_on_floor() and not fly_mode:
 		velocity.y += get_gravity().y * delta
 
@@ -255,10 +262,9 @@ func _physics_process(delta: float) -> void:
 		air_horiz_speed = horiz.length()
 		
 		if air_horiz_speed > 0.1:
-			# We use -x and -z to align Godot's forward (-Z) with 0 degrees
 			air_move_angle = atan2(-horiz.x, -horiz.z) 
 		else:
-			air_move_angle = rotation_y
+			air_move_angle = camera.global_rotation.y
 			air_horiz_speed = 0.0
 		is_airborne = true
 
@@ -299,7 +305,6 @@ func _physics_process(delta: float) -> void:
 	if (is_on_floor() and not is_airborne) or fly_mode:
 		var target_vel = Vector3.ZERO
 		if direction:
-			# Multiplier only affects ground movement
 			target_vel.x = direction.x * currentSpeed * speed_mult
 			target_vel.z = direction.z * currentSpeed * speed_mult
 		if smooth_move:
@@ -318,11 +323,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		if is_airborne:
 			_apply_air_strafe(direction, delta)
-		# If somehow airborne but is_airborne not set (e.g. walked off edge), just coast
 
 	move_and_slide()
 
-	# --- Crouch state machine ---
 	var wants = _wants_crouch()
 
 	if wants and not is_crouched:
@@ -331,17 +334,12 @@ func _physics_process(delta: float) -> void:
 		if _can_stand_up():
 			is_crouched = false
 
-	var target_height = CROUCH_HEIGHT if is_crouched else STAND_HEIGHT
+	var target_height = CROUCH_HEIGHT if is_crouched else PLAYER_HEIGHT
 
 	if collision_shape.shape is CapsuleShape3D:
 		var new_height = lerp(collision_shape.shape.height, target_height, delta * CROUCH_LERP)
 		collision_shape.shape.height = new_height
-		collision_shape.position.y = 0.0
-
-		if not is_crouched and is_on_floor():
-			var height_diff = STAND_HEIGHT - new_height
-			if height_diff > 0.01:
-				global_transform.origin.y += (STAND_HEIGHT - new_height) * delta * CROUCH_LERP * 0.5
+		collision_shape.position.y = _capsule_offset_y()
 
 
 func get_collision_speed_multiplier() -> float:
@@ -361,7 +359,7 @@ func _apply_air_strafe(wish_dir: Vector3, delta: float) -> void:
 		if _debug_instance: _debug_mesh.clear_surfaces()
 		return
 
-	var cam_yaw = rotation_y
+	var cam_yaw = camera.global_rotation.y
 	var track_target = air_move_angle 
 
 	if wish_dir.length() > 0.1:
@@ -377,23 +375,18 @@ func _apply_air_strafe(wish_dir: Vector3, delta: float) -> void:
 			var key_diff = _angle_diff(key_angle, cam_yaw)
 			track_target = cam_yaw + key_diff * AIR_KEY_BIAS
 
-	# --- Distance from center to target ---
 	var steering_diff = abs(_angle_diff(track_target, air_move_angle))
 	var tolerance_rad = deg_to_rad(AIR_ANGLE_TOLERANCE)
 
-	# --- SPEED BOOST LOGIC (The Reward) ---
-	# We calculate a 0.0 to 1.0 value based on how close Blue is to Red
 	if steering_diff > 0.001 and steering_diff <= tolerance_rad:
 		# Closer to tolerance = higher reward
 		var reward_factor = steering_diff / tolerance_rad 
 		air_horiz_speed += AIR_STRAFE_BOOST * reward_factor * delta
 	
-	# --- DRAG LOGIC (The Penalty) ---
 	if steering_diff > tolerance_rad:
 		var overflow = clamp((steering_diff - tolerance_rad) / deg_to_rad(90.0), 0.0, 1.0)
 		air_horiz_speed = max(air_horiz_speed - air_horiz_speed * AIR_DRAG_OUT_OF_WINDOW * overflow * delta, 0.0)
 
-	# --- CHASE LOGIC ---
 	var angle_to_target = _angle_diff(track_target, air_move_angle)
 	var max_step = deg_to_rad(AIR_ANGLE_TRACK_SPEED) * delta
 	air_move_angle += clamp(angle_to_target, -max_step, max_step)
@@ -403,7 +396,6 @@ func _apply_air_strafe(wish_dir: Vector3, delta: float) -> void:
 		var lines_to_draw = []
 
 		var target_dir = Vector3(-sin(track_target), 0, -cos(track_target))
-		# Visual flare: Make the Blue line Cyan if it's in the "Boost Zone"
 		var blue_color = Color.CYAN if (steering_diff > 0.1 and steering_diff <= tolerance_rad) else Color.BLUE
 		lines_to_draw.append({"start": debug_origin, "end": debug_origin + target_dir * 0.5, "color": blue_color})
 
@@ -420,7 +412,6 @@ func _apply_air_strafe(wish_dir: Vector3, delta: float) -> void:
 	velocity.x = -sin(air_move_angle) * air_horiz_speed
 	velocity.z = -cos(air_move_angle) * air_horiz_speed
 
-# Returns the shortest signed angular difference from angle a to angle b (radians), range [-PI, PI]
 func _angle_diff(target: float, current: float) -> float:
 	var diff = fmod(target - current, TAU)
 	if diff > PI:

@@ -1,0 +1,180 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dcw7ustkrjqjq"
+path="res://.godot/imported/DreamMall.glb-35ca0425d03adfd93244c3f2ff1e67ba.scn"
+
+[deps]
+
+source_file="res://Mods/Real FNaF/Custom Assets/Models/Maps/DreamMall.glb"
+dest_files=["res://.godot/imported/DreamMall.glb-35ca0425d03adfd93244c3f2ff1e67ba.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=false
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Basic Blue": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/BasicBlue.tres",
+"use_external/path": "uid://b7uqoi8vursc0"
+},
+"Basic Brown": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/BasicBrown.tres",
+"use_external/path": "uid://d4cmbr6k58tbd"
+},
+"Basic Gray": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/BasicGray.tres",
+"use_external/path": "uid://dwjao3k7umdw0"
+},
+"Basic Green": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/BasicGreen.tres",
+"use_external/path": "uid://63kctcw34gu4"
+},
+"Concrete": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/Concrete.tres",
+"use_external/path": "uid://3nvjagi18agu"
+},
+"Dark Ceiling": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/DarkCeiling.tres",
+"use_external/path": "uid://bvyb7e4j1wmck"
+},
+"Light 3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/Light3.tres",
+"use_external/path": "uid://coxwyr3lqw2kq"
+},
+"Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/Metal.tres",
+"use_external/path": "uid://dtm6nc0khtx44"
+},
+"Metal Copper": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/MetalCopper.tres",
+"use_external/path": "uid://c3alu11bnwac3"
+},
+"Shiny Black": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/ShinyBlack.tres",
+"use_external/path": "uid://dig5qqrgj5lbu"
+},
+"Shiny Gray": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/ShinyGray.tres",
+"use_external/path": "uid://w45nvcrvxoya"
+},
+"Unpainted Concrete": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/UnpaintedConcrete.tres",
+"use_external/path": "uid://dn2psf6hk2lvf"
+},
+"basic": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/Basic.tres",
+"use_external/path": "uid://cbdja8i43bu22"
+},
+"glass": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/Glass.tres",
+"use_external/path": "uid://co6hi8x336fm1"
+},
+"light": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/Light.tres",
+"use_external/path": "uid://chyb4untfhsrl"
+},
+"tile": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Mods/Real FNaF/Custom Assets/Materials/TileFloor.tres",
+"use_external/path": "uid://d10ieggf03ur2"
+}
+},
+"meshes": {
+"DreamMall_Circle_007": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"DreamMall_Circle_028": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"DreamMall_Circle_029": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+},
+"DreamMall_Circle_030": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": false,
+"save_to_file/fallback_path": "",
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:Circle_013": {
+"generate/physics": true
+},
+"PATH:Circle_015": {
+"generate/physics": true
+},
+"PATH:Circle_016": {
+"generate/physics": true
+},
+"PATH:Circle_017": {
+"generate/physics": true
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=0
+gltf/texture_map_mode=1

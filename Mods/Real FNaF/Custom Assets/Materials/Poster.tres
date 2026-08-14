@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cx5s45ltdw6jv"]
+
+[ext_resource type="Texture2D" uid="uid://jbqxk6vkuxar" path="res://Mods/Real FNaF/Custom Assets/Textures/desktop_ADlogo.png" id="1_ickr4"]
+
+[resource]
+albedo_texture = ExtResource("1_ickr4")
+metallic_texture_channel = 2
+roughness = 0.3
+roughness_texture_channel = 1
+normal_enabled = true
+texture_filter = 5

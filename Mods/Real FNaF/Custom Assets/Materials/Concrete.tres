@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://3nvjagi18agu"]
+
+[ext_resource type="Texture2D" uid="uid://c3ahkjntsm3uv" path="res://Mods/Real FNaF/Custom Assets/Textures/brushed_concrete_diff_2k.jpg" id="1_1ublg"]
+[ext_resource type="Texture2D" uid="uid://cxtoiqrwu8ls1" path="res://Mods/Real FNaF/Custom Assets/Textures/brushed_concrete_arm_2k.jpg" id="2_dh212"]
+[ext_resource type="Texture2D" uid="uid://c2ym3dbvhpr1m" path="res://Mods/Real FNaF/Custom Assets/Textures/brushed_concrete_nor_gl_2k.jpg" id="3_7ttbv"]
+
+[resource]
+albedo_texture = ExtResource("1_1ublg")
+metallic = 1.0
+metallic_texture = ExtResource("2_dh212")
+metallic_texture_channel = 2
+roughness = 0.74
+roughness_texture = ExtResource("2_dh212")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_7ttbv")

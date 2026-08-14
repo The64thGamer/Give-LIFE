@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dn2psf6hk2lvf"]
+
+[ext_resource type="Texture2D" uid="uid://bqnbv1qmqluse" path="res://Mods/Real FNaF/Custom Assets/Textures/concrete_slab_wall_diff_2k.jpg" id="1_ryf3y"]
+[ext_resource type="Texture2D" uid="uid://bx48ugjck8i4w" path="res://Mods/Real FNaF/Custom Assets/Textures/concrete_slab_wall_arm_2k.jpg" id="2_vcjt8"]
+[ext_resource type="Texture2D" uid="uid://ccit5q1yj37ln" path="res://Mods/Real FNaF/Custom Assets/Textures/concrete_slab_wall_nor_gl_2k.jpg" id="3_yjtyj"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_ryf3y")
+metallic_texture = ExtResource("2_vcjt8")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_vcjt8")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_yjtyj")

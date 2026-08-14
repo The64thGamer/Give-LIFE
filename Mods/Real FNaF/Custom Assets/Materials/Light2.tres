@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bnwc1jublxx3e"]
+
+[resource]
+cull_mode = 2
+emission_enabled = true
+emission = Color(0.7816203, 0.8384696, 0.83505994, 1)
+emission_energy_multiplier = 5.0

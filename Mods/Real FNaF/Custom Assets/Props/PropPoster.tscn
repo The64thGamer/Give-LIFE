@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b1ay1k4t1aoms"]
+
+[ext_resource type="PackedScene" uid="uid://doqoivpglsl0d" path="res://Mods/Real FNaF/Custom Assets/Models/Props/ComingSoonPoster.glb" id="1_o25nt"]
+
+[node name="InsetLight" type="Node3D" unique_id=1251876253]
+
+[node name="ComingSoonPoster" parent="." unique_id=1534445648 instance=ExtResource("1_o25nt")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)

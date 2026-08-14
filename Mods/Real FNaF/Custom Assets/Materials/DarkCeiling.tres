@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bvyb7e4j1wmck"]
+
+[ext_resource type="Texture2D" uid="uid://dxudq88ypef8h" path="res://Mods/Faz Anim 2/Custom Assets/Textures/painted_plaster_wall_diff_4k.jpg" id="1_wa08s"]
+
+[resource]
+cull_mode = 2
+albedo_color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+albedo_texture = ExtResource("1_wa08s")
+metallic_texture_channel = 2
+roughness_texture_channel = 1
+normal_enabled = true
